@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026.04.27 19:01:47",
+  "timestamp": "2026.04.27 19:02:19",
   "oro": {
-    "timestamp": "2026.04.27 20:01:44",
+    "timestamp": "2026.04.27 20:02:14",
     "balance": 1007.88,
-    "equity": 918.27,
-    "flotante": -89.61,
+    "equity": 920.16,
+    "flotante": -87.72,
     "ciclos": 5,
     "martingala": {
       "activa": true,
@@ -15,16 +15,16 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 52.6,
+      "objetivo": 52.62,
       "fondo": 2.75,
       "pct": 5.2
     }
   },
   "btc": {
-    "timestamp": "2026.04.27 20:01:42",
+    "timestamp": "2026.04.27 20:02:14",
     "balance": 1007.88,
-    "equity": 918.16,
-    "flotante": -89.72,
+    "equity": 920.16,
+    "flotante": -87.72,
     "ciclos": 2,
     "martingala": {
       "activa": false,
@@ -35,7 +35,7 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 35.31,
+      "objetivo": 35.32,
       "fondo": 1.91,
       "pct": 5.4
     }
