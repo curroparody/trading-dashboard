@@ -615,7 +615,7 @@ function renderBot(key, data, allData) {
   // Card class
   const cardClass = hasHedge ? 'bot-card hedge-active' : 'bot-card';
 
-  // Ciclos y ganancia real
+  // Stats row — sin flotante
   const ciclos = data.ciclos !== undefined ? data.ciclos : '—';
   const gr     = data.ganancia_real !== undefined ? fmt(data.ganancia_real) : '—';
 
@@ -630,7 +630,7 @@ function renderBot(key, data, allData) {
       </div>`;
   }
 
-  // Hucha propia (leemos de GlobalVariable via JSON si está disponible)
+  // Hucha propia
   const huchaPropia = data.hucha_propia !== undefined ? data.hucha_propia : null;
   const huchaTope   = 30;
   const huchaPct    = huchaPropia !== null ? Math.min((huchaPropia / huchaTope) * 100, 100) : 0;
@@ -680,7 +680,7 @@ function renderBot(key, data, allData) {
       </div>`;
   }
 
-  // Solidaridad — qué hedges de compañeros están activos y cuánto ha aportado
+  // Solidaridad — qué hedges de compañeros están activos
   const botKeys = Object.keys(BOT_META).filter(k => k !== key);
   let solidItems = [];
   for(const compKey of botKeys) {
@@ -689,10 +689,12 @@ function renderBot(key, data, allData) {
     const compHedge = compData.hedge || {};
     if(compHedge.activo !== true) continue;
     const compMeta = BOT_META[compKey];
-    // Aportado — usamos hucha_aportado si disponible, si no mostramos "contribuyendo"
-    const aportado = data.hucha_aportado !== undefined ? data.hucha_aportado : null;
-    solidItems.push({ meta: compMeta, aportado, pctHedge: compHedge.pct });
+    solidItems.push({ meta: compMeta, pctHedge: compHedge.pct });
   }
+
+  // hucha_aportado es el total solidario acumulado por este bot
+  const totalAportado = data.hucha_aportado !== undefined && data.hucha_aportado > 0
+    ? fmt(data.hucha_aportado) : null;
 
   let solidHtml = '';
   if(!hasHedge) {
@@ -707,7 +709,7 @@ function renderBot(key, data, allData) {
               <span class="solid-arrow">→</span>
               ${s.meta.label} Hedge · ${pct(s.pctHedge)} completado
             </div>
-            <span class="solid-amount">${s.aportado !== null ? fmt(s.aportado) : 'Contribuyendo'}</span>
+            <span class="solid-amount">${totalAportado || 'Contribuyendo'}</span>
           </div>`;
       }
     }
@@ -732,10 +734,6 @@ function renderBot(key, data, allData) {
         <div class="stat-item">
           <span class="stat-label">Ganancia Real</span>
           <span class="stat-value gold">${gr}</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-label">Flotante</span>
-          <span class="stat-value ${data.flotante < 0 ? 'orange' : 'green'}">${fmt(data.flotante)}</span>
         </div>
       </div>
 
