@@ -2,384 +2,808 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>PROYECTO S.E.M.</title>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PROYECTO S.E.M. — Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #060a0f;
-    --surface: #0c1420;
-    --surface2: #101c2c;
-    --border: #162030;
-    --gold: #e8a020;
-    --btc: #f7921a;
-    --green: #00c853;
-    --red: #ff1744;
-    --blue: #2962ff;
-    --text: #d0e8ff;
-    --dim: #3a5570;
-    --mono: 'JetBrains Mono', monospace;
-    --display: 'Bebas Neue', sans-serif;
+    --bg:       #0a0c10;
+    --surface:  #111318;
+    --border:   #1e2230;
+    --gold:     #c9a84c;
+    --gold2:    #e8c96a;
+    --green:    #22c55e;
+    --red:      #ef4444;
+    --orange:   #f97316;
+    --muted:    #4a5060;
+    --text:     #e2e8f0;
+    --textdim:  #8892a4;
+    --mono:     'Space Mono', monospace;
+    --sans:     'Syne', sans-serif;
   }
-  * { margin:0; padding:0; box-sizing:border-box; }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
   body {
     background: var(--bg);
     color: var(--text);
-    font-family: var(--mono);
+    font-family: var(--sans);
     min-height: 100vh;
-    font-size: 13px;
+    overflow-x: hidden;
   }
-  .wrap { max-width: 420px; margin: 0 auto; padding: 12px; }
+
+  /* Background grid */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(201,168,76,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px 20px;
+  }
 
   /* HEADER */
-  .header {
+  header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 14px 0 16px;
+    margin-bottom: 32px;
+    padding-bottom: 20px;
     border-bottom: 1px solid var(--border);
-    margin-bottom: 16px;
-  }
-  .title {
-    font-family: var(--display);
-    font-size: 26px;
-    letter-spacing: 3px;
-    color: var(--text);
-  }
-  .title span { color: var(--gold); }
-  .live {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 10px;
-    color: var(--dim);
-    letter-spacing: 1px;
-  }
-  .dot {
-    width: 7px; height: 7px;
-    border-radius: 50%;
-    background: var(--green);
-    box-shadow: 0 0 8px var(--green);
-    animation: blink 2s infinite;
-  }
-  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
-
-  .timestamp {
-    text-align: center;
-    font-size: 10px;
-    color: var(--dim);
-    margin-bottom: 14px;
-    letter-spacing: 1px;
   }
 
-  /* TABS */
-  .tabs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6px;
-    margin-bottom: 16px;
+  .logo-block h1 {
+    font-family: var(--sans);
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    text-transform: uppercase;
   }
-  .tab {
-    padding: 9px;
-    border-radius: 6px;
-    border: 1px solid var(--border);
-    background: var(--surface);
-    color: var(--dim);
+
+  .logo-block p {
     font-family: var(--mono);
     font-size: 11px;
-    font-weight: 700;
-    cursor: pointer;
-    text-align: center;
-    letter-spacing: 2px;
-    transition: all .2s;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    margin-top: 3px;
   }
-  .tab.active { border-color: var(--gold); color: var(--gold); background: rgba(232,160,32,.08); }
-  .tab-content { display: none; }
-  .tab-content.active { display: block; }
 
-  /* BOT CARD */
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 14px;
-    margin-bottom: 10px;
-    position: relative;
-    overflow: hidden;
-  }
-  .card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 3px; height: 100%;
-    border-radius: 8px 0 0 8px;
-  }
-  .card.gold::before { background: var(--gold); }
-  .card.btc::before { background: var(--btc); }
-
-  .card-header {
+  .header-right {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 12px;
+    gap: 20px;
   }
-  .card-name {
-    font-family: var(--display);
+
+  .live-dot {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--green);
+    letter-spacing: 0.08em;
+  }
+
+  .live-dot::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.8); }
+  }
+
+  .timestamp {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  /* ECOSYSTEM BAR */
+  .ecosystem-bar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 28px;
+    padding: 16px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+  }
+
+  .eco-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-right: 20px;
+    border-right: 1px solid var(--border);
+  }
+  .eco-stat:last-child { border-right: none; }
+
+  .eco-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .eco-value {
+    font-family: var(--mono);
     font-size: 18px;
-    letter-spacing: 2px;
+    font-weight: 700;
+    color: var(--gold2);
+  }
+
+  .eco-value.green { color: var(--green); }
+  .eco-value.red   { color: var(--red); }
+  .eco-value.orange { color: var(--orange); }
+
+  /* GRID BOTS */
+  .bots-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  @media (max-width: 900px) {
+    .bots-grid { grid-template-columns: 1fr; }
+  }
+
+  /* BOT CARD */
+  .bot-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s;
+  }
+
+  .bot-card.hedge-active {
+    border-color: var(--orange);
+  }
+
+  .bot-card.offline {
+    border-color: var(--muted);
+    opacity: 0.5;
+  }
+
+  /* Accent line top */
+  .bot-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+
+  .bot-card.hedge-active::before {
+    background: var(--orange);
+    opacity: 1;
+  }
+
+  /* Card header */
+  .card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  .card-title {
+    font-family: var(--sans);
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--text);
+  }
+
+  .card-subtitle {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    margin-top: 2px;
+  }
+
+  .status-badge {
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 2px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .status-badge.ok      { background: rgba(34,197,94,0.15);  color: var(--green); border: 1px solid rgba(34,197,94,0.3); }
+  .status-badge.hedge   { background: rgba(249,115,22,0.15); color: var(--orange); border: 1px solid rgba(249,115,22,0.3); }
+  .status-badge.offline { background: rgba(74,80,96,0.2);    color: var(--muted); border: 1px solid var(--border); }
+
+  /* Stats row */
+  .stats-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .stat-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .stat-value {
+    font-family: var(--mono);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .stat-value.gold   { color: var(--gold2); }
+  .stat-value.green  { color: var(--green); }
+  .stat-value.orange { color: var(--orange); }
+
+  /* Section label */
+  .section-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
     display: flex;
     align-items: center;
     gap: 8px;
   }
-  .sym {
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* Hucha */
+  .hucha-block {
+    margin-bottom: 16px;
+  }
+
+  .hucha-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+
+  .hucha-label {
     font-family: var(--mono);
-    font-size: 10px;
-    padding: 2px 7px;
-    border-radius: 3px;
-    letter-spacing: 1px;
-    font-weight: 400;
-  }
-  .gold .sym { background: rgba(232,160,32,.12); color: var(--gold); }
-  .btc .sym { background: rgba(247,146,26,.12); color: var(--btc); }
-  .ciclos { font-size: 11px; color: var(--dim); }
-  .ciclos span { color: var(--text); font-weight: 700; }
-
-  /* OP ACTIVA */
-  .op-row {
-    background: var(--surface2);
-    border-radius: 5px;
-    padding: 8px 10px;
+    font-size: 12px;
+    color: var(--textdim);
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 8px;
-    font-size: 11px;
+    gap: 6px;
   }
-  .op-label { color: var(--dim); letter-spacing: 1px; text-transform: uppercase; }
-  .op-val { display: flex; gap: 6px; align-items: center; }
-  .badge {
-    font-size: 10px;
+
+  .hucha-amount {
+    font-family: var(--mono);
+    font-size: 14px;
     font-weight: 700;
-    padding: 2px 7px;
-    border-radius: 3px;
-    letter-spacing: 1px;
+    color: var(--gold2);
   }
-  .badge.buy { background: rgba(0,200,83,.12); color: var(--green); }
-  .badge.sell { background: rgba(255,23,68,.12); color: var(--red); }
-  .badge.n2 { background: rgba(255,193,7,.12); color: #ffc107; }
 
-  /* BLOQUE HEDGE / HUCHA */
-  .block {
-    background: var(--surface2);
-    border-radius: 5px;
-    padding: 10px 12px;
-    margin-bottom: 8px;
-  }
-  .block:last-child { margin-bottom: 0; }
-  .block-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
-  }
-  .block-title {
-    font-size: 10px;
-    color: var(--dim);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-  .block-pct {
-    font-family: var(--display);
-    font-size: 18px;
-    letter-spacing: 1px;
-  }
-  .gold .block-pct { color: var(--gold); }
-  .btc .block-pct { color: var(--btc); }
-  .pct-hucha { color: var(--green) !important; }
-
-  .bar {
-    height: 3px;
+  .hucha-bar-track {
+    height: 4px;
     background: var(--border);
     border-radius: 2px;
     overflow: hidden;
-    margin-bottom: 7px;
   }
-  .bar-fill {
-    height: 100%;
-    border-radius: 2px;
-    transition: width 1s ease;
-  }
-  .gold .bar-fill.hedge-fill { background: linear-gradient(90deg, #7a4a0a, var(--gold)); }
-  .btc .bar-fill.hedge-fill { background: linear-gradient(90deg, #7a4a0a, var(--btc)); }
-  .bar-fill.hucha-fill { background: linear-gradient(90deg, #004d26, var(--green)); }
 
-  .amounts {
+  .hucha-bar-fill {
+    height: 100%;
+    background: var(--gold);
+    border-radius: 2px;
+    transition: width 0.5s ease;
+  }
+
+  /* Hedge block */
+  .hedge-block {
+    margin-bottom: 14px;
+    padding: 12px;
+    background: rgba(249,115,22,0.05);
+    border: 1px solid rgba(249,115,22,0.2);
+  }
+
+  .hedge-header {
     display: flex;
     justify-content: space-between;
-    font-size: 11px;
-    color: var(--dim);
-  }
-  .amounts span { color: var(--text); }
-
-  .no-hedge {
-    font-size: 11px;
-    color: var(--green);
-    padding: 8px 0 0;
-    letter-spacing: 1px;
+    align-items: center;
+    margin-bottom: 10px;
   }
 
-  .solidario {
+  .hedge-title {
+    font-family: var(--mono);
     font-size: 11px;
-    color: var(--blue);
-    margin-top: 6px;
-    letter-spacing: .5px;
+    color: var(--orange);
+    font-weight: 700;
+    letter-spacing: 0.06em;
   }
 
-  footer {
+  .hedge-pct {
+    font-family: var(--mono);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--orange);
+  }
+
+  .hedge-details {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 10px;
+  }
+
+  .hedge-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .hedge-detail-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .hedge-detail-value {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  /* Progress bar hedge */
+  .progress-track {
+    height: 8px;
+    background: rgba(249,115,22,0.15);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--orange), var(--gold2));
+    border-radius: 2px;
+    transition: width 0.8s ease;
+    position: relative;
+  }
+
+  .progress-fill::after {
+    content: '';
+    position: absolute;
+    right: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: white;
+    opacity: 0.6;
+  }
+
+  /* Solidaridad */
+  .solidaridad-block {
+    margin-top: 14px;
+  }
+
+  .solid-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    margin-bottom: 6px;
+    background: rgba(201,168,76,0.05);
+    border: 1px solid rgba(201,168,76,0.15);
+    border-left: 2px solid var(--gold);
+  }
+
+  .solid-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--textdim);
+  }
+
+  .solid-arrow {
+    color: var(--gold);
+    font-size: 12px;
+  }
+
+  .solid-amount {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gold2);
+  }
+
+  .no-activity {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
     text-align: center;
+    padding: 12px;
+    border: 1px dashed var(--border);
+  }
+
+  /* Martingala indicator */
+  .mart-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 4px 8px;
+    border: 1px solid var(--border);
+    color: var(--textdim);
+    margin-top: 10px;
+  }
+
+  .mart-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--muted);
+  }
+
+  .mart-dot.active-buy  { background: var(--green); }
+  .mart-dot.active-sell { background: var(--red); }
+
+  /* Footer */
+  footer {
+    margin-top: 28px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer span {
+    font-family: var(--mono);
     font-size: 10px;
-    color: var(--dim);
-    padding: 16px 0 8px;
-    letter-spacing: 1px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .error-msg {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--red);
+    text-align: center;
+    padding: 40px;
   }
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="wrapper">
 
-  <div class="header">
-    <div class="title">PROYECTO <span>S.E.M.</span></div>
-    <div class="live">
-      <div class="dot" id="dot"></div>
-      <span id="liveText">EN VIVO</span>
+  <header>
+    <div class="logo-block">
+      <h1>PROYECTO S.E.M.</h1>
+      <p>SISTEMA DE TRADING ALGORÍTMICO · DEMO · VT MARKETS</p>
+    </div>
+    <div class="header-right">
+      <span class="live-dot" id="liveStatus">EN VIVO</span>
+      <span class="timestamp" id="lastUpdate">--:--:--</span>
+    </div>
+  </header>
+
+  <!-- ECOSYSTEM BAR -->
+  <div class="ecosystem-bar" id="ecoBar">
+    <div class="eco-stat">
+      <span class="eco-label">Bots activos</span>
+      <span class="eco-value" id="ecoActivos">—</span>
+    </div>
+    <div class="eco-stat">
+      <span class="eco-label">Ciclos totales</span>
+      <span class="eco-value" id="ecoCiclos">—</span>
+    </div>
+    <div class="eco-stat">
+      <span class="eco-label">Ganancia Real Total</span>
+      <span class="eco-value green" id="ecoGanancia">—</span>
+    </div>
+    <div class="eco-stat">
+      <span class="eco-label">Hedges activos</span>
+      <span class="eco-value orange" id="ecoHedges">—</span>
     </div>
   </div>
 
-  <div class="timestamp" id="ts">—</div>
-
-  <div class="tabs">
-    <div class="tab active" onclick="switchTab('demo')">DEMO</div>
-    <div class="tab" onclick="switchTab('real')">REAL</div>
+  <!-- BOTS GRID -->
+  <div class="bots-grid" id="botsGrid">
+    <div class="bot-card offline"><div class="no-activity">Cargando datos...</div></div>
+    <div class="bot-card offline"><div class="no-activity">Cargando datos...</div></div>
+    <div class="bot-card offline"><div class="no-activity">Cargando datos...</div></div>
+    <div class="bot-card offline"><div class="no-activity">Cargando datos...</div></div>
   </div>
 
-  <!-- DEMO -->
-  <div class="tab-content active" id="tab-demo">
-    <div id="demo-oro" class="card gold"></div>
-    <div id="demo-btc" class="card btc"></div>
-  </div>
+  <footer>
+    <span>PROYECTO S.E.M. · v1.3.2</span>
+    <span id="nextUpdate">Actualizando en 30s</span>
+  </footer>
 
-  <!-- REAL -->
-  <div class="tab-content" id="tab-real">
-    <div id="real-oro" class="card gold"></div>
-    <div id="real-btc" class="card btc"></div>
-  </div>
-
-  <footer>PROYECTO S.E.M. · Actualización cada 30s</footer>
 </div>
 
 <script>
-const DEMO_URL = 'https://raw.githubusercontent.com/curroparody/trading-dashboard/main/data_demo.json';
-const REAL_URL = 'https://raw.githubusercontent.com/curroparody/trading-dashboard/main/data_real.json';
+const DATA_URL = 'https://raw.githubusercontent.com/curroparody/trading-dashboard/main/data_demo.json';
 
-function switchTab(t) {
-  document.querySelectorAll('.tab').forEach((el,i)=>el.classList.toggle('active',['demo','real'][i]===t));
-  document.querySelectorAll('.tab-content').forEach(el=>el.classList.remove('active'));
-  document.getElementById('tab-'+t).classList.add('active');
+const BOT_META = {
+  oro:    { name: 'XAUUSD', label: 'ORO',    symbol: 'XAU/USD' },
+  btc:    { name: 'BTCUSD', label: 'BITCOIN', symbol: 'BTC/USD' },
+  eurusd: { name: 'EURUSD', label: 'EURO',   symbol: 'EUR/USD' },
+  usdjpy: { name: 'USDJPY', label: 'YEN',    symbol: 'USD/JPY' },
+};
+
+// Hucha_Aportado per compañero — leemos del JSON global
+// Cada bot tiene su ganancia_real. Para solidaridad usamos hucha_aportado si está disponible.
+
+let countdown = 30;
+let countdownInterval;
+
+function fmt(val, decimals=2) {
+  if(val === undefined || val === null) return '—';
+  return '$' + Number(val).toFixed(decimals);
 }
 
-function fmt(n){ return '$'+(+n||0).toFixed(2); }
-function pct(a,b){ return b>0?Math.min((a/b)*100,100).toFixed(1):0; }
-
-function renderBot(id, par, data){
-  const el = document.getElementById(id);
-  if(!data){ el.innerHTML='<div style="color:var(--dim);padding:10px;font-size:11px">Sin datos</div>'; return; }
-
-  const isGold = par==='oro';
-  const label = isGold ? 'ORO' : 'BITCOIN';
-  const sym   = isGold ? 'XAUUSD' : 'BTCUSD';
-
-  // Operacion activa
-  let opHTML = '<span style="color:var(--dim)">Sin operación</span>';
-  if(data.martingala && data.martingala.activa){
-    const d = (data.martingala.direccion||'').toLowerCase();
-    opHTML = `<span class="badge ${d}">${data.martingala.direccion}</span>
-      ${data.martingala.nivel>1?`<span class="badge n2">N${data.martingala.nivel}</span>`:''}
-      <span style="color:var(--dim);font-size:11px">${fmt(data.martingala.precio)}</span>`;
-  }
-
-  // Hedge
-  let hedgeHTML = '<div class="no-hedge">✓ Sin hedge activo</div>';
-  if(data.hedge && data.hedge.activo){
-    const p = pct(data.hedge.fondo, data.hedge.objetivo);
-    hedgeHTML = `<div class="block">
-      <div class="block-header">
-        <div class="block-title">🔴 HEDGE ${data.hedge.numero}</div>
-        <div class="block-pct">${p}%</div>
-      </div>
-      <div class="bar"><div class="bar-fill hedge-fill" style="width:${p}%"></div></div>
-      <div class="amounts">Fondo: <span>${fmt(data.hedge.fondo)}</span> &nbsp;/&nbsp; Objetivo: <span>${fmt(data.hedge.objetivo)}</span></div>
-    </div>`;
-  }
-
-  // Hucha
-  let huchaHTML = '';
-  if(data.hucha !== undefined){
-    const ph = pct(data.hucha, data.hucha_tope||30);
-    huchaHTML = `<div class="block">
-      <div class="block-header">
-        <div class="block-title">🐷 HUCHA</div>
-        <div class="block-pct pct-hucha">${ph}%</div>
-      </div>
-      <div class="bar"><div class="bar-fill hucha-fill" style="width:${ph}%"></div></div>
-      <div class="amounts">Acumulado: <span>${fmt(data.hucha)}</span> &nbsp;/&nbsp; Tope: <span>${fmt(data.hucha_tope||30)}</span></div>
-      ${data.hucha_aportado>0?`<div class="solidario">🤝 Solidario: ${fmt(data.hucha_aportado)}</div>`:''}
-    </div>`;
-  }
-
-  el.innerHTML = `
-    <div class="card-header">
-      <div class="card-name">${label} <span class="sym">${sym}</span></div>
-      <div class="ciclos">CICLOS <span>${data.ciclos||0}</span></div>
-    </div>
-    <div class="op-row">
-      <div class="op-label">Operación activa</div>
-      <div class="op-val">${opHTML}</div>
-    </div>
-    ${hedgeHTML}
-    ${huchaHTML}`;
+function pct(val) {
+  if(val === undefined || val === null) return '—';
+  return Number(val).toFixed(1) + '%';
 }
 
-async function fetchAndRender(){
+function renderBot(key, data, allData) {
+  const meta = BOT_META[key];
+  if(!data || Object.keys(data).length === 0) {
+    return `
+      <div class="bot-card offline">
+        <div class="card-header">
+          <div>
+            <div class="card-title">${meta.label}</div>
+            <div class="card-subtitle">${meta.symbol}</div>
+          </div>
+          <span class="status-badge offline">OFFLINE</span>
+        </div>
+        <div class="no-activity">Sin datos del bot</div>
+      </div>`;
+  }
+
+  const hedge = data.hedge || {};
+  const mart  = data.martingala || {};
+  const hasHedge = hedge.activo === true;
+  const hasMart  = mart.activa === true;
+
+  // Status badge
+  const badgeClass = hasHedge ? 'hedge' : 'ok';
+  const badgeText  = hasHedge ? '🔴 HEDGE' : '✅ ACTIVO';
+
+  // Card class
+  const cardClass = hasHedge ? 'bot-card hedge-active' : 'bot-card';
+
+  // Ciclos y ganancia real
+  const ciclos = data.ciclos !== undefined ? data.ciclos : '—';
+  const gr     = data.ganancia_real !== undefined ? fmt(data.ganancia_real) : '—';
+
+  // Martingala indicator
+  let martHtml = '';
+  if(hasMart) {
+    const dotClass = mart.direccion === 'BUY' ? 'mart-dot active-buy' : 'mart-dot active-sell';
+    martHtml = `
+      <div class="mart-indicator">
+        <span class="${dotClass}"></span>
+        ${mart.direccion} N${mart.nivel || 1} · ${mart.precio ? mart.precio.toFixed(2) : '—'}
+      </div>`;
+  }
+
+  // Hucha propia (leemos de GlobalVariable via JSON si está disponible)
+  const huchaPropia = data.hucha_propia !== undefined ? data.hucha_propia : null;
+  const huchaTope   = 30;
+  const huchaPct    = huchaPropia !== null ? Math.min((huchaPropia / huchaTope) * 100, 100) : 0;
+
+  let huchaHtml = '';
+  if(huchaPropia !== null) {
+    huchaHtml = `
+      <div class="hucha-block">
+        <div class="section-label">🐷 Hucha propia</div>
+        <div class="hucha-row">
+          <span class="hucha-label">Acumulado</span>
+          <span class="hucha-amount">${fmt(huchaPropia)} / $${huchaTope.toFixed(2)}</span>
+        </div>
+        <div class="hucha-bar-track">
+          <div class="hucha-bar-fill" style="width:${huchaPct.toFixed(1)}%"></div>
+        </div>
+      </div>`;
+  }
+
+  // Hedge propio
+  let hedgeHtml = '';
+  if(hasHedge) {
+    const hPct = hedge.pct !== undefined ? Math.min(hedge.pct, 100) : 0;
+    hedgeHtml = `
+      <div class="hedge-block">
+        <div class="hedge-header">
+          <span class="hedge-title">🔴 HEDGE #${hedge.numero || 1} ACTIVO</span>
+          <span class="hedge-pct">${pct(hedge.pct)}</span>
+        </div>
+        <div class="hedge-details">
+          <div class="hedge-detail">
+            <span class="hedge-detail-label">Objetivo</span>
+            <span class="hedge-detail-value">${fmt(hedge.objetivo)}</span>
+          </div>
+          <div class="hedge-detail">
+            <span class="hedge-detail-label">Fondo</span>
+            <span class="hedge-detail-value">${fmt(hedge.fondo)}</span>
+          </div>
+          <div class="hedge-detail">
+            <span class="hedge-detail-label">Restante</span>
+            <span class="hedge-detail-value">${hedge.objetivo && hedge.fondo ? fmt(hedge.objetivo - hedge.fondo) : '—'}</span>
+          </div>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" style="width:${hPct.toFixed(1)}%"></div>
+        </div>
+      </div>`;
+  }
+
+  // Solidaridad — qué hedges de compañeros están activos y cuánto ha aportado
+  const botKeys = Object.keys(BOT_META).filter(k => k !== key);
+  let solidItems = [];
+  for(const compKey of botKeys) {
+    const compData = allData[compKey];
+    if(!compData || Object.keys(compData).length === 0) continue;
+    const compHedge = compData.hedge || {};
+    if(compHedge.activo !== true) continue;
+    const compMeta = BOT_META[compKey];
+    // Aportado — usamos hucha_aportado si disponible, si no mostramos "contribuyendo"
+    const aportado = data.hucha_aportado !== undefined ? data.hucha_aportado : null;
+    solidItems.push({ meta: compMeta, aportado, pctHedge: compHedge.pct });
+  }
+
+  let solidHtml = '';
+  if(!hasHedge) {
+    solidHtml = `<div class="solidaridad-block"><div class="section-label">🤝 Solidaridad</div>`;
+    if(solidItems.length === 0) {
+      solidHtml += `<div class="no-activity">Sin hedges activos en el ecosistema</div>`;
+    } else {
+      for(const s of solidItems) {
+        solidHtml += `
+          <div class="solid-item">
+            <div class="solid-left">
+              <span class="solid-arrow">→</span>
+              ${s.meta.label} Hedge · ${pct(s.pctHedge)} completado
+            </div>
+            <span class="solid-amount">${s.aportado !== null ? fmt(s.aportado) : 'Contribuyendo'}</span>
+          </div>`;
+      }
+    }
+    solidHtml += `</div>`;
+  }
+
+  return `
+    <div class="${cardClass}">
+      <div class="card-header">
+        <div>
+          <div class="card-title">${meta.label}</div>
+          <div class="card-subtitle">${meta.symbol}</div>
+        </div>
+        <span class="status-badge ${badgeClass}">${badgeText}</span>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-item">
+          <span class="stat-label">Ciclos</span>
+          <span class="stat-value">${ciclos}</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Ganancia Real</span>
+          <span class="stat-value gold">${gr}</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Flotante</span>
+          <span class="stat-value ${data.flotante < 0 ? 'orange' : 'green'}">${fmt(data.flotante)}</span>
+        </div>
+      </div>
+
+      ${huchaHtml}
+      ${hedgeHtml}
+      ${solidHtml}
+      ${martHtml}
+    </div>`;
+}
+
+async function fetchData() {
   try {
-    const [rd, rr] = await Promise.all([
-      fetch(DEMO_URL+'?t='+Date.now()).catch(()=>null),
-      fetch(REAL_URL+'?t='+Date.now()).catch(()=>null)
-    ]);
+    const res = await fetch(DATA_URL + '?t=' + Date.now());
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
 
-    if(rd && rd.ok){
-      const d = await rd.json();
-      renderBot('demo-oro','oro',d.oro);
-      renderBot('demo-btc','btc',d.btc);
+    // Timestamp
+    document.getElementById('lastUpdate').textContent = data.timestamp || '—';
+
+    // Ecosystem
+    const eco = data.ecosistema || {};
+    document.getElementById('ecoActivos').textContent  = eco.bots_activos  ?? '—';
+    document.getElementById('ecoCiclos').textContent   = eco.ciclos_total  ?? '—';
+    document.getElementById('ecoGanancia').textContent = eco.ganancia_real_total !== undefined ? '$' + Number(eco.ganancia_real_total).toFixed(2) : '—';
+    document.getElementById('ecoHedges').textContent   = eco.hedges_activos ?? '—';
+
+    // Bots
+    const allData = {
+      oro:    data.oro    || {},
+      btc:    data.btc    || {},
+      eurusd: data.eurusd || {},
+      usdjpy: data.usdjpy || {},
+    };
+
+    let html = '';
+    for(const key of Object.keys(BOT_META)) {
+      html += renderBot(key, allData[key], allData);
     }
-    if(rr && rr.ok){
-      const r = await rr.json();
-      renderBot('real-oro','oro',r.oro);
-      renderBot('real-btc','btc',r.btc);
-    }
+    document.getElementById('botsGrid').innerHTML = html;
 
-    document.getElementById('dot').style.background='var(--green)';
-    document.getElementById('dot').style.boxShadow='0 0 8px var(--green)';
-    document.getElementById('liveText').textContent='EN VIVO';
-    document.getElementById('ts').textContent='Actualizado: '+new Date().toLocaleTimeString('es-ES');
+    // Live indicator
+    document.getElementById('liveStatus').style.color = 'var(--green)';
 
-  } catch(e){
-    document.getElementById('dot').style.background='#ffc107';
-    document.getElementById('liveText').textContent='SIN DATOS';
+  } catch(e) {
+    document.getElementById('liveStatus').style.color = 'var(--red)';
+    document.getElementById('liveStatus').textContent = 'ERROR';
+    console.error(e);
   }
+
+  // Reset countdown
+  countdown = 30;
 }
 
-fetchAndRender();
-setInterval(fetchAndRender, 30000);
+function startCountdown() {
+  clearInterval(countdownInterval);
+  countdownInterval = setInterval(() => {
+    countdown--;
+    document.getElementById('nextUpdate').textContent = `Actualizando en ${countdown}s`;
+    if(countdown <= 0) {
+      fetchData();
+    }
+  }, 1000);
+}
+
+// Init
+fetchData();
+startCountdown();
+setInterval(fetchData, 30000);
 </script>
 </body>
 </html>
