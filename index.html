@@ -567,7 +567,7 @@ const DATA_URL = 'https://raw.githubusercontent.com/curroparody/trading-dashboar
 const BOT_META = {
   oro:    { name: 'XAUUSD', label: 'ORO',    symbol: 'XAU/USD' },
   btc:    { name: 'BTCUSD', label: 'BITCOIN', symbol: 'BTC/USD' },
-  eurusd: { name: 'EURUSD', label: 'EURO',   symbol: 'EUR/USD' },
+  ger40:  { name: 'GER40',  label: 'DAX 40', symbol: 'GER40' },
   usdjpy: { name: 'USDJPY', label: 'YEN',    symbol: 'USD/JPY' },
 };
 
@@ -764,7 +764,7 @@ async function fetchData() {
     const allData = {
       oro:    data.oro    || {},
       btc:    data.btc    || {},
-      eurusd: data.eurusd || {},
+      ger40:  data.ger40  || {},
       usdjpy: data.usdjpy || {},
     };
 
