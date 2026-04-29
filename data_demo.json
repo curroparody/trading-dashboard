@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026.04.29 17:53:40",
+  "timestamp": "2026.04.29 17:54:11",
   "ecosistema": {
     "bots_activos": 4,
-    "balance_total": 4085.8,
-    "equity_total": 3838.67,
-    "flotante_total": -247.13,
-    "ciclos_total": 24,
+    "balance_total": 4089.92,
+    "equity_total": 3837.55,
+    "flotante_total": -252.37,
+    "ciclos_total": 25,
     "hedges_activos": 1,
-    "ganancia_real_total": 21.51
+    "ganancia_real_total": 21.61
   },
   "oro": {
-    "timestamp": "2026.04.29 18:53:31",
-    "balance": 1021.45,
-    "equity": 959.73,
-    "flotante": -61.72,
+    "timestamp": "2026.04.29 18:54:11",
+    "balance": 1022.48,
+    "equity": 959.49,
+    "flotante": -62.99,
     "ciclos": 20,
     "ganancia_real": 17.91,
     "hucha_propia": 0.0,
@@ -27,16 +27,16 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 52.14,
+      "objetivo": 52.12,
       "fondo": 7.17,
-      "pct": 13.7
+      "pct": 13.8
     }
   },
   "btc": {
-    "timestamp": "2026.04.29 18:53:33",
-    "balance": 1021.45,
-    "equity": 959.62,
-    "flotante": -61.83,
+    "timestamp": "2026.04.29 18:54:03",
+    "balance": 1022.48,
+    "equity": 959.35,
+    "flotante": -63.13,
     "ciclos": 2,
     "ganancia_real": 2.08,
     "hucha_propia": 0.69,
@@ -56,10 +56,10 @@
     }
   },
   "ger40": {
-    "timestamp": "2026.04.29 18:53:31",
-    "balance": 1021.45,
-    "equity": 959.73,
-    "flotante": -61.72,
+    "timestamp": "2026.04.29 18:54:11",
+    "balance": 1022.48,
+    "equity": 959.49,
+    "flotante": -62.99,
     "ciclos": 0,
     "ganancia_real": 0.0,
     "hucha_propia": 0.0,
@@ -79,19 +79,19 @@
     }
   },
   "usdjpy": {
-    "timestamp": "2026.04.29 18:53:35",
-    "balance": 1021.45,
-    "equity": 959.59,
-    "flotante": -61.86,
-    "ciclos": 2,
-    "ganancia_real": 1.52,
+    "timestamp": "2026.04.29 18:54:05",
+    "balance": 1022.48,
+    "equity": 959.22,
+    "flotante": -63.26,
+    "ciclos": 3,
+    "ganancia_real": 1.62,
     "hucha_propia": 0.51,
-    "hucha_aportado": 0.0,
+    "hucha_aportado": 0.93,
     "martingala": {
-      "activa": true,
-      "direccion": "BUY",
-      "nivel": 1,
-      "precio": 160.15
+      "activa": false,
+      "direccion": "",
+      "nivel": 0,
+      "precio": 0.0
     },
     "hedge": {
       "activo": false,
