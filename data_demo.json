@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026.04.29 14:50:56",
+  "timestamp": "2026.04.29 14:51:27",
   "ecosistema": {
     "bots_activos": 4,
-    "balance_total": 4075.16,
-    "equity_total": 4057.93,
-    "flotante_total": -17.23,
-    "ciclos_total": 20,
+    "balance_total": 4078.16,
+    "equity_total": 4057.87,
+    "flotante_total": -20.29,
+    "ciclos_total": 21,
     "hedges_activos": 0,
-    "ganancia_real_total": 17.85
+    "ganancia_real_total": 18.6
   },
   "oro": {
-    "timestamp": "2026.04.29 15:50:53",
-    "balance": 1018.79,
-    "equity": 1014.5,
-    "flotante": -4.29,
+    "timestamp": "2026.04.29 15:51:23",
+    "balance": 1019.79,
+    "equity": 1014.49,
+    "flotante": -5.3,
     "ciclos": 18,
     "ganancia_real": 16.19,
     "hucha_propia": 5.4,
@@ -33,10 +33,10 @@
     }
   },
   "btc": {
-    "timestamp": "2026.04.29 15:50:51",
-    "balance": 1018.79,
-    "equity": 1014.49,
-    "flotante": -4.3,
+    "timestamp": "2026.04.29 15:51:25",
+    "balance": 1019.79,
+    "equity": 1014.38,
+    "flotante": -5.41,
     "ciclos": 1,
     "ganancia_real": 0.89,
     "hucha_propia": 0.3,
@@ -56,10 +56,10 @@
     }
   },
   "eurusd": {
-    "timestamp": "2026.04.29 15:50:48",
+    "timestamp": "2026.04.29 15:51:19",
     "balance": 1018.79,
-    "equity": 1014.45,
-    "flotante": -4.34,
+    "equity": 1014.51,
+    "flotante": -4.28,
     "ciclos": 0,
     "ganancia_real": 0.0,
     "hucha_propia": 0.0,
@@ -79,19 +79,19 @@
     }
   },
   "usdjpy": {
-    "timestamp": "2026.04.29 15:50:53",
-    "balance": 1018.79,
+    "timestamp": "2026.04.29 15:51:23",
+    "balance": 1019.79,
     "equity": 1014.49,
-    "flotante": -4.3,
-    "ciclos": 1,
-    "ganancia_real": 0.77,
-    "hucha_propia": 0.26,
+    "flotante": -5.3,
+    "ciclos": 2,
+    "ganancia_real": 1.52,
+    "hucha_propia": 0.51,
     "hucha_aportado": 0.0,
     "martingala": {
-      "activa": true,
-      "direccion": "BUY",
-      "nivel": 1,
-      "precio": 159.78
+      "activa": false,
+      "direccion": "",
+      "nivel": 0,
+      "precio": 0.0
     },
     "hedge": {
       "activo": false,
