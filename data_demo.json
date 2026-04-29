@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026.04.29 17:52:05",
+  "timestamp": "2026.04.29 17:52:37",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 4085.8,
-    "equity_total": 3839.64,
-    "flotante_total": -246.16,
+    "equity_total": 3839.13,
+    "flotante_total": -246.67,
     "ciclos_total": 24,
     "hedges_activos": 1,
     "ganancia_real_total": 21.51
   },
   "oro": {
-    "timestamp": "2026.04.29 18:52:01",
+    "timestamp": "2026.04.29 18:52:31",
     "balance": 1021.45,
-    "equity": 959.95,
-    "flotante": -61.5,
+    "equity": 959.82,
+    "flotante": -61.63,
     "ciclos": 20,
     "ganancia_real": 17.91,
     "hucha_propia": 0.0,
@@ -27,16 +27,16 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 52.14,
+      "objetivo": 52.12,
       "fondo": 7.17,
-      "pct": 13.7
+      "pct": 13.8
     }
   },
   "btc": {
-    "timestamp": "2026.04.29 18:52:02",
+    "timestamp": "2026.04.29 18:52:32",
     "balance": 1021.45,
-    "equity": 959.92,
-    "flotante": -61.53,
+    "equity": 959.8,
+    "flotante": -61.65,
     "ciclos": 2,
     "ganancia_real": 2.08,
     "hucha_propia": 0.69,
@@ -56,19 +56,19 @@
     }
   },
   "ger40": {
-    "timestamp": "2026.04.29 18:52:01",
+    "timestamp": "2026.04.29 18:52:31",
     "balance": 1021.45,
-    "equity": 959.95,
-    "flotante": -61.5,
+    "equity": 959.82,
+    "flotante": -61.63,
     "ciclos": 0,
     "ganancia_real": 0.0,
     "hucha_propia": 0.0,
     "hucha_aportado": 0.0,
     "martingala": {
-      "activa": false,
-      "direccion": "",
-      "nivel": 0,
-      "precio": 0.0
+      "activa": true,
+      "direccion": "SELL",
+      "nivel": 1,
+      "precio": 23920.93
     },
     "hedge": {
       "activo": false,
@@ -79,10 +79,10 @@
     }
   },
   "usdjpy": {
-    "timestamp": "2026.04.29 18:52:03",
+    "timestamp": "2026.04.29 18:52:34",
     "balance": 1021.45,
-    "equity": 959.82,
-    "flotante": -61.63,
+    "equity": 959.69,
+    "flotante": -61.76,
     "ciclos": 2,
     "ganancia_real": 1.52,
     "hucha_propia": 0.51,
