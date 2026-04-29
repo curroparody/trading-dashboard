@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026.04.29 02:27:42",
+  "timestamp": "2026.04.29 02:28:13",
   "ecosistema": {
-    "bots_activos": 3,
-    "balance_total": 3012.45,
-    "equity_total": 3009.11,
-    "flotante_total": -3.34,
+    "bots_activos": 4,
+    "balance_total": 4016.6,
+    "equity_total": 4012.6,
+    "flotante_total": -4.0,
     "ciclos_total": 4,
     "hedges_activos": 0,
     "ganancia_real_total": 3.91
   },
   "oro": {
-    "timestamp": "2026.04.29 03:27:41",
+    "timestamp": "2026.04.29 03:28:11",
     "balance": 1004.15,
     "equity": 1003.01,
     "flotante": -1.14,
@@ -19,10 +19,10 @@
     "hucha_propia": 1.01,
     "hucha_aportado": 0.0,
     "martingala": {
-      "activa": false,
-      "direccion": "",
-      "nivel": 0,
-      "precio": 0.0
+      "activa": true,
+      "direccion": "SELL",
+      "nivel": 1,
+      "precio": 4600.3
     },
     "hedge": {
       "activo": false,
@@ -33,10 +33,10 @@
     }
   },
   "btc": {
-    "timestamp": "2026.04.29 03:27:38",
+    "timestamp": "2026.04.29 03:28:08",
     "balance": 1004.15,
-    "equity": 1003.1,
-    "flotante": -1.05,
+    "equity": 1003.16,
+    "flotante": -0.99,
     "ciclos": 1,
     "ganancia_real": 0.89,
     "hucha_propia": 0.3,
@@ -56,10 +56,10 @@
     }
   },
   "eurusd": {
-    "timestamp": "2026.04.29 03:27:42",
+    "timestamp": "2026.04.29 03:28:04",
     "balance": 1004.15,
-    "equity": 1003.0,
-    "flotante": -1.15,
+    "equity": 1003.27,
+    "flotante": -0.88,
     "ciclos": 0,
     "ganancia_real": 0.0,
     "hucha_propia": 0.0,
@@ -78,5 +78,27 @@
       "pct": 0.0
     }
   },
-  "usdjpy": {}
+  "usdjpy": {
+    "timestamp": "2026.04.29 03:28:03",
+    "balance": 1004.15,
+    "equity": 1003.16,
+    "flotante": -0.99,
+    "ciclos": 0,
+    "ganancia_real": 0.0,
+    "hucha_propia": 0.0,
+    "hucha_aportado": 0.0,
+    "martingala": {
+      "activa": true,
+      "direccion": "BUY",
+      "nivel": 1,
+      "precio": 159.6
+    },
+    "hedge": {
+      "activo": false,
+      "numero": 0,
+      "objetivo": 0.0,
+      "fondo": 0.0,
+      "pct": 0.0
+    }
+  }
 }
