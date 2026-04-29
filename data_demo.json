@@ -1,42 +1,42 @@
 {
-  "timestamp": "2026.04.29 17:55:45",
+  "timestamp": "2026.04.29 17:56:18",
   "ecosistema": {
     "bots_activos": 4,
-    "balance_total": 4089.92,
-    "equity_total": 3840.76,
-    "flotante_total": -249.16,
+    "balance_total": 4091.84,
+    "equity_total": 3844.27,
+    "flotante_total": -247.57,
     "ciclos_total": 25,
     "hedges_activos": 1,
     "ganancia_real_total": 21.61
   },
   "oro": {
-    "timestamp": "2026.04.29 18:55:41",
+    "timestamp": "2026.04.29 18:56:11",
     "balance": 1022.48,
-    "equity": 960.06,
-    "flotante": -62.42,
+    "equity": 961.12,
+    "flotante": -61.36,
     "ciclos": 20,
     "ganancia_real": 17.91,
     "hucha_propia": 0.0,
     "hucha_aportado": 0.0,
     "martingala": {
-      "activa": false,
-      "direccion": "",
-      "nivel": 0,
-      "precio": 0.0
+      "activa": true,
+      "direccion": "SELL",
+      "nivel": 1,
+      "precio": 4547.15
     },
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 52.14,
+      "objetivo": 52.12,
       "fondo": 7.17,
-      "pct": 13.7
+      "pct": 13.8
     }
   },
   "btc": {
-    "timestamp": "2026.04.29 18:55:43",
-    "balance": 1022.48,
-    "equity": 960.06,
-    "flotante": -62.42,
+    "timestamp": "2026.04.29 18:56:13",
+    "balance": 1023.44,
+    "equity": 961.04,
+    "flotante": -62.4,
     "ciclos": 2,
     "ganancia_real": 2.08,
     "hucha_propia": 0.69,
@@ -56,10 +56,10 @@
     }
   },
   "ger40": {
-    "timestamp": "2026.04.29 18:55:41",
+    "timestamp": "2026.04.29 18:56:11",
     "balance": 1022.48,
-    "equity": 960.13,
-    "flotante": -62.35,
+    "equity": 961.09,
+    "flotante": -61.39,
     "ciclos": 0,
     "ganancia_real": 0.0,
     "hucha_propia": 0.0,
@@ -79,10 +79,10 @@
     }
   },
   "usdjpy": {
-    "timestamp": "2026.04.29 18:55:45",
-    "balance": 1022.48,
-    "equity": 960.51,
-    "flotante": -61.97,
+    "timestamp": "2026.04.29 18:56:15",
+    "balance": 1023.44,
+    "equity": 961.02,
+    "flotante": -62.42,
     "ciclos": 3,
     "ganancia_real": 1.62,
     "hucha_propia": 0.51,
