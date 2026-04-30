@@ -486,6 +486,40 @@
   .mart-dot.active-buy  { background: var(--green); }
   .mart-dot.active-sell { background: var(--red); }
 
+  /* Toggle Demo / Real */
+  .mode-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-right: 12px;
+  }
+
+  .mode-btn {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 5px 14px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    transition: all 0.2s;
+  }
+
+  .mode-btn.active-demo {
+    background: var(--gold);
+    color: #000;
+  }
+
+  .mode-btn.active-real {
+    background: var(--green);
+    color: #000;
+  }
+
   /* Footer */
   footer {
     margin-top: 28px;
@@ -518,9 +552,13 @@
   <header>
     <div class="logo-block">
       <h1>PROYECTO S.E.M.</h1>
-      <p>SISTEMA DE TRADING ALGORÍTMICO · DEMO · VT MARKETS</p>
+      <p id="modeLabel">SISTEMA DE TRADING ALGORÍTMICO · DEMO · VT MARKETS</p>
     </div>
     <div class="header-right">
+      <div class="mode-toggle">
+        <button class="mode-btn active-demo" id="btnDemo" onclick="setMode('demo')">DEMO</button>
+        <button class="mode-btn" id="btnReal" onclick="setMode('real')">REAL</button>
+      </div>
       <span class="live-dot" id="liveStatus">EN VIVO</span>
       <span class="timestamp" id="lastUpdate">--:--:--</span>
     </div>
@@ -562,7 +600,32 @@
 </div>
 
 <script>
-const DATA_URL = 'https://raw.githubusercontent.com/curroparody/trading-dashboard/main/data_demo.json';
+const DATA_URL_DEMO = 'https://raw.githubusercontent.com/curroparody/trading-dashboard/main/data_demo.json';
+const DATA_URL_REAL = 'https://raw.githubusercontent.com/curroparody/trading-dashboard/main/data_real.json';
+
+let currentMode = 'demo';
+
+function setMode(mode) {
+  currentMode = mode;
+  const btnDemo = document.getElementById('btnDemo');
+  const btnReal = document.getElementById('btnReal');
+  const modeLabel = document.getElementById('modeLabel');
+
+  if(mode === 'demo') {
+    btnDemo.className = 'mode-btn active-demo';
+    btnReal.className = 'mode-btn';
+    modeLabel.textContent = 'SISTEMA DE TRADING ALGORÍTMICO · DEMO · VT MARKETS';
+  } else {
+    btnDemo.className = 'mode-btn';
+    btnReal.className = 'mode-btn active-real';
+    modeLabel.textContent = 'SISTEMA DE TRADING ALGORÍTMICO · REAL · VT MARKETS';
+  }
+  fetchData();
+}
+
+function getDataUrl() {
+  return currentMode === 'real' ? DATA_URL_REAL : DATA_URL_DEMO;
+}
 
 const BOT_META = {
   oro:    { name: 'XAUUSD', label: 'ORO',    symbol: 'XAU/USD' },
@@ -754,7 +817,7 @@ function renderBot(key, data, allData) {
 
 async function fetchData() {
   try {
-    const res = await fetch(DATA_URL + '?t=' + Date.now());
+    const res = await fetch(getDataUrl() + '?t=' + Date.now());
     if(!res.ok) throw new Error('HTTP ' + res.status);
     const data = await res.json();
 
