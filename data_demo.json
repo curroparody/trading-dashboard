@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026.04.30 21:24:36",
+  "timestamp": "2026.04.30 21:25:08",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 4276.2,
-    "equity_total": 3516.03,
-    "flotante_total": -760.17,
+    "equity_total": 3516.39,
+    "flotante_total": -759.81,
     "ciclos_total": 73,
     "hedges_activos": 3,
     "ganancia_real_total": 26.87
   },
   "oro": {
-    "timestamp": "2026.04.30 22:24:36",
+    "timestamp": "2026.04.30 22:25:06",
     "balance": 1069.05,
-    "equity": 878.92,
-    "flotante": -190.13,
+    "equity": 879.13,
+    "flotante": -189.92,
     "ciclos": 49,
     "ganancia_real": 21.14,
     "hucha_propia": 0.0,
@@ -27,16 +27,16 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 56.51,
+      "objetivo": 56.49,
       "fondo": 39.25,
       "pct": 69.5
     }
   },
   "btc": {
-    "timestamp": "2026.04.30 22:24:31",
+    "timestamp": "2026.04.30 22:25:02",
     "balance": 1069.05,
-    "equity": 879.04,
-    "flotante": -190.01,
+    "equity": 879.12,
+    "flotante": -189.93,
     "ciclos": 4,
     "ganancia_real": 2.29,
     "hucha_propia": 0.0,
@@ -56,7 +56,7 @@
     }
   },
   "ger40": {
-    "timestamp": "2026.04.30 22:24:27",
+    "timestamp": "2026.04.30 22:25:04",
     "balance": 1069.05,
     "equity": 879.01,
     "flotante": -190.04,
@@ -73,16 +73,16 @@
     "hedge": {
       "activo": true,
       "numero": 2,
-      "objetivo": 5.59,
+      "objetivo": 5.58,
       "fondo": 3.12,
-      "pct": 55.9
+      "pct": 56.0
     }
   },
   "usdjpy": {
-    "timestamp": "2026.04.30 22:24:29",
+    "timestamp": "2026.04.30 22:25:00",
     "balance": 1069.05,
-    "equity": 879.06,
-    "flotante": -189.99,
+    "equity": 879.13,
+    "flotante": -189.92,
     "ciclos": 12,
     "ganancia_real": 2.53,
     "hucha_propia": 0.0,
@@ -96,9 +96,9 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 32.68,
+      "objetivo": 32.67,
       "fondo": 5.96,
-      "pct": 18.2
+      "pct": 18.3
     }
   }
 }
