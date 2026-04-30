@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026.04.30 03:53:47",
+  "timestamp": "2026.04.30 03:54:18",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 4119.84,
-    "equity_total": 3754.02,
-    "flotante_total": -365.82,
+    "equity_total": 3714.73,
+    "flotante_total": -405.11,
     "ciclos_total": 35,
     "hedges_activos": 2,
     "ganancia_real_total": 22.67
   },
   "oro": {
-    "timestamp": "2026.04.30 04:53:45",
+    "timestamp": "2026.04.30 04:54:15",
     "balance": 1029.96,
-    "equity": 938.49,
-    "flotante": -91.47,
+    "equity": 928.47,
+    "flotante": -101.49,
     "ciclos": 27,
     "ganancia_real": 18.66,
     "hucha_propia": 0.0,
@@ -27,16 +27,16 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 56.51,
+      "objetivo": 56.49,
       "fondo": 14.84,
       "pct": 26.3
     }
   },
   "btc": {
-    "timestamp": "2026.04.30 04:53:45",
+    "timestamp": "2026.04.30 04:54:08",
     "balance": 1029.96,
-    "equity": 938.49,
-    "flotante": -91.47,
+    "equity": 929.32,
+    "flotante": -100.64,
     "ciclos": 3,
     "ganancia_real": 2.19,
     "hucha_propia": 0.0,
@@ -56,19 +56,19 @@
     }
   },
   "ger40": {
-    "timestamp": "2026.04.30 04:53:42",
+    "timestamp": "2026.04.30 04:54:11",
     "balance": 1029.96,
-    "equity": 938.43,
-    "flotante": -91.53,
+    "equity": 929.22,
+    "flotante": -100.74,
     "ciclos": 0,
     "ganancia_real": 0.0,
     "hucha_propia": 0.0,
     "hucha_aportado": 0.0,
     "martingala": {
-      "activa": true,
-      "direccion": "SELL",
-      "nivel": 2,
-      "precio": 23889.49
+      "activa": false,
+      "direccion": "",
+      "nivel": 0,
+      "precio": 0.0
     },
     "hedge": {
       "activo": true,
@@ -79,10 +79,10 @@
     }
   },
   "usdjpy": {
-    "timestamp": "2026.04.30 04:53:46",
+    "timestamp": "2026.04.30 04:54:16",
     "balance": 1029.96,
-    "equity": 938.61,
-    "flotante": -91.35,
+    "equity": 927.72,
+    "flotante": -102.24,
     "ciclos": 5,
     "ganancia_real": 1.82,
     "hucha_propia": 0.0,
