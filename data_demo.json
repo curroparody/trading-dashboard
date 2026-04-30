@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026.04.30 16:39:12",
+  "timestamp": "2026.04.30 16:39:43",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 4220.44,
-    "equity_total": 3479.89,
-    "flotante_total": -740.55,
+    "equity_total": 3480.92,
+    "flotante_total": -739.52,
     "ciclos_total": 60,
     "hedges_activos": 3,
     "ganancia_real_total": 25.78
   },
   "oro": {
-    "timestamp": "2026.04.30 17:39:11",
+    "timestamp": "2026.04.30 17:39:41",
     "balance": 1055.11,
-    "equity": 869.92,
-    "flotante": -185.19,
+    "equity": 870.26,
+    "flotante": -184.85,
     "ciclos": 41,
     "ganancia_real": 20.47,
     "hucha_propia": 0.0,
@@ -33,10 +33,10 @@
     }
   },
   "btc": {
-    "timestamp": "2026.04.30 17:39:06",
+    "timestamp": "2026.04.30 17:39:36",
     "balance": 1055.11,
-    "equity": 870.07,
-    "flotante": -185.04,
+    "equity": 870.15,
+    "flotante": -184.96,
     "ciclos": 4,
     "ganancia_real": 2.29,
     "hucha_propia": 0.0,
@@ -56,10 +56,10 @@
     }
   },
   "ger40": {
-    "timestamp": "2026.04.30 17:39:10",
+    "timestamp": "2026.04.30 17:39:41",
     "balance": 1055.11,
-    "equity": 869.94,
-    "flotante": -185.17,
+    "equity": 870.26,
+    "flotante": -184.85,
     "ciclos": 6,
     "ganancia_real": 0.75,
     "hucha_propia": 0.0,
@@ -79,26 +79,26 @@
     }
   },
   "usdjpy": {
-    "timestamp": "2026.04.30 17:39:09",
+    "timestamp": "2026.04.30 17:39:39",
     "balance": 1055.11,
-    "equity": 869.96,
-    "flotante": -185.15,
+    "equity": 870.25,
+    "flotante": -184.86,
     "ciclos": 9,
     "ganancia_real": 2.27,
     "hucha_propia": 0.0,
     "hucha_aportado": 0.0,
     "martingala": {
-      "activa": false,
-      "direccion": "",
-      "nivel": 0,
-      "precio": 0.0
+      "activa": true,
+      "direccion": "SELL",
+      "nivel": 1,
+      "precio": 156.7
     },
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 32.64,
+      "objetivo": 32.68,
       "fondo": 3.09,
-      "pct": 9.5
+      "pct": 9.4
     }
   }
 }
