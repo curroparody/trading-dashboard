@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026.04.30 17:53:49",
+  "timestamp": "2026.04.30 17:54:20",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 4243.04,
-    "equity_total": 3489.86,
-    "flotante_total": -753.18,
+    "equity_total": 3487.62,
+    "flotante_total": -755.42,
     "ciclos_total": 65,
     "hedges_activos": 3,
     "ganancia_real_total": 26.34
   },
   "oro": {
-    "timestamp": "2026.04.30 18:53:41",
+    "timestamp": "2026.04.30 18:54:11",
     "balance": 1060.76,
-    "equity": 872.41,
-    "flotante": -188.35,
+    "equity": 871.8,
+    "flotante": -188.96,
     "ciclos": 45,
     "ganancia_real": 20.93,
     "hucha_propia": 0.0,
@@ -33,10 +33,10 @@
     }
   },
   "btc": {
-    "timestamp": "2026.04.30 18:53:49",
+    "timestamp": "2026.04.30 18:54:19",
     "balance": 1060.76,
-    "equity": 872.46,
-    "flotante": -188.3,
+    "equity": 871.84,
+    "flotante": -188.92,
     "ciclos": 4,
     "ganancia_real": 2.29,
     "hucha_propia": 0.0,
@@ -56,19 +56,19 @@
     }
   },
   "ger40": {
-    "timestamp": "2026.04.30 18:53:41",
+    "timestamp": "2026.04.30 18:54:12",
     "balance": 1060.76,
-    "equity": 872.5,
-    "flotante": -188.26,
+    "equity": 872.06,
+    "flotante": -188.7,
     "ciclos": 6,
     "ganancia_real": 0.75,
     "hucha_propia": 0.0,
     "hucha_aportado": 0.0,
     "martingala": {
-      "activa": false,
-      "direccion": "",
-      "nivel": 0,
-      "precio": 0.0
+      "activa": true,
+      "direccion": "BUY",
+      "nivel": 1,
+      "precio": 24253.64
     },
     "hedge": {
       "activo": true,
@@ -79,10 +79,10 @@
     }
   },
   "usdjpy": {
-    "timestamp": "2026.04.30 18:53:42",
+    "timestamp": "2026.04.30 18:54:12",
     "balance": 1060.76,
-    "equity": 872.49,
-    "flotante": -188.27,
+    "equity": 871.92,
+    "flotante": -188.84,
     "ciclos": 10,
     "ganancia_real": 2.37,
     "hucha_propia": 0.0,
@@ -96,7 +96,7 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 32.62,
+      "objetivo": 32.67,
       "fondo": 3.99,
       "pct": 12.2
     }
