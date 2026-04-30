@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026.04.30 21:55:57",
+  "timestamp": "2026.04.30 21:56:28",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 4276.2,
-    "equity_total": 3515.74,
-    "flotante_total": -760.46,
+    "equity_total": 3510.32,
+    "flotante_total": -765.88,
     "ciclos_total": 73,
     "hedges_activos": 3,
     "ganancia_real_total": 26.87
   },
   "oro": {
-    "timestamp": "2026.04.30 22:55:57",
+    "timestamp": "2026.04.30 22:56:27",
     "balance": 1069.05,
-    "equity": 878.49,
-    "flotante": -190.56,
+    "equity": 877.51,
+    "flotante": -191.54,
     "ciclos": 49,
     "ganancia_real": 21.14,
     "hucha_propia": 0.0,
@@ -33,10 +33,10 @@
     }
   },
   "btc": {
-    "timestamp": "2026.04.30 22:55:49",
+    "timestamp": "2026.04.30 22:56:20",
     "balance": 1069.05,
-    "equity": 879.28,
-    "flotante": -189.77,
+    "equity": 877.66,
+    "flotante": -191.39,
     "ciclos": 4,
     "ganancia_real": 2.29,
     "hucha_propia": 0.0,
@@ -56,10 +56,10 @@
     }
   },
   "ger40": {
-    "timestamp": "2026.04.30 22:55:50",
+    "timestamp": "2026.04.30 22:56:16",
     "balance": 1069.05,
-    "equity": 879.07,
-    "flotante": -189.98,
+    "equity": 877.54,
+    "flotante": -191.51,
     "ciclos": 8,
     "ganancia_real": 0.91,
     "hucha_propia": 0.0,
@@ -79,10 +79,10 @@
     }
   },
   "usdjpy": {
-    "timestamp": "2026.04.30 22:55:52",
+    "timestamp": "2026.04.30 22:56:23",
     "balance": 1069.05,
-    "equity": 878.9,
-    "flotante": -190.15,
+    "equity": 877.61,
+    "flotante": -191.44,
     "ciclos": 12,
     "ganancia_real": 2.53,
     "hucha_propia": 0.0,
@@ -96,7 +96,7 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 32.66,
+      "objetivo": 32.67,
       "fondo": 5.96,
       "pct": 18.3
     }
