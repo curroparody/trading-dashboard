@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026.04.30 10:38:32",
+  "timestamp": "2026.04.30 10:39:03",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 4162.72,
-    "equity_total": 3673.14,
-    "flotante_total": -489.58,
+    "equity_total": 3656.5,
+    "flotante_total": -506.22,
     "ciclos_total": 43,
     "hedges_activos": 2,
     "ganancia_real_total": 23.75
   },
   "oro": {
-    "timestamp": "2026.04.30 11:38:27",
+    "timestamp": "2026.04.30 11:38:57",
     "balance": 1040.68,
-    "equity": 918.3,
-    "flotante": -122.38,
+    "equity": 914.68,
+    "flotante": -126.0,
     "ciclos": 32,
     "ganancia_real": 19.42,
     "hucha_propia": 0.0,
@@ -27,16 +27,16 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 56.51,
+      "objetivo": 56.49,
       "fondo": 21.68,
       "pct": 38.4
     }
   },
   "btc": {
-    "timestamp": "2026.04.30 11:38:27",
+    "timestamp": "2026.04.30 11:39:00",
     "balance": 1040.68,
-    "equity": 918.29,
-    "flotante": -122.39,
+    "equity": 914.06,
+    "flotante": -126.62,
     "ciclos": 4,
     "ganancia_real": 2.29,
     "hucha_propia": 0.0,
@@ -56,10 +56,10 @@
     }
   },
   "ger40": {
-    "timestamp": "2026.04.30 11:38:28",
+    "timestamp": "2026.04.30 11:38:58",
     "balance": 1040.68,
-    "equity": 918.26,
-    "flotante": -122.42,
+    "equity": 914.21,
+    "flotante": -126.47,
     "ciclos": 1,
     "ganancia_real": 0.12,
     "hucha_propia": 0.0,
@@ -73,16 +73,16 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 4.88,
+      "objetivo": 4.87,
       "fondo": 1.05,
       "pct": 21.6
     }
   },
   "usdjpy": {
-    "timestamp": "2026.04.30 11:38:28",
+    "timestamp": "2026.04.30 11:38:58",
     "balance": 1040.68,
-    "equity": 918.29,
-    "flotante": -122.39,
+    "equity": 913.55,
+    "flotante": -127.13,
     "ciclos": 6,
     "ganancia_real": 1.92,
     "hucha_propia": 0.0,
@@ -90,7 +90,7 @@
     "martingala": {
       "activa": true,
       "direccion": "BUY",
-      "nivel": 1,
+      "nivel": 2,
       "precio": 160.63
     },
     "hedge": {
