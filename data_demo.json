@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026.04.30 18:30:48",
+  "timestamp": "2026.04.30 18:31:20",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 4251.56,
-    "equity_total": 3470.36,
-    "flotante_total": -781.2,
+    "equity_total": 3467.54,
+    "flotante_total": -784.02,
     "ciclos_total": 67,
     "hedges_activos": 3,
     "ganancia_real_total": 26.56
   },
   "oro": {
-    "timestamp": "2026.04.30 19:30:43",
+    "timestamp": "2026.04.30 19:31:13",
     "balance": 1062.89,
-    "equity": 867.97,
-    "flotante": -194.92,
+    "equity": 866.66,
+    "flotante": -196.23,
     "ciclos": 45,
     "ganancia_real": 20.93,
     "hucha_propia": 0.0,
@@ -27,16 +27,16 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 56.49,
+      "objetivo": 56.51,
       "fondo": 35.29,
       "pct": 62.5
     }
   },
   "btc": {
-    "timestamp": "2026.04.30 19:30:40",
+    "timestamp": "2026.04.30 19:31:13",
     "balance": 1062.89,
-    "equity": 867.89,
-    "flotante": -195.0,
+    "equity": 866.7,
+    "flotante": -196.19,
     "ciclos": 4,
     "ganancia_real": 2.29,
     "hucha_propia": 0.0,
@@ -56,19 +56,19 @@
     }
   },
   "ger40": {
-    "timestamp": "2026.04.30 19:30:47",
+    "timestamp": "2026.04.30 19:31:17",
     "balance": 1062.89,
-    "equity": 867.22,
-    "flotante": -195.67,
+    "equity": 867.41,
+    "flotante": -195.48,
     "ciclos": 7,
     "ganancia_real": 0.86,
     "hucha_propia": 0.0,
     "hucha_aportado": 0.0,
     "martingala": {
-      "activa": false,
-      "direccion": "",
-      "nivel": 0,
-      "precio": 0.0
+      "activa": true,
+      "direccion": "BUY",
+      "nivel": 1,
+      "precio": 24263.64
     },
     "hedge": {
       "activo": true,
@@ -79,10 +79,10 @@
     }
   },
   "usdjpy": {
-    "timestamp": "2026.04.30 19:30:46",
+    "timestamp": "2026.04.30 19:31:16",
     "balance": 1062.89,
-    "equity": 867.28,
-    "flotante": -195.61,
+    "equity": 866.77,
+    "flotante": -196.12,
     "ciclos": 11,
     "ganancia_real": 2.48,
     "hucha_propia": 0.0,
@@ -96,9 +96,9 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 32.62,
+      "objetivo": 32.67,
       "fondo": 5.01,
-      "pct": 15.4
+      "pct": 15.3
     }
   }
 }
