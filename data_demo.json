@@ -1,42 +1,42 @@
 {
-  "timestamp": "2026.04.30 18:07:53",
+  "timestamp": "2026.04.30 18:08:24",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 4251.56,
-    "equity_total": 3501.13,
-    "flotante_total": -750.43,
+    "equity_total": 3502.21,
+    "flotante_total": -749.35,
     "ciclos_total": 67,
     "hedges_activos": 3,
     "ganancia_real_total": 26.56
   },
   "oro": {
-    "timestamp": "2026.04.30 19:07:51",
+    "timestamp": "2026.04.30 19:08:21",
     "balance": 1062.89,
-    "equity": 875.33,
-    "flotante": -187.56,
+    "equity": 875.52,
+    "flotante": -187.37,
     "ciclos": 45,
     "ganancia_real": 20.93,
     "hucha_propia": 0.0,
     "hucha_aportado": 0.0,
     "martingala": {
-      "activa": false,
-      "direccion": "",
-      "nivel": 0,
-      "precio": 0.0
+      "activa": true,
+      "direccion": "BUY",
+      "nivel": 1,
+      "precio": 4616.63
     },
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 56.49,
+      "objetivo": 56.51,
       "fondo": 35.29,
       "pct": 62.5
     }
   },
   "btc": {
-    "timestamp": "2026.04.30 19:07:45",
+    "timestamp": "2026.04.30 19:08:17",
     "balance": 1062.89,
-    "equity": 875.27,
-    "flotante": -187.62,
+    "equity": 875.6,
+    "flotante": -187.29,
     "ciclos": 4,
     "ganancia_real": 2.29,
     "hucha_propia": 0.0,
@@ -56,10 +56,10 @@
     }
   },
   "ger40": {
-    "timestamp": "2026.04.30 19:07:53",
+    "timestamp": "2026.04.30 19:08:14",
     "balance": 1062.89,
-    "equity": 875.29,
-    "flotante": -187.6,
+    "equity": 875.53,
+    "flotante": -187.36,
     "ciclos": 7,
     "ganancia_real": 0.86,
     "hucha_propia": 0.0,
@@ -79,10 +79,10 @@
     }
   },
   "usdjpy": {
-    "timestamp": "2026.04.30 19:07:45",
+    "timestamp": "2026.04.30 19:08:15",
     "balance": 1062.89,
-    "equity": 875.24,
-    "flotante": -187.65,
+    "equity": 875.56,
+    "flotante": -187.33,
     "ciclos": 11,
     "ganancia_real": 2.48,
     "hucha_propia": 0.0,
@@ -96,9 +96,9 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 32.69,
+      "objetivo": 32.65,
       "fondo": 5.01,
-      "pct": 15.3
+      "pct": 15.4
     }
   }
 }
