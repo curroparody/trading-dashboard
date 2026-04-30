@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026.04.30 15:27:35",
+  "timestamp": "2026.04.30 15:28:06",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 4206.28,
-    "equity_total": 3468.75,
-    "flotante_total": -737.53,
+    "equity_total": 3466.47,
+    "flotante_total": -739.81,
     "ciclos_total": 57,
     "hedges_activos": 3,
     "ganancia_real_total": 25.41
   },
   "oro": {
-    "timestamp": "2026.04.30 16:27:33",
+    "timestamp": "2026.04.30 16:28:03",
     "balance": 1051.57,
-    "equity": 867.18,
-    "flotante": -184.39,
+    "equity": 866.59,
+    "flotante": -184.98,
     "ciclos": 40,
     "ganancia_real": 20.33,
     "hucha_propia": 0.0,
@@ -27,16 +27,16 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 56.49,
+      "objetivo": 56.51,
       "fondo": 29.93,
       "pct": 53.0
     }
   },
   "btc": {
-    "timestamp": "2026.04.30 16:27:34",
+    "timestamp": "2026.04.30 16:28:04",
     "balance": 1051.57,
-    "equity": 867.2,
-    "flotante": -184.37,
+    "equity": 866.65,
+    "flotante": -184.92,
     "ciclos": 4,
     "ganancia_real": 2.29,
     "hucha_propia": 0.0,
@@ -56,10 +56,10 @@
     }
   },
   "ger40": {
-    "timestamp": "2026.04.30 16:27:33",
+    "timestamp": "2026.04.30 16:28:04",
     "balance": 1051.57,
-    "equity": 867.16,
-    "flotante": -184.41,
+    "equity": 866.58,
+    "flotante": -184.99,
     "ciclos": 6,
     "ganancia_real": 0.75,
     "hucha_propia": 0.0,
@@ -79,19 +79,19 @@
     }
   },
   "usdjpy": {
-    "timestamp": "2026.04.30 16:27:35",
+    "timestamp": "2026.04.30 16:28:05",
     "balance": 1051.57,
-    "equity": 867.21,
-    "flotante": -184.36,
+    "equity": 866.65,
+    "flotante": -184.92,
     "ciclos": 7,
     "ganancia_real": 2.04,
     "hucha_propia": 0.0,
     "hucha_aportado": 0.0,
     "martingala": {
-      "activa": false,
-      "direccion": "",
-      "nivel": 0,
-      "precio": 0.0
+      "activa": true,
+      "direccion": "SELL",
+      "nivel": 1,
+      "precio": 156.7
     },
     "hedge": {
       "activo": true,
