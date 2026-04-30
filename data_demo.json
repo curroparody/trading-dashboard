@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026.04.30 16:10:58",
+  "timestamp": "2026.04.30 16:11:29",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 4210.92,
-    "equity_total": 3439.92,
-    "flotante_total": -771.0,
+    "equity_total": 3438.48,
+    "flotante_total": -772.44,
     "ciclos_total": 58,
     "hedges_activos": 3,
     "ganancia_real_total": 25.53
   },
   "oro": {
-    "timestamp": "2026.04.30 17:10:51",
+    "timestamp": "2026.04.30 17:11:21",
     "balance": 1052.73,
-    "equity": 859.56,
-    "flotante": -193.17,
+    "equity": 859.81,
+    "flotante": -192.92,
     "ciclos": 40,
     "ganancia_real": 20.33,
     "hucha_propia": 0.0,
@@ -27,16 +27,16 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 56.51,
+      "objetivo": 56.49,
       "fondo": 29.93,
       "pct": 53.0
     }
   },
   "btc": {
-    "timestamp": "2026.04.30 17:10:56",
+    "timestamp": "2026.04.30 17:11:26",
     "balance": 1052.73,
-    "equity": 860.18,
-    "flotante": -192.55,
+    "equity": 859.72,
+    "flotante": -193.01,
     "ciclos": 4,
     "ganancia_real": 2.29,
     "hucha_propia": 0.0,
@@ -56,10 +56,10 @@
     }
   },
   "ger40": {
-    "timestamp": "2026.04.30 17:10:54",
+    "timestamp": "2026.04.30 17:11:25",
     "balance": 1052.73,
-    "equity": 860.42,
-    "flotante": -192.31,
+    "equity": 859.29,
+    "flotante": -193.44,
     "ciclos": 6,
     "ganancia_real": 0.75,
     "hucha_propia": 0.0,
@@ -73,16 +73,16 @@
     "hedge": {
       "activo": true,
       "numero": 2,
-      "objetivo": 5.57,
+      "objetivo": 5.56,
       "fondo": 1.11,
       "pct": 19.9
     }
   },
   "usdjpy": {
-    "timestamp": "2026.04.30 17:10:52",
+    "timestamp": "2026.04.30 17:11:22",
     "balance": 1052.73,
-    "equity": 859.76,
-    "flotante": -192.97,
+    "equity": 859.66,
+    "flotante": -193.07,
     "ciclos": 8,
     "ganancia_real": 2.16,
     "hucha_propia": 0.0,
@@ -96,7 +96,7 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 32.62,
+      "objetivo": 32.61,
       "fondo": 2.12,
       "pct": 6.5
     }
