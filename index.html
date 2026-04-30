@@ -555,7 +555,7 @@
   </div>
 
   <footer>
-    <span>PROYECTO S.E.M. · v1.3.2</span>
+    <span>PROYECTO S.E.M. · v1.3.6</span>
     <span id="nextUpdate">Actualizando en 30s</span>
   </footer>
 
@@ -680,7 +680,7 @@ function renderBot(key, data, allData) {
       </div>`;
   }
 
-  // Solidaridad — qué hedges de compañeros están activos
+  // Solidaridad — qué hedges de compañeros están activos, ordenados por fecha (más antiguo primero)
   const botKeys = Object.keys(BOT_META).filter(k => k !== key);
   let solidItems = [];
   for(const compKey of botKeys) {
@@ -689,12 +689,14 @@ function renderBot(key, data, allData) {
     const compHedge = compData.hedge || {};
     if(compHedge.activo !== true) continue;
     const compMeta = BOT_META[compKey];
-    solidItems.push({ meta: compMeta, pctHedge: compHedge.pct });
+    solidItems.push({ meta: compMeta, pctHedge: compHedge.pct, fecha: compHedge.fecha_activacion || 0 });
   }
+  // Ordenar por fecha de activación ascendente (más antiguo primero)
+  solidItems.sort((a, b) => a.fecha - b.fecha);
 
   // hucha_aportado es el total solidario acumulado por este bot
   const totalAportado = data.hucha_aportado !== undefined && data.hucha_aportado > 0
-    ? fmt(data.hucha_aportado) : null;
+    ? data.hucha_aportado : null;
 
   let solidHtml = '';
   if(!hasHedge) {
@@ -702,15 +704,21 @@ function renderBot(key, data, allData) {
     if(solidItems.length === 0) {
       solidHtml += `<div class="no-activity">Sin hedges activos en el ecosistema</div>`;
     } else {
-      for(const s of solidItems) {
+      for(let i = 0; i < solidItems.length; i++) {
+        const s = solidItems[i];
+        const isDestino = i === 0; // El más antiguo es el destino real de las aportaciones
         solidHtml += `
-          <div class="solid-item">
+          <div class="solid-item" style="${isDestino ? 'opacity:1' : 'opacity:0.4'}">
             <div class="solid-left">
-              <span class="solid-arrow">→</span>
+              <span class="solid-arrow">${isDestino ? '→' : '·'}</span>
               ${s.meta.label} Hedge · ${pct(s.pctHedge)} completado
+              ${isDestino ? '<span style="font-size:10px;color:var(--gold);margin-left:6px">DESTINO</span>' : ''}
             </div>
-            <span class="solid-amount">${totalAportado || 'Contribuyendo'}</span>
+            <span class="solid-amount">${isDestino && totalAportado ? fmt(totalAportado) : ''}</span>
           </div>`;
+      }
+      if(totalAportado) {
+        solidHtml += `<div style="font-family:var(--mono);font-size:10px;color:var(--muted);margin-top:6px">Total aportado al ecosistema: ${fmt(totalAportado)}</div>`;
       }
     }
     solidHtml += `</div>`;
