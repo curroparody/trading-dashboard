@@ -1,41 +1,41 @@
 {
-  "timestamp": "2026.05.01 12:53:05",
+  "timestamp": "2026.05.01 12:53:36",
   "ecosistema": {
     "bots_activos": 4,
-    "balance_total": 4290.69,
-    "equity_total": 3457.82,
-    "flotante_total": -832.87,
-    "ciclos_total": 77,
+    "balance_total": 4294.59,
+    "equity_total": 3461.45,
+    "flotante_total": -833.14,
+    "ciclos_total": 78,
     "hedges_activos": 3,
-    "ganancia_real_total": 27.35
+    "ganancia_real_total": 27.48
   },
   "oro": {
-    "timestamp": "2026.05.01 13:53:01",
-    "balance": 1073.88,
-    "equity": 862.0,
-    "flotante": -211.88,
-    "ciclos": 52,
-    "ganancia_real": 21.5,
+    "timestamp": "2026.05.01 13:53:31",
+    "balance": 1075.18,
+    "equity": 863.11,
+    "flotante": -212.07,
+    "ciclos": 53,
+    "ganancia_real": 21.63,
     "hucha_propia": 0.0,
     "hucha_aportado": 0.0,
     "martingala": {
-      "activa": true,
-      "direccion": "SELL",
-      "nivel": 1,
-      "precio": 4568.98
+      "activa": false,
+      "direccion": "",
+      "nivel": 0,
+      "precio": 0.0
     },
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 57.96,
-      "fondo": 42.52,
-      "pct": 73.4
+      "objetivo": 57.94,
+      "fondo": 43.69,
+      "pct": 75.4
     }
   },
   "btc": {
-    "timestamp": "2026.05.01 13:53:01",
-    "balance": 1073.88,
-    "equity": 861.84,
+    "timestamp": "2026.05.01 13:53:31",
+    "balance": 1075.18,
+    "equity": 863.14,
     "flotante": -212.04,
     "ciclos": 4,
     "ganancia_real": 2.29,
@@ -79,10 +79,10 @@
     }
   },
   "usdjpy": {
-    "timestamp": "2026.05.01 13:53:00",
-    "balance": 1073.88,
-    "equity": 861.88,
-    "flotante": -212.0,
+    "timestamp": "2026.05.01 13:53:30",
+    "balance": 1075.18,
+    "equity": 863.1,
+    "flotante": -212.08,
     "ciclos": 13,
     "ganancia_real": 2.65,
     "hucha_propia": 0.0,
@@ -96,7 +96,7 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 32.88,
+      "objetivo": 32.91,
       "fondo": 7.04,
       "pct": 21.4
     }
