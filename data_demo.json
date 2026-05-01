@@ -1,42 +1,42 @@
 {
-  "timestamp": "2026.05.01 15:52:07",
+  "timestamp": "2026.05.01 15:52:38",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 4294.59,
-    "equity_total": 3268.13,
-    "flotante_total": -1026.46,
+    "equity_total": 3248.82,
+    "flotante_total": -1045.77,
     "ciclos_total": 78,
     "hedges_activos": 4,
     "ganancia_real_total": 27.48
   },
   "oro": {
-    "timestamp": "2026.05.01 16:52:03",
+    "timestamp": "2026.05.01 16:52:33",
     "balance": 1075.18,
-    "equity": 798.66,
-    "flotante": -276.52,
+    "equity": 792.13,
+    "flotante": -283.05,
     "ciclos": 53,
     "ganancia_real": 21.63,
     "hucha_propia": 0.0,
     "hucha_aportado": 0.0,
     "martingala": {
-      "activa": true,
-      "direccion": "SELL",
-      "nivel": 2,
-      "precio": 4575.44
+      "activa": false,
+      "direccion": "",
+      "nivel": 0,
+      "precio": 0.0
     },
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 57.94,
+      "objetivo": 57.96,
       "fondo": 43.69,
       "pct": 75.4
     }
   },
   "btc": {
-    "timestamp": "2026.05.01 16:52:01",
+    "timestamp": "2026.05.01 16:52:31",
     "balance": 1075.18,
-    "equity": 798.7,
-    "flotante": -276.48,
+    "equity": 792.29,
+    "flotante": -282.89,
     "ciclos": 4,
     "ganancia_real": 2.29,
     "hucha_propia": 0.0,
@@ -50,7 +50,7 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 35.3,
+      "objetivo": 35.31,
       "fondo": 0.0,
       "pct": 0.0
     }
@@ -79,10 +79,10 @@
     }
   },
   "usdjpy": {
-    "timestamp": "2026.05.01 16:52:01",
+    "timestamp": "2026.05.01 16:52:31",
     "balance": 1075.18,
-    "equity": 798.67,
-    "flotante": -276.51,
+    "equity": 792.3,
+    "flotante": -282.88,
     "ciclos": 13,
     "ganancia_real": 2.65,
     "hucha_propia": 0.0,
@@ -96,7 +96,7 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 32.96,
+      "objetivo": 32.89,
       "fondo": 7.04,
       "pct": 21.4
     }
