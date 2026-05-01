@@ -1,42 +1,42 @@
 {
-  "timestamp": "2026.05.01 12:39:35",
+  "timestamp": "2026.05.01 12:40:06",
   "ecosistema": {
     "bots_activos": 4,
-    "balance_total": 4287.03,
-    "equity_total": 3456.05,
-    "flotante_total": -830.98,
-    "ciclos_total": 76,
+    "balance_total": 4290.69,
+    "equity_total": 3458.35,
+    "flotante_total": -832.34,
+    "ciclos_total": 77,
     "hedges_activos": 3,
-    "ganancia_real_total": 27.23
+    "ganancia_real_total": 27.35
   },
   "oro": {
-    "timestamp": "2026.05.01 13:39:28",
-    "balance": 1072.66,
-    "equity": 861.32,
-    "flotante": -211.34,
-    "ciclos": 51,
-    "ganancia_real": 21.38,
+    "timestamp": "2026.05.01 13:39:58",
+    "balance": 1073.88,
+    "equity": 862.02,
+    "flotante": -211.86,
+    "ciclos": 52,
+    "ganancia_real": 21.5,
     "hucha_propia": 0.0,
     "hucha_aportado": 0.0,
     "martingala": {
-      "activa": true,
-      "direccion": "SELL",
-      "nivel": 1,
-      "precio": 4569.78
+      "activa": false,
+      "direccion": "",
+      "nivel": 0,
+      "precio": 0.0
     },
     "hedge": {
       "activo": true,
       "numero": 1,
       "objetivo": 57.94,
-      "fondo": 41.42,
-      "pct": 71.5
+      "fondo": 42.52,
+      "pct": 73.4
     }
   },
   "btc": {
-    "timestamp": "2026.05.01 13:39:30",
-    "balance": 1072.66,
-    "equity": 861.29,
-    "flotante": -211.37,
+    "timestamp": "2026.05.01 13:40:01",
+    "balance": 1073.88,
+    "equity": 862.21,
+    "flotante": -211.67,
     "ciclos": 4,
     "ganancia_real": 2.29,
     "hucha_propia": 0.0,
@@ -79,10 +79,10 @@
     }
   },
   "usdjpy": {
-    "timestamp": "2026.05.01 13:39:28",
-    "balance": 1072.66,
-    "equity": 861.34,
-    "flotante": -211.32,
+    "timestamp": "2026.05.01 13:39:59",
+    "balance": 1073.88,
+    "equity": 862.02,
+    "flotante": -211.86,
     "ciclos": 13,
     "ganancia_real": 2.65,
     "hucha_propia": 0.0,
@@ -96,7 +96,7 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 32.88,
+      "objetivo": 32.87,
       "fondo": 7.04,
       "pct": 21.4
     }
