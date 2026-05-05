@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026.05.05 10:19:22",
+  "timestamp": "2026.05.05 10:19:53",
   "ecosistema": {
-    "bots_activos": 3,
-    "balance_total": 3085.89,
-    "equity_total": 2771.99,
-    "flotante_total": -313.9,
-    "ciclos_total": 19,
+    "bots_activos": 4,
+    "balance_total": 4114.52,
+    "equity_total": 3701.11,
+    "flotante_total": -413.41,
+    "ciclos_total": 24,
     "hedges_activos": 1,
-    "ganancia_real_total": 14.56
+    "ganancia_real_total": 19.97
   },
   "oro": {
-    "timestamp": "2026.05.05 11:19:04",
+    "timestamp": "2026.05.05 11:19:34",
     "balance": 1028.63,
-    "equity": 923.83,
-    "flotante": -104.8,
+    "equity": 925.46,
+    "flotante": -103.17,
     "ciclos": 15,
     "ganancia_real": 12.4,
     "hucha_propia": 0.0,
@@ -27,16 +27,16 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 51.12,
+      "objetivo": 51.1,
       "fondo": 8.23,
       "pct": 16.1
     }
   },
   "btc": {
-    "timestamp": "2026.05.05 11:18:59",
+    "timestamp": "2026.05.05 11:19:35",
     "balance": 1028.63,
-    "equity": 924.11,
-    "flotante": -104.52,
+    "equity": 925.44,
+    "flotante": -103.19,
     "ciclos": 4,
     "ganancia_real": 2.16,
     "hucha_propia": 0.0,
@@ -55,12 +55,34 @@
       "pct": 0.0
     }
   },
-  "ger40": {},
-  "usdjpy": {
-    "timestamp": "2026.05.05 11:19:11",
+  "ger40": {
+    "timestamp": "2026.05.05 11:19:52",
     "balance": 1028.63,
-    "equity": 924.05,
-    "flotante": -104.58,
+    "equity": 925.46,
+    "flotante": -103.17,
+    "ciclos": 5,
+    "ganancia_real": 5.41,
+    "hucha_propia": 0.0,
+    "hucha_aportado": 0.0,
+    "martingala": {
+      "activa": true,
+      "direccion": "SELL",
+      "nivel": 2,
+      "precio": 23871.71
+    },
+    "hedge": {
+      "activo": false,
+      "numero": 0,
+      "objetivo": 0.0,
+      "fondo": 0.0,
+      "pct": 0.0
+    }
+  },
+  "usdjpy": {
+    "timestamp": "2026.05.05 11:19:41",
+    "balance": 1028.63,
+    "equity": 924.75,
+    "flotante": -103.88,
     "ciclos": 0,
     "ganancia_real": 0.0,
     "hucha_propia": 0.0,
