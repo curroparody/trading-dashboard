@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026.05.05 03:32:29",
+  "timestamp": "2026.05.05 03:33:00",
   "ecosistema": {
     "bots_activos": 4,
-    "balance_total": 4104.76,
-    "equity_total": 4014.46,
-    "flotante_total": -90.3,
-    "ciclos_total": 22,
+    "balance_total": 4108.99,
+    "equity_total": 4011.84,
+    "flotante_total": -97.15,
+    "ciclos_total": 23,
     "hedges_activos": 0,
-    "ganancia_real_total": 19.12
+    "ganancia_real_total": 19.87
   },
   "oro": {
-    "timestamp": "2026.05.05 04:32:14",
-    "balance": 1026.19,
-    "equity": 1003.64,
-    "flotante": -22.55,
+    "timestamp": "2026.05.05 04:32:44",
+    "balance": 1027.6,
+    "equity": 1003.11,
+    "flotante": -24.49,
     "ciclos": 15,
     "ganancia_real": 12.4,
     "hucha_propia": 4.93,
@@ -33,10 +33,10 @@
     }
   },
   "btc": {
-    "timestamp": "2026.05.05 04:32:21",
-    "balance": 1026.19,
-    "equity": 1004.74,
-    "flotante": -21.45,
+    "timestamp": "2026.05.05 04:32:51",
+    "balance": 1027.6,
+    "equity": 1002.56,
+    "flotante": -25.04,
     "ciclos": 3,
     "ganancia_real": 2.06,
     "hucha_propia": 0.99,
@@ -56,19 +56,19 @@
     }
   },
   "ger40": {
-    "timestamp": "2026.05.05 04:32:26",
-    "balance": 1026.19,
-    "equity": 1003.98,
-    "flotante": -22.21,
-    "ciclos": 4,
-    "ganancia_real": 4.66,
-    "hucha_propia": 1.55,
+    "timestamp": "2026.05.05 04:32:56",
+    "balance": 1027.6,
+    "equity": 1002.94,
+    "flotante": -24.66,
+    "ciclos": 5,
+    "ganancia_real": 5.41,
+    "hucha_propia": 2.31,
     "hucha_aportado": 0.0,
     "martingala": {
-      "activa": true,
-      "direccion": "SELL",
-      "nivel": 1,
-      "precio": 23879.81
+      "activa": false,
+      "direccion": "",
+      "nivel": 0,
+      "precio": 0.0
     },
     "hedge": {
       "activo": false,
@@ -79,10 +79,10 @@
     }
   },
   "usdjpy": {
-    "timestamp": "2026.05.05 04:32:04",
+    "timestamp": "2026.05.05 04:32:34",
     "balance": 1026.19,
-    "equity": 1002.1,
-    "flotante": -24.09,
+    "equity": 1003.23,
+    "flotante": -22.96,
     "ciclos": 0,
     "ganancia_real": 0.0,
     "hucha_propia": 0.0,
