@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026.05.06 18:09:40",
+  "timestamp": "2026.05.06 18:10:11",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 4203.44,
-    "equity_total": 3710.76,
-    "flotante_total": -492.68,
+    "equity_total": 3709.41,
+    "flotante_total": -494.03,
     "ciclos_total": 44,
     "hedges_activos": 2,
     "ganancia_real_total": 20.62
   },
   "oro": {
-    "timestamp": "2026.05.06 19:09:04",
+    "timestamp": "2026.05.06 19:09:44",
     "balance": 1050.86,
-    "equity": 927.62,
-    "flotante": -123.24,
+    "equity": 927.24,
+    "flotante": -123.62,
     "ciclos": 25,
     "ganancia_real": 12.4,
     "hucha_propia": 0.0,
@@ -33,19 +33,19 @@
     }
   },
   "btc": {
-    "timestamp": "2026.05.06 19:09:14",
+    "timestamp": "2026.05.06 19:09:44",
     "balance": 1050.86,
-    "equity": 927.75,
-    "flotante": -123.11,
+    "equity": 927.24,
+    "flotante": -123.62,
     "ciclos": 9,
     "ganancia_real": 2.4,
     "hucha_propia": 0.0,
     "hucha_aportado": 6.09,
     "martingala": {
-      "activa": false,
-      "direccion": "",
-      "nivel": 0,
-      "precio": 0.0
+      "activa": true,
+      "direccion": "BUY",
+      "nivel": 1,
+      "precio": 81825.91
     },
     "hedge": {
       "activo": false,
@@ -56,10 +56,10 @@
     }
   },
   "ger40": {
-    "timestamp": "2026.05.06 19:09:29",
+    "timestamp": "2026.05.06 19:10:00",
     "balance": 1050.86,
-    "equity": 927.77,
-    "flotante": -123.09,
+    "equity": 927.69,
+    "flotante": -123.17,
     "ciclos": 8,
     "ganancia_real": 5.52,
     "hucha_propia": 0.0,
@@ -79,10 +79,10 @@
     }
   },
   "usdjpy": {
-    "timestamp": "2026.05.06 19:09:10",
+    "timestamp": "2026.05.06 19:09:44",
     "balance": 1050.86,
-    "equity": 927.62,
-    "flotante": -123.24,
+    "equity": 927.24,
+    "flotante": -123.62,
     "ciclos": 2,
     "ganancia_real": 0.3,
     "hucha_propia": 0.0,
