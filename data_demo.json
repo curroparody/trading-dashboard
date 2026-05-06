@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026.05.06 10:07:50",
+  "timestamp": "2026.05.06 10:08:21",
   "ecosistema": {
     "bots_activos": 4,
-    "balance_total": 4146.36,
-    "equity_total": 3695.7,
-    "flotante_total": -450.66,
-    "ciclos_total": 33,
+    "balance_total": 4147.36,
+    "equity_total": 3697.15,
+    "flotante_total": -450.21,
+    "ciclos_total": 34,
     "hedges_activos": 2,
     "ganancia_real_total": 20.62
   },
   "oro": {
-    "timestamp": "2026.05.06 11:07:25",
+    "timestamp": "2026.05.06 11:07:55",
     "balance": 1036.59,
-    "equity": 923.9,
-    "flotante": -112.69,
+    "equity": 924.19,
+    "flotante": -112.4,
     "ciclos": 15,
     "ganancia_real": 12.4,
     "hucha_propia": 0.0,
@@ -33,19 +33,19 @@
     }
   },
   "btc": {
-    "timestamp": "2026.05.06 11:07:43",
-    "balance": 1036.59,
-    "equity": 924.08,
-    "flotante": -112.51,
-    "ciclos": 8,
+    "timestamp": "2026.05.06 11:08:13",
+    "balance": 1037.59,
+    "equity": 924.42,
+    "flotante": -113.17,
+    "ciclos": 9,
     "ganancia_real": 2.4,
     "hucha_propia": 0.0,
-    "hucha_aportado": 5.09,
+    "hucha_aportado": 6.09,
     "martingala": {
-      "activa": true,
-      "direccion": "BUY",
-      "nivel": 1,
-      "precio": 81491.79
+      "activa": false,
+      "direccion": "",
+      "nivel": 0,
+      "precio": 0.0
     },
     "hedge": {
       "activo": false,
@@ -56,10 +56,10 @@
     }
   },
   "ger40": {
-    "timestamp": "2026.05.06 11:07:36",
+    "timestamp": "2026.05.06 11:08:07",
     "balance": 1036.59,
-    "equity": 923.89,
-    "flotante": -112.7,
+    "equity": 924.38,
+    "flotante": -112.21,
     "ciclos": 8,
     "ganancia_real": 5.52,
     "hucha_propia": 0.0,
@@ -79,10 +79,10 @@
     }
   },
   "usdjpy": {
-    "timestamp": "2026.05.06 11:07:29",
+    "timestamp": "2026.05.06 11:07:59",
     "balance": 1036.59,
-    "equity": 923.83,
-    "flotante": -112.76,
+    "equity": 924.16,
+    "flotante": -112.43,
     "ciclos": 2,
     "ganancia_real": 0.3,
     "hucha_propia": 0.0,
