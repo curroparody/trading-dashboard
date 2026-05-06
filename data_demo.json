@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026.05.06 06:49:54",
+  "timestamp": "2026.05.06 06:50:25",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 4138.08,
-    "equity_total": 3682.25,
-    "flotante_total": -455.83,
+    "equity_total": 3680.85,
+    "flotante_total": -457.23,
     "ciclos_total": 31,
     "hedges_activos": 2,
     "ganancia_real_total": 20.62
   },
   "oro": {
-    "timestamp": "2026.05.06 07:49:34",
+    "timestamp": "2026.05.06 07:50:04",
     "balance": 1034.52,
-    "equity": 920.79,
-    "flotante": -113.73,
+    "equity": 920.2,
+    "flotante": -114.32,
     "ciclos": 15,
     "ganancia_real": 12.4,
     "hucha_propia": 0.0,
@@ -33,19 +33,19 @@
     }
   },
   "btc": {
-    "timestamp": "2026.05.06 07:49:31",
+    "timestamp": "2026.05.06 07:50:01",
     "balance": 1034.52,
-    "equity": 920.79,
-    "flotante": -113.73,
+    "equity": 920.22,
+    "flotante": -114.3,
     "ciclos": 6,
     "ganancia_real": 2.4,
     "hucha_propia": 0.0,
     "hucha_aportado": 3.02,
     "martingala": {
-      "activa": false,
-      "direccion": "",
-      "nivel": 0,
-      "precio": 0.0
+      "activa": true,
+      "direccion": "BUY",
+      "nivel": 1,
+      "precio": 81491.79
     },
     "hedge": {
       "activo": false,
@@ -56,10 +56,10 @@
     }
   },
   "ger40": {
-    "timestamp": "2026.05.06 07:49:44",
+    "timestamp": "2026.05.06 07:50:15",
     "balance": 1034.52,
-    "equity": 919.88,
-    "flotante": -114.64,
+    "equity": 920.21,
+    "flotante": -114.31,
     "ciclos": 8,
     "ganancia_real": 5.52,
     "hucha_propia": 0.0,
@@ -73,16 +73,16 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 62.07,
+      "objetivo": 61.37,
       "fondo": 3.8,
-      "pct": 6.1
+      "pct": 6.2
     }
   },
   "usdjpy": {
-    "timestamp": "2026.05.06 07:49:35",
+    "timestamp": "2026.05.06 07:50:05",
     "balance": 1034.52,
-    "equity": 920.79,
-    "flotante": -113.73,
+    "equity": 920.22,
+    "flotante": -114.3,
     "ciclos": 2,
     "ganancia_real": 0.3,
     "hucha_propia": 0.0,
