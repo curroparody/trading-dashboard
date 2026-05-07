@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026.05.07 15:49:21",
+  "timestamp": "2026.05.07 15:49:52",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 4299.4,
-    "equity_total": 3681.18,
-    "flotante_total": -618.22,
+    "equity_total": 3666.89,
+    "flotante_total": -632.51,
     "ciclos_total": 63,
     "hedges_activos": 2,
     "ganancia_real_total": 20.62
   },
   "oro": {
-    "timestamp": "2026.05.07 16:49:00",
+    "timestamp": "2026.05.07 16:49:30",
     "balance": 1074.85,
-    "equity": 921.19,
-    "flotante": -153.66,
+    "equity": 916.75,
+    "flotante": -158.1,
     "ciclos": 38,
     "ganancia_real": 12.4,
     "hucha_propia": 0.0,
@@ -27,16 +27,16 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 55.33,
+      "objetivo": 55.35,
       "fondo": 43.28,
       "pct": 78.2
     }
   },
   "btc": {
-    "timestamp": "2026.05.07 16:49:00",
+    "timestamp": "2026.05.07 16:49:30",
     "balance": 1074.85,
-    "equity": 921.17,
-    "flotante": -153.68,
+    "equity": 916.54,
+    "flotante": -158.31,
     "ciclos": 9,
     "ganancia_real": 2.4,
     "hucha_propia": 0.0,
@@ -44,7 +44,7 @@
     "martingala": {
       "activa": true,
       "direccion": "BUY",
-      "nivel": 1,
+      "nivel": 2,
       "precio": 81825.91
     },
     "hedge": {
@@ -56,10 +56,10 @@
     }
   },
   "ger40": {
-    "timestamp": "2026.05.07 16:49:04",
+    "timestamp": "2026.05.07 16:49:34",
     "balance": 1074.85,
-    "equity": 920.55,
-    "flotante": -154.3,
+    "equity": 916.24,
+    "flotante": -158.61,
     "ciclos": 14,
     "ganancia_real": 5.52,
     "hucha_propia": 0.0,
@@ -73,16 +73,16 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 61.54,
+      "objetivo": 61.53,
       "fondo": 12.3,
       "pct": 20.0
     }
   },
   "usdjpy": {
-    "timestamp": "2026.05.07 16:49:08",
+    "timestamp": "2026.05.07 16:49:39",
     "balance": 1074.85,
-    "equity": 918.27,
-    "flotante": -156.58,
+    "equity": 917.36,
+    "flotante": -157.49,
     "ciclos": 2,
     "ganancia_real": 0.3,
     "hucha_propia": 0.0,
