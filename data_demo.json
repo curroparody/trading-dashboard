@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026.05.11 02:14:58",
+  "timestamp": "2026.05.11 02:15:29",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1001.95,
     "equity_total": 1001.95,
     "flotante_total": 0.0,
-    "ciclos_total": 26,
-    "hedges_activos": 1,
-    "hedges_cola_total": 1,
-    "ganancia_real_total": 6.27,
+    "ciclos_total": 0,
+    "hedges_activos": 0,
+    "hedges_cola_total": 0,
+    "ganancia_real_total": 0.75,
     "hucha_total": 0.0,
     "operativa_total": 0.0,
     "operativa_log": [
@@ -21,7 +21,7 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.05.11 03:14:51",
+    "timestamp": "2026.05.11 03:15:21",
     "balance": 1001.95,
     "equity": 1001.95,
     "flotante": 0.0,
@@ -57,7 +57,7 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.05.11 03:14:45",
+    "timestamp": "2026.05.11 03:15:15",
     "balance": 1001.95,
     "equity": 1001.95,
     "flotante": 0.0,
@@ -86,14 +86,18 @@
     "operativa_log": []
   },
   "ger40": {
-    "timestamp": "2026.05.08 18:15:03",
-    "balance": 1096.38,
-    "equity": 885.76,
-    "flotante": -210.62,
-    "ciclos": 26,
-    "ganancia_real": 5.52,
+    "timestamp": "2026.05.11 03:15:01",
+    "balance": 1001.95,
+    "equity": 1001.95,
+    "flotante": 0.0,
+    "ciclos": 0,
+    "ganancia_real": 0.0,
     "hucha_propia": 0.0,
     "hucha_aportado": 0.0,
+    "hucha_fase": 0,
+    "hucha_fase_pct": 80,
+    "hucha_tope": 30.0,
+    "operativa_aportado": 0.0,
     "martingala": {
       "activa": false,
       "direccion": "",
@@ -101,30 +105,17 @@
       "precio": 0.0
     },
     "hedge": {
-      "activo": true,
-      "numero": 1,
-      "objetivo": 62.26,
-      "fondo": 26.38,
-      "pct": 42.4
+      "activo": false,
+      "numero": 0,
+      "objetivo": 0.0,
+      "fondo": 0.0,
+      "pct": 0.0
     },
-    "hedges_cola": [
-      {
-        "numero": 1,
-        "objetivo": 62.26,
-        "fondo": 26.38,
-        "pct": 42.4,
-        "flotante": 0,
-        "fecha": ""
-      }
-    ],
-    "hucha_fase": 0,
-    "hucha_fase_pct": 80,
-    "hucha_tope": 30,
-    "operativa_aportado": 0,
+    "hedges_cola": [],
     "operativa_log": []
   },
   "usdjpy": {
-    "timestamp": "2026.05.11 03:14:30",
+    "timestamp": "2026.05.11 03:15:00",
     "balance": 1001.95,
     "equity": 1001.95,
     "flotante": 0.0,
