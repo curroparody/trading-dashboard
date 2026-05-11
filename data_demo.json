@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026.05.11 16:20:29",
+  "timestamp": "2026.05.11 16:21:01",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1034.19,
-    "equity_total": 1030.47,
-    "flotante_total": -3.72,
+    "equity_total": 1029.74,
+    "flotante_total": -4.45,
     "ciclos_total": 4,
-    "hedges_activos": 0,
-    "hedges_cola_total": 0,
+    "hedges_activos": 1,
+    "hedges_cola_total": 1,
     "ganancia_real_total": 30.62,
     "hucha_total": 3.66,
     "operativa_total": 0.0,
@@ -51,10 +51,10 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.05.11 17:20:01",
+    "timestamp": "2026.05.11 17:20:31",
     "balance": 1034.19,
-    "equity": 1030.47,
-    "flotante": -3.72,
+    "equity": 1029.74,
+    "flotante": -4.45,
     "ciclos": 2,
     "ganancia_real": 29.44,
     "hucha_propia": 1.98,
@@ -105,10 +105,10 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.05.11 17:20:23",
+    "timestamp": "2026.05.11 17:20:53",
     "balance": 1034.19,
-    "equity": 1030.08,
-    "flotante": -4.11,
+    "equity": 1028.94,
+    "flotante": -5.25,
     "ciclos": 0,
     "ganancia_real": 0.72,
     "hucha_propia": 0.0,
@@ -118,19 +118,28 @@
     "hucha_tope": 30.0,
     "operativa_aportado": 0.0,
     "martingala": {
-      "activa": true,
-      "direccion": "BUY",
-      "nivel": 2,
-      "precio": 81219.97
+      "activa": false,
+      "direccion": "",
+      "nivel": 0,
+      "precio": 0.0
     },
     "hedge": {
-      "activo": false,
-      "numero": 0,
-      "objetivo": 0.0,
-      "fondo": 0.0,
-      "pct": 0.0
+      "activo": true,
+      "numero": 1,
+      "objetivo": 3.43,
+      "fondo": 1.68,
+      "pct": 49.0
     },
-    "hedges_cola": [],
+    "hedges_cola": [
+      {
+        "numero": 1,
+        "objetivo": 3.43,
+        "fondo": 1.68,
+        "pct": 49.0,
+        "flotante": -3.43,
+        "fecha": "2026.05.11 17:20"
+      }
+    ],
     "operativa_log": [
       {
         "tipo": "GANANCIA_LIBRE",
@@ -141,10 +150,10 @@
     ]
   },
   "ger40": {
-    "timestamp": "2026.05.11 17:20:01",
+    "timestamp": "2026.05.11 17:20:32",
     "balance": 1034.19,
-    "equity": 1030.47,
-    "flotante": -3.72,
+    "equity": 1029.71,
+    "flotante": -4.48,
     "ciclos": 2,
     "ganancia_real": 0.46,
     "hucha_propia": 1.68,
@@ -177,10 +186,10 @@
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.05.11 17:20:18",
+    "timestamp": "2026.05.11 17:20:48",
     "balance": 1034.19,
-    "equity": 1030.08,
-    "flotante": -4.11,
+    "equity": 1028.94,
+    "flotante": -5.25,
     "ciclos": 0,
     "ganancia_real": 0.0,
     "hucha_propia": 0.0,
