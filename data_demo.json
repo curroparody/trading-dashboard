@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026.05.12 08:44:54",
+  "timestamp": "2026.05.12 08:45:26",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1040.31,
-    "equity_total": 1032.06,
-    "flotante_total": -8.25,
+    "equity_total": 1032.12,
+    "flotante_total": -8.19,
     "ciclos_total": 12,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
-    "ganancia_real_total": 32.53,
+    "ganancia_real_total": 33.37,
     "hucha_total": 5.43,
     "operativa_total": 1.76,
     "operativa_log": [
@@ -50,6 +50,12 @@
       },
       {
         "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.84,
+        "fecha": "2026.05.12 09:44"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
         "destino": "Ganancia Real directa",
         "importe": 0.72,
         "fecha": "2026.05.11 12:06"
@@ -75,12 +81,12 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.05.12 09:44:26",
+    "timestamp": "2026.05.12 09:45:26",
     "balance": 1040.31,
-    "equity": 1032.06,
-    "flotante": -8.25,
+    "equity": 1032.12,
+    "flotante": -8.19,
     "ciclos": 3,
-    "ganancia_real": 30.19,
+    "ganancia_real": 31.03,
     "hucha_propia": 0.78,
     "hucha_aportado": 1.98,
     "hucha_fase": 0,
@@ -137,14 +143,20 @@
         "destino": "Ganancia Real directa [Dashboard]",
         "importe": 2.32,
         "fecha": "2026.05.12 08:03"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.84,
+        "fecha": "2026.05.12 09:44"
       }
     ]
   },
   "btc": {
-    "timestamp": "2026.05.12 09:44:51",
+    "timestamp": "2026.05.12 09:45:21",
     "balance": 1040.31,
-    "equity": 1032.15,
-    "flotante": -8.16,
+    "equity": 1032.11,
+    "flotante": -8.2,
     "ciclos": 0,
     "ganancia_real": 0.72,
     "hucha_propia": 0.0,
@@ -189,10 +201,10 @@
     ]
   },
   "ger40": {
-    "timestamp": "2026.05.12 09:44:47",
+    "timestamp": "2026.05.12 09:45:18",
     "balance": 1040.31,
-    "equity": 1032.12,
-    "flotante": -8.19,
+    "equity": 1032.11,
+    "flotante": -8.2,
     "ciclos": 6,
     "ganancia_real": 1.32,
     "hucha_propia": 3.43,
@@ -225,10 +237,10 @@
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.05.12 09:44:28",
+    "timestamp": "2026.05.12 09:44:58",
     "balance": 1040.31,
-    "equity": 1032.09,
-    "flotante": -8.22,
+    "equity": 1032.14,
+    "flotante": -8.17,
     "ciclos": 3,
     "ganancia_real": 0.3,
     "hucha_propia": 1.22,
