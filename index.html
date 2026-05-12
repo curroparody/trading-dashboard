@@ -761,11 +761,10 @@ function renderBot(key, data, allData) {
     logsHtml = `<div class="ganancia-detail-empty">Sin operativa manual registrada</div>`;
   } else {
     for(const log of logs) {
-      // Entradas a ganancia real = positivo (verde). Salidas = negativo (rojo)
-      // Entradas positivas en verde, negativas en rojo, salidas siempre en rojo
-      const esEntrada = log.tipo === 'GANANCIA_LIBRE' && log.importe >= 0;
-      const signo = log.importe >= 0 ? '+' : '-';
-      const color = (log.tipo === 'GANANCIA_LIBRE' && log.importe >= 0) ? 'var(--green)' : 'var(--red)';
+      // GANANCIA_LIBRE positiva = entrada (verde +). Todo lo demás = salida (rojo -)
+      const esEntrada = log.tipo === 'GANANCIA_LIBRE' && log.importe > 0;
+      const signo = esEntrada ? '+' : '-';
+      const color = esEntrada ? 'var(--green)' : 'var(--red)';
       logsHtml += `
         <div class="ganancia-detail-row">
           <span class="ganancia-detail-dest">→ ${log.destino} <span style="font-size:10px;color:var(--muted)">${log.fecha || ''}</span></span>
