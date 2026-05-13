@@ -600,6 +600,14 @@
       <span class="eco-value" id="ecoRetirado">—</span>
     </div>
     <div class="eco-stat">
+      <span class="eco-label">Gastado</span>
+      <span class="eco-value" id="ecoGastado">—</span>
+    </div>
+    <div class="eco-stat">
+      <span class="eco-label">Pendiente</span>
+      <span class="eco-value" id="ecoPendiente">—</span>
+    </div>
+    <div class="eco-stat">
       <span class="eco-label">Balance total</span>
       <span class="eco-value" id="ecoBalance">—</span>
     </div>
@@ -992,8 +1000,14 @@ async function fetchData() {
     document.getElementById('ecoGanancia').textContent = eco.ganancia_real_total !== undefined
       ? '$' + Number(eco.ganancia_real_total).toFixed(2) : '—';
     document.getElementById('ecoHedges').textContent   = eco.hedges_activos ?? '—';
-    document.getElementById('ecoRetirado').textContent = eco.retirado_total !== undefined && eco.retirado_total > 0
+    document.getElementById('ecoRetirado').textContent = eco.retirado_total !== undefined
       ? '$' + Number(eco.retirado_total).toFixed(2) : '$0.00';
+    const gastado = eco.gastado_total || 0;
+    const retirado = eco.retirado_total || 0;
+    const pendiente = retirado - gastado;
+    document.getElementById('ecoGastado').textContent = '$' + gastado.toFixed(2);
+    document.getElementById('ecoPendiente').textContent = '$' + pendiente.toFixed(2);
+    document.getElementById('ecoPendiente').style.color = pendiente > 0 ? 'var(--green)' : 'var(--text)';
     document.getElementById('ecoBalance').textContent  = eco.balance_total !== undefined
       ? '$' + Number(eco.balance_total).toFixed(2) : '—';
 
