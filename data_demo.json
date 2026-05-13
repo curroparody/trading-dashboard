@@ -1,15 +1,15 @@
 {
-  "timestamp": "2026.05.13 23:11:03",
+  "timestamp": "2026.05.13 23:11:36",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1253.89,
     "equity_total": 238.26,
     "flotante_total": -1015.63,
-    "ciclos_total": 0,
+    "ciclos_total": 1,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
-    "ganancia_real_total": 7.44,
-    "hucha_total": 12.0,
+    "ganancia_real_total": 7.66,
+    "hucha_total": 12.88,
     "operativa_total": 12.0,
     "retirado_total": 0.0,
     "operativa_log": [
@@ -203,24 +203,24 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.05.14 00:10:38",
-    "balance": 1835.89,
-    "equity": 803.25,
-    "flotante": -1032.64,
-    "ciclos": 0,
-    "ganancia_real": 1.37,
+    "timestamp": "2026.05.14 00:11:08",
+    "balance": 1836.99,
+    "equity": 803.33,
+    "flotante": -1033.66,
+    "ciclos": 1,
+    "ganancia_real": 1.59,
     "retirado": 0.0,
-    "hucha_propia": 3.0,
+    "hucha_propia": 3.88,
     "hucha_aportado": 0.0,
-    "hucha_fase": 0,
-    "hucha_fase_pct": 80,
+    "hucha_fase": 1,
+    "hucha_fase_pct": 60,
     "hucha_tope": 30.0,
     "operativa_aportado": 0.0,
     "martingala": {
-      "activa": true,
-      "direccion": "SELL",
-      "nivel": 1,
-      "precio": 79517.38
+      "activa": false,
+      "direccion": "",
+      "nivel": 0,
+      "precio": 0.0
     },
     "hedge": {
       "activo": false,
