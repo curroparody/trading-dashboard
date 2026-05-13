@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026.05.13 11:51:18",
+  "timestamp": "2026.05.13 11:51:51",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1083.35,
@@ -8,7 +8,7 @@
     "ciclos_total": 25,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
-    "ganancia_real_total": 21.34,
+    "ganancia_real_total": 21.86,
     "hucha_total": 48.63,
     "operativa_total": 41.76,
     "retirado_total": 10.0,
@@ -189,6 +189,12 @@
       },
       {
         "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.52,
+        "fecha": "2026.05.13 12:51"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
         "destino": "Ganancia Real directa",
         "importe": 0.72,
         "fecha": "2026.05.11 12:06"
@@ -238,12 +244,12 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.05.13 12:50:51",
+    "timestamp": "2026.05.13 12:51:21",
     "balance": 1083.35,
     "equity": 1083.35,
     "flotante": 0.0,
     "ciclos": 6,
-    "ganancia_real": 10.37,
+    "ganancia_real": 10.89,
     "retirado": 10.0,
     "hucha_propia": 12.41,
     "hucha_aportado": 1.98,
@@ -439,11 +445,17 @@
         "destino": "Ganancia Real directa [Dashboard]",
         "importe": 1.32,
         "fecha": "2026.05.13 10:28"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.52,
+        "fecha": "2026.05.13 12:51"
       }
     ]
   },
   "btc": {
-    "timestamp": "2026.05.13 12:51:00",
+    "timestamp": "2026.05.13 12:51:30",
     "balance": 1083.35,
     "equity": 1083.35,
     "flotante": 0.0,
@@ -510,7 +522,7 @@
     ]
   },
   "ger40": {
-    "timestamp": "2026.05.13 12:50:59",
+    "timestamp": "2026.05.13 12:51:29",
     "balance": 1083.35,
     "equity": 1083.35,
     "flotante": 0.0,
@@ -553,7 +565,7 @@
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.05.13 12:51:16",
+    "timestamp": "2026.05.13 12:51:46",
     "balance": 1083.35,
     "equity": 1083.35,
     "flotante": 0.0,
