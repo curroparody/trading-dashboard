@@ -1,268 +1,28 @@
 {
-  "timestamp": "2026.05.13 19:00:58",
+  "timestamp": "2026.05.13 19:10:51",
   "ecosistema": {
-    "bots_activos": 4,
-    "balance_total": 1075.58,
-    "equity_total": 1075.58,
+    "bots_activos": 3,
+    "balance_total": 200.0,
+    "equity_total": 200.0,
     "flotante_total": 0.0,
-    "ciclos_total": 29,
+    "ciclos_total": 0,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
-    "ganancia_real_total": 26.12,
-    "hucha_total": 50.06,
-    "operativa_total": 41.76,
-    "retirado_total": 10.0,
-    "operativa_log": [
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa",
-        "importe": 0.75,
-        "fecha": "2026.05.11 01:47"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa",
-        "importe": 20.4,
-        "fecha": "2026.05.11 08:53"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa",
-        "importe": 6.56,
-        "fecha": "2026.05.11 11:17"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa",
-        "importe": 1.23,
-        "fecha": "2026.05.11 14:05"
-      },
-      {
-        "tipo": "INYECTAR_HEDGE",
-        "destino": "Hedge BTCUSD",
-        "importe": 1.76,
-        "fecha": "2026.05.11 17:56"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 2.32,
-        "fecha": "2026.05.12 08:03"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 0.84,
-        "fecha": "2026.05.12 09:44"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 1.19,
-        "fecha": "2026.05.12 11:06"
-      },
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha XAUUSD",
-        "importe": 5.0,
-        "fecha": "2026.05.12 11:20"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 1.75,
-        "fecha": "2026.05.12 11:52"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 0.57,
-        "fecha": "2026.05.12 12:42"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 1.36,
-        "fecha": "2026.05.12 13:01"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 0.28,
-        "fecha": "2026.05.12 14:13"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 3.62,
-        "fecha": "2026.05.12 15:07"
-      },
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha BTC [Dashboard]",
-        "importe": 5.0,
-        "fecha": "2026.05.12 16:28"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 5.54,
-        "fecha": "2026.05.12 16:42"
-      },
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha BTCUSD [Dashboard]",
-        "importe": 5.0,
-        "fecha": "2026.05.12 17:53"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 5.0,
-        "fecha": "2026.05.12 17:59"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 4.44,
-        "fecha": "2026.05.12 18:04"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 1.21,
-        "fecha": "2026.05.12 18:37"
-      },
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha BTCUSD [Dashboard]",
-        "importe": 5.0,
-        "fecha": "2026.05.12 20:41"
-      },
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha USDJPY [Dashboard]",
-        "importe": 5.0,
-        "fecha": "2026.05.12 20:43"
-      },
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha GER40 [Dashboard]",
-        "importe": 5.0,
-        "fecha": "2026.05.12 20:44"
-      },
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha XAUUSD [Dashboard]",
-        "importe": 5.0,
-        "fecha": "2026.05.12 20:45"
-      },
-      {
-        "tipo": "RETIRADA",
-        "destino": "Retirada [Dashboard]",
-        "importe": -10.0,
-        "fecha": "2026.05.13 07:24"
-      },
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha USDJPY [Dashboard]",
-        "importe": 5.0,
-        "fecha": "2026.05.13 07:25"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 0.12,
-        "fecha": "2026.05.13 07:48"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 0.95,
-        "fecha": "2026.05.13 08:31"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 1.32,
-        "fecha": "2026.05.13 10:28"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 0.52,
-        "fecha": "2026.05.13 12:51"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 2.51,
-        "fecha": "2026.05.13 15:02"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa",
-        "importe": 0.72,
-        "fecha": "2026.05.11 12:06"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 1.0,
-        "fecha": "2026.05.12 00:40"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": -1.0,
-        "fecha": "2026.05.12 00:49"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 0.09,
-        "fecha": "2026.05.12 15:29"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 0.38,
-        "fecha": "2026.05.12 15:40"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 0.59,
-        "fecha": "2026.05.12 18:04"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa",
-        "importe": 0.04,
-        "fecha": "2026.05.11 11:18"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 1.53,
-        "fecha": "2026.05.13 07:23"
-      }
-    ]
+    "ganancia_real_total": 0.0,
+    "hucha_total": 0.0,
+    "operativa_total": 0,
+    "retirado_total": 0,
+    "operativa_log": []
   },
   "oro": {
-    "timestamp": "2026.05.13 19:58:58",
-    "balance": 1075.58,
-    "equity": 1075.58,
+    "timestamp": "2026.05.01 01:02:01",
+    "balance": 200.0,
+    "equity": 200.0,
     "flotante": 0.0,
-    "ciclos": 8,
-    "ganancia_real": 14.56,
-    "retirado": 10.0,
-    "hucha_propia": 13.36,
-    "hucha_aportado": 1.98,
-    "hucha_fase": 2,
-    "hucha_fase_pct": 45,
-    "hucha_tope": 30.0,
-    "operativa_aportado": 41.76,
+    "ciclos": 0,
+    "ganancia_real": 0.0,
+    "hucha_propia": 0.0,
+    "hucha_aportado": 0.0,
     "martingala": {
       "activa": false,
       "direccion": "",
@@ -277,209 +37,22 @@
       "pct": 0.0
     },
     "hedges_cola": [],
-    "operativa_log": [
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa",
-        "importe": 0.75,
-        "fecha": "2026.05.11 01:47"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa",
-        "importe": 20.4,
-        "fecha": "2026.05.11 08:53"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa",
-        "importe": 6.56,
-        "fecha": "2026.05.11 11:17"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa",
-        "importe": 1.23,
-        "fecha": "2026.05.11 14:05"
-      },
-      {
-        "tipo": "INYECTAR_HEDGE",
-        "destino": "Hedge BTCUSD",
-        "importe": 1.76,
-        "fecha": "2026.05.11 17:56"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 2.32,
-        "fecha": "2026.05.12 08:03"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 0.84,
-        "fecha": "2026.05.12 09:44"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 1.19,
-        "fecha": "2026.05.12 11:06"
-      },
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha XAUUSD",
-        "importe": 5.0,
-        "fecha": "2026.05.12 11:20"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 1.75,
-        "fecha": "2026.05.12 11:52"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 0.57,
-        "fecha": "2026.05.12 12:42"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 1.36,
-        "fecha": "2026.05.12 13:01"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 0.28,
-        "fecha": "2026.05.12 14:13"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 3.62,
-        "fecha": "2026.05.12 15:07"
-      },
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha BTC [Dashboard]",
-        "importe": 5.0,
-        "fecha": "2026.05.12 16:28"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 5.54,
-        "fecha": "2026.05.12 16:42"
-      },
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha BTCUSD [Dashboard]",
-        "importe": 5.0,
-        "fecha": "2026.05.12 17:53"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 5.0,
-        "fecha": "2026.05.12 17:59"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 4.44,
-        "fecha": "2026.05.12 18:04"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 1.21,
-        "fecha": "2026.05.12 18:37"
-      },
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha BTCUSD [Dashboard]",
-        "importe": 5.0,
-        "fecha": "2026.05.12 20:41"
-      },
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha USDJPY [Dashboard]",
-        "importe": 5.0,
-        "fecha": "2026.05.12 20:43"
-      },
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha GER40 [Dashboard]",
-        "importe": 5.0,
-        "fecha": "2026.05.12 20:44"
-      },
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha XAUUSD [Dashboard]",
-        "importe": 5.0,
-        "fecha": "2026.05.12 20:45"
-      },
-      {
-        "tipo": "RETIRADA",
-        "destino": "Retirada [Dashboard]",
-        "importe": -10.0,
-        "fecha": "2026.05.13 07:24"
-      },
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha USDJPY [Dashboard]",
-        "importe": 5.0,
-        "fecha": "2026.05.13 07:25"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 0.12,
-        "fecha": "2026.05.13 07:48"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 0.95,
-        "fecha": "2026.05.13 08:31"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 1.32,
-        "fecha": "2026.05.13 10:28"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 0.52,
-        "fecha": "2026.05.13 12:51"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 2.51,
-        "fecha": "2026.05.13 15:02"
-      }
-    ]
+    "hucha_fase": 0,
+    "hucha_fase_pct": 80,
+    "hucha_tope": 30,
+    "operativa_aportado": 0,
+    "operativa_log": [],
+    "retirado": 0
   },
   "btc": {
-    "timestamp": "2026.05.13 19:59:16",
-    "balance": 1075.58,
-    "equity": 1075.58,
+    "timestamp": "2026.05.01 01:01:30",
+    "balance": 200.0,
+    "equity": 200.0,
     "flotante": 0.0,
-    "ciclos": 1,
-    "ganancia_real": 2.37,
-    "retirado": 0.0,
-    "hucha_propia": 10.48,
+    "ciclos": 0,
+    "ganancia_real": 0.0,
+    "hucha_propia": 0.0,
     "hucha_aportado": 0.0,
-    "hucha_fase": 2,
-    "hucha_fase_pct": 45,
-    "hucha_tope": 30.0,
-    "operativa_aportado": 0.0,
     "martingala": {
       "activa": false,
       "direccion": "",
@@ -494,107 +67,28 @@
       "pct": 0.0
     },
     "hedges_cola": [],
-    "operativa_log": [
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa",
-        "importe": 0.72,
-        "fecha": "2026.05.11 12:06"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 1.0,
-        "fecha": "2026.05.12 00:40"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": -1.0,
-        "fecha": "2026.05.12 00:49"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 0.09,
-        "fecha": "2026.05.12 15:29"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 0.38,
-        "fecha": "2026.05.12 15:40"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 0.59,
-        "fecha": "2026.05.12 18:04"
-      }
-    ]
+    "hucha_fase": 0,
+    "hucha_fase_pct": 80,
+    "hucha_tope": 30,
+    "operativa_aportado": 0,
+    "operativa_log": [],
+    "retirado": 0
   },
-  "ger40": {
-    "timestamp": "2026.05.13 19:58:57",
-    "balance": 1075.58,
-    "equity": 1075.58,
-    "flotante": 0.0,
-    "ciclos": 10,
-    "ganancia_real": 7.3,
-    "retirado": 0.0,
-    "hucha_propia": 12.88,
-    "hucha_aportado": 0.0,
-    "hucha_fase": 2,
-    "hucha_fase_pct": 45,
-    "hucha_tope": 30.0,
-    "operativa_aportado": 0.0,
-    "martingala": {
-      "activa": true,
-      "direccion": "SELL",
-      "nivel": 1,
-      "precio": 24055.75
-    },
-    "hedge": {
-      "activo": false,
-      "numero": 0,
-      "objetivo": 0.0,
-      "fondo": 0.0,
-      "pct": 0.0
-    },
-    "hedges_cola": [],
-    "operativa_log": [
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa",
-        "importe": 0.04,
-        "fecha": "2026.05.11 11:18"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 1.53,
-        "fecha": "2026.05.13 07:23"
-      }
-    ]
-  },
+  "ger40": {},
   "usdjpy": {
-    "timestamp": "2026.05.13 19:58:51",
-    "balance": 1075.58,
-    "equity": 1075.58,
+    "timestamp": "2026.05.01 01:01:46",
+    "balance": 200.0,
+    "equity": 200.0,
     "flotante": 0.0,
-    "ciclos": 10,
-    "ganancia_real": 1.89,
-    "retirado": 0.0,
-    "hucha_propia": 13.34,
+    "ciclos": 0,
+    "ganancia_real": 0.0,
+    "hucha_propia": 0.0,
     "hucha_aportado": 0.0,
-    "hucha_fase": 2,
-    "hucha_fase_pct": 45,
-    "hucha_tope": 30.0,
-    "operativa_aportado": 0.0,
     "martingala": {
-      "activa": true,
-      "direccion": "BUY",
-      "nivel": 1,
-      "precio": 157.86
+      "activa": false,
+      "direccion": "",
+      "nivel": 0,
+      "precio": 0.0
     },
     "hedge": {
       "activo": false,
@@ -604,6 +98,11 @@
       "pct": 0.0
     },
     "hedges_cola": [],
-    "operativa_log": []
+    "hucha_fase": 0,
+    "hucha_fase_pct": 80,
+    "hucha_tope": 30,
+    "operativa_aportado": 0,
+    "operativa_log": [],
+    "retirado": 0
   }
 }
