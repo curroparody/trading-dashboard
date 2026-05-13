@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026.05.13 06:25:25",
+  "timestamp": "2026.05.13 06:25:57",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1074.47,
-    "equity_total": 1068.72,
-    "flotante_total": -5.75,
+    "equity_total": 1068.48,
+    "flotante_total": -5.99,
     "ciclos_total": 19,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
-    "ganancia_real_total": 20.55,
-    "hucha_total": 40.85,
-    "operativa_total": 36.76,
+    "ganancia_real_total": 15.55,
+    "hucha_total": 45.85,
+    "operativa_total": 41.76,
     "retirado_total": 10.0,
     "operativa_log": [
       {
@@ -164,6 +164,12 @@
         "fecha": "2026.05.13 07:24"
       },
       {
+        "tipo": "INYECTAR_HUCHA",
+        "destino": "Hucha USDJPY [Dashboard]",
+        "importe": 5.0,
+        "fecha": "2026.05.13 07:25"
+      },
+      {
         "tipo": "GANANCIA_LIBRE",
         "destino": "Ganancia Real directa",
         "importe": 0.72,
@@ -214,19 +220,19 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.05.13 07:24:57",
+    "timestamp": "2026.05.13 07:25:57",
     "balance": 1074.47,
-    "equity": 1068.72,
-    "flotante": -5.75,
+    "equity": 1068.48,
+    "flotante": -5.99,
     "ciclos": 3,
-    "ganancia_real": 10.99,
+    "ganancia_real": 5.99,
     "retirado": 10.0,
     "hucha_propia": 10.78,
     "hucha_aportado": 1.98,
     "hucha_fase": 2,
     "hucha_fase_pct": 45,
     "hucha_tope": 30.0,
-    "operativa_aportado": 36.76,
+    "operativa_aportado": 41.76,
     "martingala": {
       "activa": false,
       "direccion": "",
@@ -391,14 +397,20 @@
         "destino": "Retirada [Dashboard]",
         "importe": -10.0,
         "fecha": "2026.05.13 07:24"
+      },
+      {
+        "tipo": "INYECTAR_HUCHA",
+        "destino": "Hucha USDJPY [Dashboard]",
+        "importe": 5.0,
+        "fecha": "2026.05.13 07:25"
       }
     ]
   },
   "btc": {
-    "timestamp": "2026.05.13 07:25:11",
+    "timestamp": "2026.05.13 07:25:44",
     "balance": 1074.47,
-    "equity": 1068.5,
-    "flotante": -5.97,
+    "equity": 1068.7,
+    "flotante": -5.77,
     "ciclos": 1,
     "ganancia_real": 2.37,
     "retirado": 0.0,
@@ -462,10 +474,10 @@
     ]
   },
   "ger40": {
-    "timestamp": "2026.05.13 07:25:11",
+    "timestamp": "2026.05.13 07:25:44",
     "balance": 1074.47,
-    "equity": 1068.5,
-    "flotante": -5.97,
+    "equity": 1068.49,
+    "flotante": -5.98,
     "ciclos": 9,
     "ganancia_real": 6.47,
     "retirado": 0.0,
@@ -505,17 +517,17 @@
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.05.13 07:25:18",
+    "timestamp": "2026.05.13 07:25:49",
     "balance": 1074.47,
-    "equity": 1068.4,
-    "flotante": -6.07,
+    "equity": 1068.54,
+    "flotante": -5.93,
     "ciclos": 6,
     "ganancia_real": 0.72,
     "retirado": 0.0,
-    "hucha_propia": 7.39,
+    "hucha_propia": 12.39,
     "hucha_aportado": 0.0,
-    "hucha_fase": 1,
-    "hucha_fase_pct": 60,
+    "hucha_fase": 2,
+    "hucha_fase_pct": 45,
     "hucha_tope": 30.0,
     "operativa_aportado": 0.0,
     "martingala": {
