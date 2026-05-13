@@ -1,28 +1,33 @@
 {
-  "timestamp": "2026.05.13 19:14:41",
+  "timestamp": "2026.05.13 19:17:14",
   "ecosistema": {
-    "bots_activos": 3,
-    "balance_total": 200.0,
-    "equity_total": 200.0,
-    "flotante_total": 0.0,
+    "bots_activos": 4,
+    "balance_total": 1339.78,
+    "equity_total": 315.07,
+    "flotante_total": -1024.71,
     "ciclos_total": 0,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
     "ganancia_real_total": 0.0,
     "hucha_total": 0.0,
-    "operativa_total": 0,
-    "retirado_total": 0,
+    "operativa_total": 0.0,
+    "retirado_total": 0.0,
     "operativa_log": []
   },
   "oro": {
-    "timestamp": "2026.05.01 01:02:01",
-    "balance": 200.0,
-    "equity": 200.0,
-    "flotante": 0.0,
+    "timestamp": "2026.05.13 20:16:56",
+    "balance": 1339.78,
+    "equity": 315.07,
+    "flotante": -1024.71,
     "ciclos": 0,
     "ganancia_real": 0.0,
+    "retirado": 0.0,
     "hucha_propia": 0.0,
     "hucha_aportado": 0.0,
+    "hucha_fase": 0,
+    "hucha_fase_pct": 80,
+    "hucha_tope": 30.0,
+    "operativa_aportado": 0.0,
     "martingala": {
       "activa": false,
       "direccion": "",
@@ -37,22 +42,22 @@
       "pct": 0.0
     },
     "hedges_cola": [],
-    "hucha_fase": 0,
-    "hucha_fase_pct": 80,
-    "hucha_tope": 30,
-    "operativa_aportado": 0,
-    "operativa_log": [],
-    "retirado": 0
+    "operativa_log": []
   },
   "btc": {
-    "timestamp": "2026.05.01 01:01:30",
-    "balance": 200.0,
-    "equity": 200.0,
-    "flotante": 0.0,
+    "timestamp": "2026.05.13 20:16:47",
+    "balance": 1339.78,
+    "equity": 315.33,
+    "flotante": -1024.45,
     "ciclos": 0,
     "ganancia_real": 0.0,
+    "retirado": 0.0,
     "hucha_propia": 0.0,
     "hucha_aportado": 0.0,
+    "hucha_fase": 0,
+    "hucha_fase_pct": 80,
+    "hucha_tope": 30.0,
+    "operativa_aportado": 0.0,
     "martingala": {
       "activa": false,
       "direccion": "",
@@ -67,23 +72,22 @@
       "pct": 0.0
     },
     "hedges_cola": [],
-    "hucha_fase": 0,
-    "hucha_fase_pct": 80,
-    "hucha_tope": 30,
-    "operativa_aportado": 0,
-    "operativa_log": [],
-    "retirado": 0
+    "operativa_log": []
   },
-  "ger40": {},
-  "usdjpy": {
-    "timestamp": "2026.05.01 01:01:46",
-    "balance": 200.0,
-    "equity": 200.0,
-    "flotante": 0.0,
+  "ger40": {
+    "timestamp": "2026.05.13 20:17:06",
+    "balance": 1339.78,
+    "equity": 315.32,
+    "flotante": -1024.46,
     "ciclos": 0,
     "ganancia_real": 0.0,
+    "retirado": 0.0,
     "hucha_propia": 0.0,
     "hucha_aportado": 0.0,
+    "hucha_fase": 0,
+    "hucha_fase_pct": 80,
+    "hucha_tope": 30.0,
+    "operativa_aportado": 0.0,
     "martingala": {
       "activa": false,
       "direccion": "",
@@ -98,11 +102,36 @@
       "pct": 0.0
     },
     "hedges_cola": [],
+    "operativa_log": []
+  },
+  "usdjpy": {
+    "timestamp": "2026.05.13 20:16:46",
+    "balance": 1339.78,
+    "equity": 315.33,
+    "flotante": -1024.45,
+    "ciclos": 0,
+    "ganancia_real": 0.0,
+    "retirado": 0.0,
+    "hucha_propia": 0.0,
+    "hucha_aportado": 0.0,
     "hucha_fase": 0,
     "hucha_fase_pct": 80,
-    "hucha_tope": 30,
-    "operativa_aportado": 0,
-    "operativa_log": [],
-    "retirado": 0
+    "hucha_tope": 30.0,
+    "operativa_aportado": 0.0,
+    "martingala": {
+      "activa": false,
+      "direccion": "",
+      "nivel": 0,
+      "precio": 0.0
+    },
+    "hedge": {
+      "activo": false,
+      "numero": 0,
+      "objetivo": 0.0,
+      "fondo": 0.0,
+      "pct": 0.0
+    },
+    "hedges_cola": [],
+    "operativa_log": []
   }
 }
