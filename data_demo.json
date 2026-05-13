@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026.05.13 19:44:31",
+  "timestamp": "2026.05.13 19:45:03",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1332.08,
-    "equity_total": 322.91,
-    "flotante_total": -1009.17,
+    "equity_total": 322.9,
+    "flotante_total": -1009.18,
     "ciclos_total": 0,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
@@ -46,10 +46,10 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.05.13 20:44:26",
+    "timestamp": "2026.05.13 20:44:56",
     "balance": 1332.08,
-    "equity": 322.91,
-    "flotante": -1009.17,
+    "equity": 322.9,
+    "flotante": -1009.18,
     "ciclos": 0,
     "ganancia_real": 7.29,
     "retirado": 0.0,
@@ -107,37 +107,7 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.05.13 20:44:26",
-    "balance": 1332.08,
-    "equity": 322.91,
-    "flotante": -1009.17,
-    "ciclos": 0,
-    "ganancia_real": 0.0,
-    "retirado": 0.0,
-    "hucha_propia": 0.0,
-    "hucha_aportado": 0.0,
-    "hucha_fase": 0,
-    "hucha_fase_pct": 80,
-    "hucha_tope": 30.0,
-    "operativa_aportado": 0.0,
-    "martingala": {
-      "activa": false,
-      "direccion": "",
-      "nivel": 0,
-      "precio": 0.0
-    },
-    "hedge": {
-      "activo": false,
-      "numero": 0,
-      "objetivo": 0.0,
-      "fondo": 0.0,
-      "pct": 0.0
-    },
-    "hedges_cola": [],
-    "operativa_log": []
-  },
-  "ger40": {
-    "timestamp": "2026.05.13 20:44:30",
+    "timestamp": "2026.05.13 20:44:57",
     "balance": 1332.08,
     "equity": 323.09,
     "flotante": -1008.99,
@@ -166,11 +136,41 @@
     "hedges_cola": [],
     "operativa_log": []
   },
-  "usdjpy": {
-    "timestamp": "2026.05.13 20:44:27",
+  "ger40": {
+    "timestamp": "2026.05.13 20:45:00",
     "balance": 1332.08,
-    "equity": 322.84,
-    "flotante": -1009.24,
+    "equity": 323.15,
+    "flotante": -1008.93,
+    "ciclos": 0,
+    "ganancia_real": 0.0,
+    "retirado": 0.0,
+    "hucha_propia": 0.0,
+    "hucha_aportado": 0.0,
+    "hucha_fase": 0,
+    "hucha_fase_pct": 80,
+    "hucha_tope": 30.0,
+    "operativa_aportado": 0.0,
+    "martingala": {
+      "activa": false,
+      "direccion": "",
+      "nivel": 0,
+      "precio": 0.0
+    },
+    "hedge": {
+      "activo": false,
+      "numero": 0,
+      "objetivo": 0.0,
+      "fondo": 0.0,
+      "pct": 0.0
+    },
+    "hedges_cola": [],
+    "operativa_log": []
+  },
+  "usdjpy": {
+    "timestamp": "2026.05.13 20:44:58",
+    "balance": 1332.08,
+    "equity": 323.09,
+    "flotante": -1008.99,
     "ciclos": 0,
     "ganancia_real": 0.0,
     "retirado": 0.0,
