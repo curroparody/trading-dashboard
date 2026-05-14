@@ -1,15 +1,15 @@
 {
-  "timestamp": "2026.05.14 05:45:51",
+  "timestamp": "2026.05.14 05:46:23",
   "ecosistema": {
-    "bots_activos": 4,
+    "bots_activos": 3,
     "balance_total": 1851.81,
-    "equity_total": 839.25,
-    "flotante_total": -1012.56,
-    "ciclos_total": 10,
+    "equity_total": 839.09,
+    "flotante_total": -1012.72,
+    "ciclos_total": 9,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
-    "ganancia_real_total": 11.87,
-    "hucha_total": 19.48,
+    "ganancia_real_total": 11.77,
+    "hucha_total": 16.07,
     "operativa_total": 12.0,
     "retirado_total": 0.0,
     "gastado_total": 0,
@@ -101,10 +101,10 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.05.14 06:45:45",
+    "timestamp": "2026.05.14 06:46:15",
     "balance": 1851.81,
-    "equity": 839.25,
-    "flotante": -1012.56,
+    "equity": 839.09,
+    "flotante": -1012.72,
     "ciclos": 7,
     "ganancia_real": 9.73,
     "retirado": 0.0,
@@ -204,10 +204,10 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.05.14 06:45:49",
+    "timestamp": "2026.05.14 06:46:19",
     "balance": 1851.81,
-    "equity": 839.07,
-    "flotante": -1012.74,
+    "equity": 839.04,
+    "flotante": -1012.77,
     "ciclos": 2,
     "ganancia_real": 2.04,
     "retirado": 0.0,
@@ -247,10 +247,10 @@
     ]
   },
   "ger40": {
-    "timestamp": "2026.05.14 06:45:45",
+    "timestamp": "2026.05.14 06:46:17",
     "balance": 1851.81,
-    "equity": 839.25,
-    "flotante": -1012.56,
+    "equity": 839.04,
+    "flotante": -1012.77,
     "ciclos": 0,
     "ganancia_real": 0.0,
     "retirado": 0.0,
@@ -276,34 +276,5 @@
     "hedges_cola": [],
     "operativa_log": []
   },
-  "usdjpy": {
-    "timestamp": "2026.05.14 06:45:22",
-    "balance": 1851.81,
-    "equity": 839.23,
-    "flotante": -1012.58,
-    "ciclos": 1,
-    "ganancia_real": 0.1,
-    "retirado": 0.0,
-    "hucha_propia": 3.41,
-    "hucha_aportado": 0.0,
-    "hucha_fase": 1,
-    "hucha_fase_pct": 60,
-    "hucha_tope": 30.0,
-    "operativa_aportado": 0.0,
-    "martingala": {
-      "activa": false,
-      "direccion": "",
-      "nivel": 0,
-      "precio": 0.0
-    },
-    "hedge": {
-      "activo": false,
-      "numero": 0,
-      "objetivo": 0.0,
-      "fondo": 0.0,
-      "pct": 0.0
-    },
-    "hedges_cola": [],
-    "operativa_log": []
-  }
+  "usdjpy": {}
 }
