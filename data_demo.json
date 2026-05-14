@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026.05.14 12:07:04",
+  "timestamp": "2026.05.14 12:07:35",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1864.45,
-    "equity_total": 857.84,
-    "flotante_total": -1006.61,
+    "equity_total": 857.36,
+    "flotante_total": -1007.09,
     "ciclos_total": 14,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
-    "ganancia_real_total": 24.28,
-    "hucha_total": 23.42,
-    "operativa_total": 14.0,
+    "ganancia_real_total": 24.19,
+    "hucha_total": 23.51,
+    "operativa_total": 14.09,
     "retirado_total": 7.0,
     "gastado_total": 6.7,
     "operativa_log": [
@@ -115,14 +115,20 @@
         "destino": "Hucha BTCUSD [Dashboard]",
         "importe": 2.0,
         "fecha": "2026.05.14 13:05"
+      },
+      {
+        "tipo": "INYECTAR_HUCHA",
+        "destino": "Hucha USDJPY [Dashboard]",
+        "importe": 0.09,
+        "fecha": "2026.05.14 13:07"
       }
     ]
   },
   "oro": {
-    "timestamp": "2026.05.14 13:06:49",
+    "timestamp": "2026.05.14 13:07:19",
     "balance": 1864.45,
-    "equity": 857.84,
-    "flotante": -1006.61,
+    "equity": 857.36,
+    "flotante": -1007.09,
     "ciclos": 11,
     "ganancia_real": 24.14,
     "retirado": 7.0,
@@ -234,10 +240,10 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.05.14 13:07:00",
+    "timestamp": "2026.05.14 13:07:30",
     "balance": 1864.45,
-    "equity": 857.65,
-    "flotante": -1006.8,
+    "equity": 858.12,
+    "flotante": -1006.33,
     "ciclos": 2,
     "ganancia_real": 0.04,
     "retirado": 0.0,
@@ -283,10 +289,10 @@
     ]
   },
   "ger40": {
-    "timestamp": "2026.05.14 13:06:50",
+    "timestamp": "2026.05.14 13:07:21",
     "balance": 1864.45,
-    "equity": 857.68,
-    "flotante": -1006.77,
+    "equity": 857.61,
+    "flotante": -1006.84,
     "ciclos": 0,
     "ganancia_real": 0.0,
     "retirado": 0.0,
@@ -313,19 +319,19 @@
     "operativa_log": []
   },
   "usdjpy": {
-    "timestamp": "2026.05.14 13:06:47",
+    "timestamp": "2026.05.14 13:07:17",
     "balance": 1864.45,
-    "equity": 857.7,
-    "flotante": -1006.75,
+    "equity": 857.24,
+    "flotante": -1007.21,
     "ciclos": 1,
-    "ganancia_real": 0.1,
+    "ganancia_real": 0.01,
     "retirado": 0.0,
-    "hucha_propia": 3.41,
+    "hucha_propia": 3.5,
     "hucha_aportado": 0.0,
     "hucha_fase": 1,
     "hucha_fase_pct": 60,
     "hucha_tope": 30.0,
-    "operativa_aportado": 0.0,
+    "operativa_aportado": 0.09,
     "martingala": {
       "activa": true,
       "direccion": "BUY",
@@ -340,6 +346,13 @@
       "pct": 0.0
     },
     "hedges_cola": [],
-    "operativa_log": []
+    "operativa_log": [
+      {
+        "tipo": "INYECTAR_HUCHA",
+        "destino": "Hucha USDJPY [Dashboard]",
+        "importe": 0.09,
+        "fecha": "2026.05.14 13:07"
+      }
+    ]
   }
 }
