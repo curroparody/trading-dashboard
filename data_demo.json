@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026.05.15 13:29:48",
+  "timestamp": "2026.05.15 13:30:21",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1907.54,
-    "equity_total": 492.02,
-    "flotante_total": -1415.52,
+    "equity_total": 491.01,
+    "flotante_total": -1416.53,
     "ciclos_total": 28,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
@@ -227,10 +227,10 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.05.15 14:29:43",
+    "timestamp": "2026.05.15 14:30:13",
     "balance": 1907.54,
-    "equity": 492.02,
-    "flotante": -1415.52,
+    "equity": 491.01,
+    "flotante": -1416.53,
     "ciclos": 19,
     "ganancia_real": 6.69,
     "retirado": 51.62,
@@ -420,10 +420,10 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.05.15 14:29:25",
+    "timestamp": "2026.05.15 14:29:56",
     "balance": 1907.54,
-    "equity": 492.52,
-    "flotante": -1415.02,
+    "equity": 492.14,
+    "flotante": -1415.4,
     "ciclos": 2,
     "ganancia_real": 0.01,
     "retirado": 0.0,
@@ -475,10 +475,10 @@
     ]
   },
   "ger40": {
-    "timestamp": "2026.05.15 14:29:30",
+    "timestamp": "2026.05.15 14:30:00",
     "balance": 1907.54,
-    "equity": 492.09,
-    "flotante": -1415.45,
+    "equity": 492.43,
+    "flotante": -1415.11,
     "ciclos": 1,
     "ganancia_real": 0.01,
     "retirado": 0.0,
@@ -489,10 +489,10 @@
     "hucha_tope": 30.0,
     "operativa_aportado": 0.43,
     "martingala": {
-      "activa": false,
-      "direccion": "",
-      "nivel": 0,
-      "precio": 0.0
+      "activa": true,
+      "direccion": "SELL",
+      "nivel": 1,
+      "precio": 24056.25
     },
     "hedge": {
       "activo": false,
@@ -512,10 +512,10 @@
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.05.15 14:29:48",
+    "timestamp": "2026.05.15 14:30:18",
     "balance": 1907.54,
-    "equity": 491.69,
-    "flotante": -1415.85,
+    "equity": 492.26,
+    "flotante": -1415.28,
     "ciclos": 6,
     "ganancia_real": 0.32,
     "retirado": 0.0,
@@ -526,10 +526,10 @@
     "hucha_tope": 30.0,
     "operativa_aportado": 0.97,
     "martingala": {
-      "activa": false,
-      "direccion": "",
-      "nivel": 0,
-      "precio": 0.0
+      "activa": true,
+      "direccion": "BUY",
+      "nivel": 1,
+      "precio": 158.52
     },
     "hedge": {
       "activo": false,
