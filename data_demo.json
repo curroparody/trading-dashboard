@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026.05.17 23:02:18",
+  "timestamp": "2026.05.17 23:02:51",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1850.93,
     "equity_total": 466.69,
     "flotante_total": -1384.24,
-    "ciclos_total": 29,
+    "ciclos_total": 22,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
-    "ganancia_real_total": 8.52,
+    "ganancia_real_total": 7.91,
     "hucha_total": 0.0,
-    "operativa_total": 21.28,
+    "operativa_total": 20.31,
     "retirado_total": 51.62,
     "gastado_total": 0.0,
     "operativa_log": [
@@ -181,24 +181,6 @@
         "destino": "Hucha GER40 [Dashboard]",
         "importe": 0.43,
         "fecha": "2026.05.14 18:19"
-      },
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha USDJPY [Dashboard]",
-        "importe": 0.09,
-        "fecha": "2026.05.14 13:07"
-      },
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha USDJPY [Dashboard]",
-        "importe": 0.39,
-        "fecha": "2026.05.14 18:21"
-      },
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha BTCUSD [Dashboard]",
-        "importe": 0.49,
-        "fecha": "2026.05.15 09:43"
       }
     ]
   },
@@ -396,7 +378,7 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.05.18 00:01:55",
+    "timestamp": "2026.05.18 00:02:28",
     "balance": 1850.93,
     "equity": 374.56,
     "flotante": -1476.37,
@@ -463,19 +445,19 @@
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.05.15 17:21:24",
+    "timestamp": "2026.05.18 00:02:21",
     "balance": 1850.93,
-    "equity": 472.69,
-    "flotante": -1378.24,
-    "ciclos": 7,
-    "ganancia_real": 0.61,
+    "equity": 374.56,
+    "flotante": -1476.37,
+    "ciclos": 0,
+    "ganancia_real": 0.0,
     "retirado": 0.0,
     "hucha_propia": 0.0,
-    "hucha_aportado": 8.53,
+    "hucha_aportado": 0.0,
     "hucha_fase": 0,
     "hucha_fase_pct": 80,
     "hucha_tope": 30.0,
-    "operativa_aportado": 0.97,
+    "operativa_aportado": 0.0,
     "martingala": {
       "activa": false,
       "direccion": "",
@@ -490,25 +472,6 @@
       "pct": 0.0
     },
     "hedges_cola": [],
-    "operativa_log": [
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha USDJPY [Dashboard]",
-        "importe": 0.09,
-        "fecha": "2026.05.14 13:07"
-      },
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha USDJPY [Dashboard]",
-        "importe": 0.39,
-        "fecha": "2026.05.14 18:21"
-      },
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha BTCUSD [Dashboard]",
-        "importe": 0.49,
-        "fecha": "2026.05.15 09:43"
-      }
-    ]
+    "operativa_log": []
   }
 }
