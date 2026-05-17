@@ -772,16 +772,25 @@ function renderBot(key, data, allData) {
   if(logs.length === 0) {
     logsHtml = `<div class="ganancia-detail-empty">Sin operativa manual registrada</div>`;
   } else {
-    for(const log of logs) {
-      // GANANCIA_LIBRE positiva = entrada (verde +). Todo lo demás = salida (rojo -)
+    function buildLogRow(log, uid) {
       const esEntrada = log.tipo === 'GANANCIA_LIBRE' && log.importe > 0;
       const signo = esEntrada ? '+' : '-';
       const color = esEntrada ? 'var(--green)' : 'var(--red)';
-      logsHtml += `
-        <div class="ganancia-detail-row">
-          <span class="ganancia-detail-dest">→ ${log.destino} <span style="font-size:10px;color:var(--muted)">${log.fecha || ''}</span></span>
-          <span class="ganancia-detail-amt" style="color:${color}">${signo}${fmt(Math.abs(log.importe))}</span>
-        </div>`;
+      return `<div class="ganancia-detail-row">
+        <span class="ganancia-detail-dest">→ ${log.destino} <span style="font-size:10px;color:var(--muted)">${log.fecha || ''}</span></span>
+        <span class="ganancia-detail-amt" style="color:${color}">${signo}${fmt(Math.abs(log.importe))}</span>
+      </div>`;
+    }
+    const logsRev = [...logs].reverse();
+    const visibles = logsRev.slice(0, 5);
+    const ocultos  = logsRev.slice(5);
+    const uid = key + '_logs';
+    for(const log of visibles) logsHtml += buildLogRow(log, uid);
+    if(ocultos.length > 0) {
+      logsHtml += `<div id="${uid}_extra" style="display:none">`;
+      for(const log of ocultos) logsHtml += buildLogRow(log, uid);
+      logsHtml += `</div>`;
+      logsHtml += `<div style="text-align:center;margin-top:6px"><span id="${uid}_btn" onclick="const e=document.getElementById('${uid}_extra');const b=document.getElementById('${uid}_btn');if(e.style.display==='none'){e.style.display='block';b.textContent='Ver menos'}else{e.style.display='none';b.textContent='Ver todos (${ocultos.length} más)'}" style="font-family:var(--mono);font-size:10px;color:var(--muted);cursor:pointer;text-decoration:underline">Ver todos (${ocultos.length} más)</span></div>`;
     }
   }
 
