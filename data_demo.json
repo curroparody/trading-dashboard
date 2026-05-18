@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026.05.18 07:45:52",
+  "timestamp": "2026.05.18 07:46:25",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1855.61,
-    "equity_total": 400.5,
-    "flotante_total": -1455.11,
+    "equity_total": 403.81,
+    "flotante_total": -1451.8,
     "ciclos_total": 4,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
@@ -16,10 +16,10 @@
     "operativa_log": []
   },
   "oro": {
-    "timestamp": "2026.05.18 08:45:38",
+    "timestamp": "2026.05.18 08:46:08",
     "balance": 1855.61,
-    "equity": 400.5,
-    "flotante": -1455.11,
+    "equity": 403.81,
+    "flotante": -1451.8,
     "ciclos": 3,
     "ganancia_real": 0.72,
     "retirado": 0.0,
@@ -46,10 +46,10 @@
     "operativa_log": []
   },
   "btc": {
-    "timestamp": "2026.05.18 08:45:48",
+    "timestamp": "2026.05.18 08:46:19",
     "balance": 1855.61,
-    "equity": 401.4,
-    "flotante": -1454.21,
+    "equity": 403.64,
+    "flotante": -1451.97,
     "ciclos": 1,
     "ganancia_real": 0.22,
     "retirado": 0.0,
@@ -60,10 +60,10 @@
     "hucha_tope": 30.0,
     "operativa_aportado": 0.0,
     "martingala": {
-      "activa": false,
-      "direccion": "",
-      "nivel": 0,
-      "precio": 0.0
+      "activa": true,
+      "direccion": "SELL",
+      "nivel": 1,
+      "precio": 76905.23
     },
     "hedge": {
       "activo": false,
@@ -76,10 +76,10 @@
     "operativa_log": []
   },
   "ger40": {
-    "timestamp": "2026.05.18 08:45:31",
+    "timestamp": "2026.05.18 08:46:01",
     "balance": 1855.61,
-    "equity": 401.74,
-    "flotante": -1453.87,
+    "equity": 404.18,
+    "flotante": -1451.43,
     "ciclos": 0,
     "ganancia_real": 0.0,
     "retirado": 0.0,
@@ -106,10 +106,10 @@
     "operativa_log": []
   },
   "usdjpy": {
-    "timestamp": "2026.05.18 08:45:51",
+    "timestamp": "2026.05.18 08:46:21",
     "balance": 1855.61,
-    "equity": 401.7,
-    "flotante": -1453.91,
+    "equity": 403.86,
+    "flotante": -1451.75,
     "ciclos": 0,
     "ganancia_real": 0.0,
     "retirado": 0.0,
