@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026.05.19 17:10:16",
+  "timestamp": "2026.05.19 17:10:48",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1872.89,
-    "equity_total": 131.19,
-    "flotante_total": -1741.7,
+    "equity_total": 131.44,
+    "flotante_total": -1741.45,
     "ciclos_total": 23,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
-    "ganancia_real_total": 1.84,
-    "hucha_total": 18.87,
-    "operativa_total": 38.25,
+    "ganancia_real_total": 0.48,
+    "hucha_total": 20.23,
+    "operativa_total": 39.61,
     "retirado_total": 12.99,
     "gastado_total": 12.68,
     "operativa_log": [
@@ -334,6 +334,12 @@
       },
       {
         "tipo": "INYECTAR_HUCHA",
+        "destino": "Hucha BTCUSD [Dashboard]",
+        "importe": 1.36,
+        "fecha": "2026.05.19 18:10"
+      },
+      {
+        "tipo": "INYECTAR_HUCHA",
         "destino": "Hucha GER40 [Dashboard]",
         "importe": 0.24,
         "fecha": "2026.05.18 19:14"
@@ -365,10 +371,10 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.05.19 18:09:48",
+    "timestamp": "2026.05.19 18:10:48",
     "balance": 1872.89,
-    "equity": 131.19,
-    "flotante": -1741.7,
+    "equity": 131.44,
+    "flotante": -1741.45,
     "ciclos": 9,
     "ganancia_real": 0.01,
     "retirado": 12.99,
@@ -708,19 +714,19 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.05.19 18:10:06",
+    "timestamp": "2026.05.19 18:10:37",
     "balance": 1872.89,
-    "equity": 131.3,
-    "flotante": -1741.59,
+    "equity": 131.54,
+    "flotante": -1741.35,
     "ciclos": 6,
-    "ganancia_real": 1.37,
+    "ganancia_real": 0.01,
     "retirado": 0.0,
-    "hucha_propia": 0.0,
+    "hucha_propia": 1.36,
     "hucha_aportado": 5.84,
     "hucha_fase": 0,
     "hucha_fase_pct": 80,
     "hucha_tope": 30.0,
-    "operativa_aportado": 0.71,
+    "operativa_aportado": 2.07,
     "martingala": {
       "activa": false,
       "direccion": "",
@@ -741,14 +747,20 @@
         "destino": "Hucha BTCUSD [Dashboard]",
         "importe": 0.71,
         "fecha": "2026.05.18 19:14"
+      },
+      {
+        "tipo": "INYECTAR_HUCHA",
+        "destino": "Hucha BTCUSD [Dashboard]",
+        "importe": 1.36,
+        "fecha": "2026.05.19 18:10"
       }
     ]
   },
   "ger40": {
-    "timestamp": "2026.05.19 18:10:05",
+    "timestamp": "2026.05.19 18:10:35",
     "balance": 1872.89,
-    "equity": 131.47,
-    "flotante": -1741.42,
+    "equity": 131.21,
+    "flotante": -1741.68,
     "ciclos": 4,
     "ganancia_real": 0.01,
     "retirado": 0.0,
@@ -800,10 +812,10 @@
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.05.19 18:10:11",
+    "timestamp": "2026.05.19 18:10:42",
     "balance": 1872.89,
-    "equity": 131.31,
-    "flotante": -1741.58,
+    "equity": 131.49,
+    "flotante": -1741.4,
     "ciclos": 4,
     "ganancia_real": 0.45,
     "retirado": 0.0,
