@@ -752,6 +752,10 @@
       <span class="eco-value orange" id="ecoHedges">—</span>
     </div>
     <div class="eco-stat">
+      <span class="eco-label">🐷 Hucha común</span>
+      <span class="eco-value gold" id="ecoHuchaComun">—</span>
+    </div>
+    <div class="eco-stat">
       <span class="eco-label">Retirado total</span>
       <span class="eco-value" id="ecoRetirado">—</span>
     </div>
@@ -901,7 +905,7 @@
   </div>
 
   <footer>
-    <span>PROYECTO S.E.M. · v2.0</span>
+    <span>PROYECTO S.E.M. · v2.1</span>
     <span id="nextUpdate">Actualizando en 30s</span>
   </footer>
 
@@ -1076,8 +1080,9 @@ function renderBot(key, data, allData) {
     </div>`;
 
   // Hucha
-  const huchaPropia  = data.hucha_propia   !== undefined ? data.hucha_propia   : null;
-  const huchaTope    = data.hucha_tope     !== undefined ? data.hucha_tope     : 30;
+  // v1.6.0: hucha comun del ecosistema
+  const huchaPropia  = allData._hucha_comun !== undefined ? allData._hucha_comun : (data.hucha_propia !== undefined ? data.hucha_propia : null);
+  const huchaTope    = 100;
   const huchaFase    = data.hucha_fase     !== undefined ? data.hucha_fase     : null;
   const huchaFasePct = data.hucha_fase_pct !== undefined ? data.hucha_fase_pct : null;
   const huchaPct     = huchaPropia !== null ? Math.min((huchaPropia / huchaTope) * 100, 100) : 0;
@@ -1087,7 +1092,7 @@ function renderBot(key, data, allData) {
   if(huchaPropia !== null) {
     huchaHtml = `
       <div class="hucha-block">
-        <div class="section-label">🐷 Hucha propia</div>
+        <div class="section-label">🐷 Hucha común del ecosistema</div>
         <div class="hucha-row">
           <span class="hucha-label">
             Acumulado
@@ -1442,6 +1447,8 @@ async function fetchData() {
     document.getElementById('ecoGanancia').textContent = eco.ganancia_real_total !== undefined
       ? '$' + Number(eco.ganancia_real_total).toFixed(2) : '—';
     document.getElementById('ecoHedges').textContent   = eco.hedges_activos ?? '—';
+    document.getElementById('ecoHuchaComun').textContent = eco.hucha_total !== undefined
+      ? '$' + Number(eco.hucha_total).toFixed(2) + ' / $100.00' : '—';
     document.getElementById('ecoRetirado').textContent = eco.retirado_total !== undefined
       ? '$' + Number(eco.retirado_total).toFixed(2) : '$0.00';
     const gastado  = eco.gastado_total  || 0;
@@ -1458,6 +1465,7 @@ async function fetchData() {
       btc:    data.btc    || {},
       ger40:  data.ger40  || {},
       usdjpy: data.usdjpy || {},
+      _hucha_comun: eco.hucha_total !== undefined ? eco.hucha_total : null,
     };
 
     // Salud
