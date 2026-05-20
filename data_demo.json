@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026.05.20 14:33:29",
+  "timestamp": "2026.05.20 14:34:02",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1882.45,
-    "equity_total": 44.69,
-    "flotante_total": -1837.76,
+    "equity_total": 44.16,
+    "flotante_total": -1838.29,
     "ciclos_total": 29,
     "hedges_activos": 2,
     "hedges_cola_total": 2,
@@ -377,10 +377,10 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.05.20 15:33:21",
+    "timestamp": "2026.05.20 15:33:51",
     "balance": 1882.45,
-    "equity": 44.69,
-    "flotante": -1837.76,
+    "equity": 44.16,
+    "flotante": -1838.29,
     "ciclos": 14,
     "ganancia_real": 2.13,
     "retirado": 12.99,
@@ -399,25 +399,25 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 31.48,
+      "objetivo": 27.74,
       "fondo": 25.71,
-      "pct": 81.7
+      "pct": 92.7
     },
     "hedges_cola": [
       {
         "numero": 1,
-        "objetivo": 31.48,
+        "objetivo": 27.74,
         "fondo": 25.71,
-        "pct": 81.7,
-        "flotante": -31.48,
+        "pct": 92.7,
+        "flotante": -27.74,
         "fecha": "2026.05.20 03:30"
       },
       {
         "numero": 2,
-        "objetivo": 55.7,
+        "objetivo": 63.22,
         "fondo": 0.0,
         "pct": 0.0,
-        "flotante": -55.7,
+        "flotante": -63.22,
         "fecha": "2026.05.20 13:35"
       }
     ],
@@ -737,10 +737,10 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.05.20 15:33:28",
+    "timestamp": "2026.05.20 15:33:58",
     "balance": 1882.45,
-    "equity": 44.79,
-    "flotante": -1837.66,
+    "equity": 44.1,
+    "flotante": -1838.35,
     "ciclos": 6,
     "ganancia_real": 0.01,
     "retirado": 0.0,
@@ -780,10 +780,10 @@
     ]
   },
   "ger40": {
-    "timestamp": "2026.05.20 15:33:09",
+    "timestamp": "2026.05.20 15:33:41",
     "balance": 1882.45,
-    "equity": 44.81,
-    "flotante": -1837.64,
+    "equity": 44.72,
+    "flotante": -1837.73,
     "ciclos": 5,
     "ganancia_real": 0.12,
     "retirado": 0.0,
@@ -835,10 +835,10 @@
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.05.20 15:33:10",
+    "timestamp": "2026.05.20 15:33:40",
     "balance": 1882.45,
-    "equity": 44.88,
-    "flotante": -1837.57,
+    "equity": 44.42,
+    "flotante": -1838.03,
     "ciclos": 4,
     "ganancia_real": 0.01,
     "retirado": 0.0,
