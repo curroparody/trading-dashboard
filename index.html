@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PROYECTO S.E.M. — Dashboard v1.4.0</title>
+<title>PROYECTO S.E.M. — Dashboard v2.0</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -58,7 +58,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid var(--border);
   }
@@ -112,7 +112,6 @@
 
   .timestamp { font-family: var(--mono); font-size: 11px; color: var(--muted); }
 
-  /* MODE TOGGLE */
   .mode-toggle {
     display: flex;
     align-items: center;
@@ -136,6 +135,51 @@
 
   .mode-btn.active-demo { background: var(--gold); color: #000; }
   .mode-btn.active-real { background: var(--green); color: #000; }
+
+  /* SEMÁFORO DE SALUD */
+  .health-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    padding: 12px 20px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .health-indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .health-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .health-dot.green  { background: var(--green); box-shadow: 0 0 8px var(--green); }
+  .health-dot.yellow { background: #eab308;       box-shadow: 0 0 8px #eab308; }
+  .health-dot.red    { background: var(--red);    box-shadow: 0 0 8px var(--red); animation: pulse 1s infinite; }
+
+  .health-text {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+  }
+
+  .health-text.green  { color: var(--green); }
+  .health-text.yellow { color: #eab308; }
+  .health-text.red    { color: var(--red); }
+
+  .health-detail {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+  }
 
   /* ECOSYSTEM BAR */
   .ecosystem-bar {
@@ -221,7 +265,6 @@
   .status-badge.hedge   { background: rgba(249,115,22,0.15); color: var(--orange); border: 1px solid rgba(249,115,22,0.3); }
   .status-badge.offline { background: rgba(74,80,96,0.2);    color: var(--muted);  border: 1px solid var(--border); }
 
-  /* STATS ROW */
   .stats-row {
     display: flex;
     gap: 16px;
@@ -239,7 +282,6 @@
   .stat-value.orange { color: var(--orange); }
   .stat-value.red    { color: var(--red); }
 
-  /* SECTION LABEL */
   .section-label {
     font-family: var(--mono);
     font-size: 10px;
@@ -254,7 +296,7 @@
 
   .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
-  /* GANANCIA REAL DESPLEGABLE — v1.4.0 */
+  /* GANANCIA REAL */
   .ganancia-block { margin-bottom: 16px; }
 
   .ganancia-header {
@@ -276,23 +318,10 @@
   .ganancia-value.pos { color: var(--gold2); }
   .ganancia-value.neg { color: var(--red); }
 
-  .ganancia-arrow {
-    font-family: var(--mono);
-    font-size: 10px;
-    color: var(--muted);
-    transition: transform 0.2s;
-  }
-
+  .ganancia-arrow { font-family: var(--mono); font-size: 10px; color: var(--muted); transition: transform 0.2s; }
   .ganancia-arrow.open { transform: rotate(180deg); }
 
-  .ganancia-detail {
-    display: none;
-    padding: 8px 10px;
-    background: rgba(201,168,76,0.03);
-    border: 1px solid rgba(201,168,76,0.1);
-    border-top: none;
-  }
-
+  .ganancia-detail { display: none; padding: 8px 10px; background: rgba(201,168,76,0.03); border: 1px solid rgba(201,168,76,0.1); border-top: none; }
   .ganancia-detail.open { display: block; }
 
   .ganancia-detail-row {
@@ -310,7 +339,7 @@
   .ganancia-detail-amt  { color: var(--red); font-weight: 700; }
   .ganancia-detail-empty { font-family: var(--mono); font-size: 11px; color: var(--muted); text-align: center; padding: 8px 0; }
 
-  /* HUCHA v1.4.0 con fase */
+  /* HUCHA */
   .hucha-block { margin-bottom: 16px; }
 
   .hucha-row {
@@ -346,7 +375,7 @@
     margin-top: 3px;
   }
 
-  /* HEDGE COLA — v1.4.0 */
+  /* HEDGE */
   .hedge-cola { margin-bottom: 14px; }
 
   .hedge-block {
@@ -379,12 +408,14 @@
   .hedge-detail-value { font-family: var(--mono); font-size: 13px; color: var(--text); font-weight: 700; }
   .hedge-detail-value.neg { color: var(--red); }
 
+  /* BARRA DE PROGRESO CON MARCAS */
   .progress-track {
     height: 8px;
     background: rgba(249,115,22,0.15);
     border-radius: 2px;
-    overflow: hidden;
+    overflow: visible;
     position: relative;
+    margin-bottom: 14px;
   }
 
   .progress-fill {
@@ -402,6 +433,28 @@
     width: 3px;
     background: white;
     opacity: 0.6;
+  }
+
+  .progress-marks {
+    position: relative;
+    height: 16px;
+    margin-top: 2px;
+  }
+
+  .progress-mark {
+    position: absolute;
+    transform: translateX(-50%);
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--muted);
+  }
+
+  .progress-mark::before {
+    content: '|';
+    display: block;
+    text-align: center;
+    margin-bottom: 2px;
+    color: var(--border);
   }
 
   /* SOLIDARIDAD */
@@ -422,19 +475,6 @@
   .solid-arrow { color: var(--gold); font-size: 12px; }
   .solid-amount { font-family: var(--mono); font-size: 13px; font-weight: 700; color: var(--gold2); }
 
-  /* OPERATIVA MANUAL — v1.4.0 */
-  .operativa-block {
-    margin-top: 14px;
-    padding: 10px 12px;
-    background: rgba(59,130,246,0.05);
-    border: 1px solid rgba(59,130,246,0.2);
-    border-left: 2px solid var(--blue);
-  }
-
-  .operativa-title { font-family: var(--mono); font-size: 10px; color: var(--blue); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px; }
-  .operativa-value { font-family: var(--mono); font-size: 14px; font-weight: 700; color: var(--text); }
-
-  /* MARTINGALA */
   .mart-indicator {
     display: inline-flex;
     align-items: center;
@@ -479,11 +519,7 @@
     margin-bottom: 16px;
   }
 
-  .operativa-field {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
+  .operativa-field { display: flex; flex-direction: column; gap: 4px; }
 
   .operativa-field label {
     font-family: var(--mono);
@@ -506,15 +542,9 @@
   }
 
   .operativa-field select:focus,
-  .operativa-field input:focus {
-    border-color: var(--blue);
-  }
+  .operativa-field input:focus { border-color: var(--blue); }
 
-  .operativa-btns {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
+  .operativa-btns { display: flex; gap: 10px; flex-wrap: wrap; }
 
   .operativa-btn {
     font-family: var(--mono);
@@ -546,6 +576,123 @@
   .operativa-msg.ok   { background: rgba(34,197,94,0.1);  color: var(--green);  border: 1px solid rgba(34,197,94,0.3); }
   .operativa-msg.err  { background: rgba(239,68,68,0.1);  color: var(--red);    border: 1px solid rgba(239,68,68,0.3); }
 
+  /* HISTÓRICO DE HEDGES */
+  .historico-section {
+    margin-top: 28px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--orange);
+    padding: 20px;
+  }
+
+  .historico-title {
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--orange);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .historico-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--mono);
+    font-size: 11px;
+  }
+
+  .historico-table th {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border);
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 10px;
+  }
+
+  .historico-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    color: var(--textdim);
+  }
+
+  .historico-table tr:last-child td { border-bottom: none; }
+  .historico-table td.ok  { color: var(--green); font-weight: 700; }
+  .historico-table td.neg { color: var(--red); font-weight: 700; }
+
+  .historico-empty {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    text-align: center;
+    padding: 20px;
+    border: 1px dashed var(--border);
+  }
+
+  /* OPERACIONES MANUALES */
+  .opmanual-section {
+    margin-top: 28px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--green);
+    padding: 20px;
+  }
+
+  .opmanual-title {
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--green);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .opmanual-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    margin-bottom: 12px;
+    padding: 14px;
+    background: rgba(34,197,94,0.03);
+    border: 1px solid rgba(34,197,94,0.15);
+  }
+
+  .opmanual-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--mono);
+    font-size: 11px;
+    margin-top: 16px;
+  }
+
+  .opmanual-table th {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border);
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 10px;
+  }
+
+  .opmanual-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    color: var(--textdim);
+  }
+
+  .opmanual-table tr:last-child td { border-bottom: none; }
+  .opmanual-table td.buy  { color: var(--green); font-weight: 700; }
+  .opmanual-table td.sell { color: var(--red);   font-weight: 700; }
+  .opmanual-table td.pos  { color: var(--green); }
+  .opmanual-table td.neg  { color: var(--red);   }
+
   /* FOOTER */
   footer {
     margin-top: 28px;
@@ -576,6 +723,15 @@
       <span class="timestamp" id="lastUpdate">--:--:--</span>
     </div>
   </header>
+
+  <!-- SEMÁFORO DE SALUD -->
+  <div class="health-bar" id="healthBar">
+    <div class="health-indicator">
+      <div class="health-dot green" id="healthDot"></div>
+      <span class="health-text green" id="healthText">ECOSISTEMA OPERATIVO</span>
+    </div>
+    <span class="health-detail" id="healthDetail">Todos los bots activos · Sin incidencias</span>
+  </div>
 
   <!-- ECOSYSTEM BAR -->
   <div class="ecosystem-bar" id="ecoBar">
@@ -621,7 +777,7 @@
     <div class="bot-card offline"><div class="no-activity">Cargando datos...</div></div>
   </div>
 
-  <!-- PANEL OPERATIVA MANUAL -->
+  <!-- PANEL OPERATIVA MANUAL BOTS -->
   <div class="operativa-panel" id="panelOperativa">
     <div class="operativa-panel-title">⚙ Operativa Manual</div>
     <div class="operativa-form">
@@ -673,8 +829,79 @@
     </div>
   </div>
 
+  <!-- HISTÓRICO DE HEDGES -->
+  <div class="historico-section">
+    <div class="historico-title">📋 Histórico de Hedges</div>
+    <div id="historicoHedges">
+      <div class="historico-empty">Sin hedges cerrados registrados todavía</div>
+    </div>
+  </div>
+
+  <!-- OPERACIONES MANUALES DE TRADING -->
+  <div class="opmanual-section">
+    <div class="opmanual-title">
+      <span>📝 Operaciones Manuales de Trading</span>
+      <button class="operativa-btn success" onclick="toggleFormOpManual()" style="font-size:11px;padding:6px 14px">+ NUEVA</button>
+    </div>
+
+    <div id="formOpManual" style="display:none">
+      <div class="opmanual-form">
+        <div class="operativa-field">
+          <label>Par</label>
+          <select id="om_par">
+            <option>XAUUSD</option>
+            <option>BTCUSD</option>
+            <option>GER40</option>
+            <option>USDJPY</option>
+            <option>OTRO</option>
+          </select>
+        </div>
+        <div class="operativa-field">
+          <label>Dirección</label>
+          <select id="om_dir">
+            <option value="BUY">BUY</option>
+            <option value="SELL">SELL</option>
+          </select>
+        </div>
+        <div class="operativa-field">
+          <label>Precio apertura</label>
+          <input type="number" id="om_apertura" step="0.01" placeholder="0.00">
+        </div>
+        <div class="operativa-field">
+          <label>Precio cierre</label>
+          <input type="number" id="om_cierre" step="0.01" placeholder="0.00">
+        </div>
+        <div class="operativa-field">
+          <label>Swap ($)</label>
+          <input type="number" id="om_swap" step="0.01" placeholder="0.00" value="0">
+        </div>
+        <div class="operativa-field">
+          <label>Resultado ($)</label>
+          <input type="number" id="om_resultado" step="0.01" placeholder="0.00">
+        </div>
+        <div class="operativa-field">
+          <label>Fecha</label>
+          <input type="date" id="om_fecha">
+        </div>
+        <div class="operativa-field">
+          <label>Notas</label>
+          <input type="text" id="om_notas" placeholder="Opcional">
+        </div>
+      </div>
+      <div class="operativa-btns">
+        <button class="operativa-btn success" onclick="guardarOpManual()">GUARDAR</button>
+        <button class="operativa-btn warning" onclick="toggleFormOpManual()">CANCELAR</button>
+      </div>
+      <div class="operativa-msg" id="om_msg"></div>
+    </div>
+
+    <div id="tablaOpManual">
+      <div class="historico-empty">Sin operaciones manuales registradas</div>
+    </div>
+  </div>
+
   <footer>
-    <span>PROYECTO S.E.M. · v1.4.0</span>
+    <span>PROYECTO S.E.M. · v2.0</span>
     <span id="nextUpdate">Actualizando en 30s</span>
   </footer>
 
@@ -683,8 +910,12 @@
 <script>
 const DATA_URL_DEMO = 'https://raw.githubusercontent.com/curroparody/trading-dashboard/main/data_demo.json';
 const DATA_URL_REAL = 'https://raw.githubusercontent.com/curroparody/trading-dashboard/main/data_real.json';
+const GITHUB_API_BASE = 'https://api.github.com/repos/curroparody/trading-dashboard/contents/';
+const GITHUB_TOKEN = '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'; // Sustituir por token real
 
 let currentMode = 'demo';
+let operacionesManuales = [];
+let historicoHedges = [];
 
 function setMode(mode) {
   currentMode = mode;
@@ -707,13 +938,10 @@ const BOT_META = {
   usdjpy: { name: 'USDJPY', label: 'YEN',       symbol: 'USD/JPY' },
 };
 
-// Nombres de fase de hucha
 const FASE_NOMBRES = ['F0 · 80%', 'F1 · 60%', 'F2 · 45%', 'F3 · 30%', 'F4 · 15%', 'F5 · 10%'];
 
 let countdown = 30;
 let countdownInterval;
-// Almacén de logs de operativa manual por bot (viene del JSON)
-let operativaLogs = {};
 
 function fmt(val, decimals=2) {
   if(val === undefined || val === null) return '—';
@@ -735,6 +963,40 @@ function toggleGanancia(botKey) {
   arrow.classList.toggle('open', !isOpen);
 }
 
+// ── SALUD DEL ECOSISTEMA ──────────────────────────────────────────
+function actualizarSalud(allData, ecoData) {
+  const dot    = document.getElementById('healthDot');
+  const text   = document.getElementById('healthText');
+  const detail = document.getElementById('healthDetail');
+
+  const hedgesActivos = ecoData.hedges_activos || 0;
+  const botsActivos   = ecoData.bots_activos   || 0;
+  const botsEsperado  = 4;
+
+  if(botsActivos < botsEsperado && hedgesActivos > 0) {
+    dot.className = 'health-dot red';
+    text.className = 'health-text red';
+    text.textContent = 'ATENCIÓN — HEDGE ACTIVO CON BOT OFFLINE';
+    detail.textContent = `${hedgesActivos} hedge(s) activo(s) · ${botsEsperado - botsActivos} bot(s) sin datos`;
+  } else if(hedgesActivos > 0) {
+    dot.className = 'health-dot yellow';
+    text.className = 'health-text yellow';
+    text.textContent = `HEDGE ACTIVO (${hedgesActivos})`;
+    detail.textContent = `${botsActivos}/4 bots operativos · Ecosistema trabajando para resolver`;
+  } else if(botsActivos < botsEsperado) {
+    dot.className = 'health-dot yellow';
+    text.className = 'health-text yellow';
+    text.textContent = 'BOT SIN DATOS';
+    detail.textContent = `${botsActivos}/4 bots activos · Verificar MT4`;
+  } else {
+    dot.className = 'health-dot green';
+    text.className = 'health-text green';
+    text.textContent = 'ECOSISTEMA OPERATIVO';
+    detail.textContent = `${botsActivos}/4 bots activos · Sin incidencias`;
+  }
+}
+
+// ── RENDER BOT ────────────────────────────────────────────────────
 function renderBot(key, data, allData) {
   const meta = BOT_META[key];
   if(!data || Object.keys(data).length === 0) {
@@ -751,46 +1013,55 @@ function renderBot(key, data, allData) {
       </div>`;
   }
 
-  const hedge       = data.hedge || {};
-  const mart        = data.martingala || {};
-  const hedgesCola  = data.hedges_cola || [];
-  const hasHedge    = hedge.activo === true;
-  const hasMart     = mart.activa === true;
+  const hedge      = data.hedge || {};
+  const mart       = data.martingala || {};
+  const hedgesCola = data.hedges_cola || [];
+  const hasHedge   = hedge.activo === true;
+  const hasMart    = mart.activa === true;
 
   const badgeClass = hasHedge ? 'hedge' : 'ok';
   const badgeText  = hasHedge ? '🔴 HEDGE' : '✅ ACTIVO';
   const cardClass  = hasHedge ? 'bot-card hedge-active' : 'bot-card';
 
-  // ── GANANCIA REAL DESPLEGABLE ──────────────────────────────────────
+  // Ganancia real
   const gr = data.ganancia_real !== undefined ? data.ganancia_real : null;
   const grClass = gr !== null ? (gr >= 0 ? 'pos' : 'neg') : 'pos';
   const grFmt   = gr !== null ? fmt(gr) : '—';
 
-  // Logs de operativa manual — vienen del JSON del bot
   const logs = (data.operativa_log && data.operativa_log.length > 0) ? data.operativa_log : [];
   let logsHtml = '';
   if(logs.length === 0) {
     logsHtml = `<div class="ganancia-detail-empty">Sin operativa manual registrada</div>`;
   } else {
-    function buildLogRow(log, uid) {
-      const esEntrada = log.tipo === 'GANANCIA_LIBRE' && log.importe > 0;
-      const signo = esEntrada ? '+' : '-';
-      const color = esEntrada ? 'var(--green)' : 'var(--red)';
-      return `<div class="ganancia-detail-row">
-        <span class="ganancia-detail-dest">→ ${log.destino} <span style="font-size:10px;color:var(--muted)">${log.fecha || ''}</span></span>
-        <span class="ganancia-detail-amt" style="color:${color}">${signo}${fmt(Math.abs(log.importe))}</span>
-      </div>`;
-    }
     const logsRev = [...logs].reverse();
     const visibles = logsRev.slice(0, 5);
     const ocultos  = logsRev.slice(5);
     const uid = key + '_logs';
-    for(const log of visibles) logsHtml += buildLogRow(log, uid);
+    for(const log of visibles) {
+      const esEntrada = log.tipo === 'GANANCIA_LIBRE' && log.importe > 0;
+      const color = esEntrada ? 'var(--green)' : 'var(--red)';
+      const signo = esEntrada ? '+' : '-';
+      logsHtml += `<div class="ganancia-detail-row">
+        <span class="ganancia-detail-dest">→ ${log.destino} <span style="font-size:10px;color:var(--muted)">${log.fecha || ''}</span></span>
+        <span class="ganancia-detail-amt" style="color:${color}">${signo}${fmt(Math.abs(log.importe))}</span>
+      </div>`;
+    }
     if(ocultos.length > 0) {
       logsHtml += `<div id="${uid}_extra" style="display:none">`;
-      for(const log of ocultos) logsHtml += buildLogRow(log, uid);
-      logsHtml += `</div>`;
-      logsHtml += `<div style="text-align:center;margin-top:6px"><span id="${uid}_btn" onclick="const e=document.getElementById('${uid}_extra');const b=document.getElementById('${uid}_btn');if(e.style.display==='none'){e.style.display='block';b.textContent='Ver menos'}else{e.style.display='none';b.textContent='Ver todos (${ocultos.length} más)'}" style="font-family:var(--mono);font-size:10px;color:var(--muted);cursor:pointer;text-decoration:underline">Ver todos (${ocultos.length} más)</span></div>`;
+      for(const log of ocultos) {
+        const esEntrada = log.tipo === 'GANANCIA_LIBRE' && log.importe > 0;
+        const color = esEntrada ? 'var(--green)' : 'var(--red)';
+        const signo = esEntrada ? '+' : '-';
+        logsHtml += `<div class="ganancia-detail-row">
+          <span class="ganancia-detail-dest">→ ${log.destino}</span>
+          <span class="ganancia-detail-amt" style="color:${color}">${signo}${fmt(Math.abs(log.importe))}</span>
+        </div>`;
+      }
+      logsHtml += `</div>
+        <div style="text-align:center;margin-top:6px">
+          <span onclick="const e=document.getElementById('${uid}_extra');const b=this;if(e.style.display==='none'){e.style.display='block';b.textContent='Ver menos'}else{e.style.display='none';b.textContent='Ver todos (${ocultos.length} más)'}"
+          style="font-family:var(--mono);font-size:10px;color:var(--muted);cursor:pointer;text-decoration:underline">Ver todos (${ocultos.length} más)</span>
+        </div>`;
     }
   }
 
@@ -801,18 +1072,16 @@ function renderBot(key, data, allData) {
         <span class="ganancia-value ${grClass}">${grFmt}</span>
         <span class="ganancia-arrow" id="ganancia-arrow-${key}">▼</span>
       </div>
-      <div class="ganancia-detail" id="ganancia-detail-${key}">
-        ${logsHtml}
-      </div>
+      <div class="ganancia-detail" id="ganancia-detail-${key}">${logsHtml}</div>
     </div>`;
 
-  // ── HUCHA con FASE ─────────────────────────────────────────────────
-  const huchaPropia = data.hucha_propia !== undefined ? data.hucha_propia : null;
-  const huchaTope   = data.hucha_tope   !== undefined ? data.hucha_tope   : 30;
-  const huchaFase   = data.hucha_fase   !== undefined ? data.hucha_fase   : null;
-  const huchaFasePct= data.hucha_fase_pct !== undefined ? data.hucha_fase_pct : null;
-  const huchaPct    = huchaPropia !== null ? Math.min((huchaPropia / huchaTope) * 100, 100) : 0;
-  const faseNombre  = huchaFase !== null ? FASE_NOMBRES[Math.min(huchaFase, 5)] : '';
+  // Hucha
+  const huchaPropia  = data.hucha_propia   !== undefined ? data.hucha_propia   : null;
+  const huchaTope    = data.hucha_tope     !== undefined ? data.hucha_tope     : 30;
+  const huchaFase    = data.hucha_fase     !== undefined ? data.hucha_fase     : null;
+  const huchaFasePct = data.hucha_fase_pct !== undefined ? data.hucha_fase_pct : null;
+  const huchaPct     = huchaPropia !== null ? Math.min((huchaPropia / huchaTope) * 100, 100) : 0;
+  const faseNombre   = huchaFase !== null ? FASE_NOMBRES[Math.min(huchaFase, 5)] : '';
 
   let huchaHtml = '';
   if(huchaPropia !== null) {
@@ -836,16 +1105,21 @@ function renderBot(key, data, allData) {
       </div>`;
   }
 
-  // ── COLA DE HEDGES — v1.4.0 ────────────────────────────────────────
+  // Hedge con marcas de progreso
   let hedgeHtml = '';
   if(hedgesCola.length > 0) {
     hedgeHtml = `<div class="hedge-cola"><div class="section-label">🔴 Hedges activos (${hedgesCola.length})</div>`;
     hedgesCola.forEach((h, idx) => {
-      const hPct      = h.pct !== undefined ? Math.min(h.pct, 100) : 0;
-      const restante  = h.objetivo && h.fondo ? h.objetivo - h.fondo : null;
-      const isMain    = idx === 0;
-      const blockCls  = isMain ? 'hedge-block' : 'hedge-block secondary';
-      const flotante  = h.flotante !== undefined ? h.flotante : null;
+      const hPct     = h.pct !== undefined ? Math.min(h.pct, 100) : 0;
+      const restante = h.objetivo && h.fondo ? h.objetivo - h.fondo : null;
+      const isMain   = idx === 0;
+      const blockCls = isMain ? 'hedge-block' : 'hedge-block secondary';
+      const flotante = h.flotante !== undefined ? h.flotante : null;
+
+      // Marcas 25/50/75/90
+      const marcasHtml = [25, 50, 75, 90].map(m =>
+        `<div class="progress-mark" style="left:${m}%">${m}%</div>`
+      ).join('');
 
       hedgeHtml += `
         <div class="${blockCls}">
@@ -880,12 +1154,15 @@ function renderBot(key, data, allData) {
           <div class="progress-track">
             <div class="progress-fill" style="width:${hPct.toFixed(1)}%"></div>
           </div>
+          <div class="progress-marks">${marcasHtml}</div>
         </div>`;
     });
     hedgeHtml += '</div>';
   } else if(hasHedge) {
-    // Fallback al formato antiguo si hedges_cola no está disponible
     const hPct = hedge.pct !== undefined ? Math.min(hedge.pct, 100) : 0;
+    const marcasHtml = [25, 50, 75, 90].map(m =>
+      `<div class="progress-mark" style="left:${m}%">${m}%</div>`
+    ).join('');
     hedgeHtml = `
       <div class="hedge-cola">
         <div class="section-label">🔴 Hedge activo</div>
@@ -911,11 +1188,12 @@ function renderBot(key, data, allData) {
           <div class="progress-track">
             <div class="progress-fill" style="width:${hPct.toFixed(1)}%"></div>
           </div>
+          <div class="progress-marks">${marcasHtml}</div>
         </div>
       </div>`;
   }
 
-  // ── SOLIDARIDAD ────────────────────────────────────────────────────
+  // Solidaridad
   const botKeys = Object.keys(BOT_META).filter(k => k !== key);
   let solidItems = [];
   for(const compKey of botKeys) {
@@ -936,29 +1214,21 @@ function renderBot(key, data, allData) {
       solidHtml += `<div class="no-activity">Sin hedges activos en el ecosistema</div>`;
     } else {
       solidItems.forEach((s, i) => {
-        const isDestino = i === 0;
         solidHtml += `
-          <div class="solid-item" style="${isDestino ? '' : 'opacity:0.4'}">
+          <div class="solid-item" style="${i > 0 ? 'opacity:0.4' : ''}">
             <div class="solid-left">
-              <span class="solid-arrow">${isDestino ? '→' : '·'}</span>
+              <span class="solid-arrow">${i === 0 ? '→' : '·'}</span>
               ${s.meta.label} Hedge · ${fmtPct(s.pctHedge)} completado
-              ${isDestino ? '<span style="font-size:10px;color:var(--gold);margin-left:6px">DESTINO</span>' : ''}
+              ${i === 0 ? '<span style="font-size:10px;color:var(--gold);margin-left:6px">DESTINO</span>' : ''}
             </div>
-            <span class="solid-amount">${isDestino && totalAportado ? fmt(totalAportado) : ''}</span>
+            <span class="solid-amount">${i === 0 && totalAportado ? fmt(totalAportado) : ''}</span>
           </div>`;
       });
-
     }
     solidHtml += '</div>';
   }
 
-  // ── OPERATIVA MANUAL — v1.4.0 ──────────────────────────────────────
-  const opAportado = data.operativa_aportado !== undefined && data.operativa_aportado > 0
-    ? data.operativa_aportado : null;
-
-  let opHtml = ''; // Bloque de operativa manual eliminado de tarjetas individuales
-
-  // ── MARTINGALA ─────────────────────────────────────────────────────
+  // Martingala
   let martHtml = '';
   if(hasMart) {
     const dotClass = mart.direccion === 'BUY' ? 'mart-dot active-buy' : 'mart-dot active-sell';
@@ -978,23 +1248,186 @@ function renderBot(key, data, allData) {
         </div>
         <span class="status-badge ${badgeClass}">${badgeText}</span>
       </div>
-
       <div class="stats-row">
         <div class="stat-item">
           <span class="stat-label">Ciclos</span>
           <span class="stat-value">${data.ciclos !== undefined ? data.ciclos : '—'}</span>
         </div>
       </div>
-
       ${gananciaHtml}
       ${huchaHtml}
       ${hedgeHtml}
       ${solidHtml}
-      ${opHtml}
       ${martHtml}
     </div>`;
 }
 
+// ── HISTÓRICO DE HEDGES ───────────────────────────────────────────
+function renderHistoricoHedges() {
+  const el = document.getElementById('historicoHedges');
+  if(historicoHedges.length === 0) {
+    el.innerHTML = '<div class="historico-empty">Sin hedges cerrados registrados todavía</div>';
+    return;
+  }
+  let html = `<table class="historico-table">
+    <thead>
+      <tr>
+        <th>Bot</th>
+        <th>Fecha inicio</th>
+        <th>Fecha cierre</th>
+        <th>Duración</th>
+        <th>Objetivo</th>
+        <th>Fondo final</th>
+        <th>Bots que aportaron</th>
+      </tr>
+    </thead>
+    <tbody>`;
+  for(const h of [...historicoHedges].reverse()) {
+    html += `<tr>
+      <td>${h.bot || '—'}</td>
+      <td>${h.fecha_inicio || '—'}</td>
+      <td>${h.fecha_cierre || '—'}</td>
+      <td>${h.duracion || '—'}</td>
+      <td>${h.objetivo ? fmt(h.objetivo) : '—'}</td>
+      <td class="ok">${h.fondo ? fmt(h.fondo) : '—'}</td>
+      <td style="font-size:10px;color:var(--muted)">${h.bots_aportaron || '—'}</td>
+    </tr>`;
+  }
+  html += '</tbody></table>';
+  el.innerHTML = html;
+}
+
+// ── OPERACIONES MANUALES DE TRADING ──────────────────────────────
+function toggleFormOpManual() {
+  const form = document.getElementById('formOpManual');
+  form.style.display = form.style.display === 'none' ? 'block' : 'none';
+  if(form.style.display === 'block') {
+    document.getElementById('om_fecha').value = new Date().toISOString().split('T')[0];
+  }
+}
+
+function guardarOpManual() {
+  const par       = document.getElementById('om_par').value;
+  const dir       = document.getElementById('om_dir').value;
+  const apertura  = parseFloat(document.getElementById('om_apertura').value || 0);
+  const cierre    = parseFloat(document.getElementById('om_cierre').value || 0);
+  const swap      = parseFloat(document.getElementById('om_swap').value || 0);
+  const resultado = parseFloat(document.getElementById('om_resultado').value || 0);
+  const fecha     = document.getElementById('om_fecha').value;
+  const notas     = document.getElementById('om_notas').value;
+
+  if(!apertura || !cierre) {
+    mostrarMsgOM('Precio de apertura y cierre son obligatorios', 'err');
+    return;
+  }
+
+  const op = { par, dir, apertura, cierre, swap, resultado, fecha, notas, ts: Date.now() };
+  operacionesManuales.push(op);
+  guardarOpManualesGitHub();
+  renderOpManuales();
+  toggleFormOpManual();
+  mostrarMsgOM('Operación guardada correctamente', 'ok');
+
+  // Limpiar
+  ['om_apertura','om_cierre','om_swap','om_resultado','om_notas'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+  document.getElementById('om_swap').value = '0';
+}
+
+function mostrarMsgOM(texto, tipo) {
+  const el = document.getElementById('om_msg');
+  el.textContent = texto;
+  el.className = 'operativa-msg' + (texto ? ' show ' + tipo : '');
+  setTimeout(() => { el.className = 'operativa-msg'; }, 3000);
+}
+
+function renderOpManuales() {
+  const el = document.getElementById('tablaOpManual');
+  if(operacionesManuales.length === 0) {
+    el.innerHTML = '<div class="historico-empty">Sin operaciones manuales registradas</div>';
+    return;
+  }
+  let total = 0;
+  let html = `<table class="opmanual-table">
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Par</th>
+        <th>Dir.</th>
+        <th>Apertura</th>
+        <th>Cierre</th>
+        <th>Swap</th>
+        <th>Resultado</th>
+        <th>Notas</th>
+      </tr>
+    </thead>
+    <tbody>`;
+  for(const op of [...operacionesManuales].reverse()) {
+    total += op.resultado || 0;
+    html += `<tr>
+      <td>${op.fecha || '—'}</td>
+      <td>${op.par}</td>
+      <td class="${op.dir === 'BUY' ? 'buy' : 'sell'}">${op.dir}</td>
+      <td>${op.apertura.toFixed(2)}</td>
+      <td>${op.cierre.toFixed(2)}</td>
+      <td class="${op.swap >= 0 ? 'pos' : 'neg'}">${fmt(op.swap)}</td>
+      <td class="${op.resultado >= 0 ? 'pos' : 'neg'}">${fmt(op.resultado)}</td>
+      <td style="color:var(--muted);font-size:10px">${op.notas || ''}</td>
+    </tr>`;
+  }
+  html += `</tbody>
+    <tfoot>
+      <tr>
+        <td colspan="6" style="text-align:right;color:var(--muted);font-size:10px;padding:8px 10px">TOTAL RESULTADO:</td>
+        <td class="${total >= 0 ? 'pos' : 'neg'}" style="padding:8px 10px">${fmt(total)}</td>
+        <td></td>
+      </tr>
+    </tfoot>
+  </table>`;
+  el.innerHTML = html;
+}
+
+async function guardarOpManualesGitHub() {
+  try {
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(operacionesManuales, null, 2))));
+    // Primero obtener SHA actual
+    let sha = '';
+    try {
+      const res = await fetch(GITHUB_API_BASE + 'operaciones_manuales.json', {
+        headers: { 'Authorization': 'token ' + GITHUB_TOKEN }
+      });
+      if(res.ok) { const d = await res.json(); sha = d.sha; }
+    } catch(e) {}
+
+    await fetch(GITHUB_API_BASE + 'operaciones_manuales.json', {
+      method: 'PUT',
+      headers: {
+        'Authorization': 'token ' + GITHUB_TOKEN,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        message: 'Actualizar operaciones manuales',
+        content,
+        sha: sha || undefined
+      })
+    });
+  } catch(e) {
+    console.error('Error guardando en GitHub:', e);
+  }
+}
+
+async function cargarOpManualesGitHub() {
+  try {
+    const res = await fetch('https://raw.githubusercontent.com/curroparody/trading-dashboard/main/operaciones_manuales.json?t=' + Date.now());
+    if(res.ok) {
+      operacionesManuales = await res.json();
+      renderOpManuales();
+    }
+  } catch(e) {}
+}
+
+// ── FETCH PRINCIPAL ───────────────────────────────────────────────
 async function fetchData() {
   try {
     const res = await fetch(getDataUrl() + '?t=' + Date.now());
@@ -1011,13 +1444,13 @@ async function fetchData() {
     document.getElementById('ecoHedges').textContent   = eco.hedges_activos ?? '—';
     document.getElementById('ecoRetirado').textContent = eco.retirado_total !== undefined
       ? '$' + Number(eco.retirado_total).toFixed(2) : '$0.00';
-    const gastado = eco.gastado_total || 0;
+    const gastado  = eco.gastado_total  || 0;
     const retirado = eco.retirado_total || 0;
     const pendiente = retirado - gastado;
-    document.getElementById('ecoGastado').textContent = '$' + gastado.toFixed(2);
-    document.getElementById('ecoPendiente').textContent = '$' + pendiente.toFixed(2);
-    document.getElementById('ecoPendiente').style.color = pendiente > 0 ? 'var(--green)' : 'var(--text)';
-    document.getElementById('ecoBalance').textContent  = eco.balance_total !== undefined
+    document.getElementById('ecoGastado').textContent   = '$' + gastado.toFixed(2);
+    document.getElementById('ecoPendiente').textContent  = '$' + pendiente.toFixed(2);
+    document.getElementById('ecoPendiente').style.color  = pendiente > 0 ? 'var(--green)' : 'var(--text)';
+    document.getElementById('ecoBalance').textContent   = eco.balance_total !== undefined
       ? '$' + Number(eco.balance_total).toFixed(2) : '—';
 
     const allData = {
@@ -1027,18 +1460,28 @@ async function fetchData() {
       usdjpy: data.usdjpy || {},
     };
 
+    // Salud
+    actualizarSalud(allData, eco);
+
+    // Render bots
     let html = '';
     for(const key of Object.keys(BOT_META)) {
       html += renderBot(key, allData[key], allData);
     }
     document.getElementById('botsGrid').innerHTML = html;
 
-    document.getElementById('liveStatus').style.color = 'var(--green)';
-    document.getElementById('liveStatus').textContent = 'EN VIVO';
+    // Histórico de hedges — leer del ecosistema si viene
+    if(data.historico_hedges) {
+      historicoHedges = data.historico_hedges;
+      renderHistoricoHedges();
+    }
+
+    document.getElementById('liveStatus').style.color   = 'var(--green)';
+    document.getElementById('liveStatus').textContent   = 'EN VIVO';
 
   } catch(e) {
-    document.getElementById('liveStatus').style.color = 'var(--red)';
-    document.getElementById('liveStatus').textContent = 'ERROR';
+    document.getElementById('liveStatus').style.color   = 'var(--red)';
+    document.getElementById('liveStatus').textContent   = 'ERROR';
     console.error(e);
   }
 
@@ -1054,10 +1497,7 @@ function startCountdown() {
   }, 1000);
 }
 
-// ============================================================
-// PANEL OPERATIVA MANUAL
-// ============================================================
-
+// ── OPERATIVA MANUAL BOTS ─────────────────────────────────────────
 const MAGIC_MAP = {
   'XAUUSD': { hedge: 789000 },
   'BTCUSD': { hedge: 790000 },
@@ -1067,16 +1507,9 @@ const MAGIC_MAP = {
 
 function actualizarFormOperativa() {
   const tipo = document.getElementById('op_tipo').value;
-  const fieldImporte = document.getElementById('field_importe');
-  const fieldMagic   = document.getElementById('field_magic');
-  const fieldDestino = document.getElementById('field_destino');
-
-  // Mostrar/ocultar campos según tipo
-  fieldImporte.style.display = ['GANANCIA_LIBRE','INYECTAR_HEDGE','INYECTAR_HUCHA'].includes(tipo) ? '' : 'none';
-  fieldMagic.style.display   = tipo === 'INYECTAR_HEDGE' ? '' : 'none';
-  fieldDestino.style.display = tipo === 'INYECTAR_HUCHA' ? '' : 'none';
-
-  // Autorellenar magic según bot seleccionado
+  document.getElementById('field_importe').style.display = ['GANANCIA_LIBRE','INYECTAR_HEDGE','INYECTAR_HUCHA'].includes(tipo) ? '' : 'none';
+  document.getElementById('field_magic').style.display   = tipo === 'INYECTAR_HEDGE' ? '' : 'none';
+  document.getElementById('field_destino').style.display = tipo === 'INYECTAR_HUCHA' ? '' : 'none';
   if(tipo === 'INYECTAR_HEDGE') {
     const bot = document.getElementById('op_bot').value;
     document.getElementById('op_magic').value = MAGIC_MAP[bot]?.hedge || '';
@@ -1097,10 +1530,6 @@ function mostrarMsg(texto, tipo) {
   el.className = 'operativa-msg' + (texto ? ' show ' + tipo : '');
 }
 
-const GITHUB_TOKEN  = ''; // Token no necesario — operativa manual desde MT4
-const GITHUB_REPO   = 'curroparody/trading-dashboard';
-const INSTRUC_FILE  = 'instruccion_pendiente.json';
-
 async function ejecutarOperativa() {
   const tipo    = document.getElementById('op_tipo').value;
   const bot     = document.getElementById('op_bot').value;
@@ -1113,7 +1542,6 @@ async function ejecutarOperativa() {
     return;
   }
 
-  // Mostrar instrucciones para ejecutar en MT4
   const msgs = {
     'GANANCIA_LIBRE':  `Bot: ${bot} | Tipo: GANANCIA_LIBRE | Importe: $${importe.toFixed(2)}`,
     'INYECTAR_HEDGE':  `Bot: ${bot} | Tipo: INYECTAR_HEDGE | Magic: ${magic} | Importe: $${importe.toFixed(2)}`,
@@ -1125,9 +1553,9 @@ async function ejecutarOperativa() {
   mostrarMsg(msgs[tipo] + ' — Configura en MT4 y activa Operativa_Activa = true', 'ok');
 }
 
-// Inicializar formulario
+// ── INIT ──────────────────────────────────────────────────────────
 actualizarFormOperativa();
-
+cargarOpManualesGitHub();
 fetchData();
 startCountdown();
 setInterval(fetchData, 30000);
