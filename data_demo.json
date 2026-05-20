@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026.05.20 12:39:38",
+  "timestamp": "2026.05.20 12:40:11",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1880.94,
-    "equity_total": 45.88,
-    "flotante_total": -1835.06,
+    "equity_total": 45.49,
+    "flotante_total": -1835.45,
     "ciclos_total": 28,
     "hedges_activos": 2,
     "hedges_cola_total": 2,
@@ -377,10 +377,10 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.05.20 13:39:21",
+    "timestamp": "2026.05.20 13:39:51",
     "balance": 1880.94,
-    "equity": 45.88,
-    "flotante": -1835.06,
+    "equity": 45.49,
+    "flotante": -1835.45,
     "ciclos": 14,
     "ganancia_real": 2.13,
     "retirado": 12.99,
@@ -399,17 +399,17 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 35.34,
+      "objetivo": 35.71,
       "fondo": 24.71,
-      "pct": 69.9
+      "pct": 69.2
     },
     "hedges_cola": [
       {
         "numero": 1,
-        "objetivo": 35.34,
+        "objetivo": 35.71,
         "fondo": 24.71,
-        "pct": 69.9,
-        "flotante": -35.34,
+        "pct": 69.2,
+        "flotante": -35.71,
         "fecha": "2026.05.20 03:30"
       },
       {
@@ -737,10 +737,10 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.05.20 13:39:20",
+    "timestamp": "2026.05.20 13:39:50",
     "balance": 1880.94,
-    "equity": 45.87,
-    "flotante": -1835.07,
+    "equity": 45.41,
+    "flotante": -1835.53,
     "ciclos": 6,
     "ganancia_real": 0.01,
     "retirado": 0.0,
@@ -780,10 +780,10 @@
     ]
   },
   "ger40": {
-    "timestamp": "2026.05.20 13:39:31",
+    "timestamp": "2026.05.20 13:40:03",
     "balance": 1880.94,
-    "equity": 45.67,
-    "flotante": -1835.27,
+    "equity": 45.36,
+    "flotante": -1835.58,
     "ciclos": 4,
     "ganancia_real": 0.01,
     "retirado": 0.0,
@@ -835,10 +835,10 @@
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.05.20 13:39:31",
+    "timestamp": "2026.05.20 13:40:01",
     "balance": 1880.94,
-    "equity": 45.67,
-    "flotante": -1835.27,
+    "equity": 45.12,
+    "flotante": -1835.82,
     "ciclos": 4,
     "ganancia_real": 0.01,
     "retirado": 0.0,
