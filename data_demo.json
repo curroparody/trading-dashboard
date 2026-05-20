@@ -1,27 +1,34 @@
 {
-  "timestamp": "2026.05.21 01:37:55",
+  "timestamp": "2026.05.21 01:38:27",
   "ecosistema": {
     "bots_activos": 3,
     "balance_total": 5817.06,
-    "equity_total": 188.04,
-    "flotante_total": -5629.02,
+    "equity_total": 189.9,
+    "flotante_total": -5627.16,
     "ciclos_total": 0,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
-    "ganancia_real_total": 0.0,
+    "ganancia_real_total": 0.3,
     "hucha_total": 0,
     "operativa_total": 0.0,
     "retirado_total": 0.0,
     "gastado_total": 0.0,
-    "operativa_log": []
+    "operativa_log": [
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.3,
+        "fecha": "2026.05.21 02:37"
+      }
+    ]
   },
   "oro": {
-    "timestamp": "2026.05.21 02:37:28",
+    "timestamp": "2026.05.21 02:37:58",
     "balance": 5817.06,
-    "equity": 188.04,
-    "flotante": -5629.02,
+    "equity": 189.9,
+    "flotante": -5627.16,
     "ciclos": 0,
-    "ganancia_real": 0.0,
+    "ganancia_real": 0.3,
     "retirado": 0.0,
     "hucha_comun": 0.0,
     "hucha_aportado": 0.0,
@@ -43,13 +50,20 @@
       "pct": 0.0
     },
     "hedges_cola": [],
-    "operativa_log": []
+    "operativa_log": [
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.3,
+        "fecha": "2026.05.21 02:37"
+      }
+    ]
   },
   "btc": {
-    "timestamp": "2026.05.21 02:37:53",
+    "timestamp": "2026.05.21 02:38:24",
     "balance": 5817.06,
-    "equity": 189.63,
-    "flotante": -5627.43,
+    "equity": 190.35,
+    "flotante": -5626.71,
     "ciclos": 0,
     "ganancia_real": 0.0,
     "retirado": 0.0,
@@ -77,10 +91,10 @@
   },
   "ger40": {},
   "usdjpy": {
-    "timestamp": "2026.05.21 02:37:33",
+    "timestamp": "2026.05.21 02:38:06",
     "balance": 5817.06,
-    "equity": 188.07,
-    "flotante": -5628.99,
+    "equity": 190.56,
+    "flotante": -5626.5,
     "ciclos": 0,
     "ganancia_real": 0.0,
     "retirado": 0.0,
