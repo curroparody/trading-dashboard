@@ -912,10 +912,11 @@
 </div>
 
 <script>
-const DATA_URL_DEMO = 'https://raw.githubusercontent.com/curroparody/trading-dashboard/main/data_demo.json';
-const DATA_URL_REAL = 'https://raw.githubusercontent.com/curroparody/trading-dashboard/main/data_real.json';
+// v2.2: repositorio privado — usar API para leer y escribir
 const GITHUB_API_BASE = 'https://api.github.com/repos/curroparody/trading-dashboard/contents/';
-const GITHUB_TOKEN = 'ghp_QkfdWra1drBsj8aJZxwX0KX9sAb3OW1eFDQf'; // Sustituir por token real
+const DATA_URL_DEMO = null; // no usado - se lee via API
+const DATA_URL_REAL = null; // no usado - se lee via API
+const GITHUB_TOKEN = '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';
 
 let currentMode = 'demo';
 let operacionesManuales = [];
@@ -1412,9 +1413,12 @@ async function guardarOpManualesGitHub() {
 
 async function cargarOpManualesGitHub() {
   try {
-    const res = await fetch('https://raw.githubusercontent.com/curroparody/trading-dashboard/main/operaciones_manuales.json?t=' + Date.now());
+    const res = await fetch(GITHUB_API_BASE + 'operaciones_manuales.json?t=' + Date.now(), {
+      headers: { 'Authorization': 'token ' + GITHUB_TOKEN }
+    });
     if(res.ok) {
-      operacionesManuales = await res.json();
+      const apiData = await res.json();
+      operacionesManuales = JSON.parse(atob(apiData.content.replace(/\n/g, '')));
       renderOpManuales();
     }
   } catch(e) {}
@@ -1423,9 +1427,13 @@ async function cargarOpManualesGitHub() {
 // ── FETCH PRINCIPAL ───────────────────────────────────────────────
 async function fetchData() {
   try {
-    const res = await fetch(getDataUrl() + '?t=' + Date.now());
+    const filename = currentMode === 'real' ? 'data_real.json' : 'data_demo.json';
+    const res = await fetch(GITHUB_API_BASE + filename + '?t=' + Date.now(), {
+      headers: { 'Authorization': 'token ' + GITHUB_TOKEN }
+    });
     if(!res.ok) throw new Error('HTTP ' + res.status);
-    const data = await res.json();
+    const apiData = await res.json();
+    const data = JSON.parse(atob(apiData.content.replace(/\n/g, '')));
 
     document.getElementById('lastUpdate').textContent = data.timestamp || '—';
 
