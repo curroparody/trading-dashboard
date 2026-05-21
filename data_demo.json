@@ -1,25 +1,32 @@
 {
-  "timestamp": "2026.05.22 00:53:24",
+  "timestamp": "2026.05.22 00:53:57",
   "ecosistema": {
     "bots_activos": 3,
     "balance_total": 5982.24,
-    "equity_total": 167.5,
-    "flotante_total": -5814.74,
+    "equity_total": 168.0,
+    "flotante_total": -5814.24,
     "ciclos_total": 0,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
-    "ganancia_real_total": 0.0,
+    "ganancia_real_total": 1.17,
     "hucha_total": 0.0,
     "operativa_total": 0.0,
     "retirado_total": 0.0,
     "gastado_total": 0.0,
-    "operativa_log": []
+    "operativa_log": [
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.17,
+        "fecha": "2026.05.22 01:53"
+      }
+    ]
   },
   "oro": {
-    "timestamp": "2026.05.22 01:53:09",
+    "timestamp": "2026.05.22 01:53:39",
     "balance": 5982.24,
-    "equity": 167.5,
-    "flotante": -5814.74,
+    "equity": 168.0,
+    "flotante": -5814.24,
     "ciclos": 0,
     "ganancia_real": 0.0,
     "retirado": 0.0,
@@ -46,12 +53,12 @@
     "operativa_log": []
   },
   "btc": {
-    "timestamp": "2026.05.22 01:52:58",
+    "timestamp": "2026.05.22 01:53:28",
     "balance": 5982.24,
-    "equity": 167.43,
-    "flotante": -5814.81,
+    "equity": 167.38,
+    "flotante": -5814.86,
     "ciclos": 0,
-    "ganancia_real": 0.0,
+    "ganancia_real": 1.17,
     "retirado": 0.0,
     "hucha_comun": 0.0,
     "hucha_aportado": 0.0,
@@ -73,14 +80,21 @@
       "pct": 0.0
     },
     "hedges_cola": [],
-    "operativa_log": []
+    "operativa_log": [
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.17,
+        "fecha": "2026.05.22 01:53"
+      }
+    ]
   },
   "ger40": {},
   "usdjpy": {
-    "timestamp": "2026.05.22 01:53:10",
+    "timestamp": "2026.05.22 01:53:41",
     "balance": 5982.24,
-    "equity": 167.5,
-    "flotante": -5814.74,
+    "equity": 168.75,
+    "flotante": -5813.49,
     "ciclos": 0,
     "ganancia_real": 0.0,
     "retirado": 0.0,
