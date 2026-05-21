@@ -905,7 +905,7 @@
   </div>
 
   <footer>
-    <span>PROYECTO S.E.M. · v2.1</span>
+    <span>PROYECTO S.E.M. · v2.2</span>
     <span id="nextUpdate">Actualizando en 30s</span>
   </footer>
 
@@ -1088,27 +1088,7 @@ function renderBot(key, data, allData) {
   const huchaPct     = huchaPropia !== null ? Math.min((huchaPropia / huchaTope) * 100, 100) : 0;
   const faseNombre   = huchaFase !== null ? FASE_NOMBRES[Math.min(huchaFase, 5)] : '';
 
-  let huchaHtml = '';
-  if(huchaPropia !== null) {
-    huchaHtml = `
-      <div class="hucha-block">
-        <div class="section-label">🐷 Hucha común del ecosistema</div>
-        <div class="hucha-row">
-          <span class="hucha-label">
-            Acumulado
-            ${faseNombre ? `<span class="hucha-fase-badge">${faseNombre}</span>` : ''}
-          </span>
-          <span class="hucha-amount">${fmt(huchaPropia)} / $${Number(huchaTope).toFixed(2)}</span>
-        </div>
-        <div class="hucha-bar-track">
-          <div class="hucha-bar-fill" style="width:${huchaPct.toFixed(1)}%"></div>
-        </div>
-        <div class="hucha-meta">
-          <span>${huchaPct.toFixed(1)}% completado</span>
-          ${huchaFasePct !== null ? `<span>Aportación actual: ${huchaFasePct}%</span>` : ''}
-        </div>
-      </div>`;
-  }
+  let huchaHtml = ''; // v1.6.2: hucha comun solo en ecosistema bar
 
   // Hedge con marcas de progreso
   let hedgeHtml = '';
@@ -1332,6 +1312,14 @@ function guardarOpManual() {
   renderOpManuales();
   toggleFormOpManual();
   mostrarMsgOM('Operación guardada correctamente', 'ok');
+  // v1.6.2: si el resultado es != 0, ejecutar GANANCIA_LIBRE en el bot correspondiente
+  if(resultado !== 0) {
+    const botMap = { 'XAUUSD': 'ORO (XAUUSD)', 'BTCUSD': 'BITCOIN (BTCUSD)', 'GER40': 'DAX 40 (GER40)', 'USDJPY': 'YEN (USDJPY)' };
+    document.getElementById('op_tipo').value = 'GANANCIA_LIBRE';
+    document.getElementById('op_bot').value = par;
+    document.getElementById('op_importe').value = Math.abs(resultado).toFixed(2);
+    actualizarFormOperativa();
+  }
 
   // Limpiar
   ['om_apertura','om_cierre','om_swap','om_resultado','om_notas'].forEach(id => {
