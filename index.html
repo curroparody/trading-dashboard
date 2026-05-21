@@ -751,9 +751,16 @@
       <span class="eco-label">Hedges activos</span>
       <span class="eco-value orange" id="ecoHedges">—</span>
     </div>
-    <div class="eco-stat">
-      <span class="eco-label">🐷 Hucha común</span>
+    <div class="eco-stat" style="flex:1;min-width:200px">
+      <span class="eco-label">🐷 Hucha común del ecosistema</span>
       <span class="eco-value gold" id="ecoHuchaComun">—</span>
+      <div class="hucha-bar-track" style="margin-top:6px">
+        <div class="hucha-bar-fill" id="ecoHuchaBar" style="width:0%"></div>
+      </div>
+      <div class="hucha-meta">
+        <span id="ecoHuchaPct">0.0% completado</span>
+        <span id="ecoHuchaFase"></span>
+      </div>
     </div>
     <div class="eco-stat">
       <span class="eco-label">Retirado total</span>
@@ -1472,8 +1479,15 @@ async function fetchData() {
     document.getElementById('ecoGanancia').textContent = eco.ganancia_real_total !== undefined
       ? '$' + Number(eco.ganancia_real_total).toFixed(2) : '—';
     document.getElementById('ecoHedges').textContent   = eco.hedges_activos ?? '—';
-    document.getElementById('ecoHuchaComun').textContent = eco.hucha_total !== undefined
-      ? '$' + Number(eco.hucha_total).toFixed(2) + ' / $100.00' : '—';
+    const huchaVal = eco.hucha_total !== undefined ? Number(eco.hucha_total) : 0;
+    document.getElementById('ecoHuchaComun').textContent = '$' + huchaVal.toFixed(2) + ' / $100.00';
+    const huchaPctVal = Math.min(huchaVal, 100);
+    document.getElementById('ecoHuchaBar').style.width = huchaPctVal + '%';
+    document.getElementById('ecoHuchaPct').textContent = huchaPctVal.toFixed(1) + '% completado';
+    // Fase
+    const fases = [[0,20,'F0 80%'],[20,40,'F1 60%'],[40,60,'F2 45%'],[60,80,'F3 30%'],[80,100,'F4 15%']];
+    const faseActual = fases.find(f => huchaVal >= f[0] && huchaVal < f[1]);
+    document.getElementById('ecoHuchaFase').textContent = faseActual ? faseActual[2] : (huchaVal >= 100 ? 'TOPE' : '');
     document.getElementById('ecoRetirado').textContent = eco.retirado_total !== undefined
       ? '$' + Number(eco.retirado_total).toFixed(2) : '$0.00';
     const gastado  = eco.gastado_total  || 0;
