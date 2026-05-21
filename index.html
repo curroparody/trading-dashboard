@@ -884,17 +884,18 @@
           <input type="number" id="om_resultado" step="0.01" placeholder="0.00">
         </div>
         <div class="operativa-field">
-          <label>Fecha</label>
-          <input type="date" id="om_fecha">
-        </div>
-        <div class="operativa-field">
           <label>Notas</label>
           <input type="text" id="om_notas" placeholder="Opcional">
         </div>
       </div>
       <div class="operativa-btns">
-        <button class="operativa-btn success" onclick="guardarOpManual()">GUARDAR</button>
+        <button class="operativa-btn success" onclick="generarComandoOpManual()">GENERAR COMANDO</button>
         <button class="operativa-btn warning" onclick="toggleFormOpManual()">CANCELAR</button>
+      </div>
+      <div id="om_comando_box" style="display:none;margin-top:12px;padding:12px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.3)">
+        <div style="font-family:var(--mono);font-size:10px;color:var(--muted);margin-bottom:6px;letter-spacing:0.06em">COPIA Y MANDA POR TELEGRAM</div>
+        <div id="om_comando_texto" style="font-family:var(--mono);font-size:13px;color:var(--green);word-break:break-all"></div>
+        <button class="operativa-btn success" onclick="copiarComando()" style="margin-top:10px;font-size:11px;padding:5px 14px">COPIAR</button>
       </div>
       <div class="operativa-msg" id="om_msg"></div>
     </div>
@@ -905,7 +906,7 @@
   </div>
 
   <footer>
-    <span>PROYECTO S.E.M. · v2.2</span>
+    <span>PROYECTO S.E.M. · v2.3</span>
     <span id="nextUpdate">Actualizando en 30s</span>
   </footer>
 
@@ -1284,6 +1285,37 @@ function renderHistoricoHedges() {
 }
 
 // ── OPERACIONES MANUALES DE TRADING ──────────────────────────────
+function generarComandoOpManual() {
+  const par       = document.getElementById('om_par').value;
+  const dir       = document.getElementById('om_dir').value;
+  const apertura  = parseFloat(document.getElementById('om_apertura').value || 0);
+  const cierre    = parseFloat(document.getElementById('om_cierre').value || 0);
+  const swap      = parseFloat(document.getElementById('om_swap').value || 0);
+  const resultado = parseFloat(document.getElementById('om_resultado').value || 0);
+  const notas     = document.getElementById('om_notas').value;
+
+  if(!apertura || !cierre) {
+    document.getElementById('om_msg').textContent = 'Precio apertura y cierre son obligatorios';
+    document.getElementById('om_msg').className = 'operativa-msg show err';
+    return;
+  }
+
+  let cmd = `/opmanual ${par} ${dir} ${apertura.toFixed(2)} ${cierre.toFixed(2)} ${swap.toFixed(2)} ${resultado.toFixed(2)}`;
+  if(notas) cmd += ` ${notas}`;
+
+  document.getElementById('om_comando_texto').textContent = cmd;
+  document.getElementById('om_comando_box').style.display = 'block';
+}
+
+function copiarComando() {
+  const texto = document.getElementById('om_comando_texto').textContent;
+  navigator.clipboard.writeText(texto).then(() => {
+    document.getElementById('om_msg').textContent = 'Copiado. Manda el comando por Telegram.';
+    document.getElementById('om_msg').className = 'operativa-msg show ok';
+    setTimeout(() => { document.getElementById('om_msg').className = 'operativa-msg'; }, 3000);
+  });
+}
+
 function toggleFormOpManual() {
   const form = document.getElementById('formOpManual');
   form.style.display = form.style.display === 'none' ? 'block' : 'none';
@@ -1413,12 +1445,10 @@ async function guardarOpManualesGitHub() {
 
 async function cargarOpManualesGitHub() {
   try {
-    const res = await fetch(GITHUB_API_BASE + 'operaciones_manuales.json?t=' + Date.now(), {
-      headers: { 'Authorization': 'token ' + GITHUB_TOKEN }
-    });
+    // Leer operaciones_manuales.json via raw (repo publico)
+    const res = await fetch('https://raw.githubusercontent.com/curroparody/trading-dashboard/main/operaciones_manuales.json?t=' + Date.now());
     if(res.ok) {
-      const apiData = await res.json();
-      operacionesManuales = JSON.parse(atob(apiData.content.replace(/\n/g, '')));
+      operacionesManuales = await res.json();
       renderOpManuales();
     }
   } catch(e) {}
@@ -1427,13 +1457,12 @@ async function cargarOpManualesGitHub() {
 // ── FETCH PRINCIPAL ───────────────────────────────────────────────
 async function fetchData() {
   try {
-    const filename = currentMode === 'real' ? 'data_real.json' : 'data_demo.json';
-    const res = await fetch(GITHUB_API_BASE + filename + '?t=' + Date.now(), {
-      headers: { 'Authorization': 'token ' + GITHUB_TOKEN }
-    });
+    const DATA_URL = currentMode === 'real'
+      ? 'https://raw.githubusercontent.com/curroparody/trading-dashboard/main/data_real.json'
+      : 'https://raw.githubusercontent.com/curroparody/trading-dashboard/main/data_demo.json';
+    const res = await fetch(DATA_URL + '?t=' + Date.now());
     if(!res.ok) throw new Error('HTTP ' + res.status);
-    const apiData = await res.json();
-    const data = JSON.parse(atob(apiData.content.replace(/\n/g, '')));
+    const data = await res.json();
 
     document.getElementById('lastUpdate').textContent = data.timestamp || '—';
 
