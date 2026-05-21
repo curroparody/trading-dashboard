@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026.05.22 00:59:23",
+  "timestamp": "2026.05.22 00:59:56",
   "ecosistema": {
     "bots_activos": 3,
     "balance_total": 5982.24,
-    "equity_total": 167.16,
-    "flotante_total": -5815.08,
+    "equity_total": 169.27,
+    "flotante_total": -5812.97,
     "ciclos_total": 0,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
-    "ganancia_real_total": -0.04,
+    "ganancia_real_total": -2.35,
     "hucha_total": 0.0,
     "operativa_total": 0.0,
     "retirado_total": 0.0,
@@ -25,14 +25,20 @@
         "destino": "Ganancia Real directa [Dashboard]",
         "importe": -1.21,
         "fecha": "2026.05.22 01:58"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": -2.31,
+        "fecha": "2026.05.22 01:59"
       }
     ]
   },
   "oro": {
-    "timestamp": "2026.05.22 01:59:13",
+    "timestamp": "2026.05.22 01:59:43",
     "balance": 5982.24,
-    "equity": 167.16,
-    "flotante": -5815.08,
+    "equity": 169.27,
+    "flotante": -5812.97,
     "ciclos": 0,
     "ganancia_real": 0.0,
     "retirado": 0.0,
@@ -59,10 +65,10 @@
     "operativa_log": []
   },
   "btc": {
-    "timestamp": "2026.05.22 01:59:00",
+    "timestamp": "2026.05.22 01:59:33",
     "balance": 5982.24,
-    "equity": 166.76,
-    "flotante": -5815.48,
+    "equity": 167.81,
+    "flotante": -5814.43,
     "ciclos": 0,
     "ganancia_real": -0.04,
     "retirado": 0.0,
@@ -103,12 +109,12 @@
   },
   "ger40": {},
   "usdjpy": {
-    "timestamp": "2026.05.22 01:59:14",
+    "timestamp": "2026.05.22 01:59:48",
     "balance": 5982.24,
-    "equity": 167.11,
-    "flotante": -5815.13,
+    "equity": 168.58,
+    "flotante": -5813.66,
     "ciclos": 0,
-    "ganancia_real": 0.0,
+    "ganancia_real": -2.31,
     "retirado": 0.0,
     "hucha_comun": 0.0,
     "hucha_aportado": 0.0,
@@ -130,6 +136,13 @@
       "pct": 0.0
     },
     "hedges_cola": [],
-    "operativa_log": []
+    "operativa_log": [
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": -2.31,
+        "fecha": "2026.05.22 01:59"
+      }
+    ]
   }
 }
