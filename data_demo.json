@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026.05.25 18:38:31",
+  "timestamp": "2026.05.25 18:39:04",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 6071.96,
-    "equity_total": 274.49,
-    "flotante_total": -5797.47,
+    "equity_total": 274.56,
+    "flotante_total": -5797.4,
     "ciclos_total": 19,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
-    "ganancia_real_total": 33.65,
+    "ganancia_real_total": 28.87,
     "hucha_total": 27.06,
-    "operativa_total": 0.18,
+    "operativa_total": 4.96,
     "retirado_total": 0.0,
     "gastado_total": 0.0,
     "operativa_log": [
@@ -591,6 +591,12 @@
         "fecha": "2026.05.25 03:15"
       },
       {
+        "tipo": "INYECTAR_HUCHA",
+        "destino": "Hucha ECOSISTEMA [Dashboard]",
+        "importe": 4.78,
+        "fecha": "2026.05.25 19:38"
+      },
+      {
         "tipo": "GANANCIA_LIBRE",
         "destino": "Ganancia Real directa [Dashboard]",
         "importe": -2.31,
@@ -599,10 +605,10 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.05.25 19:38:08",
+    "timestamp": "2026.05.25 19:38:38",
     "balance": 6071.96,
-    "equity": 274.49,
-    "flotante": -5797.47,
+    "equity": 274.56,
+    "flotante": -5797.4,
     "ciclos": 15,
     "ganancia_real": 31.06,
     "retirado": 0.0,
@@ -1176,10 +1182,10 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.05.25 19:38:20",
+    "timestamp": "2026.05.25 19:38:51",
     "balance": 6071.96,
-    "equity": 274.49,
-    "flotante": -5797.47,
+    "equity": 275.35,
+    "flotante": -5796.61,
     "ciclos": 1,
     "ganancia_real": 0.01,
     "retirado": 0.0,
@@ -1225,19 +1231,19 @@
     ]
   },
   "ger40": {
-    "timestamp": "2026.05.25 19:37:26",
+    "timestamp": "2026.05.25 19:38:51",
     "balance": 6071.96,
-    "equity": 275.17,
-    "flotante": -5796.79,
+    "equity": 274.62,
+    "flotante": -5797.34,
     "ciclos": 2,
-    "ganancia_real": 4.79,
+    "ganancia_real": 0.01,
     "retirado": 0.0,
     "hucha_comun": 27.06,
     "hucha_aportado": 0.0,
     "hucha_fase": 2,
     "hucha_fase_pct": 45,
     "hucha_tope": 100.0,
-    "operativa_aportado": 0.0,
+    "operativa_aportado": 4.78,
     "martingala": {
       "activa": false,
       "direccion": "",
@@ -1264,14 +1270,20 @@
         "destino": "Ganancia Real ciclo auto [20%]",
         "importe": 3.27,
         "fecha": "2026.05.25 03:15"
+      },
+      {
+        "tipo": "INYECTAR_HUCHA",
+        "destino": "Hucha ECOSISTEMA [Dashboard]",
+        "importe": 4.78,
+        "fecha": "2026.05.25 19:38"
       }
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.05.25 19:38:14",
+    "timestamp": "2026.05.25 19:38:44",
     "balance": 6071.96,
-    "equity": 275.22,
-    "flotante": -5796.74,
+    "equity": 274.53,
+    "flotante": -5797.43,
     "ciclos": 1,
     "ganancia_real": -2.21,
     "retirado": 0.0,
