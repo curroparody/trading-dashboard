@@ -8,17 +8,17 @@
 <style>
   :root {
     --bg:       #0a0c10;
-    --surface:  #111318;
-    --border:   #1e2230;
-    --gold:     #c9a84c;
-    --gold2:    #e8c96a;
-    --green:    #22c55e;
-    --red:      #ef4444;
-    --orange:   #f97316;
-    --blue:     #3b82f6;
-    --muted:    #4a5060;
-    --text:     #e2e8f0;
-    --textdim:  #8892a4;
+    --surface:  #13161e;
+    --border:   #252a3a;
+    --gold:     #e0b84a;
+    --gold2:    #f0d080;
+    --green:    #2ecc71;
+    --red:      #ff5555;
+    --orange:   #ff9f43;
+    --blue:     #5b9cf6;
+    --muted:    #6a7490;
+    --text:     #f0f4ff;
+    --textdim:  #a0aabb;
     --mono:     'Space Mono', monospace;
     --sans:     'Syne', sans-serif;
   }
@@ -875,6 +875,26 @@
           </select>
         </div>
         <div class="operativa-field">
+          <label>Fecha apertura</label>
+          <input type="date" id="om_fecha_apertura">
+        </div>
+        <div class="operativa-field">
+          <label>Hora apertura</label>
+          <input type="time" id="om_hora_apertura" step="1">
+        </div>
+        <div class="operativa-field">
+          <label>Fecha cierre</label>
+          <input type="date" id="om_fecha_cierre">
+        </div>
+        <div class="operativa-field">
+          <label>Hora cierre</label>
+          <input type="time" id="om_hora_cierre" step="1">
+        </div>
+        <div class="operativa-field">
+          <label>Lotaje</label>
+          <input type="number" id="om_lote" step="0.01" placeholder="0.01" value="0.01">
+        </div>
+        <div class="operativa-field">
           <label>Precio apertura</label>
           <input type="number" id="om_apertura" step="0.01" placeholder="0.00">
         </div>
@@ -1346,7 +1366,12 @@ function guardarOpManual() {
     return;
   }
 
-  const op = { par, dir, apertura, cierre, swap, resultado, fecha, notas, ts: Date.now() };
+  const op = { par, dir, apertura, cierre, swap, resultado, fecha, notas, ts: Date.now(),
+               fecha_apertura: document.getElementById('om_fecha_apertura').value || '',
+               hora_apertura:  document.getElementById('om_hora_apertura').value  || '',
+               fecha_cierre:   document.getElementById('om_fecha_cierre').value   || '',
+               hora_cierre:    document.getElementById('om_hora_cierre').value    || '',
+               lote:           parseFloat(document.getElementById('om_lote').value || 0.01) };
   operacionesManuales.push(op);
   guardarOpManualesGitHub();
   renderOpManuales();
@@ -1362,7 +1387,7 @@ function guardarOpManual() {
   }
 
   // Limpiar
-  ['om_apertura','om_cierre','om_swap','om_resultado','om_notas'].forEach(id => {
+  ['om_apertura','om_cierre','om_swap','om_resultado','om_notas','om_fecha_apertura','om_hora_apertura','om_fecha_cierre','om_hora_cierre','om_lote'].forEach(id => {
     document.getElementById(id).value = '';
   });
   document.getElementById('om_swap').value = '0';
@@ -1385,9 +1410,13 @@ function renderOpManuales() {
   let html = `<table class="opmanual-table">
     <thead>
       <tr>
-        <th>Fecha</th>
+        <th>Fecha apertura</th>
+        <th>Hora apertura</th>
+        <th>Fecha cierre</th>
+        <th>Hora cierre</th>
         <th>Par</th>
         <th>Dir.</th>
+        <th>Lote</th>
         <th>Apertura</th>
         <th>Cierre</th>
         <th>Swap</th>
@@ -1399,9 +1428,13 @@ function renderOpManuales() {
   for(const op of [...operacionesManuales].reverse()) {
     total += op.resultado || 0;
     html += `<tr>
-      <td>${op.fecha || '—'}</td>
+      <td>${op.fecha_apertura || op.fecha || '—'}</td>
+      <td>${op.hora_apertura || '—'}</td>
+      <td>${op.fecha_cierre || '—'}</td>
+      <td>${op.hora_cierre || '—'}</td>
       <td>${op.par}</td>
       <td class="${op.dir === 'BUY' ? 'buy' : 'sell'}">${op.dir}</td>
+      <td style="color:var(--textdim)">${op.lote ? op.lote.toFixed(2) : '—'}</td>
       <td>${op.apertura.toFixed(2)}</td>
       <td>${op.cierre.toFixed(2)}</td>
       <td class="${op.swap >= 0 ? 'pos' : 'neg'}">${fmt(op.swap)}</td>
@@ -1412,7 +1445,7 @@ function renderOpManuales() {
   html += `</tbody>
     <tfoot>
       <tr>
-        <td colspan="6" style="text-align:right;color:var(--muted);font-size:10px;padding:8px 10px">TOTAL RESULTADO:</td>
+        <td colspan="10" style="text-align:right;color:var(--muted);font-size:10px;padding:8px 10px">TOTAL RESULTADO:</td>
         <td class="${total >= 0 ? 'pos' : 'neg'}" style="padding:8px 10px">${fmt(total)}</td>
         <td></td>
       </tr>
