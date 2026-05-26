@@ -1403,12 +1403,12 @@ function guardarOpManual() {
   renderOpManuales();
   toggleFormOpManual();
   mostrarMsgOM('Operación guardada correctamente', 'ok');
-  // v1.6.2: si el resultado es != 0, ejecutar GANANCIA_LIBRE en el bot correspondiente
-  if(resultado !== 0) {
-    const botMap = { 'XAUUSD': 'ORO (XAUUSD)', 'BTCUSD': 'BITCOIN (BTCUSD)', 'GER40': 'DAX 40 (GER40)', 'USDJPY': 'YEN (USDJPY)' };
+  // Suma swap al resultado para GANANCIA_LIBRE
+  const totalConSwap = resultado + swap;
+  if(totalConSwap !== 0) {
     document.getElementById('op_tipo').value = 'GANANCIA_LIBRE';
     document.getElementById('op_bot').value = par;
-    document.getElementById('op_importe').value = Math.abs(resultado).toFixed(2);
+    document.getElementById('op_importe').value = Math.abs(totalConSwap).toFixed(2);
     actualizarFormOperativa();
   }
 
@@ -1417,6 +1417,14 @@ function guardarOpManual() {
     document.getElementById(id).value = '';
   });
   document.getElementById('om_swap').value = '0';
+}
+
+function eliminarOpManual(ts) {
+  if(!confirm('¿Eliminar esta operación?')) return;
+  operacionesManuales = operacionesManuales.filter(o => o.ts !== ts);
+  guardarOpManualesGitHub();
+  renderOpManuales();
+  mostrarMsgOM('Operación eliminada', 'ok');
 }
 
 function mostrarMsgOM(texto, tipo) {
@@ -1465,7 +1473,7 @@ function renderOpManuales() {
         <table class="opmanual-table">
           <thead><tr>
             <th>H.Apertura</th><th>H.Cierre</th><th>Par</th><th>Dir.</th>
-            <th>Lote</th><th>Apertura</th><th>Cierre</th><th>Swap</th><th>Resultado</th><th>Notas</th>
+            <th>Lote</th><th>Apertura</th><th>Cierre</th><th>Swap</th><th>Resultado</th><th>Notas</th><th></th>
           </tr></thead>
           <tbody>`;
 
@@ -1481,6 +1489,7 @@ function renderOpManuales() {
         <td class="${(op.swap||0) >= 0 ? 'pos' : 'neg'}">${fmt(op.swap||0)}</td>
         <td class="${op.resultado >= 0 ? 'pos' : 'neg'}">${fmt(op.resultado)}</td>
         <td style="color:var(--muted);font-size:10px">${op.notas || ''}</td>
+        <td><button onclick="eliminarOpManual(${op.ts})" style="background:none;border:none;color:var(--red);cursor:pointer;font-size:12px;padding:2px 6px" title="Eliminar">✕</button></td>
       </tr>`;
     }
 
