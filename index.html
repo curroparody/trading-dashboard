@@ -693,6 +693,32 @@
   .opmanual-table td.pos  { color: var(--green); }
   .opmanual-table td.neg  { color: var(--red);   }
 
+  /* DESPLEGABLE POR DÍA */
+  .opmanual-day {
+    margin-bottom: 6px;
+    border: 1px solid var(--border);
+  }
+  .opmanual-day-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 14px;
+    background: rgba(255,255,255,0.03);
+    cursor: pointer;
+    user-select: none;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+  }
+  .opmanual-day-header:hover { background: rgba(255,255,255,0.06); }
+  .opmanual-day-header .day-label { color: var(--text); font-weight: 700; }
+  .opmanual-day-header .day-meta { color: var(--muted); font-size: 10px; }
+  .opmanual-day-header .day-total { font-weight: 700; }
+  .opmanual-day-header .day-arrow { color: var(--muted); font-size: 10px; transition: transform 0.2s; }
+  .opmanual-day-header.open .day-arrow { transform: rotate(180deg); }
+  .opmanual-day-body { display: none; }
+  .opmanual-day-body.open { display: block; }
+
   /* FOOTER */
   footer {
     margin-top: 28px;
@@ -1406,52 +1432,75 @@ function renderOpManuales() {
     el.innerHTML = '<div class="historico-empty">Sin operaciones manuales registradas</div>';
     return;
   }
-  let total = 0;
-  let html = `<table class="opmanual-table">
-    <thead>
-      <tr>
-        <th>Fecha apertura</th>
-        <th>Hora apertura</th>
-        <th>Fecha cierre</th>
-        <th>Hora cierre</th>
-        <th>Par</th>
-        <th>Dir.</th>
-        <th>Lote</th>
-        <th>Apertura</th>
-        <th>Cierre</th>
-        <th>Swap</th>
-        <th>Resultado</th>
-        <th>Notas</th>
-      </tr>
-    </thead>
-    <tbody>`;
-  for(const op of [...operacionesManuales].reverse()) {
-    total += op.resultado || 0;
-    html += `<tr>
-      <td>${op.fecha_apertura || op.fecha || '—'}</td>
-      <td>${op.hora_apertura || '—'}</td>
-      <td>${op.fecha_cierre || '—'}</td>
-      <td>${op.hora_cierre || '—'}</td>
-      <td>${op.par}</td>
-      <td class="${op.dir === 'BUY' ? 'buy' : 'sell'}">${op.dir}</td>
-      <td style="color:var(--textdim)">${op.lote ? op.lote.toFixed(2) : '—'}</td>
-      <td>${op.apertura.toFixed(2)}</td>
-      <td>${op.cierre.toFixed(2)}</td>
-      <td class="${op.swap >= 0 ? 'pos' : 'neg'}">${fmt(op.swap)}</td>
-      <td class="${op.resultado >= 0 ? 'pos' : 'neg'}">${fmt(op.resultado)}</td>
-      <td style="color:var(--muted);font-size:10px">${op.notas || ''}</td>
-    </tr>`;
+
+  // Agrupar por fecha de apertura
+  const grupos = {};
+  for(const op of operacionesManuales) {
+    const dia = op.fecha_apertura || op.fecha || 'Sin fecha';
+    if(!grupos[dia]) grupos[dia] = [];
+    grupos[dia].push(op);
   }
-  html += `</tbody>
-    <tfoot>
-      <tr>
-        <td colspan="10" style="text-align:right;color:var(--muted);font-size:10px;padding:8px 10px">TOTAL RESULTADO:</td>
-        <td class="${total >= 0 ? 'pos' : 'neg'}" style="padding:8px 10px">${fmt(total)}</td>
-        <td></td>
-      </tr>
-    </tfoot>
-  </table>`;
+
+  // Ordenar días descendente
+  const dias = Object.keys(grupos).sort().reverse();
+
+  let totalGlobal = 0;
+  let html = '';
+
+  for(const dia of dias) {
+    const ops = grupos[dia];
+    const totalDia = ops.reduce((s, o) => s + (o.resultado || 0), 0);
+    totalGlobal += totalDia;
+    const colorTotal = totalDia >= 0 ? 'var(--green)' : 'var(--red)';
+    const idx = dia.replace(/[^a-z0-9]/gi, '');
+
+    html += `<div class="opmanual-day">
+      <div class="opmanual-day-header" onclick="toggleDia('${idx}')">
+        <span class="day-label">${dia}</span>
+        <span class="day-meta">${ops.length} operación${ops.length !== 1 ? 'es' : ''}</span>
+        <span class="day-total" style="color:${colorTotal}">${fmt(totalDia)}</span>
+        <span class="day-arrow">▼</span>
+      </div>
+      <div class="opmanual-day-body" id="day_${idx}">
+        <table class="opmanual-table">
+          <thead><tr>
+            <th>H.Apertura</th><th>H.Cierre</th><th>Par</th><th>Dir.</th>
+            <th>Lote</th><th>Apertura</th><th>Cierre</th><th>Swap</th><th>Resultado</th><th>Notas</th>
+          </tr></thead>
+          <tbody>`;
+
+    for(const op of [...ops].reverse()) {
+      html += `<tr>
+        <td>${op.hora_apertura || '—'}</td>
+        <td>${op.hora_cierre || '—'}</td>
+        <td>${op.par}</td>
+        <td class="${op.dir === 'BUY' ? 'buy' : 'sell'}">${op.dir}</td>
+        <td style="color:var(--textdim)">${op.lote ? op.lote.toFixed(2) : '—'}</td>
+        <td>${op.apertura.toFixed(2)}</td>
+        <td>${op.cierre.toFixed(2)}</td>
+        <td class="${(op.swap||0) >= 0 ? 'pos' : 'neg'}">${fmt(op.swap||0)}</td>
+        <td class="${op.resultado >= 0 ? 'pos' : 'neg'}">${fmt(op.resultado)}</td>
+        <td style="color:var(--muted);font-size:10px">${op.notas || ''}</td>
+      </tr>`;
+    }
+
+    html += `</tbody></table></div></div>`;
+  }
+
+  // Total global
+  html += `<div style="text-align:right;font-family:var(--mono);font-size:11px;padding:10px 4px;color:var(--muted)">
+    TOTAL GLOBAL: <span style="color:${totalGlobal >= 0 ? 'var(--green)' : 'var(--red)'};font-weight:700">${fmt(totalGlobal)}</span>
+  </div>`;
+
   el.innerHTML = html;
+}
+
+function toggleDia(idx) {
+  const body = document.getElementById('day_' + idx);
+  const header = body.previousElementSibling;
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  header.classList.toggle('open', !isOpen);
 }
 
 async function guardarOpManualesGitHub() {
