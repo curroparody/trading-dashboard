@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026.05.26 23:12:51",
+  "timestamp": "2026.05.26 23:13:23",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 6071.59,
@@ -8,7 +8,7 @@
     "ciclos_total": 23,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
-    "ganancia_real_total": 0.5,
+    "ganancia_real_total": 1.15,
     "hucha_total": 28.84,
     "operativa_total": 11.01,
     "retirado_total": 25.0,
@@ -631,6 +631,12 @@
         "destino": "Hucha ECOSISTEMA [Dashboard]",
         "importe": 0.18,
         "fecha": "2026.05.25 19:37"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [55%]",
+        "importe": 0.65,
+        "fecha": "2026.05.27 00:13"
       },
       {
         "tipo": "GANANCIA_LIBRE",
@@ -1302,14 +1308,14 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.05.27 00:12:27",
-    "balance": 6071.59,
-    "equity": 227.29,
-    "flotante": -5844.3,
+    "timestamp": "2026.05.27 00:13:13",
+    "balance": 6072.78,
+    "equity": 228.43,
+    "flotante": -5844.35,
     "ciclos": 1,
-    "ganancia_real": 0.01,
+    "ganancia_real": 0.66,
     "retirado": 0.0,
-    "hucha_comun": 28.84,
+    "hucha_comun": 29.38,
     "hucha_aportado": 0.0,
     "hucha_fase": 2,
     "hucha_fase_pct": 45,
@@ -1347,6 +1353,12 @@
         "destino": "Hucha ECOSISTEMA [Dashboard]",
         "importe": 0.18,
         "fecha": "2026.05.25 19:37"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [55%]",
+        "importe": 0.65,
+        "fecha": "2026.05.27 00:13"
       }
     ]
   },
