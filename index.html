@@ -840,7 +840,7 @@
       </div>
       <div class="operativa-field" id="field_importe">
         <label>Importe ($)</label>
-        <input type="number" id="op_importe" step="0.01" min="0" placeholder="0.00">
+        <input type="number" id="op_importe" step="0.01" placeholder="0.00">
       </div>
       <div class="operativa-field" id="field_magic" style="display:none">
         <label>Magic Hedge destino</label>
@@ -1408,7 +1408,7 @@ function guardarOpManual() {
   if(totalConSwap !== 0) {
     document.getElementById('op_tipo').value = 'GANANCIA_LIBRE';
     document.getElementById('op_bot').value = par;
-    document.getElementById('op_importe').value = Math.abs(totalConSwap).toFixed(2);
+    document.getElementById('op_importe').value = totalConSwap.toFixed(2);
     actualizarFormOperativa();
   }
 
@@ -1675,7 +1675,7 @@ async function ejecutarOperativa() {
   const magic   = parseInt(document.getElementById('op_magic').value || 0);
   const destino = document.getElementById('op_destino').value;
 
-  if(['GANANCIA_LIBRE','INYECTAR_HEDGE','INYECTAR_HUCHA'].includes(tipo) && importe <= 0) {
+  if(['GANANCIA_LIBRE','INYECTAR_HEDGE','INYECTAR_HUCHA'].includes(tipo) && importe === 0) {
     mostrarMsg('Introduce un importe mayor que 0', 'err');
     return;
   }
