@@ -1524,30 +1524,45 @@ function toggleDia(idx) {
   header.classList.toggle('open', !isOpen);
 }
 
+async function obtenerSHAOperaciones() {
+  try {
+    const res = await fetch(GITHUB_API_BASE + 'operaciones_manuales.json', {
+      headers: { 'Authorization': 'token ' + GITHUB_TOKEN }
+    });
+    if(res.ok) { const d = await res.json(); return d.sha || ''; }
+  } catch(e) {}
+  return '';
+}
+
 async function guardarOpManualesGitHub() {
   try {
     const content = btoa(unescape(encodeURIComponent(JSON.stringify(operacionesManuales, null, 2))));
-    // Primero obtener SHA actual
-    let sha = '';
-    try {
-      const res = await fetch(GITHUB_API_BASE + 'operaciones_manuales.json', {
-        headers: { 'Authorization': 'token ' + GITHUB_TOKEN }
-      });
-      if(res.ok) { const d = await res.json(); sha = d.sha; }
-    } catch(e) {}
 
-    const res = await fetch(GITHUB_API_BASE + 'operaciones_manuales.json', {
-      method: 'PUT',
-      headers: {
-        'Authorization': 'token ' + GITHUB_TOKEN,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        message: 'Actualizar operaciones manuales',
-        content,
-        sha: sha || undefined
-      })
-    });
+    const intentarPUT = async (sha) => {
+      return fetch(GITHUB_API_BASE + 'operaciones_manuales.json', {
+        method: 'PUT',
+        headers: {
+          'Authorization': 'token ' + GITHUB_TOKEN,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message: 'Actualizar operaciones manuales',
+          content,
+          sha: sha || undefined
+        })
+      });
+    };
+
+    let sha = await obtenerSHAOperaciones();
+    let res = await intentarPUT(sha);
+
+    // Si 409 (SHA desactualizado por subida concurrente del uploader), refrescar y reintentar
+    if(res.status === 409) {
+      console.warn('SHA desactualizado (409) — refrescando y reintentando...');
+      sha = await obtenerSHAOperaciones();
+      res = await intentarPUT(sha);
+    }
+
     return res.ok;
   } catch(e) {
     console.error('Error guardando en GitHub:', e);
