@@ -1378,36 +1378,42 @@ function toggleFormOpManual() {
 }
 
 function guardarOpManual() {
-  const par       = document.getElementById('om_par').value;
-  const dir       = document.getElementById('om_dir').value;
-  const apertura  = parseFloat(document.getElementById('om_apertura').value || 0);
-  const cierre    = parseFloat(document.getElementById('om_cierre').value || 0);
-  const swap      = parseFloat(document.getElementById('om_swap').value || 0);
-  const resultado = parseFloat(document.getElementById('om_resultado').value || 0);
-  const fecha     = document.getElementById('om_fecha').value;
-  const notas     = document.getElementById('om_notas').value;
+  const par        = document.getElementById('om_par').value;
+  const dir        = document.getElementById('om_dir').value;
+  const apertura   = parseFloat(document.getElementById('om_apertura').value || 0);
+  const cierre     = parseFloat(document.getElementById('om_cierre').value || 0);
+  const swap       = parseFloat(document.getElementById('om_swap').value || 0);
+  const resultado  = parseFloat(document.getElementById('om_resultado').value || 0);
+  const fecha_cierre = document.getElementById('om_fecha_cierre').value || '';
+  const notas      = document.getElementById('om_notas').value;
 
   if(!apertura || !cierre) {
     mostrarMsgOM('Precio de apertura y cierre son obligatorios', 'err');
     return;
   }
 
-  const op = { par, dir, apertura, cierre, swap, resultado, fecha, notas, ts: Date.now(),
-               fecha_apertura: document.getElementById('om_fecha_apertura').value || '',
-               hora_apertura:  document.getElementById('om_hora_apertura').value  || '',
-               fecha_cierre:   document.getElementById('om_fecha_cierre').value   || '',
-               hora_cierre:    document.getElementById('om_hora_cierre').value    || '',
-               lote:           parseFloat(document.getElementById('om_lote').value || 0.01) };
+  const op = {
+    par, dir, apertura, cierre, swap, resultado,
+    fecha: fecha_cierre,
+    fecha_apertura: document.getElementById('om_fecha_apertura').value || '',
+    hora_apertura:  document.getElementById('om_hora_apertura').value  || '',
+    fecha_cierre:   fecha_cierre,
+    hora_cierre:    document.getElementById('om_hora_cierre').value    || '',
+    lote:           parseFloat(document.getElementById('om_lote').value || 0.01),
+    notas, ts: Date.now()
+  };
+
   operacionesManuales.push(op);
   guardarOpManualesGitHub();
   renderOpManuales();
   toggleFormOpManual();
   mostrarMsgOM('Operación guardada correctamente', 'ok');
-  // Suma swap al resultado para GANANCIA_LIBRE
+
+  // Suma swap al resultado y manda al bot como GANANCIA_LIBRE
   const totalConSwap = resultado + swap;
   if(totalConSwap !== 0) {
     document.getElementById('op_tipo').value = 'GANANCIA_LIBRE';
-    document.getElementById('op_bot').value = par;
+    document.getElementById('op_bot').value  = par;
     document.getElementById('op_importe').value = totalConSwap.toFixed(2);
     actualizarFormOperativa();
   }
@@ -1457,7 +1463,7 @@ function renderOpManuales() {
 
   for(const dia of dias) {
     const ops = grupos[dia];
-    const totalDia = ops.reduce((s, o) => s + (o.resultado || 0), 0);
+    const totalDia = ops.reduce((s, o) => s + (parseFloat(o.resultado) || 0), 0);
     totalGlobal += totalDia;
     const colorTotal = totalDia >= 0 ? 'var(--green)' : 'var(--red)';
     const idx = dia.replace(/[^a-z0-9]/gi, '');
@@ -1483,11 +1489,11 @@ function renderOpManuales() {
         <td>${op.hora_cierre || '—'}</td>
         <td>${op.par}</td>
         <td class="${op.dir === 'BUY' ? 'buy' : 'sell'}">${op.dir}</td>
-        <td style="color:var(--textdim)">${op.lote ? op.lote.toFixed(2) : '—'}</td>
-        <td>${op.apertura.toFixed(2)}</td>
-        <td>${op.cierre.toFixed(2)}</td>
-        <td class="${(op.swap||0) >= 0 ? 'pos' : 'neg'}">${fmt(op.swap||0)}</td>
-        <td class="${op.resultado >= 0 ? 'pos' : 'neg'}">${fmt(op.resultado)}</td>
+        <td style="color:var(--textdim)">${op.lote ? parseFloat(op.lote).toFixed(2) : '—'}</td>
+        <td>${parseFloat(op.apertura).toFixed(2)}</td>
+        <td>${parseFloat(op.cierre).toFixed(2)}</td>
+        <td class="${(parseFloat(op.swap)||0) >= 0 ? 'pos' : 'neg'}">${fmt(parseFloat(op.swap)||0)}</td>
+        <td class="${parseFloat(op.resultado) >= 0 ? 'pos' : 'neg'}">${fmt(parseFloat(op.resultado))}</td>
         <td style="color:var(--muted);font-size:10px">${op.notas || ''}</td>
         <td><button onclick="eliminarOpManual(${op.ts})" style="background:none;border:none;color:var(--red);cursor:pointer;font-size:12px;padding:2px 6px" title="Eliminar">✕</button></td>
       </tr>`;
