@@ -1,35 +1,689 @@
 {
-  "timestamp": "2026.05.17 23:30:00",
+  "timestamp": "2026.05.26 17:33:26",
   "ecosistema": {
     "bots_activos": 4,
-    "balance_total": 1850.93,
-    "equity_total": 1850.93,
-    "flotante_total": 0.0,
-    "ciclos_total": 0,
+    "balance_total": 6071.59,
+    "equity_total": 278.08,
+    "flotante_total": -5793.51,
+    "ciclos_total": 23,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
-    "ganancia_real_total": 0.0,
-    "hucha_total": 0.0,
-    "operativa_total": 0.0,
-    "retirado_total": 0.0,
+    "ganancia_real_total": 0.76,
+    "hucha_total": 28.84,
+    "operativa_total": 11.01,
+    "retirado_total": 25.0,
     "gastado_total": 0.0,
-    "operativa_log": []
+    "operativa_log": [
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.42,
+        "fecha": "2026.05.22 02:01"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.3,
+        "fecha": "2026.05.22 02:01"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.58,
+        "fecha": "2026.05.22 02:02"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.03,
+        "fecha": "2026.05.22 02:02"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.32,
+        "fecha": "2026.05.22 02:03"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.81,
+        "fecha": "2026.05.22 02:04"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.41,
+        "fecha": "2026.05.22 02:04"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.6,
+        "fecha": "2026.05.22 02:05"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": -20.48,
+        "fecha": "2026.05.22 11:15"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.73,
+        "fecha": "2026.05.22 11:16"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.77,
+        "fecha": "2026.05.22 11:16"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.65,
+        "fecha": "2026.05.22 11:17"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.17,
+        "fecha": "2026.05.22 11:17"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.47,
+        "fecha": "2026.05.22 11:18"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 22.16,
+        "fecha": "2026.05.22 11:18"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.43,
+        "fecha": "2026.05.22 11:19"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.17,
+        "fecha": "2026.05.22 11:20"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.29,
+        "fecha": "2026.05.22 11:21"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.36,
+        "fecha": "2026.05.22 11:21"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": -38.76,
+        "fecha": "2026.05.22 11:22"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": -24.72,
+        "fecha": "2026.05.22 11:22"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 27.06,
+        "fecha": "2026.05.22 11:23"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.07,
+        "fecha": "2026.05.25 01:14"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.8,
+        "fecha": "2026.05.25 01:23"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.77,
+        "fecha": "2026.05.25 01:24"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.16,
+        "fecha": "2026.05.25 01:25"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.78,
+        "fecha": "2026.05.25 01:26"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.03,
+        "fecha": "2026.05.25 01:27"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.38,
+        "fecha": "2026.05.25 01:27"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.21,
+        "fecha": "2026.05.25 01:28"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.65,
+        "fecha": "2026.05.25 01:28"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.54,
+        "fecha": "2026.05.25 01:29"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.74,
+        "fecha": "2026.05.25 01:29"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.17,
+        "fecha": "2026.05.25 01:30"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.08,
+        "fecha": "2026.05.25 01:30"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": -14.85,
+        "fecha": "2026.05.25 01:31"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 6.24,
+        "fecha": "2026.05.25 01:35"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": -0.2,
+        "fecha": "2026.05.25 01:36"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.04,
+        "fecha": "2026.05.25 01:37"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.59,
+        "fecha": "2026.05.25 01:38"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 17.59,
+        "fecha": "2026.05.25 01:39"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.38,
+        "fecha": "2026.05.25 01:40"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.46,
+        "fecha": "2026.05.25 01:40"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.81,
+        "fecha": "2026.05.25 01:41"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.03,
+        "fecha": "2026.05.25 01:41"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.13,
+        "fecha": "2026.05.25 01:41"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.2,
+        "fecha": "2026.05.25 01:42"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.03,
+        "fecha": "2026.05.25 01:45"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.32,
+        "fecha": "2026.05.25 01:51"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [40%]",
+        "importe": 0.47,
+        "fecha": "2026.05.25 07:48"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [40%]",
+        "importe": 0.44,
+        "fecha": "2026.05.25 07:56"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [40%]",
+        "importe": 0.54,
+        "fecha": "2026.05.25 10:50"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.32,
+        "fecha": "2026.05.25 11:05"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.46,
+        "fecha": "2026.05.25 11:06"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.21,
+        "fecha": "2026.05.25 11:06"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.21,
+        "fecha": "2026.05.25 11:07"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.18,
+        "fecha": "2026.05.25 11:09"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.44,
+        "fecha": "2026.05.25 11:09"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.13,
+        "fecha": "2026.05.25 11:10"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.29,
+        "fecha": "2026.05.25 11:10"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.31,
+        "fecha": "2026.05.25 11:11"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.48,
+        "fecha": "2026.05.25 11:11"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.53,
+        "fecha": "2026.05.25 11:11"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.85,
+        "fecha": "2026.05.25 11:12"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.4,
+        "fecha": "2026.05.25 11:13"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.35,
+        "fecha": "2026.05.25 11:13"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.84,
+        "fecha": "2026.05.25 11:13"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.47,
+        "fecha": "2026.05.25 11:14"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.66,
+        "fecha": "2026.05.25 11:15"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.79,
+        "fecha": "2026.05.25 11:15"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 2.13,
+        "fecha": "2026.05.25 11:15"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.26,
+        "fecha": "2026.05.25 11:21"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.31,
+        "fecha": "2026.05.25 11:39"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [55%]",
+        "importe": 0.62,
+        "fecha": "2026.05.25 16:07"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [55%]",
+        "importe": 0.61,
+        "fecha": "2026.05.25 16:08"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [55%]",
+        "importe": 0.6,
+        "fecha": "2026.05.25 17:05"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [55%]",
+        "importe": 0.64,
+        "fecha": "2026.05.25 17:06"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.36,
+        "fecha": "2026.05.25 19:25"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.55,
+        "fecha": "2026.05.25 19:26"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.52,
+        "fecha": "2026.05.25 19:26"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.36,
+        "fecha": "2026.05.25 19:27"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.82,
+        "fecha": "2026.05.25 19:28"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.43,
+        "fecha": "2026.05.25 19:28"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.45,
+        "fecha": "2026.05.25 19:29"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.12,
+        "fecha": "2026.05.25 19:29"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.57,
+        "fecha": "2026.05.25 19:30"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.49,
+        "fecha": "2026.05.25 19:30"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.76,
+        "fecha": "2026.05.25 19:30"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 3.19,
+        "fecha": "2026.05.25 19:31"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.84,
+        "fecha": "2026.05.25 19:32"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.23,
+        "fecha": "2026.05.25 19:32"
+      },
+      {
+        "tipo": "RETIRADA",
+        "destino": "Retirada [Dashboard]",
+        "importe": -25.0,
+        "fecha": "2026.05.25 19:40"
+      },
+      {
+        "tipo": "INYECTAR_HUCHA",
+        "destino": "Hucha ECOSISTEMA [Dashboard]",
+        "importe": 6.05,
+        "fecha": "2026.05.25 19:40"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.26,
+        "fecha": "2026.05.26 12:25"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.5,
+        "fecha": "2026.05.26 12:26"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.26,
+        "fecha": "2026.05.26 12:48"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": -0.52,
+        "fecha": "2026.05.26 15:42"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [55%]",
+        "importe": 0.88,
+        "fecha": "2026.05.26 17:00"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [55%]",
+        "importe": 0.51,
+        "fecha": "2026.05.26 17:08"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.26,
+        "fecha": "2026.05.26 18:26"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.17,
+        "fecha": "2026.05.22 01:53"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": -1.21,
+        "fecha": "2026.05.22 01:58"
+      },
+      {
+        "tipo": "INYECTAR_HUCHA",
+        "destino": "Hucha ECOSISTEMA [Dashboard]",
+        "importe": 0.18,
+        "fecha": "2026.05.25 19:37"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.3,
+        "fecha": "2026.05.22 03:15"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [20%]",
+        "importe": 3.27,
+        "fecha": "2026.05.25 03:15"
+      },
+      {
+        "tipo": "INYECTAR_HUCHA",
+        "destino": "Hucha ECOSISTEMA [Dashboard]",
+        "importe": 4.78,
+        "fecha": "2026.05.25 19:38"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [55%]",
+        "importe": 0.5,
+        "fecha": "2026.05.26 06:33"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": -2.31,
+        "fecha": "2026.05.22 01:59"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [55%]",
+        "importe": 0.29,
+        "fecha": "2026.05.26 11:00"
+      }
+    ]
   },
   "oro": {
-    "timestamp": "2026.05.17 23:30:00",
-    "balance": 1850.93,
-    "equity": 1850.93,
-    "flotante": 0.0,
-    "ciclos": 0,
-    "ganancia_real": 0.0,
-    "retirado": 0.0,
-    "hucha_propia": 0.0,
+    "timestamp": "2026.05.26 18:33:10",
+    "balance": 6071.59,
+    "equity": 278.08,
+    "flotante": -5793.51,
+    "ciclos": 17,
+    "ganancia_real": 2.16,
+    "retirado": 25.0,
+    "hucha_comun": 28.84,
     "hucha_aportado": 0.0,
-    "hucha_fase": 0,
-    "hucha_fase_pct": 80,
-    "hucha_tope": 30.0,
-    "operativa_aportado": 0.0,
-    "operativa_log": [],
+    "hucha_fase": 2,
+    "hucha_fase_pct": 45,
+    "hucha_tope": 100.0,
+    "operativa_aportado": 6.05,
     "martingala": {
       "activa": false,
       "direccion": "",
@@ -43,23 +697,624 @@
       "fondo": 0.0,
       "pct": 0.0
     },
-    "hedges_cola": []
+    "hedges_cola": [],
+    "operativa_log": [
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.42,
+        "fecha": "2026.05.22 02:01"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.3,
+        "fecha": "2026.05.22 02:01"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.58,
+        "fecha": "2026.05.22 02:02"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.03,
+        "fecha": "2026.05.22 02:02"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.32,
+        "fecha": "2026.05.22 02:03"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.81,
+        "fecha": "2026.05.22 02:04"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.41,
+        "fecha": "2026.05.22 02:04"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.6,
+        "fecha": "2026.05.22 02:05"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": -20.48,
+        "fecha": "2026.05.22 11:15"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.73,
+        "fecha": "2026.05.22 11:16"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.77,
+        "fecha": "2026.05.22 11:16"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.65,
+        "fecha": "2026.05.22 11:17"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.17,
+        "fecha": "2026.05.22 11:17"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.47,
+        "fecha": "2026.05.22 11:18"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 22.16,
+        "fecha": "2026.05.22 11:18"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.43,
+        "fecha": "2026.05.22 11:19"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.17,
+        "fecha": "2026.05.22 11:20"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.29,
+        "fecha": "2026.05.22 11:21"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.36,
+        "fecha": "2026.05.22 11:21"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": -38.76,
+        "fecha": "2026.05.22 11:22"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": -24.72,
+        "fecha": "2026.05.22 11:22"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 27.06,
+        "fecha": "2026.05.22 11:23"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.07,
+        "fecha": "2026.05.25 01:14"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.8,
+        "fecha": "2026.05.25 01:23"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.77,
+        "fecha": "2026.05.25 01:24"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.16,
+        "fecha": "2026.05.25 01:25"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.78,
+        "fecha": "2026.05.25 01:26"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.03,
+        "fecha": "2026.05.25 01:27"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.38,
+        "fecha": "2026.05.25 01:27"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.21,
+        "fecha": "2026.05.25 01:28"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.65,
+        "fecha": "2026.05.25 01:28"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.54,
+        "fecha": "2026.05.25 01:29"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.74,
+        "fecha": "2026.05.25 01:29"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.17,
+        "fecha": "2026.05.25 01:30"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.08,
+        "fecha": "2026.05.25 01:30"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": -14.85,
+        "fecha": "2026.05.25 01:31"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 6.24,
+        "fecha": "2026.05.25 01:35"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": -0.2,
+        "fecha": "2026.05.25 01:36"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.04,
+        "fecha": "2026.05.25 01:37"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.59,
+        "fecha": "2026.05.25 01:38"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 17.59,
+        "fecha": "2026.05.25 01:39"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.38,
+        "fecha": "2026.05.25 01:40"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.46,
+        "fecha": "2026.05.25 01:40"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.81,
+        "fecha": "2026.05.25 01:41"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.03,
+        "fecha": "2026.05.25 01:41"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.13,
+        "fecha": "2026.05.25 01:41"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.2,
+        "fecha": "2026.05.25 01:42"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.03,
+        "fecha": "2026.05.25 01:45"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.32,
+        "fecha": "2026.05.25 01:51"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [40%]",
+        "importe": 0.47,
+        "fecha": "2026.05.25 07:48"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [40%]",
+        "importe": 0.44,
+        "fecha": "2026.05.25 07:56"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [40%]",
+        "importe": 0.54,
+        "fecha": "2026.05.25 10:50"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.32,
+        "fecha": "2026.05.25 11:05"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.46,
+        "fecha": "2026.05.25 11:06"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.21,
+        "fecha": "2026.05.25 11:06"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.21,
+        "fecha": "2026.05.25 11:07"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.18,
+        "fecha": "2026.05.25 11:09"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.44,
+        "fecha": "2026.05.25 11:09"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.13,
+        "fecha": "2026.05.25 11:10"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.29,
+        "fecha": "2026.05.25 11:10"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.31,
+        "fecha": "2026.05.25 11:11"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.48,
+        "fecha": "2026.05.25 11:11"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.53,
+        "fecha": "2026.05.25 11:11"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.85,
+        "fecha": "2026.05.25 11:12"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.4,
+        "fecha": "2026.05.25 11:13"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.35,
+        "fecha": "2026.05.25 11:13"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.84,
+        "fecha": "2026.05.25 11:13"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.47,
+        "fecha": "2026.05.25 11:14"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.66,
+        "fecha": "2026.05.25 11:15"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.79,
+        "fecha": "2026.05.25 11:15"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 2.13,
+        "fecha": "2026.05.25 11:15"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.26,
+        "fecha": "2026.05.25 11:21"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.31,
+        "fecha": "2026.05.25 11:39"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [55%]",
+        "importe": 0.62,
+        "fecha": "2026.05.25 16:07"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [55%]",
+        "importe": 0.61,
+        "fecha": "2026.05.25 16:08"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [55%]",
+        "importe": 0.6,
+        "fecha": "2026.05.25 17:05"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [55%]",
+        "importe": 0.64,
+        "fecha": "2026.05.25 17:06"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.36,
+        "fecha": "2026.05.25 19:25"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.55,
+        "fecha": "2026.05.25 19:26"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.52,
+        "fecha": "2026.05.25 19:26"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.36,
+        "fecha": "2026.05.25 19:27"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.82,
+        "fecha": "2026.05.25 19:28"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.43,
+        "fecha": "2026.05.25 19:28"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.45,
+        "fecha": "2026.05.25 19:29"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.12,
+        "fecha": "2026.05.25 19:29"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.57,
+        "fecha": "2026.05.25 19:30"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.49,
+        "fecha": "2026.05.25 19:30"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.76,
+        "fecha": "2026.05.25 19:30"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 3.19,
+        "fecha": "2026.05.25 19:31"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.84,
+        "fecha": "2026.05.25 19:32"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.23,
+        "fecha": "2026.05.25 19:32"
+      },
+      {
+        "tipo": "RETIRADA",
+        "destino": "Retirada [Dashboard]",
+        "importe": -25.0,
+        "fecha": "2026.05.25 19:40"
+      },
+      {
+        "tipo": "INYECTAR_HUCHA",
+        "destino": "Hucha ECOSISTEMA [Dashboard]",
+        "importe": 6.05,
+        "fecha": "2026.05.25 19:40"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.26,
+        "fecha": "2026.05.26 12:25"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.5,
+        "fecha": "2026.05.26 12:26"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.26,
+        "fecha": "2026.05.26 12:48"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": -0.52,
+        "fecha": "2026.05.26 15:42"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [55%]",
+        "importe": 0.88,
+        "fecha": "2026.05.26 17:00"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [55%]",
+        "importe": 0.51,
+        "fecha": "2026.05.26 17:08"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 0.26,
+        "fecha": "2026.05.26 18:26"
+      }
+    ]
   },
   "btc": {
-    "timestamp": "2026.05.17 23:30:00",
-    "balance": 1850.93,
-    "equity": 1850.93,
-    "flotante": 0.0,
-    "ciclos": 0,
-    "ganancia_real": 0.0,
+    "timestamp": "2026.05.26 18:33:13",
+    "balance": 6071.59,
+    "equity": 278.13,
+    "flotante": -5793.46,
+    "ciclos": 1,
+    "ganancia_real": 0.01,
     "retirado": 0.0,
-    "hucha_propia": 0.0,
+    "hucha_comun": 28.84,
     "hucha_aportado": 0.0,
-    "hucha_fase": 0,
-    "hucha_fase_pct": 80,
-    "hucha_tope": 30.0,
-    "operativa_aportado": 0.0,
-    "operativa_log": [],
+    "hucha_fase": 2,
+    "hucha_fase_pct": 45,
+    "hucha_tope": 100.0,
+    "operativa_aportado": 0.18,
     "martingala": {
       "activa": false,
       "direccion": "",
@@ -73,23 +1328,42 @@
       "fondo": 0.0,
       "pct": 0.0
     },
-    "hedges_cola": []
+    "hedges_cola": [],
+    "operativa_log": [
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.17,
+        "fecha": "2026.05.22 01:53"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": -1.21,
+        "fecha": "2026.05.22 01:58"
+      },
+      {
+        "tipo": "INYECTAR_HUCHA",
+        "destino": "Hucha ECOSISTEMA [Dashboard]",
+        "importe": 0.18,
+        "fecha": "2026.05.25 19:37"
+      }
+    ]
   },
   "ger40": {
-    "timestamp": "2026.05.17 23:30:00",
-    "balance": 1850.93,
-    "equity": 1850.93,
-    "flotante": 0.0,
-    "ciclos": 0,
-    "ganancia_real": 0.0,
+    "timestamp": "2026.05.26 18:33:03",
+    "balance": 6071.59,
+    "equity": 276.57,
+    "flotante": -5795.02,
+    "ciclos": 3,
+    "ganancia_real": 0.51,
     "retirado": 0.0,
-    "hucha_propia": 0.0,
+    "hucha_comun": 28.84,
     "hucha_aportado": 0.0,
-    "hucha_fase": 0,
-    "hucha_fase_pct": 80,
-    "hucha_tope": 30.0,
-    "operativa_aportado": 0.0,
-    "operativa_log": [],
+    "hucha_fase": 2,
+    "hucha_fase_pct": 45,
+    "hucha_tope": 100.0,
+    "operativa_aportado": 4.78,
     "martingala": {
       "activa": false,
       "direccion": "",
@@ -103,23 +1377,48 @@
       "fondo": 0.0,
       "pct": 0.0
     },
-    "hedges_cola": []
+    "hedges_cola": [],
+    "operativa_log": [
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": 1.3,
+        "fecha": "2026.05.22 03:15"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [20%]",
+        "importe": 3.27,
+        "fecha": "2026.05.25 03:15"
+      },
+      {
+        "tipo": "INYECTAR_HUCHA",
+        "destino": "Hucha ECOSISTEMA [Dashboard]",
+        "importe": 4.78,
+        "fecha": "2026.05.25 19:38"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [55%]",
+        "importe": 0.5,
+        "fecha": "2026.05.26 06:33"
+      }
+    ]
   },
   "usdjpy": {
-    "timestamp": "2026.05.17 23:30:00",
-    "balance": 1850.93,
-    "equity": 1850.93,
-    "flotante": 0.0,
-    "ciclos": 0,
-    "ganancia_real": 0.0,
+    "timestamp": "2026.05.26 18:33:24",
+    "balance": 6071.59,
+    "equity": 278.22,
+    "flotante": -5793.37,
+    "ciclos": 2,
+    "ganancia_real": -1.92,
     "retirado": 0.0,
-    "hucha_propia": 0.0,
+    "hucha_comun": 28.84,
     "hucha_aportado": 0.0,
-    "hucha_fase": 0,
-    "hucha_fase_pct": 80,
-    "hucha_tope": 30.0,
+    "hucha_fase": 2,
+    "hucha_fase_pct": 45,
+    "hucha_tope": 100.0,
     "operativa_aportado": 0.0,
-    "operativa_log": [],
     "martingala": {
       "activa": false,
       "direccion": "",
@@ -133,6 +1432,20 @@
       "fondo": 0.0,
       "pct": 0.0
     },
-    "hedges_cola": []
+    "hedges_cola": [],
+    "operativa_log": [
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real directa [Dashboard]",
+        "importe": -2.31,
+        "fecha": "2026.05.22 01:59"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [55%]",
+        "importe": 0.29,
+        "fecha": "2026.05.26 11:00"
+      }
+    ]
   }
 }
