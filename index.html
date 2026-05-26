@@ -1549,13 +1549,15 @@ async function guardarOpManualesGitHub() {
 
 async function cargarOpManualesGitHub() {
   try {
-    // Leer operaciones_manuales.json via raw (repo publico)
     const res = await fetch('https://raw.githubusercontent.com/curroparody/trading-dashboard/main/operaciones_manuales.json?t=' + Date.now());
     if(res.ok) {
-      operacionesManuales = await res.json();
+      const data = await res.json();
+      operacionesManuales = Array.isArray(data) ? data : [];
       renderOpManuales();
     }
-  } catch(e) {}
+  } catch(e) {
+    console.error('Error cargando operaciones manuales:', e);
+  }
 }
 
 // ── FETCH PRINCIPAL ───────────────────────────────────────────────
