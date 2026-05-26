@@ -1425,12 +1425,18 @@ function guardarOpManual() {
   document.getElementById('om_swap').value = '0';
 }
 
-function eliminarOpManual(ts) {
+async function eliminarOpManual(ts) {
   if(!confirm('¿Eliminar esta operación?')) return;
   operacionesManuales = operacionesManuales.filter(o => o.ts !== ts);
-  guardarOpManualesGitHub();
   renderOpManuales();
-  mostrarMsgOM('Operación eliminada', 'ok');
+  const ok = await guardarOpManualesGitHub();
+  if(ok) {
+    mostrarMsgOM('Operación eliminada', 'ok');
+  } else {
+    mostrarMsgOM('Error al eliminar — reintenta', 'err');
+    // Recargar desde GitHub para asegurar estado correcto
+    await cargarOpManualesGitHub();
+  }
 }
 
 function mostrarMsgOM(texto, tipo) {
@@ -1530,7 +1536,7 @@ async function guardarOpManualesGitHub() {
       if(res.ok) { const d = await res.json(); sha = d.sha; }
     } catch(e) {}
 
-    await fetch(GITHUB_API_BASE + 'operaciones_manuales.json', {
+    const res = await fetch(GITHUB_API_BASE + 'operaciones_manuales.json', {
       method: 'PUT',
       headers: {
         'Authorization': 'token ' + GITHUB_TOKEN,
@@ -1542,8 +1548,10 @@ async function guardarOpManualesGitHub() {
         sha: sha || undefined
       })
     });
+    return res.ok;
   } catch(e) {
     console.error('Error guardando en GitHub:', e);
+    return false;
   }
 }
 
