@@ -1377,7 +1377,7 @@ function toggleFormOpManual() {
   }
 }
 
-function guardarOpManual() {
+async function guardarOpManual() {
   const par        = document.getElementById('om_par').value;
   const dir        = document.getElementById('om_dir').value;
   const apertura   = parseFloat(document.getElementById('om_apertura').value || 0);
@@ -1403,39 +1403,36 @@ function guardarOpManual() {
     notas, ts: Date.now()
   };
 
-  operacionesManuales.push(op);
-  guardarOpManualesGitHub();
-  renderOpManuales();
-  toggleFormOpManual();
-  mostrarMsgOM('Operación guardada correctamente', 'ok');
-
-  // Suma swap al resultado y manda al bot como GANANCIA_LIBRE
-  const totalConSwap = resultado + swap;
-  if(totalConSwap !== 0) {
-    document.getElementById('op_tipo').value = 'GANANCIA_LIBRE';
-    document.getElementById('op_bot').value  = par;
-    document.getElementById('op_importe').value = totalConSwap.toFixed(2);
-    actualizarFormOperativa();
+  const instruccion = { accion: 'ANADIR', operacion: op, ejecutada: false };
+  mostrarMsgOM('Enviando al uploader...', 'ok');
+  const ok = await escribirInstruccionOperacion(instruccion);
+  if(ok) {
+    // Añadir localmente para feedback inmediato
+    operacionesManuales.push(op);
+    renderOpManuales();
+    toggleFormOpManual();
+    mostrarMsgOM('Operación enviada — el uploader la procesará en breve', 'ok');
+    // Limpiar
+    ['om_apertura','om_cierre','om_swap','om_resultado','om_notas','om_fecha_apertura','om_hora_apertura','om_fecha_cierre','om_hora_cierre','om_lote'].forEach(id => {
+      document.getElementById(id).value = '';
+    });
+    document.getElementById('om_swap').value = '0';
+  } else {
+    mostrarMsgOM('Error al enviar — reintenta', 'err');
   }
-
-  // Limpiar
-  ['om_apertura','om_cierre','om_swap','om_resultado','om_notas','om_fecha_apertura','om_hora_apertura','om_fecha_cierre','om_hora_cierre','om_lote'].forEach(id => {
-    document.getElementById(id).value = '';
-  });
-  document.getElementById('om_swap').value = '0';
 }
 
 async function eliminarOpManual(ts) {
   if(!confirm('¿Eliminar esta operación?')) return;
-  operacionesManuales = operacionesManuales.filter(o => o.ts !== ts);
-  renderOpManuales();
-  const ok = await guardarOpManualesGitHub();
+  const instruccion = { accion: 'ELIMINAR', ts: ts, ejecutada: false };
+  const ok = await escribirInstruccionOperacion(instruccion);
   if(ok) {
-    mostrarMsgOM('Operación eliminada', 'ok');
+    // Eliminar localmente para feedback inmediato
+    operacionesManuales = operacionesManuales.filter(o => o.ts !== ts);
+    renderOpManuales();
+    mostrarMsgOM('Operación eliminada — el uploader procesará el descuento', 'ok');
   } else {
     mostrarMsgOM('Error al eliminar — reintenta', 'err');
-    // Recargar desde GitHub para asegurar estado correcto
-    await cargarOpManualesGitHub();
   }
 }
 
@@ -1524,50 +1521,41 @@ function toggleDia(idx) {
   header.classList.toggle('open', !isOpen);
 }
 
-async function obtenerSHAOperaciones() {
+async function escribirInstruccionOperacion(instruccion) {
+  // Escribe operaciones_instruccion.json en GitHub para que el uploader lo procese
+  // El uploader usa su propio token — el HTML no necesita token de escritura
   try {
-    const res = await fetch(GITHUB_API_BASE + 'operaciones_manuales.json', {
-      headers: { 'Authorization': 'token ' + GITHUB_TOKEN }
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(instruccion, null, 2))));
+    // Obtener SHA si existe
+    let sha = '';
+    try {
+      const res = await fetch(GITHUB_API_BASE + 'operaciones_instruccion.json', {
+        headers: { 'Authorization': 'token ' + GITHUB_TOKEN }
+      });
+      if(res.ok) { const d = await res.json(); sha = d.sha || ''; }
+    } catch(e) {}
+    const res = await fetch(GITHUB_API_BASE + 'operaciones_instruccion.json', {
+      method: 'PUT',
+      headers: {
+        'Authorization': 'token ' + GITHUB_TOKEN,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        message: 'Instruccion operacion manual',
+        content,
+        sha: sha || undefined
+      })
     });
-    if(res.ok) { const d = await res.json(); return d.sha || ''; }
-  } catch(e) {}
-  return '';
+    return res.ok;
+  } catch(e) {
+    console.error('Error escribiendo instruccion:', e);
+    return false;
+  }
 }
 
 async function guardarOpManualesGitHub() {
-  try {
-    const content = btoa(unescape(encodeURIComponent(JSON.stringify(operacionesManuales, null, 2))));
-
-    const intentarPUT = async (sha) => {
-      return fetch(GITHUB_API_BASE + 'operaciones_manuales.json', {
-        method: 'PUT',
-        headers: {
-          'Authorization': 'token ' + GITHUB_TOKEN,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          message: 'Actualizar operaciones manuales',
-          content,
-          sha: sha || undefined
-        })
-      });
-    };
-
-    let sha = await obtenerSHAOperaciones();
-    let res = await intentarPUT(sha);
-
-    // Si 409 (SHA desactualizado por subida concurrente del uploader), refrescar y reintentar
-    if(res.status === 409) {
-      console.warn('SHA desactualizado (409) — refrescando y reintentando...');
-      sha = await obtenerSHAOperaciones();
-      res = await intentarPUT(sha);
-    }
-
-    return res.ok;
-  } catch(e) {
-    console.error('Error guardando en GitHub:', e);
-    return false;
-  }
+  // Mantenida por compatibilidad — ya no se usa directamente
+  return true;
 }
 
 async function cargarOpManualesGitHub() {
