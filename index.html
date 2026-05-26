@@ -1339,13 +1339,18 @@ function renderHistoricoHedges() {
 
 // ── OPERACIONES MANUALES DE TRADING ──────────────────────────────
 function generarComandoOpManual() {
-  const par       = document.getElementById('om_par').value;
-  const dir       = document.getElementById('om_dir').value;
-  const apertura  = parseFloat(document.getElementById('om_apertura').value || 0);
-  const cierre    = parseFloat(document.getElementById('om_cierre').value || 0);
-  const swap      = parseFloat(document.getElementById('om_swap').value || 0);
-  const resultado = parseFloat(document.getElementById('om_resultado').value || 0);
-  const notas     = document.getElementById('om_notas').value;
+  const par          = document.getElementById('om_par').value;
+  const dir          = document.getElementById('om_dir').value;
+  const apertura     = parseFloat(document.getElementById('om_apertura').value || 0);
+  const cierre       = parseFloat(document.getElementById('om_cierre').value || 0);
+  const swap         = parseFloat(document.getElementById('om_swap').value || 0);
+  const resultado    = parseFloat(document.getElementById('om_resultado').value || 0);
+  const lote         = parseFloat(document.getElementById('om_lote').value || 0.01);
+  const fecha_ap     = document.getElementById('om_fecha_apertura').value || '';
+  const hora_ap      = document.getElementById('om_hora_apertura').value  || '';
+  const fecha_ci     = document.getElementById('om_fecha_cierre').value   || '';
+  const hora_ci      = document.getElementById('om_hora_cierre').value    || '';
+  const notas        = document.getElementById('om_notas').value.trim();
 
   if(!apertura || !cierre) {
     document.getElementById('om_msg').textContent = 'Precio apertura y cierre son obligatorios';
@@ -1353,7 +1358,8 @@ function generarComandoOpManual() {
     return;
   }
 
-  let cmd = `/opmanual ${par} ${dir} ${apertura.toFixed(2)} ${cierre.toFixed(2)} ${swap.toFixed(2)} ${resultado.toFixed(2)}`;
+  // Formato: /opmanual PAR DIR APERTURA CIERRE SWAP RESULTADO LOTE FECHA_AP HORA_AP FECHA_CI HORA_CI [NOTAS]
+  let cmd = `/opmanual ${par} ${dir} ${apertura.toFixed(2)} ${cierre.toFixed(2)} ${swap.toFixed(2)} ${resultado.toFixed(2)} ${lote.toFixed(2)} ${fecha_ap} ${hora_ap} ${fecha_ci} ${hora_ci}`;
   if(notas) cmd += ` ${notas}`;
 
   document.getElementById('om_comando_texto').textContent = cmd;
