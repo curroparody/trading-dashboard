@@ -1436,7 +1436,7 @@ function renderOpManuales() {
   // Agrupar por fecha de apertura
   const grupos = {};
   for(const op of operacionesManuales) {
-    const dia = op.fecha_apertura || op.fecha || 'Sin fecha';
+    const dia = op.fecha_cierre || op.fecha || 'Sin fecha';
     if(!grupos[dia]) grupos[dia] = [];
     grupos[dia].push(op);
   }
