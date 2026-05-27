@@ -1,25 +1,19 @@
 {
-  "timestamp": "2026.05.27 12:02:19",
+  "timestamp": "2026.05.27 12:02:53",
   "ecosistema": {
     "bots_activos": 4,
-    "balance_total": 6086.76,
-    "equity_total": 262.42,
-    "flotante_total": -5824.34,
-    "ciclos_total": 31,
+    "balance_total": 6087.92,
+    "equity_total": 261.93,
+    "flotante_total": -5825.99,
+    "ciclos_total": 32,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
-    "ganancia_real_total": -1.6,
-    "hucha_total": 33.09,
+    "ganancia_real_total": -0.96,
+    "hucha_total": 33.61,
     "operativa_total": 21.98,
     "retirado_total": 41.51,
     "gastado_total": 18.29,
     "operativa_log": [
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 0.03,
-        "fecha": "2026.05.25 01:45"
-      },
       {
         "tipo": "GANANCIA_LIBRE",
         "destino": "Ganancia Real directa [Dashboard]",
@@ -613,6 +607,12 @@
         "destino": "Retirada [Dashboard]",
         "importe": -6.52,
         "fecha": "2026.05.27 11:28"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [55%]",
+        "importe": 0.64,
+        "fecha": "2026.05.27 13:02"
       },
       {
         "tipo": "GANANCIA_LIBRE",
@@ -707,14 +707,14 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.05.27 13:02:12",
-    "balance": 6086.76,
-    "equity": 262.42,
-    "flotante": -5824.34,
-    "ciclos": 22,
-    "ganancia_real": 0.01,
+    "timestamp": "2026.05.27 13:02:42",
+    "balance": 6087.92,
+    "equity": 261.93,
+    "flotante": -5825.99,
+    "ciclos": 23,
+    "ganancia_real": 0.65,
     "retirado": 41.51,
-    "hucha_comun": 33.09,
+    "hucha_comun": 33.61,
     "hucha_aportado": 0.0,
     "hucha_fase": 2,
     "hucha_fase_pct": 45,
@@ -724,7 +724,7 @@
       "activa": true,
       "direccion": "SELL",
       "nivel": 1,
-      "precio": 4488.62
+      "precio": 4487.19
     },
     "hedge": {
       "activo": false,
@@ -735,12 +735,6 @@
     },
     "hedges_cola": [],
     "operativa_log": [
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 0.03,
-        "fecha": "2026.05.25 01:45"
-      },
       {
         "tipo": "GANANCIA_LIBRE",
         "destino": "Ganancia Real directa [Dashboard]",
@@ -1334,18 +1328,24 @@
         "destino": "Retirada [Dashboard]",
         "importe": -6.52,
         "fecha": "2026.05.27 11:28"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [55%]",
+        "importe": 0.64,
+        "fecha": "2026.05.27 13:02"
       }
     ]
   },
   "btc": {
-    "timestamp": "2026.05.27 13:01:52",
-    "balance": 6086.76,
-    "equity": 263.03,
-    "flotante": -5823.73,
+    "timestamp": "2026.05.27 13:02:28",
+    "balance": 6087.92,
+    "equity": 261.01,
+    "flotante": -5826.91,
     "ciclos": 3,
     "ganancia_real": 0.01,
     "retirado": 0.0,
-    "hucha_comun": 33.09,
+    "hucha_comun": 33.61,
     "hucha_aportado": 0.0,
     "hucha_fase": 2,
     "hucha_fase_pct": 45,
@@ -1411,14 +1411,14 @@
     ]
   },
   "ger40": {
-    "timestamp": "2026.05.27 13:02:08",
-    "balance": 6086.76,
-    "equity": 263.03,
-    "flotante": -5823.73,
+    "timestamp": "2026.05.27 13:02:39",
+    "balance": 6087.92,
+    "equity": 260.51,
+    "flotante": -5827.41,
     "ciclos": 3,
     "ganancia_real": 0.01,
     "retirado": 0.0,
-    "hucha_comun": 33.09,
+    "hucha_comun": 33.61,
     "hucha_aportado": 0.0,
     "hucha_fase": 2,
     "hucha_fase_pct": 45,
@@ -1472,14 +1472,14 @@
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.05.27 13:02:15",
-    "balance": 6086.76,
-    "equity": 262.2,
-    "flotante": -5824.56,
+    "timestamp": "2026.05.27 13:02:45",
+    "balance": 6087.92,
+    "equity": 260.77,
+    "flotante": -5827.15,
     "ciclos": 3,
     "ganancia_real": -1.63,
     "retirado": 0.0,
-    "hucha_comun": 33.09,
+    "hucha_comun": 33.61,
     "hucha_aportado": 0.0,
     "hucha_fase": 2,
     "hucha_fase_pct": 45,
