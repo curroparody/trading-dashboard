@@ -1,25 +1,19 @@
 {
-  "timestamp": "2026.05.28 01:44:59",
+  "timestamp": "2026.05.28 01:45:33",
   "ecosistema": {
     "bots_activos": 4,
-    "balance_total": 6091.08,
-    "equity_total": 131.68,
-    "flotante_total": -5959.4,
-    "ciclos_total": 36,
+    "balance_total": 6092.3,
+    "equity_total": 130.13,
+    "flotante_total": -5962.17,
+    "ciclos_total": 37,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
-    "ganancia_real_total": 0.76,
-    "hucha_total": 35.04,
+    "ganancia_real_total": 1.43,
+    "hucha_total": 35.59,
     "operativa_total": 21.98,
     "retirado_total": 41.51,
     "gastado_total": 18.29,
     "operativa_log": [
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [40%]",
-        "importe": 0.47,
-        "fecha": "2026.05.25 07:48"
-      },
       {
         "tipo": "GANANCIA_LIBRE",
         "destino": "Ganancia Real ciclo auto [40%]",
@@ -613,6 +607,12 @@
         "destino": "Ganancia Real ciclo auto [55%]",
         "importe": 0.62,
         "fecha": "2026.05.27 13:03"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [55%]",
+        "importe": 0.67,
+        "fecha": "2026.05.28 02:45"
       },
       {
         "tipo": "GANANCIA_LIBRE",
@@ -725,24 +725,24 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.05.28 02:44:52",
-    "balance": 6091.08,
-    "equity": 131.68,
-    "flotante": -5959.4,
-    "ciclos": 24,
-    "ganancia_real": 1.26,
+    "timestamp": "2026.05.28 02:45:22",
+    "balance": 6092.3,
+    "equity": 130.13,
+    "flotante": -5962.17,
+    "ciclos": 25,
+    "ganancia_real": 1.93,
     "retirado": 41.51,
-    "hucha_comun": 35.04,
+    "hucha_comun": 35.59,
     "hucha_aportado": 0.0,
     "hucha_fase": 2,
     "hucha_fase_pct": 45,
     "hucha_tope": 100.0,
     "operativa_aportado": 15.14,
     "martingala": {
-      "activa": true,
-      "direccion": "SELL",
-      "nivel": 1,
-      "precio": 4449.4
+      "activa": false,
+      "direccion": "",
+      "nivel": 0,
+      "precio": 0.0
     },
     "hedge": {
       "activo": false,
@@ -753,12 +753,6 @@
     },
     "hedges_cola": [],
     "operativa_log": [
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [40%]",
-        "importe": 0.47,
-        "fecha": "2026.05.25 07:48"
-      },
       {
         "tipo": "GANANCIA_LIBRE",
         "destino": "Ganancia Real ciclo auto [40%]",
@@ -1352,18 +1346,24 @@
         "destino": "Ganancia Real ciclo auto [55%]",
         "importe": 0.62,
         "fecha": "2026.05.27 13:03"
+      },
+      {
+        "tipo": "GANANCIA_LIBRE",
+        "destino": "Ganancia Real ciclo auto [55%]",
+        "importe": 0.67,
+        "fecha": "2026.05.28 02:45"
       }
     ]
   },
   "btc": {
-    "timestamp": "2026.05.28 02:44:45",
-    "balance": 6091.08,
-    "equity": 131.05,
-    "flotante": -5960.03,
+    "timestamp": "2026.05.28 02:45:15",
+    "balance": 6092.3,
+    "equity": 130.53,
+    "flotante": -5961.77,
     "ciclos": 4,
     "ganancia_real": 0.5,
     "retirado": 0.0,
-    "hucha_comun": 35.04,
+    "hucha_comun": 35.59,
     "hucha_aportado": 0.0,
     "hucha_fase": 2,
     "hucha_fase_pct": 45,
@@ -1496,14 +1496,14 @@
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.05.28 02:44:39",
-    "balance": 6091.08,
-    "equity": 130.99,
-    "flotante": -5960.09,
+    "timestamp": "2026.05.28 02:45:09",
+    "balance": 6092.3,
+    "equity": 131.64,
+    "flotante": -5960.66,
     "ciclos": 5,
     "ganancia_real": -1.01,
     "retirado": 0.0,
-    "hucha_comun": 35.04,
+    "hucha_comun": 35.59,
     "hucha_aportado": 0.0,
     "hucha_fase": 2,
     "hucha_fase_pct": 45,
