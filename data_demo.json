@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026.05.27 05:35:33",
+  "timestamp": "2026.05.27 05:36:06",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 6083.4,
-    "equity_total": 278.21,
-    "flotante_total": -5805.19,
-    "ciclos_total": 27,
+    "equity_total": 278.27,
+    "flotante_total": -5805.13,
+    "ciclos_total": 28,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
     "ganancia_real_total": 0.8,
@@ -689,11 +689,11 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.05.27 06:35:31",
+    "timestamp": "2026.05.27 06:35:59",
     "balance": 6083.4,
-    "equity": 278.21,
-    "flotante": -5805.19,
-    "ciclos": 20,
+    "equity": 278.27,
+    "flotante": -5805.13,
+    "ciclos": 21,
     "ganancia_real": 2.7,
     "retirado": 34.99,
     "hucha_comun": 31.58,
@@ -703,10 +703,10 @@
     "hucha_tope": 100.0,
     "operativa_aportado": 12.41,
     "martingala": {
-      "activa": true,
-      "direccion": "SELL",
-      "nivel": 1,
-      "precio": 4505.36
+      "activa": false,
+      "direccion": "",
+      "nivel": 0,
+      "precio": 0.0
     },
     "hedge": {
       "activo": false,
@@ -1320,14 +1320,14 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.05.27 06:35:11",
-    "balance": 6082.05,
-    "equity": 278.25,
-    "flotante": -5803.8,
+    "timestamp": "2026.05.27 06:35:41",
+    "balance": 6083.4,
+    "equity": 277.94,
+    "flotante": -5805.46,
     "ciclos": 2,
     "ganancia_real": 0.01,
     "retirado": 0.0,
-    "hucha_comun": 30.97,
+    "hucha_comun": 31.58,
     "hucha_aportado": 0.0,
     "hucha_fase": 2,
     "hucha_fase_pct": 45,
@@ -1381,14 +1381,14 @@
     ]
   },
   "ger40": {
-    "timestamp": "2026.05.27 06:35:27",
-    "balance": 6082.05,
-    "equity": 278.8,
-    "flotante": -5803.25,
+    "timestamp": "2026.05.27 06:35:58",
+    "balance": 6083.4,
+    "equity": 278.47,
+    "flotante": -5804.93,
     "ciclos": 3,
     "ganancia_real": 0.01,
     "retirado": 0.0,
-    "hucha_comun": 30.97,
+    "hucha_comun": 31.58,
     "hucha_aportado": 0.0,
     "hucha_fase": 2,
     "hucha_fase_pct": 45,
