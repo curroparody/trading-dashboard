@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026.05.27 16:52:19",
+  "timestamp": "2026.05.27 16:52:52",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 6090.18,
-    "equity_total": 124.91,
-    "flotante_total": -5965.27,
-    "ciclos_total": 34,
+    "equity_total": 126.13,
+    "flotante_total": -5964.05,
+    "ciclos_total": 35,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
     "ganancia_real_total": 0.27,
@@ -719,10 +719,10 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.05.27 17:52:13",
+    "timestamp": "2026.05.27 17:52:43",
     "balance": 6090.18,
-    "equity": 124.91,
-    "flotante": -5965.27,
+    "equity": 126.13,
+    "flotante": -5964.05,
     "ciclos": 24,
     "ganancia_real": 1.26,
     "retirado": 41.51,
@@ -1350,10 +1350,10 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.05.27 17:52:03",
+    "timestamp": "2026.05.27 17:52:33",
     "balance": 6090.18,
-    "equity": 123.05,
-    "flotante": -5967.13,
+    "equity": 126.28,
+    "flotante": -5963.9,
     "ciclos": 3,
     "ganancia_real": 0.01,
     "retirado": 0.0,
@@ -1423,10 +1423,10 @@
     ]
   },
   "ger40": {
-    "timestamp": "2026.05.27 17:52:17",
+    "timestamp": "2026.05.27 17:52:47",
     "balance": 6090.18,
-    "equity": 125.85,
-    "flotante": -5964.33,
+    "equity": 126.68,
+    "flotante": -5963.5,
     "ciclos": 3,
     "ganancia_real": 0.01,
     "retirado": 0.0,
@@ -1484,11 +1484,11 @@
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.05.27 17:52:02",
+    "timestamp": "2026.05.27 17:52:31",
     "balance": 6090.18,
-    "equity": 122.21,
-    "flotante": -5967.97,
-    "ciclos": 4,
+    "equity": 126.41,
+    "flotante": -5963.77,
+    "ciclos": 5,
     "ganancia_real": -1.01,
     "retirado": 0.0,
     "hucha_comun": 34.63,
@@ -1498,10 +1498,10 @@
     "hucha_tope": 100.0,
     "operativa_aportado": 0.0,
     "martingala": {
-      "activa": true,
-      "direccion": "BUY",
-      "nivel": 1,
-      "precio": 159.42
+      "activa": false,
+      "direccion": "",
+      "nivel": 0,
+      "precio": 0.0
     },
     "hedge": {
       "activo": false,
