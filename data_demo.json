@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026.05.28 11:59:21",
+  "timestamp": "2026.05.28 11:59:54",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 6072.44,
-    "equity_total": 20.03,
-    "flotante_total": -6052.41,
+    "equity_total": 20.42,
+    "flotante_total": -6052.02,
     "ciclos_total": 41,
-    "hedges_activos": 1,
-    "hedges_cola_total": 1,
+    "hedges_activos": 0,
+    "hedges_cola_total": 0,
     "ganancia_real_total": 0.51,
     "hucha_total": 0.02,
     "operativa_total": 24.51,
@@ -755,10 +755,10 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.05.28 12:59:00",
+    "timestamp": "2026.05.28 12:59:30",
     "balance": 6072.44,
-    "equity": 20.03,
-    "flotante": -6052.41,
+    "equity": 20.42,
+    "flotante": -6052.02,
     "ciclos": 26,
     "ganancia_real": 0.01,
     "retirado": 41.51,
@@ -1386,10 +1386,10 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.05.28 12:59:16",
+    "timestamp": "2026.05.28 12:59:46",
     "balance": 6072.44,
-    "equity": 21.17,
-    "flotante": -6051.27,
+    "equity": 19.91,
+    "flotante": -6052.53,
     "ciclos": 5,
     "ganancia_real": 1.13,
     "retirado": 0.0,
@@ -1471,14 +1471,14 @@
     ]
   },
   "ger40": {
-    "timestamp": "2026.05.28 12:58:56",
-    "balance": 6112.29,
-    "equity": 20.03,
-    "flotante": -6092.26,
+    "timestamp": "2026.05.28 12:59:52",
+    "balance": 6072.44,
+    "equity": 19.87,
+    "flotante": -6052.57,
     "ciclos": 3,
     "ganancia_real": 0.01,
     "retirado": 0.0,
-    "hucha_comun": 0.0,
+    "hucha_comun": 0.02,
     "hucha_aportado": 0.0,
     "hucha_fase": 0,
     "hucha_fase_pct": 80,
@@ -1491,22 +1491,13 @@
       "precio": 0.0
     },
     "hedge": {
-      "activo": true,
-      "numero": 1,
-      "objetivo": 39.84,
-      "fondo": 39.86,
-      "pct": 100.0
+      "activo": false,
+      "numero": 0,
+      "objetivo": 0.0,
+      "fondo": 0.0,
+      "pct": 0.0
     },
-    "hedges_cola": [
-      {
-        "numero": 1,
-        "objetivo": 39.84,
-        "fondo": 39.86,
-        "pct": 100.0,
-        "flotante": -39.84,
-        "fecha": "2026.05.28 06:09"
-      }
-    ],
+    "hedges_cola": [],
     "operativa_log": [
       {
         "tipo": "GANANCIA_LIBRE",
@@ -1553,10 +1544,10 @@
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.05.28 12:59:10",
+    "timestamp": "2026.05.28 12:59:45",
     "balance": 6072.44,
-    "equity": 20.97,
-    "flotante": -6051.47,
+    "equity": 20.78,
+    "flotante": -6051.66,
     "ciclos": 7,
     "ganancia_real": -0.64,
     "retirado": 0.0,
