@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026.05.28 03:05:10",
+  "timestamp": "2026.05.28 03:05:43",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 6093.97,
-    "equity_total": 116.24,
-    "flotante_total": -5977.73,
-    "ciclos_total": 38,
+    "equity_total": 114.0,
+    "flotante_total": -5979.97,
+    "ciclos_total": 39,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
     "ganancia_real_total": 2.36,
@@ -731,11 +731,11 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.05.28 04:05:01",
+    "timestamp": "2026.05.28 04:05:25",
     "balance": 6093.97,
-    "equity": 116.24,
-    "flotante": -5977.73,
-    "ciclos": 25,
+    "equity": 114.0,
+    "flotante": -5979.97,
+    "ciclos": 26,
     "ganancia_real": 2.54,
     "retirado": 41.51,
     "hucha_comun": 36.34,
@@ -745,10 +745,10 @@
     "hucha_tope": 100.0,
     "operativa_aportado": 15.14,
     "martingala": {
-      "activa": true,
-      "direccion": "SELL",
-      "nivel": 1,
-      "precio": 4447.15
+      "activa": false,
+      "direccion": "",
+      "nivel": 0,
+      "precio": 0.0
     },
     "hedge": {
       "activo": false,
@@ -1362,10 +1362,10 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.05.28 04:05:05",
+    "timestamp": "2026.05.28 04:05:38",
     "balance": 6093.97,
-    "equity": 115.18,
-    "flotante": -5978.79,
+    "equity": 114.0,
+    "flotante": -5979.97,
     "ciclos": 4,
     "ganancia_real": 0.5,
     "retirado": 0.0,
@@ -1441,14 +1441,14 @@
     ]
   },
   "ger40": {
-    "timestamp": "2026.05.28 04:04:49",
-    "balance": 6092.87,
-    "equity": 115.59,
-    "flotante": -5977.28,
+    "timestamp": "2026.05.28 04:05:23",
+    "balance": 6093.97,
+    "equity": 115.01,
+    "flotante": -5978.96,
     "ciclos": 3,
     "ganancia_real": 0.01,
     "retirado": 0.0,
-    "hucha_comun": 35.84,
+    "hucha_comun": 36.34,
     "hucha_aportado": 0.0,
     "hucha_fase": 2,
     "hucha_fase_pct": 45,
@@ -1502,14 +1502,14 @@
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.05.28 04:04:50",
-    "balance": 6092.87,
-    "equity": 116.26,
-    "flotante": -5976.61,
+    "timestamp": "2026.05.28 04:05:20",
+    "balance": 6093.97,
+    "equity": 114.43,
+    "flotante": -5979.54,
     "ciclos": 6,
     "ganancia_real": -0.69,
     "retirado": 0.0,
-    "hucha_comun": 35.84,
+    "hucha_comun": 36.34,
     "hucha_aportado": 0.0,
     "hucha_fase": 2,
     "hucha_fase_pct": 45,
