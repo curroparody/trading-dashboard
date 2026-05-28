@@ -1,15 +1,15 @@
 {
-  "timestamp": "2026.05.28 05:09:20",
+  "timestamp": "2026.05.28 05:09:53",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 6095.12,
-    "equity_total": 51.47,
-    "flotante_total": -6043.65,
+    "equity_total": 45.71,
+    "flotante_total": -6049.41,
     "ciclos_total": 40,
-    "hedges_activos": 0,
-    "hedges_cola_total": 0,
+    "hedges_activos": 1,
+    "hedges_cola_total": 1,
     "ganancia_real_total": 2.99,
-    "hucha_total": 36.85,
+    "hucha_total": 0.0,
     "operativa_total": 21.98,
     "retirado_total": 41.51,
     "gastado_total": 18.29,
@@ -737,17 +737,17 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.05.28 06:08:56",
+    "timestamp": "2026.05.28 06:09:26",
     "balance": 6095.12,
-    "equity": 51.47,
-    "flotante": -6043.65,
+    "equity": 45.71,
+    "flotante": -6049.41,
     "ciclos": 26,
     "ganancia_real": 2.54,
     "retirado": 41.51,
-    "hucha_comun": 36.85,
+    "hucha_comun": 0.0,
     "hucha_aportado": 0.0,
-    "hucha_fase": 2,
-    "hucha_fase_pct": 45,
+    "hucha_fase": 0,
+    "hucha_fase_pct": 80,
     "hucha_tope": 100.0,
     "operativa_aportado": 15.14,
     "martingala": {
@@ -1368,10 +1368,10 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.05.28 06:09:20",
+    "timestamp": "2026.05.28 06:09:51",
     "balance": 6095.12,
-    "equity": 46.87,
-    "flotante": -6048.25,
+    "equity": 46.47,
+    "flotante": -6048.65,
     "ciclos": 5,
     "ganancia_real": 1.13,
     "retirado": 0.0,
@@ -1453,33 +1453,42 @@
     ]
   },
   "ger40": {
-    "timestamp": "2026.05.28 06:08:50",
+    "timestamp": "2026.05.28 06:09:51",
     "balance": 6095.12,
-    "equity": 52.49,
-    "flotante": -6042.63,
+    "equity": 46.47,
+    "flotante": -6048.65,
     "ciclos": 3,
     "ganancia_real": 0.01,
     "retirado": 0.0,
-    "hucha_comun": 36.85,
+    "hucha_comun": 0.0,
     "hucha_aportado": 0.0,
-    "hucha_fase": 2,
-    "hucha_fase_pct": 45,
+    "hucha_fase": 0,
+    "hucha_fase_pct": 80,
     "hucha_tope": 100.0,
     "operativa_aportado": 5.28,
     "martingala": {
-      "activa": true,
-      "direccion": "BUY",
-      "nivel": 2,
-      "precio": 25329.19
+      "activa": false,
+      "direccion": "",
+      "nivel": 0,
+      "precio": 0.0
     },
     "hedge": {
-      "activo": false,
-      "numero": 0,
-      "objetivo": 0.0,
-      "fondo": 0.0,
-      "pct": 0.0
+      "activo": true,
+      "numero": 1,
+      "objetivo": 42.21,
+      "fondo": 36.85,
+      "pct": 87.3
     },
-    "hedges_cola": [],
+    "hedges_cola": [
+      {
+        "numero": 1,
+        "objetivo": 42.21,
+        "fondo": 36.85,
+        "pct": 87.3,
+        "flotante": -42.21,
+        "fecha": "2026.05.28 06:09"
+      }
+    ],
     "operativa_log": [
       {
         "tipo": "GANANCIA_LIBRE",
@@ -1514,10 +1523,10 @@
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.05.28 06:09:18",
+    "timestamp": "2026.05.28 06:09:49",
     "balance": 6095.12,
-    "equity": 47.36,
-    "flotante": -6047.76,
+    "equity": 46.15,
+    "flotante": -6048.97,
     "ciclos": 6,
     "ganancia_real": -0.69,
     "retirado": 0.0,
