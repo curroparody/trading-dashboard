@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026.06.01 01:04:29",
+  "timestamp": "2026.06.01 01:05:02",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1296.22,
-    "equity_total": 242.76,
-    "flotante_total": -1053.46,
+    "equity_total": 241.97,
+    "flotante_total": -1054.25,
     "ciclos_total": 0,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
@@ -16,10 +16,10 @@
     "operativa_log": []
   },
   "oro": {
-    "timestamp": "2026.06.01 02:04:09",
+    "timestamp": "2026.06.01 02:04:39",
     "balance": 1296.22,
-    "equity": 242.76,
-    "flotante": -1053.46,
+    "equity": 241.97,
+    "flotante": -1054.25,
     "ciclos": 0,
     "cierre_semana": false,
     "ganancia_real": 0.0,
@@ -47,10 +47,10 @@
     "operativa_log": []
   },
   "btc": {
-    "timestamp": "2026.06.01 02:04:17",
+    "timestamp": "2026.06.01 02:04:48",
     "balance": 1296.22,
-    "equity": 242.21,
-    "flotante": -1054.01,
+    "equity": 241.97,
+    "flotante": -1054.25,
     "ciclos": 0,
     "cierre_semana": false,
     "ganancia_real": 0.0,
@@ -108,10 +108,10 @@
     "operativa_log": []
   },
   "usdjpy": {
-    "timestamp": "2026.06.01 02:04:09",
+    "timestamp": "2026.06.01 02:04:39",
     "balance": 1296.22,
-    "equity": 242.78,
-    "flotante": -1053.44,
+    "equity": 241.97,
+    "flotante": -1054.25,
     "ciclos": 0,
     "cierre_semana": false,
     "ganancia_real": 0.0,
@@ -137,44 +137,5 @@
     },
     "hedges_cola": [],
     "operativa_log": []
-  },
-  "wetsuit": {
-    "par": "AUDCAD-STD",
-    "timestamp": "2026.06.01 02:04",
-    "flotante_total": -0.46,
-    "instancias_activas": 3,
-    "instancias_total": 3,
-    "nivel_max": 1,
-    "fondo_solidaridad": 0.0,
-    "ciclos_total": 0,
-    "ganancia_total": 0.0,
-    "rsi": 56.14,
-    "cierre_semana": false,
-    "instancias": [
-      {
-        "nombre": "Sara",
-        "activa": true,
-        "direccion": "SELL",
-        "niveles": 1,
-        "flotante": -0.25,
-        "solidaridad": false
-      },
-      {
-        "nombre": "Eva",
-        "activa": true,
-        "direccion": "SELL",
-        "niveles": 1,
-        "flotante": -0.23,
-        "solidaridad": false
-      },
-      {
-        "nombre": "Maria",
-        "activa": true,
-        "direccion": "BUY",
-        "niveles": 1,
-        "flotante": 0.02,
-        "solidaridad": false
-      }
-    ]
   }
 }
