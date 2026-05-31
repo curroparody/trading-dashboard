@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PROYECTO S.E.M. — Dashboard v2.3</title>
+<title>PROYECTO S.E.M. — Dashboard v2.6</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -738,13 +738,10 @@
   <header>
     <div class="logo-block">
       <h1>PROYECTO S.E.M.</h1>
-      <p id="modeLabel">SISTEMA DE TRADING ALGORÍTMICO · DEMO · VT MARKETS</p>
+      <p id="modeLabel">SISTEMA DE TRADING ALGORÍTMICO · VT MARKETS</p>
     </div>
     <div class="header-right">
-      <div class="mode-toggle">
-        <button class="mode-btn active-demo" id="btnDemo" onclick="setMode('demo')">DEMO</button>
-        <button class="mode-btn" id="btnReal" onclick="setMode('real')">REAL</button>
-      </div>
+      <span id="alertUploader" style="display:none;color:#ff4444;font-size:11px;margin-right:12px;font-family:var(--mono)">⚠ UPLOADER INACTIVO</span>
       <span class="live-dot" id="liveStatus">EN VIVO</span>
       <span class="timestamp" id="lastUpdate">--:--:--</span>
     </div>
@@ -814,57 +811,6 @@
     <div class="bot-card offline"><div class="no-activity">Cargando datos...</div></div>
   </div>
 
-  <!-- PANEL OPERATIVA MANUAL BOTS -->
-  <div class="operativa-panel" id="panelOperativa">
-    <div class="operativa-panel-title">⚙ Operativa Manual</div>
-    <div class="operativa-form">
-      <div class="operativa-field">
-        <label>Tipo de operación</label>
-        <select id="op_tipo" onchange="actualizarFormOperativa()">
-          <option value="GANANCIA_LIBRE">GANANCIA LIBRE</option>
-          <option value="INYECTAR_HEDGE">INYECTAR HEDGE</option>
-          <option value="INYECTAR_HUCHA">INYECTAR HUCHA</option>
-          <option value="CERRAR_N1">CERRAR N1</option>
-          <option value="CERRAR_N1N2">CERRAR N1+N2</option>
-          <option value="CANCELAR_HEDGE">CANCELAR HEDGE</option>
-        </select>
-      </div>
-      <div class="operativa-field">
-        <label>Bot</label>
-        <select id="op_bot">
-          <option value="XAUUSD">ORO (XAUUSD)</option>
-          <option value="BTCUSD">BITCOIN (BTCUSD)</option>
-          <option value="GER40">DAX 40 (GER40)</option>
-          <option value="USDJPY">YEN (USDJPY)</option>
-        </select>
-      </div>
-      <div class="operativa-field" id="field_importe">
-        <label>Importe ($)</label>
-        <input type="number" id="op_importe" step="0.01" placeholder="0.00">
-      </div>
-      <div class="operativa-field" id="field_magic" style="display:none">
-        <label>Magic Hedge destino</label>
-        <input type="number" id="op_magic" placeholder="ej: 790000">
-      </div>
-      <div class="operativa-field" id="field_destino" style="display:none">
-        <label>Bot destino hucha</label>
-        <select id="op_destino">
-          <option value="XAUUSD">ORO (XAUUSD)</option>
-          <option value="BTCUSD">BITCOIN (BTCUSD)</option>
-          <option value="GER40">DAX 40 (GER40)</option>
-          <option value="USDJPY">YEN (USDJPY)</option>
-        </select>
-      </div>
-    </div>
-    <div class="operativa-btns">
-      <button class="operativa-btn primary" onclick="ejecutarOperativa()">EJECUTAR</button>
-      <button class="operativa-btn warning" onclick="limpiarFormOperativa()">LIMPIAR</button>
-    </div>
-    <div class="operativa-msg" id="op_msg"></div>
-    <div style="margin-top:12px;font-family:var(--mono);font-size:10px;color:var(--muted)">
-      ⚠ Las operaciones se registran en el JSON del bot seleccionado. El bot las ejecuta en el siguiente tick.
-    </div>
-  </div>
 
   <!-- HISTÓRICO DE HEDGES -->
   <div class="historico-section">
@@ -958,37 +904,33 @@
     </div>
   </div>
 
+  <!-- WETSUIT BOT -->
+  <div class="wetsuit-panel" id="wetsuitPanel" style="display:none">
+    <div class="section-title">🏊 WETSUIT · AUDCAD</div>
+    <div class="wetsuit-grid" id="wetsuitGrid"></div>
+    <div class="solidaridad-panel" id="wetsuitSolidaridad" style="display:none">
+      <div class="sol-title">💛 SOLIDARIDAD ACTIVA</div>
+      <div id="wetsuitSolDetalle"></div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="wetsuitSolBar" style="width:0%"></div>
+      </div>
+      <div id="wetsuitSolTexto"></div>
+    </div>
+  </div>
+
   <footer>
-    <span>PROYECTO S.E.M. · v2.3</span>
+    <span>PROYECTO S.E.M. · v2.6</span>
     <span id="nextUpdate">Actualizando en 30s</span>
   </footer>
 
 </div>
 
 <script>
-// v2.2: repositorio privado — usar API para leer y escribir
-const GITHUB_API_BASE = 'https://api.github.com/repos/curroparody/trading-dashboard/contents/';
-const DATA_URL_DEMO = null; // no usado - se lee via API
-const DATA_URL_REAL = null; // no usado - se lee via API
-const GITHUB_TOKEN = 'ghp_IeF0jfw6at8GbWap1QD9g7vcA7sCDK2ewuaf';
+// v2.5: lectura desde raw.githubusercontent — escritura vía Telegram/uploader
+window.SERVER_UTC_OFFSET = 2; // v2.5: offset UTC del servidor VPS (EET invierno=2, verano=3)
 
-let currentMode = 'demo';
 let operacionesManuales = [];
 let historicoHedges = [];
-
-function setMode(mode) {
-  currentMode = mode;
-  document.getElementById('btnDemo').className = mode === 'demo' ? 'mode-btn active-demo' : 'mode-btn';
-  document.getElementById('btnReal').className = mode === 'real' ? 'mode-btn active-real' : 'mode-btn';
-  document.getElementById('modeLabel').textContent = mode === 'demo'
-    ? 'SISTEMA DE TRADING ALGORÍTMICO · DEMO · VT MARKETS'
-    : 'SISTEMA DE TRADING ALGORÍTMICO · REAL · VT MARKETS';
-  fetchData();
-}
-
-function getDataUrl() {
-  return currentMode === 'real' ? DATA_URL_REAL : DATA_URL_DEMO;
-}
 
 const BOT_META = {
   oro:    { name: 'XAUUSD', label: 'ORO',     symbol: 'XAU/USD' },
@@ -997,17 +939,7 @@ const BOT_META = {
   usdjpy: { name: 'USDJPY', label: 'YEN',       symbol: 'USD/JPY' },
 };
 
-const FASE_NOMBRES = ['F0 · 80%', 'F1 · 60%', 'F2 · 45%', 'F3 · 30%', 'F4 · 15%', 'F5 · 10%'];
-
-let countdown = 30;
-let countdownInterval;
-
-function fmt(val, decimals=2) {
-  if(val === undefined || val === null) return '—';
-  const n = Number(val);
-  return (n >= 0 ? '$' : '-$') + Math.abs(n).toFixed(decimals);
-}
-
+const FASE_NOMBRES = ['F0 · 80%', 'F1 · 60%', 'F2 · 45%', 'F3 · 30%', 'F4 · 15%', 'F5 · 10%']; // v2.5: completado
 function fmtPct(val) {
   if(val === undefined || val === null) return '—';
   return Number(val).toFixed(1) + '%';
@@ -1138,10 +1070,8 @@ function renderBot(key, data, allData) {
   // v1.6.0: hucha comun del ecosistema
   const huchaPropia  = allData._hucha_comun !== undefined ? allData._hucha_comun : (data.hucha_propia !== undefined ? data.hucha_propia : null);
   const huchaTope    = 100;
-  const huchaFase    = data.hucha_fase     !== undefined ? data.hucha_fase     : null;
-  const huchaFasePct = data.hucha_fase_pct !== undefined ? data.hucha_fase_pct : null;
+  // v2.5: huchaFase y faseNombre eliminados — hucha solo en ecosistema bar
   const huchaPct     = huchaPropia !== null ? Math.min((huchaPropia / huchaTope) * 100, 100) : 0;
-  const faseNombre   = huchaFase !== null ? FASE_NOMBRES[Math.min(huchaFase, 5)] : '';
 
   let huchaHtml = ''; // v1.6.2: hucha comun solo en ecosistema bar
 
@@ -1279,12 +1209,32 @@ function renderBot(key, data, allData) {
       </div>`;
   }
 
+  // v2.4: indicador última actualización y cierre semana
+  const ts = data.timestamp || null;
+  let tsMinutos = null;
+  if(ts) {
+    // v2.5: compensar diferencia de huso horario servidor (EET = UTC+2h en invierno, UTC+3h en verano)
+    // Se usa SERVER_UTC_OFFSET definido globalmente
+    const parts = ts.match(/(\d{4})\.(\d{2})\.(\d{2}) (\d{2}):(\d{2}):(\d{2})/);
+    if(parts) {
+      const serverOffsetMs = (window.SERVER_UTC_OFFSET || 2) * 3600000;
+      const botDate = new Date(Date.UTC(+parts[1], +parts[2]-1, +parts[3], +parts[4], +parts[5], +parts[6]) - serverOffsetMs);
+      tsMinutos = Math.floor((new Date() - botDate) / 60000);
+    }
+  }
+  const tsHtml = tsMinutos !== null
+    ? `<span style="font-family:var(--mono);font-size:10px;color:${tsMinutos > 2 ? '#ff4444' : 'var(--muted)'}">⏱ hace ${tsMinutos}min</span>`
+    : '';
+  const cierreHtml = data.cierre_semana === true
+    ? '<span style="font-family:var(--mono);font-size:10px;color:#ffaa00;margin-left:6px">🔒 CIERRE SEMANA</span>'
+    : '';
+
   return `
     <div class="${cardClass}">
       <div class="card-header">
         <div>
           <div class="card-title">${meta.label}</div>
-          <div class="card-subtitle">${meta.symbol}</div>
+          <div class="card-subtitle">${meta.symbol} ${tsHtml}${cierreHtml}</div>
         </div>
         <span class="status-badge ${badgeClass}">${badgeText}</span>
       </div>
@@ -1411,10 +1361,6 @@ async function guardarOpManual() {
 
   const instruccion = { accion: 'ANADIR', operacion: op, ejecutada: false };
   mostrarMsgOM('Enviando al uploader...', 'ok');
-  const ok = await escribirInstruccionOperacion(instruccion);
-  if(ok) {
-    // Añadir localmente para feedback inmediato
-    operacionesManuales.push(op);
     renderOpManuales();
     toggleFormOpManual();
     mostrarMsgOM('Operación enviada — el uploader la procesará en breve', 'ok');
@@ -1431,10 +1377,6 @@ async function guardarOpManual() {
 async function eliminarOpManual(ts) {
   if(!confirm('¿Eliminar esta operación?')) return;
   const instruccion = { accion: 'ELIMINAR', ts: ts, ejecutada: false };
-  const ok = await escribirInstruccionOperacion(instruccion);
-  if(ok) {
-    // Eliminar localmente para feedback inmediato
-    operacionesManuales = operacionesManuales.filter(o => o.ts !== ts);
     renderOpManuales();
     mostrarMsgOM('Operación eliminada — el uploader procesará el descuento', 'ok');
   } else {
@@ -1527,38 +1469,6 @@ function toggleDia(idx) {
   header.classList.toggle('open', !isOpen);
 }
 
-async function escribirInstruccionOperacion(instruccion) {
-  // Escribe operaciones_instruccion.json en GitHub para que el uploader lo procese
-  // El uploader usa su propio token — el HTML no necesita token de escritura
-  try {
-    const content = btoa(unescape(encodeURIComponent(JSON.stringify(instruccion, null, 2))));
-    // Obtener SHA si existe
-    let sha = '';
-    try {
-      const res = await fetch(GITHUB_API_BASE + 'operaciones_instruccion.json', {
-        headers: { 'Authorization': 'token ' + GITHUB_TOKEN }
-      });
-      if(res.ok) { const d = await res.json(); sha = d.sha || ''; }
-    } catch(e) {}
-    const res = await fetch(GITHUB_API_BASE + 'operaciones_instruccion.json', {
-      method: 'PUT',
-      headers: {
-        'Authorization': 'token ' + GITHUB_TOKEN,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        message: 'Instruccion operacion manual',
-        content,
-        sha: sha || undefined
-      })
-    });
-    return res.ok;
-  } catch(e) {
-    console.error('Error escribiendo instruccion:', e);
-    return false;
-  }
-}
-
 async function guardarOpManualesGitHub() {
   // Mantenida por compatibilidad — ya no se usa directamente
   return true;
@@ -1579,10 +1489,14 @@ async function cargarOpManualesGitHub() {
 
 // ── FETCH PRINCIPAL ───────────────────────────────────────────────
 async function fetchData() {
+  window._fetchInProgress = true; // v2.5
+  // v2.5: guard para evitar pantalla en negro si constantes no definidas
+  if(typeof BOT_META === 'undefined') {
+    window._fetchInProgress = false;
+    return;
+  }
   try {
-    const DATA_URL = currentMode === 'real'
-      ? 'https://raw.githubusercontent.com/curroparody/trading-dashboard/main/data_real.json'
-      : 'https://raw.githubusercontent.com/curroparody/trading-dashboard/main/data_demo.json';
+    const DATA_URL = 'https://raw.githubusercontent.com/curroparody/trading-dashboard/main/data_demo.json';
     const res = await fetch(DATA_URL + '?t=' + Date.now());
     if(!res.ok) throw new Error('HTTP ' + res.status);
     const data = await res.json();
@@ -1601,9 +1515,16 @@ async function fetchData() {
     document.getElementById('ecoHuchaBar').style.width = huchaPctVal + '%';
     document.getElementById('ecoHuchaPct').textContent = huchaPctVal.toFixed(1) + '% completado';
     // Fase
-    const fases = [[0,20,'F0 80%'],[20,40,'F1 60%'],[40,60,'F2 45%'],[60,80,'F3 30%'],[80,100,'F4 15%']];
-    const faseActual = fases.find(f => huchaVal >= f[0] && huchaVal < f[1]);
-    document.getElementById('ecoHuchaFase').textContent = faseActual ? faseActual[2] : (huchaVal >= 100 ? 'TOPE' : '');
+    // Fase hucha — rangos en $ sobre tope de $100
+    const fasesHucha = [
+      [0,   10,  'F0 · 80%'],
+      [10,  25,  'F1 · 60%'],
+      [25,  50,  'F2 · 45%'],
+      [50,  75,  'F3 · 30%'],
+      [75,  100, 'F4 · 15%'],
+    ];
+    const faseActual = fasesHucha.find(f => huchaVal >= f[0] && huchaVal < f[1]);
+    document.getElementById('ecoHuchaFase').textContent = faseActual ? faseActual[2] : (huchaVal >= 100 ? 'F5 · 10%' : 'F0 · 80%');
     document.getElementById('ecoRetirado').textContent = eco.retirado_total !== undefined
       ? '$' + Number(eco.retirado_total).toFixed(2) : '$0.00';
     const gastado  = eco.gastado_total  || 0;
@@ -1621,6 +1542,7 @@ async function fetchData() {
       ger40:  data.ger40  || {},
       usdjpy: data.usdjpy || {},
       _hucha_comun: eco.hucha_total !== undefined ? eco.hucha_total : null,
+      _raw_timestamp: data.timestamp || null,
     };
 
     // Salud
@@ -1632,6 +1554,17 @@ async function fetchData() {
       html += renderBot(key, allData[key], allData);
     }
     document.getElementById('botsGrid').innerHTML = html;
+
+    // v2.5: comprobar inactividad del uploader (timestamp del JSON = hora última subida a GitHub)
+    const alertEl = document.getElementById('alertUploader');
+    if(alertEl && allData._raw_timestamp) {
+      const parts = allData._raw_timestamp.match(/(\d{4})\.(\d{2})\.(\d{2}) (\d{2}):(\d{2}):(\d{2})/);
+      if(parts) {
+        const upd = new Date(parts[1], parts[2]-1, parts[3], parts[4], parts[5], parts[6]);
+        const diff = (new Date() - upd) / 60000;
+        alertEl.style.display = diff > 2 ? '' : 'none';
+      }
+    }
 
     // Histórico de hedges — leer del ecosistema si viene
     if(data.historico_hedges) {
@@ -1648,15 +1581,16 @@ async function fetchData() {
     console.error(e);
   }
 
+  window._fetchInProgress = false; // v2.5
   countdown = 30;
 }
 
 function startCountdown() {
   clearInterval(countdownInterval);
   countdownInterval = setInterval(() => {
-    countdown--;
+    if(countdown > 0) countdown--;
     document.getElementById('nextUpdate').textContent = `Actualizando en ${countdown}s`;
-    if(countdown <= 0) fetchData();
+    if(countdown <= 0 && !window._fetchInProgress) fetchData(); // v2.5: evitar llamadas superpuestas
   }, 1000);
 }
 
@@ -1716,12 +1650,47 @@ async function ejecutarOperativa() {
   mostrarMsg(msgs[tipo] + ' — Configura en MT4 y activa Operativa_Activa = true', 'ok');
 }
 
+// ── WETSUIT ──────────────────────────────────────────────────────
+function renderWetsuit(data) {
+  const panel = document.getElementById("wetsuitPanel");
+  if(!data || !data.wetsuit) { panel.style.display = "none"; return; }
+  panel.style.display = "";
+  const w = data.wetsuit;
+  const instancias = w.instancias || [];
+  let html = "";
+  instancias.forEach(inst => {
+    const estado = inst.activa ? (inst.direccion === 1 ? "BUY" : "SELL") : "LIBRE";
+    const sol = inst.solidaridad_activa ? " 🆘" : "";
+    html += `<div class="wetsuit-card">`;
+    html += `<div class="wetsuit-nombre">${inst.nombre}${sol}</div>`;
+    html += `<div class="wetsuit-estado">${estado} · Niv ${inst.niveles}</div>`;
+    if(inst.activa) {
+      html += `<div class="wetsuit-tp">TP: ${inst.tp_precio ? inst.tp_precio.toFixed(5) : "—"}</div>`;
+      html += `<div class="wetsuit-flotante ${inst.flotante >= 0 ? "pos" : "neg"}">$${inst.flotante ? inst.flotante.toFixed(2) : "0.00"}</div>`;
+    }
+    html += `</div>`;
+  });
+  document.getElementById("wetsuitGrid").innerHTML = html;
+  // Solidaridad
+  const fondo = w.fondo_solidaridad || 0;
+  const objetivo = w.solidaridad_objetivo || 0;
+  const solPanel = document.getElementById("wetsuitSolidaridad");
+  if(fondo > 0 || objetivo > 0) {
+    solPanel.style.display = "";
+    const pct = objetivo > 0 ? Math.min(fondo / objetivo * 100, 100) : 0;
+    document.getElementById("wetsuitSolBar").style.width = pct + "%";
+    document.getElementById("wetsuitSolTexto").textContent =
+      `$${fondo.toFixed(2)} / $${objetivo.toFixed(2)} — Restante: $${Math.max(objetivo-fondo,0).toFixed(2)}`;
+  } else {
+    solPanel.style.display = "none";
+  }
+}
+
 // ── INIT ──────────────────────────────────────────────────────────
 actualizarFormOperativa();
 cargarOpManualesGitHub();
 fetchData();
 startCountdown();
-setInterval(fetchData, 30000);
 </script>
 </body>
 </html>
