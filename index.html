@@ -1596,7 +1596,9 @@ const MAGIC_MAP = {
 };
 
 function actualizarFormOperativa() {
-  const tipo = document.getElementById('op_tipo').value;
+  const tipoEl = document.getElementById('op_tipo');
+  if(!tipoEl) return;
+  const tipo = tipoEl.value;
   document.getElementById('field_importe').style.display = ['GANANCIA_LIBRE','INYECTAR_HEDGE','INYECTAR_HUCHA'].includes(tipo) ? '' : 'none';
   document.getElementById('field_magic').style.display   = tipo === 'INYECTAR_HEDGE' ? '' : 'none';
   document.getElementById('field_destino').style.display = tipo === 'INYECTAR_HUCHA' ? '' : 'none';
@@ -1680,7 +1682,6 @@ function renderWetsuit(data) {
 }
 
 // ── INIT ──────────────────────────────────────────────────────────
-actualizarFormOperativa();
 cargarOpManualesGitHub();
 fetchData();
 startCountdown();
