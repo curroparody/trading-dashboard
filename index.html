@@ -811,6 +811,12 @@
     <div class="bot-card offline"><div class="no-activity">Cargando datos...</div></div>
   </div>
 
+  <!-- WETSUIT -->
+  <div class="historico-section" id="wetsuitSection" style="display:none">
+    <div class="historico-title">🌊 WETSUIT — AUDCAD</div>
+    <div id="wetsuitGrid"></div>
+  </div>
+
 
   <!-- HISTÓRICO DE HEDGES -->
   <div class="historico-section">
@@ -1568,7 +1574,35 @@ async function fetchData() {
       }
     }
 
-    // Histórico de hedges — leer del ecosistema si viene
+    // WETSUIT
+    if(data.wetsuit) {
+      const ws = data.wetsuit;
+      const sec = document.getElementById('wetsuitSection');
+      const grid = document.getElementById('wetsuitGrid');
+      if(sec) sec.style.display = '';
+      let html = `<div style="display:flex;flex-wrap:wrap;gap:12px;padding:12px 0">`;
+      html += `<div style="font-family:var(--mono);font-size:12px;color:var(--muted);width:100%">`;
+      html += `Par: ${ws.par || 'AUDCAD'} &nbsp;|&nbsp; Flotante: <span style="color:${(ws.flotante_total||0)>=0?'var(--green)':'var(--red)'}">$${Number(ws.flotante_total||0).toFixed(2)}</span>`;
+      html += ` &nbsp;|&nbsp; Instancias activas: ${ws.instancias_activas||0}/${ws.instancias_total||0}`;
+      html += ` &nbsp;|&nbsp; Fondo solidaridad: $${Number(ws.fondo_solidaridad||0).toFixed(2)}`;
+      html += ` &nbsp;|&nbsp; RSI: ${Number(ws.rsi||0).toFixed(1)}`;
+      html += `</div>`;
+      if(ws.instancias && ws.instancias.length) {
+        ws.instancias.forEach(inst => {
+          const color = inst.activa ? (inst.direccion==='BUY' ? 'var(--green)' : inst.direccion==='SELL' ? 'var(--red)' : 'var(--muted)') : 'var(--muted)';
+          html += `<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 14px;min-width:140px">`;
+          html += `<div style="font-family:var(--sans);font-weight:700;font-size:13px">${inst.nombre}</div>`;
+          html += `<div style="font-family:var(--mono);font-size:11px;color:${color}">${inst.activa ? inst.direccion : 'LIBRE'}</div>`;
+          if(inst.activa) {
+            html += `<div style="font-family:var(--mono);font-size:11px;color:var(--muted)">Niv: ${inst.niveles} &nbsp; $${Number(inst.flotante||0).toFixed(2)}</div>`;
+          }
+          if(inst.solidaridad) html += `<div style="font-size:10px;color:var(--orange)">SOL</div>`;
+          html += `</div>`;
+        });
+      }
+      html += `</div>`;
+      if(grid) grid.innerHTML = html;
+    }
     if(data.historico_hedges) {
       historicoHedges = data.historico_hedges;
       renderHistoricoHedges();
