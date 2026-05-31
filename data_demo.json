@@ -137,5 +137,44 @@
     },
     "hedges_cola": [],
     "operativa_log": []
+  },
+  "wetsuit": {
+    "par": "AUDCAD-STD",
+    "timestamp": "2026.06.01 02:01",
+    "flotante_total": -0.27,
+    "instancias_activas": 3,
+    "instancias_total": 3,
+    "nivel_max": 1,
+    "fondo_solidaridad": 0.0,
+    "ciclos_total": 0,
+    "ganancia_total": 0.0,
+    "rsi": 54.77,
+    "cierre_semana": false,
+    "instancias": [
+      {
+        "nombre": "Sara",
+        "activa": true,
+        "direccion": "SELL",
+        "niveles": 1,
+        "flotante": -0.06,
+        "solidaridad": false
+      },
+      {
+        "nombre": "Eva",
+        "activa": true,
+        "direccion": "SELL",
+        "niveles": 1,
+        "flotante": -0.03,
+        "solidaridad": false
+      },
+      {
+        "nombre": "Maria",
+        "activa": true,
+        "direccion": "BUY",
+        "niveles": 1,
+        "flotante": -0.18,
+        "solidaridad": false
+      }
+    ]
   }
 }
