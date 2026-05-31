@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026.06.01 01:49:25",
+  "timestamp": "2026.06.01 01:49:58",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1296.22,
-    "equity_total": 241.71,
-    "flotante_total": -1054.51,
+    "equity_total": 241.45,
+    "flotante_total": -1054.77,
     "ciclos_total": 0,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
@@ -16,10 +16,10 @@
     "operativa_log": []
   },
   "oro": {
-    "timestamp": "2026.06.01 02:49:16",
+    "timestamp": "2026.06.01 02:49:57",
     "balance": 1296.22,
-    "equity": 241.71,
-    "flotante": -1054.51,
+    "equity": 241.45,
+    "flotante": -1054.77,
     "ciclos": 0,
     "cierre_semana": false,
     "ganancia_real": 0.0,
@@ -47,10 +47,10 @@
     "operativa_log": []
   },
   "btc": {
-    "timestamp": "2026.06.01 02:49:22",
+    "timestamp": "2026.06.01 02:49:57",
     "balance": 1296.22,
-    "equity": 241.16,
-    "flotante": -1055.06,
+    "equity": 241.45,
+    "flotante": -1054.77,
     "ciclos": 0,
     "cierre_semana": false,
     "ganancia_real": 0.0,
@@ -141,14 +141,14 @@
   "wetsuit": {
     "par": "AUDCAD-STD",
     "timestamp": "2026.06.01 02:49",
-    "flotante_total": -0.55,
+    "flotante_total": -0.57,
     "instancias_activas": 3,
     "instancias_total": 3,
     "nivel_max": 1,
     "fondo_solidaridad": 0.0,
     "ciclos_total": 0,
     "ganancia_total": 0.0,
-    "rsi": 56.55,
+    "rsi": 56.68,
     "cierre_semana": false,
     "instancias": [
       {
@@ -156,7 +156,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 1,
-        "flotante": -0.33,
+        "flotante": -0.35,
         "solidaridad": false
       },
       {
@@ -164,7 +164,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 1,
-        "flotante": -0.3,
+        "flotante": -0.33,
         "solidaridad": false
       },
       {
@@ -172,7 +172,7 @@
         "activa": true,
         "direccion": "BUY",
         "niveles": 1,
-        "flotante": 0.08,
+        "flotante": 0.11,
         "solidaridad": false
       }
     ]
