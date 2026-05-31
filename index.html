@@ -1227,7 +1227,8 @@ function renderBot(key, data, allData) {
     if(parts) {
       const serverOffsetMs = (window.SERVER_UTC_OFFSET || 2) * 3600000;
       const botDate = new Date(Date.UTC(+parts[1], +parts[2]-1, +parts[3], +parts[4], +parts[5], +parts[6]) - serverOffsetMs);
-      tsMinutos = Math.floor((new Date() - botDate) / 60000);
+      tsMinutos = Math.round((new Date() - botDate) / 60000);
+      if(tsMinutos < 0) tsMinutos = 0;
     }
   }
   const tsHtml = tsMinutos !== null
