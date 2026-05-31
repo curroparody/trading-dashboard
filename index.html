@@ -931,6 +931,14 @@ window.SERVER_UTC_OFFSET = 2; // v2.5: offset UTC del servidor VPS (EET invierno
 
 let operacionesManuales = [];
 let historicoHedges = [];
+let countdownInterval = null;
+let countdown = 30;
+
+function fmt(val) {
+  if(val === undefined || val === null) return '—';
+  const n = Number(val);
+  return (n >= 0 ? '+' : '') + n.toFixed(2);
+}
 
 const BOT_META = {
   oro:    { name: 'XAUUSD', label: 'ORO',     symbol: 'XAU/USD' },
