@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026.06.01 00:59:30",
+  "timestamp": "2026.06.01 01:00:03",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1296.22,
-    "equity_total": 242.19,
-    "flotante_total": -1054.03,
+    "equity_total": 243.08,
+    "flotante_total": -1053.14,
     "ciclos_total": 0,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
@@ -16,10 +16,10 @@
     "operativa_log": []
   },
   "oro": {
-    "timestamp": "2026.06.01 01:59:09",
+    "timestamp": "2026.06.01 01:59:39",
     "balance": 1296.22,
-    "equity": 242.19,
-    "flotante": -1054.03,
+    "equity": 243.08,
+    "flotante": -1053.14,
     "ciclos": 0,
     "cierre_semana": false,
     "ganancia_real": 0.0,
@@ -47,10 +47,10 @@
     "operativa_log": []
   },
   "btc": {
-    "timestamp": "2026.06.01 01:59:16",
+    "timestamp": "2026.06.01 01:59:46",
     "balance": 1296.22,
-    "equity": 242.54,
-    "flotante": -1053.68,
+    "equity": 242.74,
+    "flotante": -1053.48,
     "ciclos": 0,
     "cierre_semana": false,
     "ganancia_real": 0.0,
@@ -108,10 +108,10 @@
     "operativa_log": []
   },
   "usdjpy": {
-    "timestamp": "2026.06.01 01:59:00",
+    "timestamp": "2026.06.01 02:00:00",
     "balance": 1296.22,
-    "equity": 242.62,
-    "flotante": -1053.6,
+    "equity": 243.63,
+    "flotante": -1052.59,
     "ciclos": 0,
     "cierre_semana": false,
     "ganancia_real": 0.0,
@@ -137,44 +137,5 @@
     },
     "hedges_cola": [],
     "operativa_log": []
-  },
-  "wetsuit": {
-    "par": "AUDCAD-STD",
-    "timestamp": "2026.06.01 01:59",
-    "flotante_total": 0.0,
-    "instancias_activas": 0,
-    "instancias_total": 3,
-    "nivel_max": 0,
-    "fondo_solidaridad": 0.0,
-    "ciclos_total": 0,
-    "ganancia_total": 0.0,
-    "rsi": 55.05,
-    "cierre_semana": false,
-    "instancias": [
-      {
-        "nombre": "Sara",
-        "activa": false,
-        "direccion": "LIBRE",
-        "niveles": 0,
-        "flotante": 0.0,
-        "solidaridad": false
-      },
-      {
-        "nombre": "Eva",
-        "activa": false,
-        "direccion": "LIBRE",
-        "niveles": 0,
-        "flotante": 0.0,
-        "solidaridad": false
-      },
-      {
-        "nombre": "Maria",
-        "activa": false,
-        "direccion": "LIBRE",
-        "niveles": 0,
-        "flotante": 0.0,
-        "solidaridad": false
-      }
-    ]
   }
 }
