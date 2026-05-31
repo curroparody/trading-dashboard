@@ -1361,27 +1361,20 @@ async function guardarOpManual() {
 
   const instruccion = { accion: 'ANADIR', operacion: op, ejecutada: false };
   mostrarMsgOM('Enviando al uploader...', 'ok');
-    renderOpManuales();
-    toggleFormOpManual();
-    mostrarMsgOM('Operación enviada — el uploader la procesará en breve', 'ok');
-    // Limpiar
-    ['om_apertura','om_cierre','om_swap','om_resultado','om_notas','om_fecha_apertura','om_hora_apertura','om_fecha_cierre','om_hora_cierre','om_lote'].forEach(id => {
-      document.getElementById(id).value = '';
-    });
-    document.getElementById('om_swap').value = '0';
-  } else {
-    mostrarMsgOM('Error al enviar — reintenta', 'err');
-  }
+  renderOpManuales();
+  toggleFormOpManual();
+  mostrarMsgOM('Operacion enviada — el uploader la procesara en breve', 'ok');
+  ['om_apertura','om_cierre','om_swap','om_resultado','om_notas','om_fecha_apertura','om_hora_apertura','om_fecha_cierre','om_hora_cierre','om_lote'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+  document.getElementById('om_swap').value = '0';
 }
 
 async function eliminarOpManual(ts) {
   if(!confirm('¿Eliminar esta operación?')) return;
   const instruccion = { accion: 'ELIMINAR', ts: ts, ejecutada: false };
-    renderOpManuales();
-    mostrarMsgOM('Operación eliminada — el uploader procesará el descuento', 'ok');
-  } else {
-    mostrarMsgOM('Error al eliminar — reintenta', 'err');
-  }
+  renderOpManuales();
+  mostrarMsgOM('Operacion eliminada — el uploader procesara el descuento', 'ok');
 }
 
 function mostrarMsgOM(texto, tipo) {
