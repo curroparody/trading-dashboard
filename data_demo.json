@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026.06.01 13:40:58",
+  "timestamp": "2026.06.01 13:41:31",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1296.29,
-    "equity_total": 231.85,
-    "flotante_total": -1064.44,
+    "equity_total": 231.92,
+    "flotante_total": -1064.37,
     "ciclos_total": 0,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
@@ -16,10 +16,10 @@
     "operativa_log": []
   },
   "oro": {
-    "timestamp": "2026.06.01 14:40:56",
+    "timestamp": "2026.06.01 14:41:28",
     "balance": 1296.29,
-    "equity": 231.85,
-    "flotante": -1064.44,
+    "equity": 231.92,
+    "flotante": -1064.37,
     "ciclos": 0,
     "cierre_semana": false,
     "ganancia_real": 0.0,
@@ -47,10 +47,10 @@
     "operativa_log": []
   },
   "btc": {
-    "timestamp": "2026.06.01 14:40:38",
+    "timestamp": "2026.06.01 14:41:10",
     "balance": 1296.29,
-    "equity": 231.98,
-    "flotante": -1064.31,
+    "equity": 231.96,
+    "flotante": -1064.33,
     "ciclos": 0,
     "cierre_semana": false,
     "ganancia_real": 0.0,
@@ -78,10 +78,10 @@
     "operativa_log": []
   },
   "ger40": {
-    "timestamp": "2026.06.01 14:40:57",
+    "timestamp": "2026.06.01 14:41:28",
     "balance": 1296.29,
-    "equity": 231.4,
-    "flotante": -1064.89,
+    "equity": 231.92,
+    "flotante": -1064.37,
     "ciclos": 0,
     "cierre_semana": false,
     "ganancia_real": 0.0,
@@ -141,15 +141,15 @@
   },
   "wetsuit": {
     "par": "AUDCAD-STD",
-    "timestamp": "2026.06.01 14:40",
-    "flotante_total": -2.95,
+    "timestamp": "2026.06.01 14:41",
+    "flotante_total": -2.96,
     "instancias_activas": 3,
     "instancias_total": 3,
     "nivel_max": 1,
     "fondo_solidaridad": 0.0,
     "ciclos_total": 0,
     "ganancia_total": 0.0,
-    "rsi": 59.55,
+    "rsi": 59.49,
     "cierre_semana": false,
     "instancias": [
       {
@@ -173,7 +173,7 @@
         "activa": true,
         "direccion": "BUY",
         "niveles": 1,
-        "flotante": 0.05,
+        "flotante": 0.04,
         "solidaridad": false
       }
     ],
