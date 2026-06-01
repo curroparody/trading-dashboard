@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026.06.01 11:49:59",
+  "timestamp": "2026.06.01 11:50:31",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1296.22,
-    "equity_total": 234.16,
-    "flotante_total": -1062.06,
+    "equity_total": 234.46,
+    "flotante_total": -1061.76,
     "ciclos_total": 0,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
@@ -16,10 +16,10 @@
     "operativa_log": []
   },
   "oro": {
-    "timestamp": "2026.06.01 12:49:56",
+    "timestamp": "2026.06.01 12:50:26",
     "balance": 1296.22,
-    "equity": 234.16,
-    "flotante": -1062.06,
+    "equity": 234.46,
+    "flotante": -1061.76,
     "ciclos": 0,
     "cierre_semana": false,
     "ganancia_real": 0.0,
@@ -47,10 +47,10 @@
     "operativa_log": []
   },
   "btc": {
-    "timestamp": "2026.06.01 12:49:31",
+    "timestamp": "2026.06.01 12:50:02",
     "balance": 1296.22,
-    "equity": 234.2,
-    "flotante": -1062.02,
+    "equity": 234.34,
+    "flotante": -1061.88,
     "ciclos": 0,
     "cierre_semana": false,
     "ganancia_real": 0.0,
@@ -141,15 +141,15 @@
   },
   "wetsuit": {
     "par": "AUDCAD-STD",
-    "timestamp": "2026.06.01 12:49",
-    "flotante_total": -2.67,
+    "timestamp": "2026.06.01 12:50",
+    "flotante_total": -2.61,
     "instancias_activas": 3,
     "instancias_total": 3,
     "nivel_max": 1,
     "fondo_solidaridad": 0.0,
     "ciclos_total": 0,
     "ganancia_total": 0.0,
-    "rsi": 57.1,
+    "rsi": 56.9,
     "cierre_semana": false,
     "instancias": [
       {
@@ -157,7 +157,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 1,
-        "flotante": -1.22,
+        "flotante": -1.18,
         "solidaridad": false
       },
       {
@@ -165,7 +165,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 1,
-        "flotante": -1.2,
+        "flotante": -1.16,
         "solidaridad": false
       },
       {
@@ -173,7 +173,7 @@
         "activa": true,
         "direccion": "BUY",
         "niveles": 1,
-        "flotante": -0.25,
+        "flotante": -0.27,
         "solidaridad": false
       }
     ],
