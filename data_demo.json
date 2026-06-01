@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026.06.02 00:20:28",
+  "timestamp": "2026.06.02 00:21:00",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1302.52,
-    "equity_total": 241.44,
-    "flotante_total": -1061.08,
+    "equity_total": 241.43,
+    "flotante_total": -1061.09,
     "ciclos_total": 5,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
@@ -53,10 +53,10 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.06.02 01:20:05",
+    "timestamp": "2026.06.02 01:20:35",
     "balance": 1302.52,
-    "equity": 241.44,
-    "flotante": -1061.08,
+    "equity": 241.43,
+    "flotante": -1061.09,
     "ciclos": 0,
     "cierre_semana": false,
     "ganancia_real": 1.65,
@@ -91,10 +91,10 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.06.02 01:20:05",
+    "timestamp": "2026.06.02 01:20:38",
     "balance": 1302.52,
-    "equity": 241.42,
-    "flotante": -1061.1,
+    "equity": 241.45,
+    "flotante": -1061.07,
     "ciclos": 1,
     "cierre_semana": false,
     "ganancia_real": 0.24,
@@ -219,7 +219,7 @@
   "wetsuit": {
     "par": "AUDCAD-STD",
     "timestamp": "2026.06.02 01:20",
-    "flotante_total": -5.98,
+    "flotante_total": -5.79,
     "instancias_activas": 3,
     "instancias_total": 3,
     "nivel_max": 2,
@@ -227,7 +227,7 @@
     "solidaridad_gastada": 0.0,
     "ciclos_total": 0,
     "ganancia_total": 0.0,
-    "rsi": 53.68,
+    "rsi": 53.41,
     "cierre_semana": false,
     "instancias": [
       {
@@ -235,7 +235,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 2,
-        "flotante": -2.86,
+        "flotante": -2.75,
         "solidaridad": false
       },
       {
@@ -243,7 +243,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 2,
-        "flotante": -3.07,
+        "flotante": -2.96,
         "solidaridad": false
       },
       {
@@ -251,7 +251,7 @@
         "activa": true,
         "direccion": "BUY",
         "niveles": 1,
-        "flotante": -0.05,
+        "flotante": -0.08,
         "solidaridad": false
       }
     ],
