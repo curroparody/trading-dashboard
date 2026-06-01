@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026.06.01 23:58:43",
+  "timestamp": "2026.06.01 23:59:16",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1301.3,
@@ -78,10 +78,10 @@
     "operativa_log": []
   },
   "btc": {
-    "timestamp": "2026.06.02 00:58:16",
+    "timestamp": "2026.06.02 00:58:48",
     "balance": 1302.52,
-    "equity": 226.69,
-    "flotante": -1075.83,
+    "equity": 225.84,
+    "flotante": -1076.68,
     "ciclos": 1,
     "cierre_semana": false,
     "ganancia_real": 0.24,
@@ -160,10 +160,10 @@
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.06.02 00:58:23",
+    "timestamp": "2026.06.02 00:58:53",
     "balance": 1302.52,
-    "equity": 226.97,
-    "flotante": -1075.55,
+    "equity": 223.45,
+    "flotante": -1079.07,
     "ciclos": 2,
     "cierre_semana": false,
     "ganancia_real": 0.21,
@@ -205,8 +205,8 @@
   },
   "wetsuit": {
     "par": "AUDCAD-STD",
-    "timestamp": "2026.06.02 00:58",
-    "flotante_total": -8.58,
+    "timestamp": "2026.06.02 00:59",
+    "flotante_total": -8.74,
     "instancias_activas": 3,
     "instancias_total": 3,
     "nivel_max": 2,
@@ -214,7 +214,7 @@
     "solidaridad_gastada": 0.0,
     "ciclos_total": 0,
     "ganancia_total": 0.0,
-    "rsi": 48.95,
+    "rsi": 49.89,
     "cierre_semana": false,
     "instancias": [
       {
@@ -222,7 +222,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 2,
-        "flotante": -3.88,
+        "flotante": -4.01,
         "solidaridad": false
       },
       {
@@ -230,7 +230,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 2,
-        "flotante": -4.08,
+        "flotante": -4.23,
         "solidaridad": false
       },
       {
@@ -238,7 +238,7 @@
         "activa": true,
         "direccion": "BUY",
         "niveles": 1,
-        "flotante": -0.62,
+        "flotante": -0.5,
         "solidaridad": false
       }
     ],
