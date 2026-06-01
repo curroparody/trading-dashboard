@@ -814,7 +814,12 @@
   <!-- WETSUIT -->
   <div class="historico-section" id="wetsuitSection" style="display:none">
     <div class="historico-title">🌊 WETSUIT — AUDCAD</div>
-    <div id="wetsuitGrid"></div>
+    <div style="display:flex;gap:8px;margin:8px 0 0 0">
+      <button id="wetsuitTabEstado" onclick="wetsuitTab('estado')" style="font-family:var(--mono);font-size:11px;padding:5px 14px;background:var(--gold);color:#000;border:none;border-radius:4px;cursor:pointer;font-weight:700">ESTADO</button>
+      <button id="wetsuitTabHistorial" onclick="wetsuitTab('historial')" style="font-family:var(--mono);font-size:11px;padding:5px 14px;background:var(--surface);color:var(--muted);border:1px solid var(--border);border-radius:4px;cursor:pointer">HISTORIAL</button>
+    </div>
+    <div id="wetsuitPanelEstado"></div>
+    <div id="wetsuitPanelHistorial" style="display:none"></div>
   </div>
 
 
@@ -1578,30 +1583,101 @@ async function fetchData() {
     if(data.wetsuit) {
       const ws = data.wetsuit;
       const sec = document.getElementById('wetsuitSection');
-      const grid = document.getElementById('wetsuitGrid');
       if(sec) sec.style.display = '';
-      let html = `<div style="display:flex;flex-wrap:wrap;gap:12px;padding:12px 0">`;
-      html += `<div style="font-family:var(--mono);font-size:12px;color:var(--muted);width:100%">`;
-      html += `Par: ${ws.par || 'AUDCAD'} &nbsp;|&nbsp; Flotante: <span style="color:${(ws.flotante_total||0)>=0?'var(--green)':'var(--red)'}">$${Number(ws.flotante_total||0).toFixed(2)}</span>`;
-      html += ` &nbsp;|&nbsp; Instancias activas: ${ws.instancias_activas||0}/${ws.instancias_total||0}`;
-      html += ` &nbsp;|&nbsp; Fondo solidaridad: $${Number(ws.fondo_solidaridad||0).toFixed(2)}`;
-      html += ` &nbsp;|&nbsp; RSI: ${Number(ws.rsi||0).toFixed(1)}`;
-      html += `</div>`;
-      if(ws.instancias && ws.instancias.length) {
-        ws.instancias.forEach(inst => {
-          const color = inst.activa ? (inst.direccion==='BUY' ? 'var(--green)' : inst.direccion==='SELL' ? 'var(--red)' : 'var(--muted)') : 'var(--muted)';
-          html += `<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 14px;min-width:140px">`;
-          html += `<div style="font-family:var(--sans);font-weight:700;font-size:13px">${inst.nombre}</div>`;
-          html += `<div style="font-family:var(--mono);font-size:11px;color:${color}">${inst.activa ? inst.direccion : 'LIBRE'}</div>`;
-          if(inst.activa) {
-            html += `<div style="font-family:var(--mono);font-size:11px;color:var(--muted)">Niv: ${inst.niveles} &nbsp; $${Number(inst.flotante||0).toFixed(2)}</div>`;
-          }
-          if(inst.solidaridad) html += `<div style="font-size:10px;color:var(--orange)">SOL</div>`;
-          html += `</div>`;
-        });
+
+      // Panel ESTADO
+      const panelEstado = document.getElementById('wetsuitPanelEstado');
+      if(panelEstado) {
+        const flotante = Number(ws.flotante_total||0);
+        const flotColor = flotante >= 0 ? 'var(--green)' : 'var(--red)';
+
+        let html = `<div style="margin-top:14px">`;
+
+        // Barra de resumen
+        html += `<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px">`;
+        html += `<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 14px">
+          <div style="font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em">Flotante total</div>
+          <div style="font-family:var(--mono);font-size:18px;font-weight:700;color:${flotColor};margin-top:4px">$${flotante.toFixed(2)}</div>
+        </div>`;
+        html += `<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 14px">
+          <div style="font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em">Instancias</div>
+          <div style="font-family:var(--mono);font-size:18px;font-weight:700;color:var(--text);margin-top:4px">${ws.instancias_activas||0} <span style="font-size:12px;color:var(--muted)">/ ${ws.instancias_total||0}</span></div>
+        </div>`;
+        html += `<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 14px">
+          <div style="font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em">Fondo solidaridad</div>
+          <div style="font-family:var(--mono);font-size:18px;font-weight:700;color:var(--green);margin-top:4px">$${Number(ws.fondo_solidaridad||0).toFixed(2)}</div>
+        </div>`;
+        html += `<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 14px">
+          <div style="font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em">RSI H1</div>
+          <div style="font-family:var(--mono);font-size:18px;font-weight:700;color:var(--text);margin-top:4px">${Number(ws.rsi||0).toFixed(1)}</div>
+        </div>`;
+        html += `</div>`;
+
+        // Tarjetas instancias
+        html += `<div style="display:flex;flex-wrap:wrap;gap:10px">`;
+        if(ws.instancias && ws.instancias.length) {
+          ws.instancias.forEach(inst => {
+            const activa = inst.activa;
+            const dir = inst.direccion || 'LIBRE';
+            const dirColor = dir==='BUY' ? 'var(--green)' : dir==='SELL' ? 'var(--red)' : 'var(--muted)';
+            const borderColor = activa ? (dir==='BUY'?'#2ecc71':dir==='SELL'?'#ff5555':'var(--border)') : 'var(--border)';
+            const flotInst = Number(inst.flotante||0);
+            const flotInstColor = flotInst >= 0 ? 'var(--green)' : 'var(--red)';
+            html += `<div style="background:var(--surface);border:1px solid ${borderColor};border-radius:8px;padding:12px 16px;min-width:150px;flex:1">`;
+            html += `<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">`;
+            html += `<span style="font-family:var(--sans);font-weight:700;font-size:14px;color:var(--text)">${inst.nombre}</span>`;
+            if(inst.solidaridad) html += `<span style="font-size:10px;font-family:var(--mono);color:var(--orange);border:1px solid var(--orange);border-radius:3px;padding:1px 5px">SOL</span>`;
+            html += `</div>`;
+            html += `<div style="font-family:var(--mono);font-size:13px;font-weight:700;color:${dirColor}">${activa ? dir : 'LIBRE'}</div>`;
+            if(activa) {
+              html += `<div style="margin-top:6px;display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--muted)">`;
+              html += `<span>Nivel ${inst.niveles}</span>`;
+              html += `<span style="color:${flotInstColor};font-weight:700">$${flotInst.toFixed(2)}</span>`;
+              html += `</div>`;
+            } else {
+              html += `<div style="margin-top:6px;font-family:var(--mono);font-size:11px;color:var(--muted)">Sin posicion</div>`;
+            }
+            html += `</div>`;
+          });
+        }
+        html += `</div></div>`;
+        panelEstado.innerHTML = html;
       }
-      html += `</div>`;
-      if(grid) grid.innerHTML = html;
+
+      // Panel HISTORIAL
+      const panelHist = document.getElementById('wetsuitPanelHistorial');
+      if(panelHist) {
+        const hist = ws.historial || {};
+        const dias = Object.keys(hist).sort().reverse();
+        if(dias.length === 0) {
+          panelHist.innerHTML = `<div style="color:var(--muted);font-family:var(--mono);font-size:12px;padding:12px 0">Sin operaciones cerradas registradas</div>`;
+        } else {
+          let html = '';
+          dias.forEach(dia => {
+            const d = hist[dia];
+            const totalColor = (d.total_dia||0) >= 0 ? 'var(--green)' : 'var(--red)';
+            html += `<div style="margin:12px 0 4px 0">`;
+            html += `<div style="font-family:var(--mono);font-size:12px;color:var(--gold);font-weight:700">${dia} &nbsp;<span style="color:${totalColor}">Total: $${Number(d.total_dia||0).toFixed(2)}</span></div>`;
+            html += `<table style="width:100%;border-collapse:collapse;font-family:var(--mono);font-size:11px;margin-top:4px">`;
+            html += `<tr style="color:var(--muted)"><td style="padding:3px 8px">Hora</td><td>Instancia</td><td>Niv</td><td>Lote</td><td>Precio</td><td>Benef</td><td>Swap</td></tr>`;
+            d.cierres.forEach(c => {
+              const bColor = c.beneficio >= 0 ? 'var(--green)' : 'var(--red)';
+              const sColor = (c.swap||0) >= 0 ? 'var(--green)' : 'var(--red)';
+              html += `<tr style="border-top:1px solid var(--border)">`;
+              html += `<td style="padding:3px 8px">${c.hora}</td>`;
+              html += `<td>${c.instancia}</td>`;
+              html += `<td>${c.nivel}</td>`;
+              html += `<td>${c.lote}</td>`;
+              html += `<td>${c.precio}</td>`;
+              html += `<td style="color:${bColor}">$${Number(c.beneficio).toFixed(2)}</td>`;
+              html += `<td style="color:${sColor}">${c.swap!==0?'$'+Number(c.swap).toFixed(2):'—'}</td>`;
+              html += `</tr>`;
+            });
+            html += `</table></div>`;
+          });
+          panelHist.innerHTML = html;
+        }
+      }
     }
     if(data.historico_hedges) {
       historicoHedges = data.historico_hedges;
@@ -1721,6 +1797,24 @@ function renderWetsuit(data) {
       `$${fondo.toFixed(2)} / $${objetivo.toFixed(2)} — Restante: $${Math.max(objetivo-fondo,0).toFixed(2)}`;
   } else {
     solPanel.style.display = "none";
+  }
+}
+
+function wetsuitTab(tab) {
+  const estado   = document.getElementById('wetsuitPanelEstado');
+  const historial = document.getElementById('wetsuitPanelHistorial');
+  const btnE = document.getElementById('wetsuitTabEstado');
+  const btnH = document.getElementById('wetsuitTabHistorial');
+  if(tab === 'estado') {
+    if(estado)    estado.style.display    = '';
+    if(historial) historial.style.display = 'none';
+    if(btnE) { btnE.style.background='var(--gold)'; btnE.style.color='#000'; btnE.style.border='none'; }
+    if(btnH) { btnH.style.background='var(--surface)'; btnH.style.color='var(--muted)'; btnH.style.border='1px solid var(--border)'; }
+  } else {
+    if(estado)    estado.style.display    = 'none';
+    if(historial) historial.style.display = '';
+    if(btnH) { btnH.style.background='var(--gold)'; btnH.style.color='#000'; btnH.style.border='none'; }
+    if(btnE) { btnE.style.background='var(--surface)'; btnE.style.color='var(--muted)'; btnE.style.border='1px solid var(--border)'; }
   }
 }
 
