@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PROYECTO S.E.M. — Dashboard v2.6</title>
+<title>PROYECTO S.E.M. — Dashboard v2.7</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -930,7 +930,7 @@
   </div>
 
   <footer>
-    <span>PROYECTO S.E.M. · v2.6</span>
+    <span>PROYECTO S.E.M. · v2.7</span>
     <span id="nextUpdate">Actualizando en 30s</span>
   </footer>
 
@@ -1594,7 +1594,7 @@ async function fetchData() {
         let html = `<div style="margin-top:14px">`;
 
         // Barra de resumen
-        html += `<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px">`;
+        html += `<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:16px">`;
         html += `<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 14px">
           <div style="font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em">Flotante total</div>
           <div style="font-family:var(--mono);font-size:18px;font-weight:700;color:${flotColor};margin-top:4px">$${flotante.toFixed(2)}</div>
@@ -1606,6 +1606,10 @@ async function fetchData() {
         html += `<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 14px">
           <div style="font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em">Fondo solidaridad</div>
           <div style="font-family:var(--mono);font-size:18px;font-weight:700;color:var(--green);margin-top:4px">$${Number(ws.fondo_solidaridad||0).toFixed(2)}</div>
+        </div>`;
+        html += `<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 14px">
+          <div style="font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em">Gastado solidaridad</div>
+          <div style="font-family:var(--mono);font-size:18px;font-weight:700;color:var(--orange);margin-top:4px">$${Number(ws.solidaridad_gastada||0).toFixed(2)}</div>
         </div>`;
         html += `<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 14px">
           <div style="font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em">RSI H1</div>
