@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026.06.02 00:56:53",
+  "timestamp": "2026.06.02 00:57:25",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1302.52,
-    "equity_total": 242.42,
-    "flotante_total": -1060.1,
+    "equity_total": 242.44,
+    "flotante_total": -1060.08,
     "ciclos_total": 5,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
@@ -53,10 +53,10 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.06.02 01:56:33",
+    "timestamp": "2026.06.02 01:57:03",
     "balance": 1302.52,
-    "equity": 242.42,
-    "flotante": -1060.1,
+    "equity": 242.44,
+    "flotante": -1060.08,
     "ciclos": 0,
     "cierre_semana": false,
     "ganancia_real": 1.65,
@@ -91,10 +91,10 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.06.02 01:56:25",
+    "timestamp": "2026.06.02 01:56:55",
     "balance": 1302.52,
-    "equity": 242.27,
-    "flotante": -1060.25,
+    "equity": 242.47,
+    "flotante": -1060.05,
     "ciclos": 1,
     "cierre_semana": false,
     "ganancia_real": 0.24,
@@ -173,10 +173,10 @@
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.06.02 01:56:48",
+    "timestamp": "2026.06.02 01:57:18",
     "balance": 1302.52,
-    "equity": 242.32,
-    "flotante": -1060.2,
+    "equity": 242.67,
+    "flotante": -1059.85,
     "ciclos": 2,
     "cierre_semana": false,
     "ganancia_real": 0.21,
@@ -218,8 +218,8 @@
   },
   "wetsuit": {
     "par": "AUDCAD-STD",
-    "timestamp": "2026.06.02 01:56",
-    "flotante_total": -5.43,
+    "timestamp": "2026.06.02 01:57",
+    "flotante_total": -5.2,
     "instancias_activas": 3,
     "instancias_total": 3,
     "nivel_max": 2,
@@ -227,7 +227,7 @@
     "solidaridad_gastada": 0.0,
     "ciclos_total": 0,
     "ganancia_total": 0.0,
-    "rsi": 52.78,
+    "rsi": 52.49,
     "cierre_semana": false,
     "instancias": [
       {
@@ -235,7 +235,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 2,
-        "flotante": -2.52,
+        "flotante": -2.39,
         "solidaridad": false
       },
       {
@@ -243,7 +243,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 2,
-        "flotante": -2.74,
+        "flotante": -2.61,
         "solidaridad": false
       },
       {
@@ -251,7 +251,7 @@
         "activa": true,
         "direccion": "BUY",
         "niveles": 1,
-        "flotante": -0.17,
+        "flotante": -0.2,
         "solidaridad": false
       }
     ],
