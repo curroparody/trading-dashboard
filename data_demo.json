@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026.06.03 00:48:54",
+  "timestamp": "2026.06.03 00:49:27",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1314.46,
-    "equity_total": 210.38,
-    "flotante_total": -1104.08,
+    "equity_total": 210.45,
+    "flotante_total": -1104.01,
     "ciclos_total": 15,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
@@ -119,10 +119,10 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.06.03 01:48:43",
+    "timestamp": "2026.06.03 01:49:13",
     "balance": 1314.46,
-    "equity": 210.38,
-    "flotante": -1104.08,
+    "equity": 210.45,
+    "flotante": -1104.01,
     "ciclos": 5,
     "cierre_semana": false,
     "ganancia_real": 6.25,
@@ -195,10 +195,10 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.06.03 01:48:49",
+    "timestamp": "2026.06.03 01:49:19",
     "balance": 1314.46,
-    "equity": 210.53,
-    "flotante": -1103.93,
+    "equity": 210.44,
+    "flotante": -1104.02,
     "ciclos": 4,
     "cierre_semana": false,
     "ganancia_real": 0.93,
@@ -299,10 +299,10 @@
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.06.03 01:48:47",
+    "timestamp": "2026.06.03 01:49:17",
     "balance": 1314.46,
-    "equity": 210.53,
-    "flotante": -1103.93,
+    "equity": 210.43,
+    "flotante": -1104.03,
     "ciclos": 4,
     "cierre_semana": false,
     "ganancia_real": 0.42,
@@ -358,8 +358,8 @@
   },
   "wetsuit": {
     "par": "AUDCAD-STD",
-    "timestamp": "2026.06.03 01:48",
-    "flotante_total": -3.09,
+    "timestamp": "2026.06.03 01:49",
+    "flotante_total": -3.13,
     "instancias_activas": 3,
     "instancias_total": 3,
     "nivel_max": 1,
@@ -375,7 +375,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 1,
-        "flotante": -1.05,
+        "flotante": -1.07,
         "solidaridad": false
       },
       {
@@ -383,7 +383,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 1,
-        "flotante": -1.03,
+        "flotante": -1.05,
         "solidaridad": false
       },
       {
