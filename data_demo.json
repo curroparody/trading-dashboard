@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026.06.03 00:01:29",
+  "timestamp": "2026.06.03 00:02:02",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1313.34,
-    "equity_total": 204.07,
-    "flotante_total": -1109.27,
+    "equity_total": 208.62,
+    "flotante_total": -1104.72,
     "ciclos_total": 14,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
@@ -107,10 +107,10 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.06.03 01:01:01",
+    "timestamp": "2026.06.03 01:02:01",
     "balance": 1313.34,
-    "equity": 204.07,
-    "flotante": -1109.27,
+    "equity": 208.62,
+    "flotante": -1104.72,
     "ciclos": 4,
     "cierre_semana": false,
     "ganancia_real": 2.52,
@@ -171,10 +171,10 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.06.03 01:01:21",
+    "timestamp": "2026.06.03 01:01:52",
     "balance": 1313.34,
-    "equity": 207.98,
-    "flotante": -1105.36,
+    "equity": 207.66,
+    "flotante": -1105.68,
     "ciclos": 4,
     "cierre_semana": false,
     "ganancia_real": 0.93,
@@ -275,10 +275,10 @@
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.06.03 01:01:02",
+    "timestamp": "2026.06.03 01:01:36",
     "balance": 1313.34,
-    "equity": 204.33,
-    "flotante": -1109.01,
+    "equity": 207.84,
+    "flotante": -1105.5,
     "ciclos": 4,
     "cierre_semana": false,
     "ganancia_real": 0.42,
@@ -343,7 +343,7 @@
     "solidaridad_gastada": 3.48,
     "ciclos_total": 0,
     "ganancia_total": 0.0,
-    "rsi": 56.44,
+    "rsi": 56.26,
     "cierre_semana": false,
     "instancias": [
       {
@@ -351,7 +351,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 1,
-        "flotante": -1.11,
+        "flotante": -1.1,
         "solidaridad": false
       },
       {
@@ -359,7 +359,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 1,
-        "flotante": -1.09,
+        "flotante": -1.08,
         "solidaridad": false
       },
       {
@@ -367,7 +367,7 @@
         "activa": true,
         "direccion": "BUY",
         "niveles": 1,
-        "flotante": -0.97,
+        "flotante": -0.99,
         "solidaridad": false
       }
     ],
