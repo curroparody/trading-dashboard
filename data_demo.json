@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026.06.03 00:51:37",
+  "timestamp": "2026.06.03 00:52:10",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1314.46,
-    "equity_total": 210.59,
-    "flotante_total": -1103.87,
+    "equity_total": 210.38,
+    "flotante_total": -1104.08,
     "ciclos_total": 15,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
@@ -119,10 +119,10 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.06.03 01:51:13",
+    "timestamp": "2026.06.03 01:51:43",
     "balance": 1314.46,
-    "equity": 210.59,
-    "flotante": -1103.87,
+    "equity": 210.38,
+    "flotante": -1104.08,
     "ciclos": 5,
     "cierre_semana": false,
     "ganancia_real": 6.25,
@@ -195,10 +195,10 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.06.03 01:51:19",
+    "timestamp": "2026.06.03 01:51:49",
     "balance": 1314.46,
-    "equity": 210.61,
-    "flotante": -1103.85,
+    "equity": 210.38,
+    "flotante": -1104.08,
     "ciclos": 4,
     "cierre_semana": false,
     "ganancia_real": 0.93,
@@ -358,8 +358,8 @@
   },
   "wetsuit": {
     "par": "AUDCAD-STD",
-    "timestamp": "2026.06.03 01:51",
-    "flotante_total": -3.11,
+    "timestamp": "2026.06.03 01:52",
+    "flotante_total": -3.15,
     "instancias_activas": 3,
     "instancias_total": 3,
     "nivel_max": 1,
@@ -367,7 +367,7 @@
     "solidaridad_gastada": 3.48,
     "ciclos_total": 0,
     "ganancia_total": 0.0,
-    "rsi": 55.89,
+    "rsi": 56.08,
     "cierre_semana": false,
     "instancias": [
       {
@@ -375,7 +375,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 1,
-        "flotante": -1.05,
+        "flotante": -1.08,
         "solidaridad": false
       },
       {
@@ -383,7 +383,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 1,
-        "flotante": -1.03,
+        "flotante": -1.06,
         "solidaridad": false
       },
       {
@@ -391,7 +391,7 @@
         "activa": true,
         "direccion": "BUY",
         "niveles": 1,
-        "flotante": -1.03,
+        "flotante": -1.01,
         "solidaridad": false
       }
     ],
