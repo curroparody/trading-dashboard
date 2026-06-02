@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026.06.02 03:46:31",
+  "timestamp": "2026.06.02 03:47:04",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1308.93,
-    "equity_total": 250.67,
-    "flotante_total": -1058.26,
+    "equity_total": 252.84,
+    "flotante_total": -1056.09,
     "ciclos_total": 11,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
@@ -89,10 +89,10 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.06.02 04:46:28",
+    "timestamp": "2026.06.02 04:46:58",
     "balance": 1308.93,
-    "equity": 250.67,
-    "flotante": -1058.26,
+    "equity": 252.84,
+    "flotante": -1056.09,
     "ciclos": 3,
     "cierre_semana": false,
     "ganancia_real": 2.26,
@@ -145,10 +145,10 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.06.02 04:46:29",
+    "timestamp": "2026.06.02 04:46:59",
     "balance": 1308.93,
-    "equity": 250.82,
-    "flotante": -1058.11,
+    "equity": 252.78,
+    "flotante": -1056.15,
     "ciclos": 3,
     "cierre_semana": false,
     "ganancia_real": 0.71,
@@ -195,10 +195,10 @@
     ]
   },
   "ger40": {
-    "timestamp": "2026.06.02 04:46:04",
+    "timestamp": "2026.06.02 04:46:34",
     "balance": 1308.93,
-    "equity": 250.18,
-    "flotante": -1058.75,
+    "equity": 250.67,
+    "flotante": -1058.26,
     "ciclos": 2,
     "cierre_semana": false,
     "ganancia_real": 0.47,
@@ -239,10 +239,10 @@
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.06.02 04:46:24",
+    "timestamp": "2026.06.02 04:46:54",
     "balance": 1308.93,
-    "equity": 250.33,
-    "flotante": -1058.6,
+    "equity": 252.59,
+    "flotante": -1056.34,
     "ciclos": 3,
     "cierre_semana": false,
     "ganancia_real": 0.32,
@@ -290,24 +290,24 @@
   },
   "wetsuit": {
     "par": "AUDCAD-STD",
-    "timestamp": "2026.06.02 04:46",
-    "flotante_total": -5.23,
+    "timestamp": "2026.06.02 04:47",
+    "flotante_total": -2.68,
     "instancias_activas": 2,
     "instancias_total": 3,
     "nivel_max": 3,
-    "fondo_solidaridad": 0.02,
-    "solidaridad_gastada": 0.43,
+    "fondo_solidaridad": 0.01,
+    "solidaridad_gastada": 0.44,
     "ciclos_total": 0,
     "ganancia_total": 0.0,
-    "rsi": 51.85,
+    "rsi": 49.47,
     "cierre_semana": false,
     "instancias": [
       {
         "nombre": "Sara",
         "activa": true,
         "direccion": "SELL",
-        "niveles": 3,
-        "flotante": -2.46,
+        "niveles": 2,
+        "flotante": -1.43,
         "solidaridad": true
       },
       {
@@ -315,7 +315,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 3,
-        "flotante": -2.77,
+        "flotante": -1.25,
         "solidaridad": true
       },
       {
