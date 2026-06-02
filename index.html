@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PROYECTO S.E.M. — Dashboard v2.7</title>
+<title>PROYECTO S.E.M. — Dashboard v2.8</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -930,7 +930,7 @@
   </div>
 
   <footer>
-    <span>PROYECTO S.E.M. · v2.7</span>
+    <span>PROYECTO S.E.M. · v2.8</span>
     <span id="nextUpdate">Actualizando en 30s</span>
   </footer>
 
@@ -1097,7 +1097,7 @@ function renderBot(key, data, allData) {
   // Hedge con marcas de progreso
   let hedgeHtml = '';
   if(hedgesCola.length > 0) {
-    hedgeHtml = `<div class="hedge-cola"><div class="section-label">🔴 Hedges activos (${hedgesCola.length})</div>`;
+    hedgeHtml = `<div class="hedge-cola"><div class="section-label">🔴 Hedges activos (${hedgesCola.length})${(hedge.parciales>0)?` · <span style="color:var(--green)">${hedge.parciales} parcial(es)</span>`:''}</div>`;
     hedgesCola.forEach((h, idx) => {
       const hPct     = h.pct !== undefined ? Math.min(h.pct, 100) : 0;
       const restante = h.objetivo && h.fondo ? h.objetivo - h.fondo : null;
@@ -1113,7 +1113,7 @@ function renderBot(key, data, allData) {
       hedgeHtml += `
         <div class="${blockCls}">
           <div class="hedge-header">
-            <span class="hedge-title">🔴 HEDGE #${h.numero}${isMain ? ' · ACTIVO' : ' · EN COLA'}</span>
+            <span class="hedge-title">🔴 HEDGE #${h.numero}${isMain ? ' · ACTIVO' : ' · EN COLA'}${(isMain && hedge.parcial)?' · <span style="color:var(--green)">N1 CERRADA</span>':''}</span>
             <span class="hedge-pct">${fmtPct(h.pct)}</span>
           </div>
           <div class="hedge-details">
