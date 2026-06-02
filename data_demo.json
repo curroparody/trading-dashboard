@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026.06.02 04:09:21",
+  "timestamp": "2026.06.02 04:09:53",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1308.93,
-    "equity_total": 253.89,
-    "flotante_total": -1055.04,
+    "equity_total": 254.22,
+    "flotante_total": -1054.71,
     "ciclos_total": 11,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
@@ -89,10 +89,10 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.06.02 05:08:58",
+    "timestamp": "2026.06.02 05:09:28",
     "balance": 1308.93,
-    "equity": 253.89,
-    "flotante": -1055.04,
+    "equity": 254.22,
+    "flotante": -1054.71,
     "ciclos": 3,
     "cierre_semana": false,
     "ganancia_real": 2.26,
@@ -145,10 +145,10 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.06.02 05:08:52",
+    "timestamp": "2026.06.02 05:09:52",
     "balance": 1308.93,
-    "equity": 254.44,
-    "flotante": -1054.49,
+    "equity": 254.09,
+    "flotante": -1054.84,
     "ciclos": 3,
     "cierre_semana": false,
     "ganancia_real": 0.71,
@@ -195,10 +195,10 @@
     ]
   },
   "ger40": {
-    "timestamp": "2026.06.02 05:09:15",
+    "timestamp": "2026.06.02 05:09:45",
     "balance": 1308.93,
-    "equity": 254.12,
-    "flotante": -1054.81,
+    "equity": 253.99,
+    "flotante": -1054.94,
     "ciclos": 2,
     "cierre_semana": false,
     "ganancia_real": 0.47,
@@ -239,10 +239,10 @@
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.06.02 05:09:08",
+    "timestamp": "2026.06.02 05:09:38",
     "balance": 1308.93,
-    "equity": 253.9,
-    "flotante": -1055.03,
+    "equity": 254.05,
+    "flotante": -1054.88,
     "ciclos": 3,
     "cierre_semana": false,
     "ganancia_real": 0.32,
@@ -291,7 +291,7 @@
   "wetsuit": {
     "par": "AUDCAD-STD",
     "timestamp": "2026.06.02 05:09",
-    "flotante_total": -2.2,
+    "flotante_total": -2.21,
     "instancias_activas": 3,
     "instancias_total": 3,
     "nivel_max": 3,
@@ -307,7 +307,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 2,
-        "flotante": -1.2,
+        "flotante": -1.21,
         "solidaridad": true
       },
       {
