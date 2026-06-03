@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026.06.03 21:09:57",
+  "timestamp": "2026.06.03 21:12:00",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1329.64,
-    "equity_total": 232.5,
-    "flotante_total": -1097.14,
+    "equity_total": 233.13,
+    "flotante_total": -1096.51,
     "ciclos_total": 28,
     "hedges_activos": 1,
     "hedges_cola_total": 1,
@@ -203,10 +203,10 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.06.03 22:09:57",
+    "timestamp": "2026.06.03 22:11:57",
     "balance": 1329.64,
-    "equity": 232.5,
-    "flotante": -1097.14,
+    "equity": 233.13,
+    "flotante": -1096.51,
     "ciclos": 10,
     "cierre_semana": false,
     "ganancia_real": 7.19,
@@ -309,10 +309,10 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.06.03 22:09:39",
+    "timestamp": "2026.06.03 22:11:39",
     "balance": 1329.64,
-    "equity": 232.38,
-    "flotante": -1097.26,
+    "equity": 232.53,
+    "flotante": -1097.11,
     "ciclos": 9,
     "cierre_semana": false,
     "ganancia_real": 2.59,
@@ -397,10 +397,10 @@
     ]
   },
   "ger40": {
-    "timestamp": "2026.06.03 22:09:39",
+    "timestamp": "2026.06.03 22:11:42",
     "balance": 1329.64,
-    "equity": 232.37,
-    "flotante": -1097.27,
+    "equity": 232.84,
+    "flotante": -1096.8,
     "ciclos": 4,
     "cierre_semana": false,
     "ganancia_real": 0.69,
@@ -420,7 +420,7 @@
     "hedge": {
       "activo": true,
       "numero": 1,
-      "objetivo": 39.17,
+      "objetivo": 39.16,
       "fondo": 23.55,
       "pct": 60.1,
       "parcial": false,
@@ -429,10 +429,10 @@
     "hedges_cola": [
       {
         "numero": 1,
-        "objetivo": 39.17,
+        "objetivo": 39.16,
         "fondo": 23.55,
         "pct": 60.1,
-        "flotante": -39.17,
+        "flotante": -39.16,
         "fecha": "2026.06.03 08:50"
       }
     ],
@@ -464,10 +464,10 @@
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.06.03 22:09:43",
+    "timestamp": "2026.06.03 22:11:43",
     "balance": 1329.64,
-    "equity": 232.35,
-    "flotante": -1097.29,
+    "equity": 232.72,
+    "flotante": -1096.92,
     "ciclos": 5,
     "cierre_semana": false,
     "ganancia_real": 0.01,
@@ -535,8 +535,8 @@
   },
   "wetsuit": {
     "par": "AUDCAD-STD",
-    "timestamp": "2026.06.03 22:09",
-    "flotante_total": -2.06,
+    "timestamp": "2026.06.03 22:11",
+    "flotante_total": -2.0,
     "instancias_activas": 3,
     "instancias_total": 3,
     "nivel_max": 1,
@@ -544,7 +544,7 @@
     "solidaridad_gastada": 3.48,
     "ciclos_total": 0,
     "ganancia_total": 0.0,
-    "rsi": 39.26,
+    "rsi": 38.9,
     "cierre_semana": false,
     "instancias": [
       {
@@ -552,7 +552,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 1,
-        "flotante": -0.19,
+        "flotante": -0.14,
         "solidaridad": false
       },
       {
@@ -560,7 +560,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 1,
-        "flotante": -0.21,
+        "flotante": -0.15,
         "solidaridad": false
       },
       {
@@ -568,7 +568,7 @@
         "activa": true,
         "direccion": "BUY",
         "niveles": 1,
-        "flotante": -1.66,
+        "flotante": -1.71,
         "solidaridad": false
       }
     ],
