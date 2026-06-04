@@ -1,264 +1,35 @@
 {
-  "timestamp": "2026.06.04 16:30:06",
+  "timestamp": "2026.06.04 17:24:58",
   "ecosistema": {
     "bots_activos": 4,
-    "balance_total": 1295.27,
-    "equity_total": 177.88,
-    "flotante_total": -1117.39,
-    "ciclos_total": 34,
-    "hedges_activos": 1,
-    "hedges_cola_total": 1,
-    "ganancia_real_total": -1.35,
-    "hucha_total": 0.0,
-    "operativa_total": 0.63,
-    "retirado_total": 0.0,
-    "gastado_total": 0.0,
-    "operativa_log": [
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 1.65,
-        "fecha": "2026.06.02 01:06"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.17,
-        "fecha": "2026.06.02 02:49"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.2,
-        "fecha": "2026.06.02 04:23"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.25,
-        "fecha": "2026.06.02 04:24"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.26,
-        "fecha": "2026.06.02 13:58"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 3.28,
-        "fecha": "2026.06.03 01:37"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [40%]",
-        "importe": 0.45,
-        "fecha": "2026.06.03 01:45"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [40%]",
-        "importe": 0.46,
-        "fecha": "2026.06.03 01:55"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [solidaridad]",
-        "importe": 0.12,
-        "fecha": "2026.06.03 16:20"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [solidaridad]",
-        "importe": 0.14,
-        "fecha": "2026.06.03 18:12"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [solidaridad]",
-        "importe": 0.12,
-        "fecha": "2026.06.03 18:14"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [solidaridad]",
-        "importe": 0.11,
-        "fecha": "2026.06.03 20:21"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 0.67,
-        "fecha": "2026.06.04 02:06"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.24,
-        "fecha": "2026.06.02 00:07"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.22,
-        "fecha": "2026.06.02 03:42"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.24,
-        "fecha": "2026.06.02 04:30"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.22,
-        "fecha": "2026.06.02 23:22"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [40%]",
-        "importe": 0.44,
-        "fecha": "2026.06.03 04:37"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [40%]",
-        "importe": 0.52,
-        "fecha": "2026.06.03 05:22"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [40%]",
-        "importe": 0.48,
-        "fecha": "2026.06.03 06:08"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [solidaridad]",
-        "importe": 0.11,
-        "fecha": "2026.06.03 12:18"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [solidaridad]",
-        "importe": 0.12,
-        "fecha": "2026.06.03 16:27"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [solidaridad]",
-        "importe": 0.1,
-        "fecha": "2026.06.03 22:21"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [solidaridad]",
-        "importe": 0.11,
-        "fecha": "2026.06.04 01:15"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [40%]",
-        "importe": 0.44,
-        "fecha": "2026.06.04 10:04"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.25,
-        "fecha": "2026.06.01 19:11"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.22,
-        "fecha": "2026.06.01 19:17"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [hedge propio]",
-        "importe": 0.11,
-        "fecha": "2026.06.03 16:18"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [hedge propio]",
-        "importe": 0.11,
-        "fecha": "2026.06.03 16:27"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [hedge propio]",
-        "importe": 0.11,
-        "fecha": "2026.06.03 22:12"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [hedge propio]",
-        "importe": 0.13,
-        "fecha": "2026.06.04 05:13"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.11,
-        "fecha": "2026.06.01 16:05"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.11,
-        "fecha": "2026.06.01 21:59"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.11,
-        "fecha": "2026.06.02 03:50"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.11,
-        "fecha": "2026.06.02 16:29"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [40%]",
-        "importe": 0.21,
-        "fecha": "2026.06.03 02:11"
-      },
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha ECOSISTEMA [Dashboard]",
-        "importe": 0.63,
-        "fecha": "2026.06.03 18:06"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [solidaridad]",
-        "importe": 0.05,
-        "fecha": "2026.06.03 22:56"
-      }
-    ]
+    "balance_total": 0,
+    "equity_total": 0,
+    "flotante_total": 0,
+    "ciclos_total": 0,
+    "hedges_activos": 0,
+    "hedges_cola_total": 0,
+    "ganancia_real_total": 0,
+    "hucha_total": 0,
+    "operativa_total": 0,
+    "retirado_total": 0,
+    "gastado_total": 0,
+    "operativa_log": []
   },
   "oro": {
     "timestamp": "2026.06.04 17:30:00",
-    "balance": 1295.27,
-    "equity": 177.88,
-    "flotante": -1117.39,
-    "ciclos": 10,
+    "balance": 0,
+    "equity": 0,
+    "flotante": 0,
+    "ciclos": 0,
     "cierre_semana": false,
-    "ganancia_real": 0.0,
-    "retirado": 0.0,
-    "hucha_comun": 0.0,
+    "ganancia_real": 0,
+    "retirado": 0,
+    "hucha_comun": 0,
     "hucha_aportado": 4.35,
     "hucha_fase": 0,
     "hucha_fase_pct": 80,
     "hucha_tope": 100.0,
-    "operativa_aportado": 0.0,
+    "operativa_aportado": 0,
     "martingala": {
       "activa": false,
       "direccion": "",
@@ -268,109 +39,30 @@
     "hedge": {
       "activo": false,
       "numero": 0,
-      "objetivo": 0.0,
-      "fondo": 0.0,
+      "objetivo": 0,
+      "fondo": 0,
       "pct": 0.0,
-      "parcial": false,
+      "parcial": 0,
       "parciales": 0
     },
     "hedges_cola": [],
-    "operativa_log": [
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 1.65,
-        "fecha": "2026.06.02 01:06"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.17,
-        "fecha": "2026.06.02 02:49"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.2,
-        "fecha": "2026.06.02 04:23"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.25,
-        "fecha": "2026.06.02 04:24"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.26,
-        "fecha": "2026.06.02 13:58"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 3.28,
-        "fecha": "2026.06.03 01:37"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [40%]",
-        "importe": 0.45,
-        "fecha": "2026.06.03 01:45"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [40%]",
-        "importe": 0.46,
-        "fecha": "2026.06.03 01:55"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [solidaridad]",
-        "importe": 0.12,
-        "fecha": "2026.06.03 16:20"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [solidaridad]",
-        "importe": 0.14,
-        "fecha": "2026.06.03 18:12"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [solidaridad]",
-        "importe": 0.12,
-        "fecha": "2026.06.03 18:14"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [solidaridad]",
-        "importe": 0.11,
-        "fecha": "2026.06.03 20:21"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real directa [Dashboard]",
-        "importe": 0.67,
-        "fecha": "2026.06.04 02:06"
-      }
-    ]
+    "operativa_log": []
   },
   "btc": {
     "timestamp": "2026.06.04 17:29:39",
-    "balance": 1295.27,
-    "equity": 178.35,
-    "flotante": -1116.92,
-    "ciclos": 12,
+    "balance": 0,
+    "equity": 0,
+    "flotante": 0,
+    "ciclos": 0,
     "cierre_semana": false,
-    "ganancia_real": -1.35,
-    "retirado": 0.0,
-    "hucha_comun": 0.0,
+    "ganancia_real": 0,
+    "retirado": 0,
+    "hucha_comun": 0,
     "hucha_aportado": 3.88,
     "hucha_fase": 0,
     "hucha_fase_pct": 80,
     "hucha_tope": 100.0,
-    "operativa_aportado": 0.0,
+    "operativa_aportado": 0,
     "martingala": {
       "activa": false,
       "direccion": "",
@@ -380,182 +72,30 @@
     "hedge": {
       "activo": false,
       "numero": 0,
-      "objetivo": 0.0,
-      "fondo": 0.0,
+      "objetivo": 0,
+      "fondo": 0,
       "pct": 0.0,
-      "parcial": false,
+      "parcial": 0,
       "parciales": 0
     },
     "hedges_cola": [],
-    "operativa_log": [
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.24,
-        "fecha": "2026.06.02 00:07"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.22,
-        "fecha": "2026.06.02 03:42"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.24,
-        "fecha": "2026.06.02 04:30"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.22,
-        "fecha": "2026.06.02 23:22"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [40%]",
-        "importe": 0.44,
-        "fecha": "2026.06.03 04:37"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [40%]",
-        "importe": 0.52,
-        "fecha": "2026.06.03 05:22"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [40%]",
-        "importe": 0.48,
-        "fecha": "2026.06.03 06:08"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [solidaridad]",
-        "importe": 0.11,
-        "fecha": "2026.06.03 12:18"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [solidaridad]",
-        "importe": 0.12,
-        "fecha": "2026.06.03 16:27"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [solidaridad]",
-        "importe": 0.1,
-        "fecha": "2026.06.03 22:21"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [solidaridad]",
-        "importe": 0.11,
-        "fecha": "2026.06.04 01:15"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [40%]",
-        "importe": 0.44,
-        "fecha": "2026.06.04 10:04"
-      }
-    ]
+    "operativa_log": []
   },
   "ger40": {
     "timestamp": "2026.06.04 17:29:54",
-    "balance": 1295.27,
-    "equity": 178.04,
-    "flotante": -1117.23,
-    "ciclos": 6,
+    "balance": 0,
+    "equity": 0,
+    "flotante": 0,
+    "ciclos": 0,
     "cierre_semana": false,
-    "ganancia_real": 0.0,
-    "retirado": 0.0,
-    "hucha_comun": 0.0,
+    "ganancia_real": 0,
+    "retirado": 0,
+    "hucha_comun": 0,
     "hucha_aportado": 0.0,
     "hucha_fase": 0,
     "hucha_fase_pct": 80,
     "hucha_tope": 100.0,
-    "operativa_aportado": 0.0,
-    "martingala": {
-      "activa": false,
-      "direccion": "",
-      "nivel": 0,
-      "precio": 0.0
-    },
-    "hedge": {
-      "activo": true,
-      "numero": 1,
-      "objetivo": 44.21,
-      "fondo": 0.0,
-      "pct": 0.0,
-      "parcial": false,
-      "parciales": 1
-    },
-    "hedges_cola": [
-      {
-        "numero": 1,
-        "objetivo": 44.21,
-        "fondo": 0.0,
-        "pct": 0.0,
-        "flotante": -44.21,
-        "fecha": "2026.06.04 16:20"
-      }
-    ],
-    "operativa_log": [
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.25,
-        "fecha": "2026.06.01 19:11"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.22,
-        "fecha": "2026.06.01 19:17"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [hedge propio]",
-        "importe": 0.11,
-        "fecha": "2026.06.03 16:18"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [hedge propio]",
-        "importe": 0.11,
-        "fecha": "2026.06.03 16:27"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [hedge propio]",
-        "importe": 0.11,
-        "fecha": "2026.06.03 22:12"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [hedge propio]",
-        "importe": 0.13,
-        "fecha": "2026.06.04 05:13"
-      }
-    ]
-  },
-  "usdjpy": {
-    "timestamp": "2026.06.04 17:29:51",
-    "balance": 1295.27,
-    "equity": 177.97,
-    "flotante": -1117.3,
-    "ciclos": 6,
-    "cierre_semana": false,
-    "ganancia_real": 0.0,
-    "retirado": 0.0,
-    "hucha_comun": 0.0,
-    "hucha_aportado": 0.47,
-    "hucha_fase": 0,
-    "hucha_fase_pct": 80,
-    "hucha_tope": 100.0,
-    "operativa_aportado": 0.63,
+    "operativa_aportado": 0,
     "martingala": {
       "activa": false,
       "direccion": "",
@@ -565,57 +105,47 @@
     "hedge": {
       "activo": false,
       "numero": 0,
-      "objetivo": 0.0,
-      "fondo": 0.0,
+      "objetivo": 0,
+      "fondo": 0,
       "pct": 0.0,
-      "parcial": false,
+      "parcial": 0,
       "parciales": 0
     },
     "hedges_cola": [],
-    "operativa_log": [
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.11,
-        "fecha": "2026.06.01 16:05"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.11,
-        "fecha": "2026.06.01 21:59"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.11,
-        "fecha": "2026.06.02 03:50"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [20%]",
-        "importe": 0.11,
-        "fecha": "2026.06.02 16:29"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [40%]",
-        "importe": 0.21,
-        "fecha": "2026.06.03 02:11"
-      },
-      {
-        "tipo": "INYECTAR_HUCHA",
-        "destino": "Hucha ECOSISTEMA [Dashboard]",
-        "importe": 0.63,
-        "fecha": "2026.06.03 18:06"
-      },
-      {
-        "tipo": "GANANCIA_LIBRE",
-        "destino": "Ganancia Real ciclo auto [solidaridad]",
-        "importe": 0.05,
-        "fecha": "2026.06.03 22:56"
-      }
-    ]
+    "operativa_log": []
+  },
+  "usdjpy": {
+    "timestamp": "2026.06.04 17:29:51",
+    "balance": 0,
+    "equity": 0,
+    "flotante": 0,
+    "ciclos": 0,
+    "cierre_semana": false,
+    "ganancia_real": 0,
+    "retirado": 0,
+    "hucha_comun": 0,
+    "hucha_aportado": 0.47,
+    "hucha_fase": 0,
+    "hucha_fase_pct": 80,
+    "hucha_tope": 100.0,
+    "operativa_aportado": 0,
+    "martingala": {
+      "activa": false,
+      "direccion": "",
+      "nivel": 0,
+      "precio": 0.0
+    },
+    "hedge": {
+      "activo": false,
+      "numero": 0,
+      "objetivo": 0,
+      "fondo": 0,
+      "pct": 0.0,
+      "parcial": 0,
+      "parciales": 0
+    },
+    "hedges_cola": [],
+    "operativa_log": []
   },
   "wetsuit": {
     "par": "AUDCAD-STD",
