@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026.06.04 10:35:27",
+  "timestamp": "2026.06.04 10:37:00",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 1294.87,
-    "equity_total": 186.02,
-    "flotante_total": -1108.85,
+    "equity_total": 189.38,
+    "flotante_total": -1105.49,
     "ciclos_total": 34,
     "hedges_activos": 0,
     "hedges_cola_total": 0,
@@ -245,10 +245,10 @@
     ]
   },
   "oro": {
-    "timestamp": "2026.06.04 11:35:07",
+    "timestamp": "2026.06.04 11:36:37",
     "balance": 1294.87,
-    "equity": 186.02,
-    "flotante": -1108.85,
+    "equity": 189.38,
+    "flotante": -1105.49,
     "ciclos": 10,
     "cierre_semana": false,
     "ganancia_real": 0.0,
@@ -357,10 +357,10 @@
     ]
   },
   "btc": {
-    "timestamp": "2026.06.04 11:35:10",
+    "timestamp": "2026.06.04 11:36:40",
     "balance": 1294.87,
-    "equity": 186.42,
-    "flotante": -1108.45,
+    "equity": 189.66,
+    "flotante": -1105.21,
     "ciclos": 12,
     "cierre_semana": false,
     "ganancia_real": -1.35,
@@ -463,10 +463,10 @@
     ]
   },
   "ger40": {
-    "timestamp": "2026.06.04 11:35:00",
+    "timestamp": "2026.06.04 11:36:33",
     "balance": 1294.87,
-    "equity": 186.57,
-    "flotante": -1108.3,
+    "equity": 189.89,
+    "flotante": -1104.98,
     "ciclos": 6,
     "cierre_semana": false,
     "ganancia_real": 0.0,
@@ -533,10 +533,10 @@
     ]
   },
   "usdjpy": {
-    "timestamp": "2026.06.04 11:35:12",
+    "timestamp": "2026.06.04 11:36:42",
     "balance": 1294.87,
-    "equity": 186.19,
-    "flotante": -1108.68,
+    "equity": 189.75,
+    "flotante": -1105.12,
     "ciclos": 6,
     "cierre_semana": false,
     "ganancia_real": 0.0,
@@ -610,16 +610,16 @@
   },
   "wetsuit": {
     "par": "AUDCAD-STD",
-    "timestamp": "2026.06.04 11:35",
-    "flotante_total": -2.75,
-    "instancias_activas": 4,
+    "timestamp": "2026.06.04 11:36",
+    "flotante_total": -3.03,
+    "instancias_activas": 3,
     "instancias_total": 4,
     "nivel_max": 1,
     "fondo_solidaridad": 0.0,
     "solidaridad_gastada": 3.48,
     "ciclos_total": 0,
     "ganancia_total": 0.0,
-    "rsi": 53.35,
+    "rsi": 52.63,
     "cierre_semana": false,
     "instancias": [
       {
@@ -627,7 +627,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 1,
-        "flotante": -1.18,
+        "flotante": -1.12,
         "solidaridad": false
       },
       {
@@ -635,7 +635,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 1,
-        "flotante": -1.19,
+        "flotante": -1.12,
         "solidaridad": false
       },
       {
@@ -643,15 +643,15 @@
         "activa": true,
         "direccion": "BUY",
         "niveles": 1,
-        "flotante": -0.73,
+        "flotante": -0.79,
         "solidaridad": false
       },
       {
         "nombre": "Leonor",
-        "activa": true,
-        "direccion": "SELL",
-        "niveles": 1,
-        "flotante": 0.35,
+        "activa": false,
+        "direccion": "LIBRE",
+        "niveles": 0,
+        "flotante": 0.0,
         "solidaridad": false
       }
     ],
@@ -962,9 +962,19 @@
             "precio": 0.99003,
             "beneficio": 0.18,
             "swap": 0.0
+          },
+          {
+            "fecha": "2026.06.04",
+            "hora": "11:35:57",
+            "instancia": "Leonor",
+            "nivel": "1",
+            "lote": 0.01,
+            "precio": 0.99197,
+            "beneficio": 0.4,
+            "swap": 0.0
           }
         ],
-        "total_dia": 0.4
+        "total_dia": 0.8
       }
     }
   }
