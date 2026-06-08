@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026.06.09 01:54:12",
+  "timestamp": "2026.06.09 01:55:45",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 0,
@@ -149,24 +149,24 @@
   },
   "wetsuit": {
     "par": "AUDCAD-STD",
-    "timestamp": "2026.06.09 02:54",
-    "flotante_total": 0.08,
-    "instancias_activas": 3,
+    "timestamp": "2026.06.09 02:55",
+    "flotante_total": -1.23,
+    "instancias_activas": 1,
     "instancias_total": 3,
-    "nivel_max": 2,
+    "nivel_max": 1,
     "fondo_solidaridad": 0.0,
     "solidaridad_gastada": 0.0,
     "ciclos_total": 0,
     "ganancia_total": 0.0,
-    "rsi": 42.11,
+    "rsi": 41.51,
     "cierre_semana": false,
     "instancias": [
       {
         "nombre": "Sara",
-        "activa": true,
-        "direccion": "SELL",
-        "niveles": 2,
-        "flotante": 0.57,
+        "activa": false,
+        "direccion": "LIBRE",
+        "niveles": 0,
+        "flotante": 0.0,
         "solidaridad": false
       },
       {
@@ -174,15 +174,15 @@
         "activa": true,
         "direccion": "BUY",
         "niveles": 1,
-        "flotante": -1.15,
+        "flotante": -1.23,
         "solidaridad": false
       },
       {
         "nombre": "Maria",
-        "activa": true,
-        "direccion": "SELL",
-        "niveles": 2,
-        "flotante": 0.66,
+        "activa": false,
+        "direccion": "LIBRE",
+        "niveles": 0,
+        "flotante": 0.0,
         "solidaridad": false
       }
     ],
@@ -306,6 +306,51 @@
           }
         ],
         "total_dia": 3.05
+      },
+      "2026/06/09": {
+        "cierres": [
+          {
+            "fecha": "2026.06.09",
+            "hora": "02:55:19",
+            "instancia": "Sara",
+            "nivel": "2",
+            "lote": 0.02,
+            "precio": 0.98238,
+            "beneficio": 2.12,
+            "swap": 0.0
+          },
+          {
+            "fecha": "2026.06.09",
+            "hora": "02:55:19",
+            "instancia": "Sara",
+            "nivel": "1",
+            "lote": 0.01,
+            "precio": 0.98238,
+            "beneficio": -1.08,
+            "swap": 0.0
+          },
+          {
+            "fecha": "2026.06.09",
+            "hora": "02:55:20",
+            "instancia": "Maria",
+            "nivel": "2",
+            "lote": 0.02,
+            "precio": 0.98238,
+            "beneficio": 2.16,
+            "swap": 0.0
+          },
+          {
+            "fecha": "2026.06.09",
+            "hora": "02:55:20",
+            "instancia": "Maria",
+            "nivel": "1",
+            "lote": 0.01,
+            "precio": 0.98238,
+            "beneficio": -1.02,
+            "swap": 0.0
+          }
+        ],
+        "total_dia": 2.18
       }
     }
   }
