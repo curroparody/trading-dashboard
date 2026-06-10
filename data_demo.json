@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026.06.11 01:18:47",
+  "timestamp": "2026.06.11 01:20:20",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 0,
@@ -149,24 +149,24 @@
   },
   "wetsuit": {
     "par": "AUDCAD-STD",
-    "timestamp": "2026.06.11 02:18",
-    "flotante_total": -19.33,
-    "instancias_activas": 3,
+    "timestamp": "2026.06.11 02:20",
+    "flotante_total": -16.57,
+    "instancias_activas": 2,
     "instancias_total": 3,
     "nivel_max": 3,
-    "fondo_solidaridad": 3.12,
+    "fondo_solidaridad": 3.32,
     "solidaridad_gastada": 0.0,
     "ciclos_total": 0,
     "ganancia_total": 0.0,
-    "rsi": 29.49,
+    "rsi": 36.08,
     "cierre_semana": false,
     "instancias": [
       {
         "nombre": "Sara",
-        "activa": true,
-        "direccion": "SELL",
-        "niveles": 1,
-        "flotante": 0.18,
+        "activa": false,
+        "direccion": "LIBRE",
+        "niveles": 0,
+        "flotante": 0.0,
         "solidaridad": false
       },
       {
@@ -174,7 +174,7 @@
         "activa": true,
         "direccion": "BUY",
         "niveles": 3,
-        "flotante": -19.5,
+        "flotante": -15.98,
         "solidaridad": true
       },
       {
@@ -182,7 +182,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 1,
-        "flotante": -0.01,
+        "flotante": -0.59,
         "solidaridad": false
       }
     ],
@@ -548,9 +548,19 @@
             "precio": 0.97537,
             "beneficio": 0.27,
             "swap": 0.0
+          },
+          {
+            "fecha": "2026.06.11",
+            "hora": "02:19:03",
+            "instancia": "Sara",
+            "nivel": "1",
+            "lote": 0.01,
+            "precio": 0.97477,
+            "beneficio": 0.2,
+            "swap": 0.0
           }
         ],
-        "total_dia": 0.27
+        "total_dia": 0.47
       }
     }
   }
