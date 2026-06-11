@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026.06.11 14:46:35",
+  "timestamp": "2026.06.11 14:48:08",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 0,
@@ -149,16 +149,16 @@
   },
   "wetsuit": {
     "par": "AUDCAD-STD",
-    "timestamp": "2026.06.11 15:46",
-    "flotante_total": -9.31,
+    "timestamp": "2026.06.11 15:48",
+    "flotante_total": -4.85,
     "instancias_activas": 2,
     "instancias_total": 3,
-    "nivel_max": 3,
-    "fondo_solidaridad": 4.45,
-    "solidaridad_gastada": 0.0,
+    "nivel_max": 2,
+    "fondo_solidaridad": 0.01,
+    "solidaridad_gastada": 4.44,
     "ciclos_total": 0,
     "ganancia_total": 0.0,
-    "rsi": 51.47,
+    "rsi": 51.11,
     "cierre_semana": false,
     "instancias": [
       {
@@ -166,15 +166,15 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 1,
-        "flotante": -1.62,
+        "flotante": -1.58,
         "solidaridad": false
       },
       {
         "nombre": "Eva",
         "activa": true,
         "direccion": "BUY",
-        "niveles": 3,
-        "flotante": -7.69,
+        "niveles": 2,
+        "flotante": -3.27,
         "solidaridad": true
       },
       {
