@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026.06.11 15:37:39",
+  "timestamp": "2026.06.11 15:39:13",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 0,
@@ -149,16 +149,16 @@
   },
   "wetsuit": {
     "par": "AUDCAD-STD",
-    "timestamp": "2026.06.11 16:37",
-    "flotante_total": -3.11,
-    "instancias_activas": 3,
+    "timestamp": "2026.06.11 16:39",
+    "flotante_total": -3.71,
+    "instancias_activas": 2,
     "instancias_total": 3,
     "nivel_max": 2,
-    "fondo_solidaridad": 0.01,
+    "fondo_solidaridad": 0.41,
     "solidaridad_gastada": 4.44,
     "ciclos_total": 0,
     "ganancia_total": 0.0,
-    "rsi": 54.97,
+    "rsi": 54.38,
     "cierre_semana": false,
     "instancias": [
       {
@@ -166,7 +166,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 1,
-        "flotante": -1.92,
+        "flotante": -1.87,
         "solidaridad": false
       },
       {
@@ -174,15 +174,15 @@
         "activa": true,
         "direccion": "BUY",
         "niveles": 2,
-        "flotante": -1.56,
+        "flotante": -1.84,
         "solidaridad": true
       },
       {
         "nombre": "Maria",
-        "activa": true,
-        "direccion": "BUY",
-        "niveles": 1,
-        "flotante": 0.37,
+        "activa": false,
+        "direccion": "LIBRE",
+        "niveles": 0,
+        "flotante": 0.0,
         "solidaridad": false
       }
     ],
@@ -578,9 +578,19 @@
             "precio": 0.97624,
             "beneficio": -1.02,
             "swap": 0.0
+          },
+          {
+            "fecha": "2026.06.11",
+            "hora": "16:37:42",
+            "instancia": "Maria",
+            "nivel": "1",
+            "lote": 0.01,
+            "precio": 0.97786,
+            "beneficio": 0.4,
+            "swap": 0.0
           }
         ],
-        "total_dia": 1.6
+        "total_dia": 2.0
       }
     }
   }
