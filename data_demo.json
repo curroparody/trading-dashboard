@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026.06.11 14:32:41",
+  "timestamp": "2026.06.11 14:34:13",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 0,
@@ -149,16 +149,16 @@
   },
   "wetsuit": {
     "par": "AUDCAD-STD",
-    "timestamp": "2026.06.11 15:32",
-    "flotante_total": -12.12,
-    "instancias_activas": 3,
+    "timestamp": "2026.06.11 15:34",
+    "flotante_total": -14.02,
+    "instancias_activas": 2,
     "instancias_total": 3,
     "nivel_max": 3,
-    "fondo_solidaridad": 3.32,
+    "fondo_solidaridad": 4.45,
     "solidaridad_gastada": 0.0,
     "ciclos_total": 0,
     "ganancia_total": 0.0,
-    "rsi": 44.97,
+    "rsi": 41.76,
     "cierre_semana": false,
     "instancias": [
       {
@@ -166,7 +166,7 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 1,
-        "flotante": -1.02,
+        "flotante": -0.67,
         "solidaridad": false
       },
       {
@@ -174,15 +174,15 @@
         "activa": true,
         "direccion": "BUY",
         "niveles": 3,
-        "flotante": -11.21,
+        "flotante": -13.35,
         "solidaridad": true
       },
       {
         "nombre": "Maria",
-        "activa": true,
-        "direccion": "SELL",
-        "niveles": 2,
-        "flotante": 0.11,
+        "activa": false,
+        "direccion": "LIBRE",
+        "niveles": 0,
+        "flotante": 0.0,
         "solidaridad": false
       }
     ],
@@ -558,9 +558,29 @@
             "precio": 0.97477,
             "beneficio": 0.2,
             "swap": 0.0
+          },
+          {
+            "fecha": "2026.06.11",
+            "hora": "15:34:07",
+            "instancia": "Maria",
+            "nivel": "2",
+            "lote": 0.02,
+            "precio": 0.97624,
+            "beneficio": 2.15,
+            "swap": 0.0
+          },
+          {
+            "fecha": "2026.06.11",
+            "hora": "15:34:07",
+            "instancia": "Maria",
+            "nivel": "1",
+            "lote": 0.01,
+            "precio": 0.97624,
+            "beneficio": -1.02,
+            "swap": 0.0
           }
         ],
-        "total_dia": 0.47
+        "total_dia": 1.6
       }
     }
   }
