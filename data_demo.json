@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026.06.11 20:59:29",
+  "timestamp": "2026.06.11 21:01:02",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 0,
@@ -149,40 +149,40 @@
   },
   "wetsuit": {
     "par": "AUDCAD-STD",
-    "timestamp": "2026.06.11 21:59",
-    "flotante_total": -11.42,
-    "instancias_activas": 1,
+    "timestamp": "2026.06.11 22:01",
+    "flotante_total": -13.02,
+    "instancias_activas": 3,
     "instancias_total": 3,
-    "nivel_max": 2,
+    "nivel_max": 3,
     "fondo_solidaridad": 0.0,
     "solidaridad_gastada": 4.44,
     "ciclos_total": 0,
     "ganancia_total": 0.0,
-    "rsi": 74.22,
+    "rsi": 75.19,
     "cierre_semana": false,
     "instancias": [
       {
         "nombre": "Sara",
         "activa": true,
         "direccion": "SELL",
-        "niveles": 2,
-        "flotante": -11.42,
-        "solidaridad": false
+        "niveles": 3,
+        "flotante": -13.38,
+        "solidaridad": true
       },
       {
         "nombre": "Eva",
-        "activa": false,
-        "direccion": "LIBRE",
-        "niveles": 0,
-        "flotante": 0.0,
+        "activa": true,
+        "direccion": "BUY",
+        "niveles": 1,
+        "flotante": 0.18,
         "solidaridad": false
       },
       {
         "nombre": "Maria",
-        "activa": false,
-        "direccion": "LIBRE",
-        "niveles": 0,
-        "flotante": 0.0,
+        "activa": true,
+        "direccion": "BUY",
+        "niveles": 1,
+        "flotante": 0.18,
         "solidaridad": false
       }
     ],
