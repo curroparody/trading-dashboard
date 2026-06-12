@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026.06.12 22:00:45",
+  "timestamp": "2026.06.12 22:02:18",
   "ecosistema": {
     "bots_activos": 4,
     "balance_total": 0,
@@ -149,16 +149,16 @@
   },
   "wetsuit": {
     "par": "AUDCAD-STD",
-    "timestamp": "2026.06.12 23:00",
-    "flotante_total": -25.18,
-    "instancias_activas": 3,
+    "timestamp": "2026.06.12 23:02",
+    "flotante_total": -27.35,
+    "instancias_activas": 1,
     "instancias_total": 3,
     "nivel_max": 4,
-    "fondo_solidaridad": 2.62,
+    "fondo_solidaridad": 3.43,
     "solidaridad_gastada": 4.44,
     "ciclos_total": 0,
     "ganancia_total": 0.0,
-    "rsi": 66.43,
+    "rsi": 67.33,
     "cierre_semana": true,
     "instancias": [
       {
@@ -166,23 +166,23 @@
         "activa": true,
         "direccion": "SELL",
         "niveles": 4,
-        "flotante": -25.92,
+        "flotante": -27.35,
         "solidaridad": true
       },
       {
         "nombre": "Eva",
-        "activa": true,
-        "direccion": "BUY",
-        "niveles": 1,
-        "flotante": 0.38,
+        "activa": false,
+        "direccion": "LIBRE",
+        "niveles": 0,
+        "flotante": 0.0,
         "solidaridad": false
       },
       {
         "nombre": "Maria",
-        "activa": true,
-        "direccion": "BUY",
-        "niveles": 1,
-        "flotante": 0.36,
+        "activa": false,
+        "direccion": "LIBRE",
+        "niveles": 0,
+        "flotante": 0.0,
         "solidaridad": false
       }
     ],
@@ -703,9 +703,29 @@
             "precio": 0.98538,
             "beneficio": 0.48,
             "swap": 0.0
+          },
+          {
+            "fecha": "2026.06.12",
+            "hora": "23:01:00",
+            "instancia": "Eva",
+            "nivel": "1",
+            "lote": 0.01,
+            "precio": 0.98567,
+            "beneficio": 0.41,
+            "swap": 0.0
+          },
+          {
+            "fecha": "2026.06.12",
+            "hora": "23:01:07",
+            "instancia": "Maria",
+            "nivel": "1",
+            "lote": 0.01,
+            "precio": 0.98569,
+            "beneficio": 0.4,
+            "swap": 0.0
           }
         ],
-        "total_dia": 0.96
+        "total_dia": 1.77
       }
     }
   }
